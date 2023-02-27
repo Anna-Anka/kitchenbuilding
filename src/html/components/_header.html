@@ -1,3 +1,225 @@
 <header class="header">
-    
+    <nav class="header__navigation">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__items">
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Адреса салонов
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__user">
+                        <button class="header-top__search" type="button">Поиск</button>
+                        <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
+                            + 7 (495) 189-65-92
+                        </a>
+                        <a class="header-top__contact header-top__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                            kuhnistroy@kuhni.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__wrapper">
+                    <a class="header-bottom__logo logo" href="#">
+                       <img class="logo__img" src="img/logo.svg" alt="логотип" width="270" height="46" loading="lazy">
+                    </a>
+                    <ul class="header-bottom__items">
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Каталог
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom__user header-user">
+                        <a class="header-user__favorite" href="#">
+                            <span class="header-user__icon" aria-hidden="true"></span>
+                            Избранное (0)
+                        </a>
+                        <button class="header-user__call button" type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header-bottom__mobile">
+                        <a class="header-bottom__phone" href="tel:+78000000000">8 (800)-000-00-00</a>
+                        <p class="header-bottom__hours">пн-пт с 8:00-18:00</p>
+                    </div>
+                    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu" id="header-burger-menu" data-menu>
+            <form class="search" action="#" role="search">
+                <label class="sr-only" for="search-header">Что искать?</label>
+                <input class="search__field" name="search" type="search" placeholder="Поиск..." id="search-header" required>
+                <button class="search__button" type="submit">
+                    <span class="sr-only">Найти</span>
+                </button>
+            </form>
+            <div class="burger-menu__user header-user">
+                <a class="header-user__favorite" href="#">
+                    <span class="header-user__icon" aria-hidden="true"></span>
+                    Избранное (0)
+                </a>
+                <button class="header-user__call button" type="button">Заказать звонок</button>
+            </div>
+            <ul class="burger-menu__accordion menu-accordion">
+                <li class="menu-accordion__item">
+                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                    <ul class="menu-accordion__content">
+                        <li class="menu-accordion__link">
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Адреса салонов</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">О компании</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-accordion__item">
+                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                    <ul class="menu-accordion__content">
+                        <li class="menu-accordion__link">
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Адреса салонов</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">О компании</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-accordion__item">
+                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                    <ul class="menu-accordion__content">
+                        <li class="menu-accordion__link">
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Адреса салонов</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">О компании</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-accordion__item">
+                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                    <ul class="menu-accordion__content">
+                        <li class="menu-accordion__link">
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Адреса салонов</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">О компании</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-accordion__item">
+                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                    <ul class="menu-accordion__content">
+                        <li class="menu-accordion__link">
+                            <a href="#">Сотрудничество</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">Адреса салонов</a>
+                        </li>
+                        <li class="menu-accordion__link">
+                            <a href="#">О компании</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                kuhnistroy@kuhni.ru
+            </a>
+            <div class="burger-menu__bottom menu-bottom">
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                            <span class="sr-only">vk</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                            <span class="sr-only">classmates</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                <a href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </nav>
 </header>

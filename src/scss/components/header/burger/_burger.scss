@@ -1,0 +1,12 @@
+.burger {
+	display: none;
+	@include burger;
+
+	&--active {
+		background-color: $dark-800;
+	}
+
+	@include mq(md) {
+		display: flex;
+	}
+}

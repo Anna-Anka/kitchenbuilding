@@ -1,0 +1,29 @@
+.search {
+	position: relative;
+	margin-bottom: 5px;
+
+	&__field {
+		width: 100%;
+		padding: 8px 46px 9px 16px;
+		background-color: $grey-200;
+		border-radius: 1000px;
+
+		&::placeholder {
+			color: rgba($black, 0.2);
+			font-weight: $fw-500;
+			font-size: 14px;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		width: 20px;
+		height: 20px;
+		background-image: url('../img/icons/search.svg');
+		transform: translateY(-50%);
+		@include bg-conatin;
+		filter: invert(1);
+	}
+}

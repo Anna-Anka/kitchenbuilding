@@ -9,12 +9,25 @@
 @import 'global';
 
 // * components
-@import './components/header';
+
+//* header
+@import './components/header/header-user';
+@import './components/header/header-top';
+@import './components/header/header-bottom';
+
+// * burger
+@import './components/header/burger/burger';
+@import './components/header/burger/burger-menu';
+
+@import './components/social';
+@import './components/search';
+@import './components/menu-bottom';
+
 @import './components/footer';
 
 // * templates
 //@import './templates/stepper';
-//@import './templates/accordion';
+@import './templates/accordion';
 //@import './templates/modal';
 //@import './templates/marquee';
 

@@ -8,7 +8,7 @@ export const burger = () => {
     const overlay = document?.querySelector('[data-menu-overlay]');
 
     const checkClass = () => {
-        if (burger?.classList.contains('burger-button--active')) {
+        if (burger?.classList.contains('burger--active')) {
             burger?.setAttribute('aria-expanded', 'true');
             burger?.setAttribute('aria-label', 'закрыть меню');
             disableScroll();
@@ -20,14 +20,14 @@ export const burger = () => {
     }
 
     burger?.addEventListener('click', (e) => {
-        burger?.classList.toggle('burger-button--active');
+        burger?.classList.toggle('burger--active');
         menu?.classList.toggle('burger-menu--active');
         overlay?.classList.toggle('overlay--active');
         checkClass();
     });
 
     overlay?.addEventListener('click', () => {
-        burger.classList.remove('burger-button--active');
+        burger.classList.remove('burger--active');
         menu.classList.remove('burger-menu--active');
         overlay.classList.remove('overlay--active');
         checkClass();
@@ -35,7 +35,7 @@ export const burger = () => {
 
     menuLinks?.forEach(el => {
         el.addEventListener('click', () => {
-            burger?.classList.remove('burger-button--active');
+            burger?.classList.remove('burger--active');
             menu.classList.remove('burger-menu--active');
             overlay.classList.remove('overlay--active');
             enableScroll();

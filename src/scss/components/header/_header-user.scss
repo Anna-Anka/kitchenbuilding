@@ -1,0 +1,33 @@
+.header-user {
+	display: flex;
+	align-items: center;
+
+	&__favorite {
+		position: relative;
+		margin-right: 10px;
+		padding: 15px 20px;
+		font-weight: $fw-600;
+		font-size: 16px;
+		background-color: $grey-200;
+		border-radius: 1000px;
+		@include flex-all-center;
+
+		@include mq(xl) {
+			width: 36px;
+			height: 36px;
+			padding: 6px;
+			font-size: 0;
+		}
+	}
+
+	&__icon {
+		width: 22px;
+		height: 22px;
+		margin-right: 6px;
+		background-image: url('../img/icons/heart.svg');
+		filter: invert(83%) sepia(46%) saturate(5102%) hue-rotate(345deg)
+			brightness(103%) contrast(94%);
+		content: '';
+		@include bg-conatin;
+	}
+}

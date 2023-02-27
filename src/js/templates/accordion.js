@@ -1,12 +1,12 @@
 export const accordionFunction = () => {
-    if (document.querySelector('.accordion')) {
-        const accordions = document.querySelectorAll('.accordion__item');
+    if (document.querySelector('.menu-accordion__item')) {
+        const accordions = document.querySelectorAll('.menu-accordion__item');
 
         accordions.forEach(el => {
             el.addEventListener('click', (e) => {
                 const self = e.currentTarget;
-                const control = self.querySelector('.accordion__control');
-                const content = self.querySelector('.accordion__content');
+                const control = self.querySelector('.menu-accordion__button');
+                const content = self.querySelector('.menu-accordion__content');
 
                 self.classList.toggle('open');
 
@@ -24,4 +24,3 @@ export const accordionFunction = () => {
         });
     };
 };
-    

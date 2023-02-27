@@ -10,8 +10,8 @@
 //stepperFunction()
 
 // * accordion
-//import { accordionFunction } from "./templates/accordion";
-//accordionFunction();
+import { accordionFunction } from "./templates/accordion";
+accordionFunction();
 
 // * Определение операционной системы на мобильных
 // import { mobileCheck } from "./functions/mobile-check";
@@ -33,9 +33,9 @@
 // import './functions/fix-fullheight';
 
 // * Реализация бургер-меню
-//import { burger } from './templates/burger';
+import { burger } from './templates/burger';
 
-//burger();
+burger();
 
 // * Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './templates/disable-scroll';

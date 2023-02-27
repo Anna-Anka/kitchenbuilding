@@ -1,0 +1,78 @@
+.header-top {
+	padding: 21px 0;
+	color: $white;
+	font-size: 16px;
+	background-color: $dark-800;
+
+	@include mq(md) {
+		display: none;
+	}
+
+	&__wrapper {
+		@include flex-center-sb;
+	}
+
+	&__items {
+		display: flex;
+		margin-right: 20px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 23, 15, 1);
+		}
+	}
+
+	&__user {
+		display: flex;
+	}
+
+	&__search,
+	&__contact {
+		position: relative;
+		@include adaptiv-value('padding-left', 32, 26, 1);
+
+		@include mq(xl) {
+			width: 20px;
+			height: 20px;
+			padding-left: 0;
+			font-size: 0;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			content: '';
+			@include bg-conatin;
+		}
+	}
+
+	&__search {
+		@include adaptiv-value('margin-right', 35, 22, 1);
+
+		&::before {
+			background-image: url('../img/icons/search.svg');
+		}
+	}
+
+	&__contact {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 35, 22, 1);
+		}
+
+		&--phone {
+			&::before {
+				background-image: url('../img/icons/phone.svg');
+			}
+		}
+
+		&--email {
+			&::before {
+				background-image: url('../img/icons/email.svg');
+			}
+		}
+	}
+}
