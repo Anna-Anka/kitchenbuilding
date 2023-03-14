@@ -1,0 +1,40 @@
+.breadcrumbs {
+	padding-top: 10px;
+	@include adaptiv-value(' padding-bottom', 20, 10, 1);
+
+	&__items {
+		display: flex;
+		overflow-x: auto;
+	}
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			position: relative;
+			margin-right: 15px;
+			padding-right: 15px;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 1px;
+				height: 100%;
+				background-color: rgba($grey-600, 0.2);
+				transform: rotate(-10deg);
+				content: '';
+			}
+		}
+	}
+
+	&__link {
+		@include adaptiv-value('font-size', 16, 12, 1);
+		color: $grey-600;
+		white-space: nowrap;
+
+		&--current {
+			color: $dark-800;
+		}
+	}
+}
