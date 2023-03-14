@@ -1,16 +1,15 @@
 .burger-menu {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	display: none;
 	width: 100%;
-	height: 100vh;
 	padding: 75px 20px 30px;
 	overflow-y: auto;
 	background-color: $white;
 
 	&--active {
-		@include mq(md) {
+		@include mq(lg) {
 			display: block;
 		}
 	}

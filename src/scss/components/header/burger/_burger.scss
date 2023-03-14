@@ -1,12 +1,13 @@
 .burger {
 	display: none;
 	@include burger;
+    order: 2;
 
 	&--active {
 		background-color: $dark-800;
 	}
 
-	@include mq(md) {
+	@include mq(lg) {
 		display: flex;
 	}
 }

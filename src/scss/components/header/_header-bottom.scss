@@ -3,6 +3,7 @@
 	z-index: 5;
 	@include adaptiv-value('padding-top', 28, 20, 1);
 	@include adaptiv-value('padding-bottom', 27, 10, 1);
+    background-color: $white;
 
 	&::before {
 		position: absolute;
@@ -29,12 +30,6 @@
 	}
 
 	&__items {
-		@include mq(md) {
-			display: none;
-		}
-	}
-
-	&__items {
 		margin-right: 10px;
 		margin-left: auto;
 		font-size: 16px;
@@ -44,6 +39,10 @@
 		@include adaptiv-value('padding-right', 50, 0, 1);
 		@include adaptiv-value('padding-top', 14, 8, 1);
 		@include adaptiv-value('padding-bottom', 14, 8, 1);
+
+		@include mq(lg) {
+			display: none;
+		}
 	}
 
 	&__item {
@@ -76,11 +75,39 @@
 				padding: 12px 20px;
 				font-size: 14px;
 			}
+
+			@include mq(lg) {
+				position: relative;
+				width: 32px;
+				height: 32px;
+				padding: 8px;
+				border-radius: 50%;
+                font-size: 0;
+			}
+
+			&::before {
+				@include mq(lg) {
+                    position: absolute;
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    @include bg-conatin;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-image: url('../img/icons/phone.svg');
+				}
+			}
 		}
 
-		@include mq(md) {
-			display: none;
+		@include mq(lg) {
+			order: 1;
+			margin-right: 8px;
 		}
+
+        @include mq(sm) {
+            display: none;
+        }
 	}
 
 	&__mobile {
@@ -91,7 +118,7 @@
 		margin-left: auto;
 		font-weight: $fw-500;
 
-		@include mq(md) {
+		@include mq(lg) {
 			display: flex;
 		}
 	}
