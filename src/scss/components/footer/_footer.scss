@@ -1,0 +1,78 @@
+.footer {
+	color: rgba($white, 0.4);
+	background-color: $dark-800;
+
+	&__top {
+		padding: 60px 0 40px;
+
+		@include mq(lg) {
+			padding: 32px 0 20px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 280px;
+		margin-right: 50px;
+		color: $white;
+
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 50px;
+	}
+
+	&__contact {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 15px;
+		padding-left: 32px;
+		font-size: 16px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			content: '';
+			@include bg-conatin;
+		}
+
+		&--phone {
+			&::before {
+				background-image: url('../img/icons/phone.svg');
+			}
+		}
+
+		&--email {
+			&::before {
+				background-image: url('../img/icons/email.svg');
+			}
+		}
+	}
+
+	&__call {
+		font-weight: $fw-600;
+		font-size: 15px;
+		border-bottom: 1px dashed $white;
+	}
+
+	&__bottom {
+		padding-bottom: 60px;
+
+		@include mq(lg) {
+			padding: 25px 0;
+			color: $dark-800;
+			background-color: $grey-200;
+		}
+	}
+}

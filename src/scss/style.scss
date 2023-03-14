@@ -23,7 +23,10 @@
 @import './components/search';
 @import './components/menu-bottom';
 
-@import './components/footer';
+// * footer
+@import './components/footer/footer';
+@import './components/footer/menu-accordion';
+@import './components/footer/menu-bottom';
 
 // * templates
 //@import './templates/stepper';

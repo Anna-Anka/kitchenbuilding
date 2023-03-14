@@ -10,6 +10,7 @@
 
 	&--active {
 		@include mq(lg) {
+			z-index: 4;
 			display: block;
 		}
 	}
