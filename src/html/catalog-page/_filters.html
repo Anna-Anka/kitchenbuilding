@@ -1,0 +1,55 @@
+<form class="filters smartfilter" action="#">
+    <fieldset class="filters__list">
+        <span class="filters__title">
+            <legend>
+                Страна производитель:
+            </legend>
+        </span>
+        <div class="filters__content">
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="country" value="Россия" checked>
+                <span class="filters__visible">Россия</span>
+            </label>
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="country" value="Италия">
+                <span class="filters__visible">Италия</span>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset class="filters__list">
+        <span class="filters__title">
+            <legend>
+                Стиль:
+            </legend>
+        </span>
+        <div class="filters__content">
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="style" value="Современный" checked>
+                <span class="filters__visible">Современный</span>
+            </label>
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="style" value="Нео-классика">
+                <span class="filters__visible">Нео-классика</span>
+            </label>
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="style" value="Классика">
+                <span class="filters__visible">Классика</span>
+            </label>
+        </div>
+    </fieldset>
+</form>
+
+<form class="sort" action="#" method="get">
+    <label class="sort__item sort__item--normal">
+        <input class="sort__hidden" type="radio" name="sort" value="Нео-классика" checked>
+        <span class="sort__visible">По популярности</span>
+    </label>
+    <label class="sort__item sort__item--up">
+        <input class="sort__hidden" type="radio" name="sort" value="По цене по возрастанию">
+        <span class="sort__visible">По цене</span>
+    </label>
+    <label class="sort__item sort__item--down sort__item--hidden">
+        <input class="sort__hidden" type="radio" name="sort" value="По цене по убыванию">
+        <span class="sort__visible">По цене</span>
+    </label>
+</form>

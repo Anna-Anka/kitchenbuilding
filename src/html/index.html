@@ -9,7 +9,15 @@
 })
 
 <main class="main">
+    <section class="catalog">
+        <div class="container">
+            <h1 class="title title--large">Каталог</h1>
 
+            @include('./catalog-page/_filters.html')
+            @include('./catalog-page/_products.html')
+
+        </div>
+    </section>
 </main>
 
 @include('./components/_footer.html')
