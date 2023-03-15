@@ -1,45 +1,30 @@
 import './../_libs'
 
-export const topSlider = () => {
-    if (document.querySelector('')) {
-        return new Swiper('', {
-            loop: true, 
-            speed: 800,
-            slidesPerGroup: 1,
-            centeredSlides: true,
+export const productCardSlider = () => {
+    if (document.querySelector('.product-card__main')) {
+        const sliderMain = document.querySelector('.slider-main');
+        const sliderNav = document.querySelector('.slider-nav');
 
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-                stopOnlastSlide: false,
+        const swiperSmall = new Swiper(sliderNav, {
+            slidesPerView: 9,
+            spaceBetween: 10,
+            loopedSlides: 9,
+            freeMode: true,
+        });
+
+        const swiperMain = new Swiper(sliderMain, {
+            spaceBetween: 10,
+            loopedSlides: 9,
+            speed: 500,
+
+            thumbs: {
+                swiper: swiperSmall,
             },
 
-            breakpoints: {
-
-                1400: {
-                    spaceBetween: -35,
-                    slidesPerView: 1.5,
-                },
-
-                1200: {
-                    spaceBetween: -25,
-                    slidesPerView: 1.5,
-                },
-
-                992: {
-                    spaceBetween: -35,
-                    slidesPerView: 1.06,
-                },
-
-                767: {
-                    spaceBetween: -30,
-                },
-
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: -10,
-                },
+            navigation: {
+                nextEl: '.product-card__button--next',
+                prevEl: '.product-card__button--prev',
             },
         });
-    }
+    };
 };

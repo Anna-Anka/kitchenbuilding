@@ -1,0 +1,51 @@
+<article class="product-card">
+    <div class="product-card__images"> 
+        <div class="product-card__main slider-main">
+            <button class="product-card__favorite" type="button" aria-label="Добавить в избранное">
+                <svg class="product-card__icon">
+                   <use xlink:href="img/sprite.svg#favorite">
+                </svg>
+            </button>
+            <ul class="swiper-wrapper">
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+            <div class="product-card__buttons">
+                <button class="product-card__button product-card__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="product-card__button product-card__button--next swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+        <div class="product-card__small slider-nav">
+            <ul class="product-card__previews swiper-wrapper">
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>

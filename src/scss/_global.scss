@@ -103,7 +103,7 @@ body {
 	@include adaptiv-value('font-size', 32, 16, 1);
 	@include adaptiv-value('margin-bottom', 20, 12, 1);
 
-    &--large {
-        @include adaptiv-value('font-size', 38, 20, 1);
-    }
+	&--large {
+		@include adaptiv-value('font-size', 38, 20, 1);
+	}
 }
