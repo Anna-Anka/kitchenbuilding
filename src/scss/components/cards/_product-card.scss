@@ -184,6 +184,7 @@
 		border-radius: 100px;
 		transform: translateX(-50%);
 		backdrop-filter: blur(4px);
+        z-index: 5;
 
 		@include mq(xl) {
 			display: flex;
