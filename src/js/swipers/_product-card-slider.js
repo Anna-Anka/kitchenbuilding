@@ -28,6 +28,11 @@ export const productCardSlider = () => {
                     nextEl: card.querySelector('.product-card__button--next'),
                     prevEl: card.querySelector('.product-card__button--prev')
                 },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
             })
 
             const changeSlide = () => {
