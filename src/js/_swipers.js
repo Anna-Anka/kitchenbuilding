@@ -1,3 +1,3 @@
-import { productCardSlider } from "./swipers/_slider";
+import { productCardSlider } from "./swipers/_product-card-slider";
 
 productCardSlider();
