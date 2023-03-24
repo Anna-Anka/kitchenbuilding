@@ -24,9 +24,11 @@
 @import './components/menu-bottom';
 @import './components/breadcrumbs';
 @import './components/swiper';
+@import './components/product-price';
 
 // * cards
 @import './components/cards/product-card';
+@import './components/cards/preview-model';
 
 // * footer
 @import './components/footer/footer';
@@ -47,3 +49,4 @@
 // * product-page
 @import './product-page/product-page';
 @import './product-page/product-card';
+@import './product-page/other-models';

@@ -1,0 +1,52 @@
+<section class="other-models product-page__section">
+    <div class="container">
+        <h2 class="other-models__title title">
+            Другие варианты этой модели
+        </h2>
+        <div class="other-models__wrapper">
+            <div class="other-models__swiper swiper">
+                <ul class="other-models__items swiper-wrapper">
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '1',
+                        })
+                    </li>
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '2',
+                        })
+                    </li>
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '3',
+                        })
+                    </li>
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '1',
+                        })
+                    </li>
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '2',
+                        })
+                    </li>
+                    <li class="other-models__item swiper-slide">
+                        @include('./../components/cards/_preview-model.html', {
+                        'img' : '3',
+                        })
+                    </li>
+                </ul>
+                <div class="other-models__pagination"></div>
+                <div class="other-models__scrollbar"></div>
+                <button class="other-models__button other-models__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="other-models__button other-models__button--next swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+        <button class="other-models__calc button" type="button">
+            Рассчитать по своим размерам
+        </button>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+.preview-model {
+    &__image {
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+        padding-bottom: 53.5%;
+    }
+
+    &__img {
+       @include resize-img;
+       border-radius: 12px;
+    }
+
+    &__price {
+        display: flex;
+    }
+}

@@ -7,13 +7,14 @@
 		}
 	}
 
-	&__card {
-		margin-bottom: 60px;
-	}
-
 	&__container {
 		@include mq(xl) {
 			padding: 0;
 		}
+	}
+
+	&__section {
+		@include adaptiv-value('padding-top', 30, 20, 1);
+		@include adaptiv-value('padding-bottom', 30, 20, 1);
 	}
 }
