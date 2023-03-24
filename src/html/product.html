@@ -1,0 +1,30 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Страница товара' }
+)
+<!--  -->
+@include('./components/_header.html')
+
+@include('./components/_breadcrumbs.html', {
+    'count' : '2',
+    '2' : 'Каталог',
+    'current' : 'Кастелло Лайт'
+})
+
+<main class="main">
+    <div class="product-page">
+        <div class="container">
+            <h1 class="product-page__title title title--large">Кастелло</h1>
+        </div>
+
+        <section class="product-page__card">
+            <h2 class="sr-only">Товар</h2>
+            <div class="product-page__container container">
+                @include('./components/cards/_product-card.html')
+            </div>
+        </section>
+    </div>
+</main>
+
+@include('./components/_footer.html')
+<!--  -->
+@include('./components/links/_bottom.html')

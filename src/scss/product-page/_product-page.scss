@@ -1,0 +1,19 @@
+.product-page {
+	&__title {
+		display: none;
+
+		@include mq(sm) {
+			display: block;
+		}
+	}
+
+	&__card {
+		margin-bottom: 60px;
+	}
+
+	&__container {
+		@include mq(xl) {
+			padding: 0;
+		}
+	}
+}
