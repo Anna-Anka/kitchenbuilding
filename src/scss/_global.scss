@@ -30,15 +30,46 @@ body {
 }
 
 .button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include flex-all-center;
 	padding: 16px 25px;
 	color: $white;
 	font-weight: $fw-600;
 	font-size: 16px;
+	text-align: center;
 	background-color: $red-600;
 	border-radius: 1000px;
+	transition: background-color 0.3s ease-in-out;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $red-500;
+		}
+	}
+
+	&:active {
+		background-color: $red-700;
+	}
+
+	&--white {
+		padding: 10px 20px;
+		color: $dark-800;
+		font-weight: $fw-600;
+		background-color: transparent;
+		border: 1px solid rgba($grey-600, 0.2);
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		@include adaptiv-value('font-size', 20, 12, 1);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $grey-200;
+			}
+		}
+
+		&:active {
+			color: $white;
+			background-color: $dark-800;
+		}
+	}
 }
 
 .sr-only {

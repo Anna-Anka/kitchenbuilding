@@ -1,0 +1,23 @@
+.product-nav {
+
+	&__items {
+		display: flex;
+		overflow-x: auto;
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 264px;
+		padding-bottom: 8px;
+		white-space: nowrap;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		@include mq(md) {
+			width: auto;
+			max-width: unset;
+		}
+	}
+}

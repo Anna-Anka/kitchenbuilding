@@ -1,0 +1,17 @@
+.similar-models {
+    &__items {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    &__item {
+        width: 100%;
+        @include adaptiv-value('max-width', 444, 312, 1);
+        min-width: 312px;
+        padding-bottom: 8px;
+
+        &:not(:last-child) {
+           @include adaptiv-value('margin-right', 15, 10, 1);
+        }
+    }
+}

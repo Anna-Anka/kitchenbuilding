@@ -1,0 +1,30 @@
+<section class="similar-models product-page__section" id="similar">
+    <div class="container">
+        <h2 class="similar-models__title title">
+            Похожие модели
+        </h2>
+        <ul class="similar-models__items">
+            <li class="similar-models__item">
+                @include('./../components/cards/products/_similar-model.html', {
+                    'title' : 'Кастелло Лайт',
+                    'text' : 'Та же модель, в другом цвете',
+                    'img' : '1'
+                })
+            </li>
+            <li class="similar-models__item">
+                @include('./../components/cards/products/_similar-model.html', {
+                    'title' : 'Кастелло Лайт',
+                    'text' : 'Та же модель, в другом цвете Та же модель, в другом цвете',
+                    'img' : '2'
+                })
+            </li>
+            <li class="similar-models__item">
+                @include('./../components/cards/products/_similar-model.html', {
+                    'title' : 'Кастелло Лайт Кастелло Лайт',
+                    'text' : 'Та же модель, в другом цвете',
+                    'img' : '3'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

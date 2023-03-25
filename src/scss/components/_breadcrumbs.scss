@@ -4,10 +4,7 @@
 
 	&__items {
 		display: flex;
-
-        @include mq(lg) {
-            overflow-x: auto;
-        }
+		overflow-x: auto;
 	}
 
 	&__item {
@@ -33,6 +30,7 @@
 
 	&__link {
 		@include adaptiv-value('font-size', 16, 12, 1);
+		display: inline-block;
 		color: $grey-600;
 		white-space: nowrap;
 

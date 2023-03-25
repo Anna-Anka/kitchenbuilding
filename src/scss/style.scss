@@ -27,8 +27,11 @@
 @import './components/product-price';
 
 // * cards
-@import './components/cards/product-card';
-@import './components/cards/preview-model';
+
+// * products-card
+@import './components/cards/products/product-card';
+@import './components/cards/products/preview-model';
+@import './components/cards/products/similar-model';
 
 // * footer
 @import './components/footer/footer';
@@ -50,3 +53,5 @@
 @import './product-page/product-page';
 @import './product-page/product-card';
 @import './product-page/other-models';
+@import './product-page/product-navigation';
+@import './product-page/similar-models';
