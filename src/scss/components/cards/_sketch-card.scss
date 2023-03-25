@@ -1,0 +1,59 @@
+.sketch-card {
+	height: 100%;
+	background-color: $grey-200;
+	@include adaptiv-value('border-radius', 15, 8, 1);
+	@include adaptiv-value('padding-top', 15, 8, 1);
+	@include adaptiv-value('padding-left', 20, 8, 1);
+	@include adaptiv-value('padding-right', 20, 8, 1);
+	@include adaptiv-value('padding-bottom', 35, 20, 1);
+
+	&__top {
+		@include flex-center-sb;
+		margin-bottom: 3px;
+	}
+
+	&__counter,
+	&__price {
+		font-weight: $fw-600;
+	}
+
+	&__counter {
+		margin-right: 10px;
+		@include adaptiv-value('font-size', 14, 8, 1);
+	}
+
+	&__number {
+		@include adaptiv-value('font-size', 25, 14, 1);
+	}
+
+	&__img {
+		display: flex;
+		margin: 0 auto;
+		padding: 0 5px;
+		object-fit: contain;
+		@include adaptiv-value('margin-bottom', 21, 8, 1);
+		@include adaptiv-value('height', 182, 82, 1);
+	}
+
+	&__price {
+		display: block;
+		margin-bottom: 2px;
+		@include adaptiv-value('font-size', 20, 14, 1);
+	}
+
+	&__subtext {
+		color: $grey-600;
+		@include adaptiv-value('font-size', 16, 12, 1);
+	}
+
+	.favorite-button {
+		@include adaptiv-value('width', 44, 24, 1);
+		@include adaptiv-value('height', 44, 24, 1);
+		position: relative;
+
+		&__icon {
+			@include adaptiv-value('width', 20, 11, 1);
+			@include adaptiv-value('height', 20, 11, 1);
+		}
+	}
+}

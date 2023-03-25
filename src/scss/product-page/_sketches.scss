@@ -1,0 +1,20 @@
+.sketches {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+		@include adaptiv-value('gap', 20, 12, 1);
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+
+		@include mq(lg) {
+			grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+		}
+
+		@include mq(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(149px, 1fr));
+		}
+	}
+
+	&__more {
+		margin: 0 auto;
+	}
+}

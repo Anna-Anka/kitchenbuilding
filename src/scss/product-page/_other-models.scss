@@ -23,8 +23,6 @@
     }
 
 	&__pagination {
-		top: unset;
-		bottom: -32px;
 		display: flex;
 		justify-content: center;
 
@@ -48,7 +46,7 @@
 
 	&__button {
 		position: absolute;
-		top: 50%;
+		top: calc(50% - 32px);
 		background-color: $grey-200;
 		transform: translateY(-50%);
 

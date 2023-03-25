@@ -1,10 +1,10 @@
 export const favoriteButton = () => {
-    if (document.querySelector('.product-card__favorite')) {
-        const buttons = document.querySelectorAll('.product-card__favorite')
+    if (document.querySelector('.favorite-button')) {
+        const buttons = document.querySelectorAll('.favorite-button')
 
         buttons.forEach(button => {
             button.addEventListener('click', () => {
-                button.classList.toggle('product-card__favorite--active')
+                button.classList.toggle('favorite-button--active')
             })
         })
     }
