@@ -1,4 +1,6 @@
 .product-page {
+    @include adaptiv-value('padding-bottom', 60, 40, 1);
+    
 	&__title {
 		display: none;
 
@@ -11,10 +13,5 @@
 		@include mq(xl) {
 			padding: 0;
 		}
-	}
-
-	&__section {
-		@include adaptiv-value('padding-top', 30, 20, 1);
-		@include adaptiv-value('padding-bottom', 30, 20, 1);
 	}
 }

@@ -1,0 +1,84 @@
+.form {
+	&__items {
+		display: flex;
+		width: 100%;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+
+			@include mq(md) {
+				margin-right: 0;
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&__field {
+		width: 100%;
+		padding: 20px 25px;
+		font-weight: $fw-600;
+		font-size: 16px;
+		line-height: 1.2;
+		background-color: $white;
+		border-radius: 10px;
+
+		@include mq(md) {
+			padding: 17px 20px;
+		}
+
+		&::placeholder {
+			color: $grey-600;
+		}
+	}
+
+	&__agree {
+		display: inline-flex;
+		align-items: center;
+		color: $white;
+		line-height: 1.2;
+		cursor: pointer;
+		@include adaptiv-value('font-size', 16, 12, 1);
+	}
+
+	&__hidden {
+		@include hidden;
+
+		&:checked + .form__visible {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__visible {
+		position: relative;
+		margin-right: 8px;
+		background-color: $white;
+		border: 1px solid rgba($grey-600, 0.4);
+		border-radius: 5px;
+		@include adaptiv-value('width', 24, 20, 1);
+		@include adaptiv-value('height', 24, 20, 1);
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 17px;
+			height: 17px;
+			background-image: url('../img/icons/check.svg');
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+			content: '';
+			@include bg-conatin;
+		}
+	}
+}
