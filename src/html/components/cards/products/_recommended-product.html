@@ -1,0 +1,80 @@
+@if(context.type === 'normal') {
+<aricle class="recommended-product">
+    @if(context.badge === 'true') {
+        @if(context.badge-type === 'dark') {
+            <span class="recommended-product__badge recommended-product__badge--dark">
+                Вариант на фото
+            </span>
+        }
+    
+    @if(context.badge-type === 'base') {
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+        }
+    }
+    <div class="recommended-product__image">
+        <picture>
+            <source srcset="img/recommended/@img.avif" type="image/avif">
+            <source srcset="img/recommended/@img.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/@img.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">@title</h3>
+            <p class="recommended-product__subtext">@subtext</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+                @if(context.old === 'true') {
+                    <span class="product-price__old">
+                        109 999 ₽
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+</aricle>
+}
+
+@if(context.type === 'technique') {
+<aricle class="recommended-product recommended-product--technique">
+    @if(context.badge === 'true') {
+        <picture>
+            <source srcset="img/recommended/label.avif" type="image/avif">
+            <source srcset="img/recommended/label.webp" type="image/webp">
+            <img class="recommended-product__label" src="img/recommended/label.png" alt="simfer" width="57" height="24" loading="lazy">
+        </picture>
+    }
+    <div class="recommended-product__image">
+        <picture>
+            <source srcset="img/recommended/@img.avif" type="image/avif">
+            <source srcset="img/recommended/@img.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/@img.png" alt="Рекомндуемый товар 1" width="325" height="200" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">@title</h3>
+            <ol class="recommended-product__items">
+                <li class="recommended-product__item">Варочная поверхность</li>
+                <li class="recommended-product__item">Духовой шкаф</li>
+                <li class="recommended-product__item">Посудомоечна машина</li>
+            </ol>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+                @if(context.old === 'true') {
+                    <span class="product-price__old">
+                        109 999 ₽
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+
+</aricle>
+}

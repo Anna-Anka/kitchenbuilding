@@ -142,5 +142,5 @@ body {
 
 .section {
     @include adaptiv-value('padding-top', 30, 20, 1);
-    @include adaptiv-value('padding-botom', 30, 20, 1);
+    @include adaptiv-value('padding-bottom', 30, 20, 1);
 }

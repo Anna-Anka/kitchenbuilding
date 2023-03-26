@@ -1,0 +1,105 @@
+<section class="recommended-products section">
+    <div class="container">
+        <h2 class="recommended-products__title title">
+            Рекомендуем приобрести
+        </h2>
+        <div class="tabs" data-tabs="recommended-products">
+            <ul class="tabs__nav">
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Столешница
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Комплект техники
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Вытяжки
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Смесители
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Мойка
+                    </button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn button button--white" type="button">
+                        Светодиодные ленты
+                    </button>
+                </li>
+            </ul>
+            <div class="tabs__content">
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '1',
+                            'badge-type' : 'dark',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика',
+                            'old' : 'false'
+                        })
+                    </li>
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '2',
+                            'badge-type' : 'base',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                            'old' : 'true',
+                        })
+                    </li>
+                </ul>
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'technique',
+                            'img' : '3',
+                            'badge' : 'true',
+                            'title' : 'Комплект техники Simfer Комплект техники Simfer',
+                            'old' : 'true',
+                        })
+                    </li>
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'technique',
+                            'img' : '3',
+                            'badge' : 'true',
+                            'title' : 'Комплект техники Simfer',
+                            'old' : 'false',
+                        })
+                    </li>
+                </ul>
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html')
+                    </li>
+                </ul>
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html')
+                    </li>
+                </ul>
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html')
+                    </li>
+                </ul>
+                <ul class="recommended-products__items tabs__panel">
+                    <li class="recommended-products__item">
+                        @include('./../components/cards/products/_recommended-product.html')
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

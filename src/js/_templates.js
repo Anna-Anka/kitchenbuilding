@@ -49,8 +49,8 @@ burger();
 //const modal = new GraphModal('modal');
 
 // * Реализация табов
-//import GraphTabs from 'graph-tabs';
-//const tabs = new GraphTabs('tab');
+import GraphTabs from 'graph-tabs';
+const tabs = new GraphTabs('recommended-products');
 
 // * Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
