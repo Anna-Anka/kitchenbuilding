@@ -2,30 +2,36 @@
 .swiper-button-prev {
 	@include adaptiv-value('width', 60, 28, 1);
 	@include adaptiv-value('height', 60, 28, 1);
-	position: relative;
 	margin-top: 0;
 	color: transparent;
-	background: rgba($white, 0.4);
-	border-radius: 50%;
 	backdrop-filter: blur(6px);
+
+	&::after {
+		width: 24px;
+		height: 24px;
+		font-size: 0;
+	}
+}
+
+.arrow-button {
+	position: relative;
+	background-color: rgba($white, 0.4);
+	border-radius: 50%;
 
 	&::after {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 24px;
-		height: 24px;
-		font-size: 0;
 		background-image: url('../img/icons/arrow.svg');
 		transform: translate(-50%, -50%) rotate(-90deg);
 		filter: invert(1);
 		content: '';
 		@include bg-conatin;
 	}
-}
 
-.swiper-button-prev {
-	&::after {
-		transform: translate(-50%, -50%) rotate(90deg);
+	&--left {
+		&::after {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
 	}
 }

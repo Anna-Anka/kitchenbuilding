@@ -48,37 +48,48 @@
 		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 
-	&__hidden {
-		@include hidden;
+	&__visible {
+		margin-right: 8px;
+	}
+}
 
-		&:checked + .form__visible {
-			&::before {
-				opacity: 1;
-			}
+.checkbox-hidden {
+	@include hidden;
+
+	&:checked + .checkbox-visible {
+		&::before {
+			opacity: 1;
 		}
 	}
 
-	&__visible {
-		position: relative;
-		margin-right: 8px;
-		background-color: $white;
-		border: 1px solid rgba($grey-600, 0.4);
-		border-radius: 5px;
-		@include adaptiv-value('width', 24, 20, 1);
-		@include adaptiv-value('height', 24, 20, 1);
-
+    &:disabled + .checkbox-visible {
 		&::before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 17px;
-			height: 17px;
-			background-image: url('../img/icons/check.svg');
-			transform: translate(-50%, -50%);
-			opacity: 0;
-			transition: opacity 0.3s ease-in-out;
-			content: '';
-			@include bg-conatin;
+			filter: invert(89%) sepia(3%) saturate(6%) hue-rotate(357deg) brightness(90%) contrast(92%);
 		}
+	}
+}
+
+.checkbox-visible {
+	position: relative;
+	background-color: $white;
+	border: 1px solid rgba($grey-600, 0.4);
+	border-radius: 5px;
+	@include adaptiv-value('width', 24, 20, 1);
+	@include adaptiv-value('height', 24, 20, 1);
+    cursor: pointer;
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 17px;
+		height: 17px;
+		background-image: url('../img/icons/check.svg');
+		transform: translate(-50%, -50%);
+		opacity: 0;
+        filter: invert(13%) sepia(96%) saturate(2665%) hue-rotate(345deg) brightness(122%) contrast(97%);
+		transition: opacity 0.3s ease-in-out;
+		content: '';
+		@include bg-conatin;
 	}
 }

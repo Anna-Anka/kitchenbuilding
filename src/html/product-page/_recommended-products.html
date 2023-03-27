@@ -3,7 +3,7 @@
         <h2 class="recommended-products__title title">
             Рекомендуем приобрести
         </h2>
-        <div class="tabs" data-tabs="recommended-products">
+        <div class="recommended-products__tabs tabs" data-tabs="recommended-products">
             <ul class="tabs__nav">
                 <li class="tabs__nav-item">
                     <button class="tabs__nav-btn button button--white" type="button">
@@ -36,70 +36,207 @@
                     </button>
                 </li>
             </ul>
-            <div class="tabs__content">
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html', {
+            <div class="tabs__wrapper">
+                <div class="tabs__content">
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
                             'type' : 'normal',
                             'img' : '1',
-                            'badge-type' : 'dark',
+                            'badge' : 'dark',
                             'title' : 'Столешница',
                             'subtext' : 'ПВХ 300х3,8 см, керамика',
                             'old' : 'false'
-                        })
-                    </li>
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html', {
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
                             'type' : 'normal',
                             'img' : '2',
-                            'badge-type' : 'base',
+                            'badge' : 'base',
                             'title' : 'Столешница',
                             'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
                             'old' : 'true',
-                        })
-                    </li>
-                </ul>
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html', {
+                            })
+                        </li>
+                    </ul>
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
                             'type' : 'technique',
                             'img' : '3',
-                            'badge' : 'true',
+                            'badge' : 'photo',
                             'title' : 'Комплект техники Simfer Комплект техники Simfer',
                             'old' : 'true',
-                        })
-                    </li>
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html', {
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
                             'type' : 'technique',
                             'img' : '3',
-                            'badge' : 'true',
                             'title' : 'Комплект техники Simfer',
                             'old' : 'false',
-                        })
-                    </li>
-                </ul>
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html')
-                    </li>
-                </ul>
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html')
-                    </li>
-                </ul>
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html')
-                    </li>
-                </ul>
-                <ul class="recommended-products__items tabs__panel">
-                    <li class="recommended-products__item">
-                        @include('./../components/cards/products/_recommended-product.html')
-                    </li>
-                </ul>
+                            })
+                        </li>
+                    </ul>
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '1',
+                            'badge' : 'dark',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика',
+                            'old' : 'false'
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '2',
+                            'badge' : 'base',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                            'old' : 'true',
+                            })
+                        </li>
+                    </ul>
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '1',
+                            'badge' : 'dark',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика',
+                            'old' : 'false'
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '2',
+                            'badge' : 'base',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                            'old' : 'true',
+                            })
+                        </li>
+                    </ul>
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '1',
+                            'badge' : 'dark',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика',
+                            'old' : 'false'
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '2',
+                            'badge' : 'base',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                            'old' : 'true',
+                            })
+                        </li>
+                    </ul>
+                    <ul class="recommended-products__items tabs__panel">
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '1',
+                            'badge' : 'dark',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика',
+                            'old' : 'false'
+                            })
+                        </li>
+                        <li class="recommended-products__item">
+                            @include('./../components/cards/products/_recommended-product.html', {
+                            'type' : 'normal',
+                            'img' : '2',
+                            'badge' : 'base',
+                            'title' : 'Столешница',
+                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                            'old' : 'true',
+                            })
+                        </li>
+                    </ul>
+                </div>
+                <form class="to-price" action="#">
+                    <div class="to-price__top">
+                        <h3 class="to-price__title">
+                            К общей стоимости
+                        </h3>
+                        <button class="to-price__back" type="button">
+                            Назад
+                            <span class="to-price__arrow arrow-button arrow-button--left" aria-hidden></span>
+                        </button>
+                    </div>
+                    <ul class="to-price__items" id="price-items">
+                        <li class="to-price__item">
+                            <label class="to-price__label">
+                                <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked disabled>
+                                <span class="checkbox-visible" aria-hidden="true"></span>
+                            </label>
+                            <div class="to-price__descr">
+                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            </div>
+                            <span class="to-price__price">75 000 ₽</span>
+                        </li>
+                        <li class="to-price__item">
+                            <label class="to-price__label">
+                                <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
+                                <span class="checkbox-visible" aria-hidden="true"></span>
+                            </label>
+                            <div class="to-price__descr">
+                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            </div>
+                            <span class="to-price__price">75 000 ₽</span>
+                        </li>
+                        <li class="to-price__item">
+                            <label class="to-price__label">
+                                <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
+                                <span class="checkbox-visible" aria-hidden="true"></span>
+                            </label>
+                            <div class="to-price__descr">
+                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            </div>
+                            <span class="to-price__price">75 000 ₽</span>
+                        </li>
+                    </ul>
+                    <div class="to-price__footer">
+                        <button class="to-price__more" aria-controls="price-items" type="button">
+                            Ещё 12
+                        </button>
+                        <div class="to-price__cost">
+                            <span class="to-price__total">Итого</span>
+                            <div class="product-price">
+                                <span class="product-price__old">
+                                    109 999 ₽
+                                </span>
+                                <span class="product-price__current">
+                                    95 000 ₽
+                                </span>
+                            </div>
+                        </div>
+                        <button class="to-price__button button" type="submit">
+                            Оформить
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
+        <button class="recommended-products__total button" type="button">
+            Общая стоимость 145 000 ₽
+        </button>
     </div>
 </section>
