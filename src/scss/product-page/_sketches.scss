@@ -1,4 +1,6 @@
 .sketches {
+    @include adaptiv-value('padding-bottom', 60, 40, 1);
+
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
