@@ -255,22 +255,21 @@
     <section class="catalog">
         <div class="container">
             <h1 class="title title--large">Каталог</h1>
-
             <form class="filters smartfilter" action="#">
     <fieldset class="filters__list">
         <span class="filters__title">
             <legend>
-                Страна производитель:
+                Страна производитель фасадов:
             </legend>
         </span>
         <div class="filters__content">
             <label class="filters__item">
                 <input class="filters__hidden" type="checkbox" name="country" value="Россия" checked>
-                <span class="filters__visible">Россия</span>
+                <span class="filters__visible button button--white">Россия</span>
             </label>
             <label class="filters__item">
                 <input class="filters__hidden" type="checkbox" name="country" value="Италия">
-                <span class="filters__visible">Италия</span>
+                <span class="filters__visible button button--white">Италия</span>
             </label>
         </div>
     </fieldset>
@@ -283,15 +282,52 @@
         <div class="filters__content">
             <label class="filters__item">
                 <input class="filters__hidden" type="checkbox" name="style" value="Современный" checked>
-                <span class="filters__visible">Современный</span>
+                <span class="filters__visible button button--white">Современный</span>
             </label>
             <label class="filters__item">
                 <input class="filters__hidden" type="checkbox" name="style" value="Нео-классика">
-                <span class="filters__visible">Нео-классика</span>
+                <span class="filters__visible button button--white">Нео-классика</span>
             </label>
             <label class="filters__item">
                 <input class="filters__hidden" type="checkbox" name="style" value="Классика">
-                <span class="filters__visible">Классика</span>
+                <span class="filters__visible button button--white">Классика</span>
+            </label>
+        </div>
+    </fieldset>
+</form>
+
+<form class="filters smartfilter" action="#">
+    <fieldset class="filters__list">
+        <span class="filters__title">
+            <legend>
+                Страна производитель фасадов:
+            </legend>
+        </span>
+        <div class="filters__content">
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="country" value="Россия" checked>
+                <span class="filters__visible button button--white">Россия</span>
+            </label>
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="country" value="Италия">
+                <span class="filters__visible button button--white">Италия</span>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset class="filters__list">
+        <span class="filters__title">
+            <legend>
+                Стиль:
+            </legend>
+        </span>
+        <div class="filters__content">
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="style" value="Современный" checked>
+                <span class="filters__visible button button--white">Современный</span>
+            </label>
+            <label class="filters__item">
+                <input class="filters__hidden" type="checkbox" name="style" value="Классика">
+                <span class="filters__visible button button--white">Классика</span>
             </label>
         </div>
     </fieldset>
@@ -319,12 +355,12 @@
                 <article class="product-card">
     <div class="product-card__images">
         <div class="product-card__main slider-main">
-            <button class="product-card__favorite" type="button" aria-label="Добавить в избранное">
-                <svg class="product-card__icon">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное">
+                <svg class="favorite-button__icon">
                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
-            <ul class="swiper-wrapper">
+            <ul class="product-card__swiper swiper-wrapper">
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/1.avif" type="image/avif">
@@ -396,8 +432,8 @@
                     </picture>
                 </li>
             </ul>
-            <button class="product-card__button product-card__button--prev swiper-button-prev" type="button"></button>
-            <button class="product-card__button product-card__button--next swiper-button-next" type="button"></button>
+            <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
+            <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
         </div>
         <div class="product-card__small slider-nav">
@@ -485,83 +521,83 @@
             <div class="product-card__pay">
                 <div class="product-card__cost">
                     <ul class="product-card__prices">
-                        <li class="product-card__price product-card__price--active" data-price="1">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price product-card__price--active" data-price="1">
+                            <span class="product-price__current">
                                 200 999 ₽
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 200 999 ₽
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="2">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="2">
+                            <span class="product-price__current">
                                 2
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 2
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="3">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="3">
+                            <span class="product-price__current">
                                 3
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 3
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="4">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="4">
+                            <span class="product-price__current">
                                 4
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 4
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="5">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="5">
+                            <span class="product-price__current">
                                 5
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 5
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="6">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="6">
+                            <span class="product-price__current">
                                6
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 6
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="7">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="7">
+                            <span class="product-price__current">
                                 7
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 7
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="8">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="8">
+                            <span class="product-price__current">
                                 8
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 8
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="9">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="9">
+                            <span class="product-price__current">
                                 9
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 9
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="10">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="10">
+                            <span class="product-price__current">
                                 10
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 10
                             </span>
                         </li>
@@ -574,271 +610,8 @@
                             Что входит в стоимость?
                         </span>
                     </button>
-                </div>
-            </div>
-        </div>
-        <a class="product-card__link button" href="#">Подробнее о модели</a>
-    </div>
-</article>
-            </li>
-            <li class="products__item">
-                <article class="product-card">
-    <div class="product-card__images">
-        <div class="product-card__main slider-main">
-            <button class="product-card__favorite" type="button" aria-label="Добавить в избранное">
-                <svg class="product-card__icon">
-                   <use xlink:href="img/sprite.svg#favorite">
-                </svg>
-            </button>
-            <ul class="swiper-wrapper">
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__big swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
-                    </picture>
-                </li>
-            </ul>
-            <button class="product-card__button product-card__button--prev swiper-button-prev" type="button"></button>
-            <button class="product-card__button product-card__button--next swiper-button-next" type="button"></button>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="product-card__small slider-nav">
-            <ul class="product-card__previews swiper-wrapper">
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/1.avif" type="image/avif">
-                        <source srcset="img/product/1.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-                <li class="product-card__thumb swiper-slide">
-                    <picture>
-                        <source srcset="img/product/2.avif" type="image/avif">
-                        <source srcset="img/product/2.webp" type="image/webp">
-                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
-                    </picture>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="product-card__content">
-        <div class="product-card__info">
-            <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
-                <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
-            </div>
-            <div class="product-card__pay">
-                <div class="product-card__cost">
-                    <ul class="product-card__prices">
-                        <li class="product-card__price product-card__price--active" data-price="1">
-                            <span class="product-card__current">
-                                200 999 ₽
-                            </span>
-                            <span class="product-card__old">
-                                200 999 ₽
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="2">
-                            <span class="product-card__current">
-                                2
-                            </span>
-                            <span class="product-card__old">
-                                2
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="3">
-                            <span class="product-card__current">
-                                3
-                            </span>
-                            <span class="product-card__old">
-                                3
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="4">
-                            <span class="product-card__current">
-                                4
-                            </span>
-                            <span class="product-card__old">
-                                4
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="5">
-                            <span class="product-card__current">
-                                5
-                            </span>
-                            <span class="product-card__old">
-                                5
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="6">
-                            <span class="product-card__current">
-                               6
-                            </span>
-                            <span class="product-card__old">
-                                6
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="7">
-                            <span class="product-card__current">
-                                7
-                            </span>
-                            <span class="product-card__old">
-                                7
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="8">
-                            <span class="product-card__current">
-                                8
-                            </span>
-                            <span class="product-card__old">
-                                8
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="9">
-                            <span class="product-card__current">
-                                9
-                            </span>
-                            <span class="product-card__old">
-                                9
-                            </span>
-                        </li>
-                        <li class="product-card__price" data-price="10">
-                            <span class="product-card__current">
-                                10
-                            </span>
-                            <span class="product-card__old">
-                                10
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="product-card__subprice">Цена за всю кухню на фото</p>
-                </div>
-                <div class="product-card__set">
-                    <button class="product-card__question">
-                        <span class="product-card__subbutton">
-                            Что входит в стоимость?
-                        </span>
+                    <button class="product-card__calc button" type="button">
+                        Рассчитать по своим размерам
                     </button>
                 </div>
             </div>
@@ -851,12 +624,12 @@
                 <article class="product-card">
     <div class="product-card__images">
         <div class="product-card__main slider-main">
-            <button class="product-card__favorite" type="button" aria-label="Добавить в избранное">
-                <svg class="product-card__icon">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное">
+                <svg class="favorite-button__icon">
                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
-            <ul class="swiper-wrapper">
+            <ul class="product-card__swiper swiper-wrapper">
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/1.avif" type="image/avif">
@@ -928,8 +701,8 @@
                     </picture>
                 </li>
             </ul>
-            <button class="product-card__button product-card__button--prev swiper-button-prev" type="button"></button>
-            <button class="product-card__button product-card__button--next swiper-button-next" type="button"></button>
+            <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
+            <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
         </div>
         <div class="product-card__small slider-nav">
@@ -1017,83 +790,83 @@
             <div class="product-card__pay">
                 <div class="product-card__cost">
                     <ul class="product-card__prices">
-                        <li class="product-card__price product-card__price--active" data-price="1">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price product-card__price--active" data-price="1">
+                            <span class="product-price__current">
                                 200 999 ₽
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 200 999 ₽
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="2">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="2">
+                            <span class="product-price__current">
                                 2
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 2
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="3">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="3">
+                            <span class="product-price__current">
                                 3
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 3
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="4">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="4">
+                            <span class="product-price__current">
                                 4
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 4
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="5">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="5">
+                            <span class="product-price__current">
                                 5
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 5
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="6">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="6">
+                            <span class="product-price__current">
                                6
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 6
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="7">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="7">
+                            <span class="product-price__current">
                                 7
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 7
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="8">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="8">
+                            <span class="product-price__current">
                                 8
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 8
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="9">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="9">
+                            <span class="product-price__current">
                                 9
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 9
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="10">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="10">
+                            <span class="product-price__current">
                                 10
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 10
                             </span>
                         </li>
@@ -1106,6 +879,9 @@
                             Что входит в стоимость?
                         </span>
                     </button>
+                    <button class="product-card__calc button" type="button">
+                        Рассчитать по своим размерам
+                    </button>
                 </div>
             </div>
         </div>
@@ -1117,12 +893,12 @@
                 <article class="product-card">
     <div class="product-card__images">
         <div class="product-card__main slider-main">
-            <button class="product-card__favorite" type="button" aria-label="Добавить в избранное">
-                <svg class="product-card__icon">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное">
+                <svg class="favorite-button__icon">
                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
-            <ul class="swiper-wrapper">
+            <ul class="product-card__swiper swiper-wrapper">
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/1.avif" type="image/avif">
@@ -1194,8 +970,8 @@
                     </picture>
                 </li>
             </ul>
-            <button class="product-card__button product-card__button--prev swiper-button-prev" type="button"></button>
-            <button class="product-card__button product-card__button--next swiper-button-next" type="button"></button>
+            <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
+            <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
         </div>
         <div class="product-card__small slider-nav">
@@ -1283,83 +1059,83 @@
             <div class="product-card__pay">
                 <div class="product-card__cost">
                     <ul class="product-card__prices">
-                        <li class="product-card__price product-card__price--active" data-price="1">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price product-card__price--active" data-price="1">
+                            <span class="product-price__current">
                                 200 999 ₽
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 200 999 ₽
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="2">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="2">
+                            <span class="product-price__current">
                                 2
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 2
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="3">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="3">
+                            <span class="product-price__current">
                                 3
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 3
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="4">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="4">
+                            <span class="product-price__current">
                                 4
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 4
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="5">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="5">
+                            <span class="product-price__current">
                                 5
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 5
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="6">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="6">
+                            <span class="product-price__current">
                                6
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 6
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="7">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="7">
+                            <span class="product-price__current">
                                 7
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 7
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="8">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="8">
+                            <span class="product-price__current">
                                 8
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 8
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="9">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="9">
+                            <span class="product-price__current">
                                 9
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 9
                             </span>
                         </li>
-                        <li class="product-card__price" data-price="10">
-                            <span class="product-card__current">
+                        <li class="product-card__price product-price" data-price="10">
+                            <span class="product-price__current">
                                 10
                             </span>
-                            <span class="product-card__old">
+                            <span class="product-price__old">
                                 10
                             </span>
                         </li>
@@ -1371,6 +1147,278 @@
                         <span class="product-card__subbutton">
                             Что входит в стоимость?
                         </span>
+                    </button>
+                    <button class="product-card__calc button" type="button">
+                        Рассчитать по своим размерам
+                    </button>
+                </div>
+            </div>
+        </div>
+        <a class="product-card__link button" href="#">Подробнее о модели</a>
+    </div>
+</article>
+            </li>
+            <li class="products__item">
+                <article class="product-card">
+    <div class="product-card__images">
+        <div class="product-card__main slider-main">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное">
+                <svg class="favorite-button__icon">
+                   <use xlink:href="img/sprite.svg#favorite">
+                </svg>
+            </button>
+            <ul class="product-card__swiper swiper-wrapper">
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__big swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+            <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
+            <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="product-card__small slider-nav">
+            <ul class="product-card__previews swiper-wrapper">
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/1.avif" type="image/avif">
+                        <source srcset="img/product/1.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/1.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+                <li class="product-card__thumb swiper-slide">
+                    <picture>
+                        <source srcset="img/product/2.avif" type="image/avif">
+                        <source srcset="img/product/2.webp" type="image/webp">
+                        <img class="product-card__preview" src="img/product/2.jpg" alt="Фото 1" width="110" height="70" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="product-card__content">
+        <div class="product-card__info">
+            <div class="product-card__name">
+                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
+            </div>
+            <div class="product-card__pay">
+                <div class="product-card__cost">
+                    <ul class="product-card__prices">
+                        <li class="product-card__price product-price product-card__price--active" data-price="1">
+                            <span class="product-price__current">
+                                200 999 ₽
+                            </span>
+                            <span class="product-price__old">
+                                200 999 ₽
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="2">
+                            <span class="product-price__current">
+                                2
+                            </span>
+                            <span class="product-price__old">
+                                2
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="3">
+                            <span class="product-price__current">
+                                3
+                            </span>
+                            <span class="product-price__old">
+                                3
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="4">
+                            <span class="product-price__current">
+                                4
+                            </span>
+                            <span class="product-price__old">
+                                4
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="5">
+                            <span class="product-price__current">
+                                5
+                            </span>
+                            <span class="product-price__old">
+                                5
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="6">
+                            <span class="product-price__current">
+                               6
+                            </span>
+                            <span class="product-price__old">
+                                6
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="7">
+                            <span class="product-price__current">
+                                7
+                            </span>
+                            <span class="product-price__old">
+                                7
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="8">
+                            <span class="product-price__current">
+                                8
+                            </span>
+                            <span class="product-price__old">
+                                8
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="9">
+                            <span class="product-price__current">
+                                9
+                            </span>
+                            <span class="product-price__old">
+                                9
+                            </span>
+                        </li>
+                        <li class="product-card__price product-price" data-price="10">
+                            <span class="product-price__current">
+                                10
+                            </span>
+                            <span class="product-price__old">
+                                10
+                            </span>
+                        </li>
+                    </ul>
+                    <p class="product-card__subprice">Цена за всю кухню на фото</p>
+                </div>
+                <div class="product-card__set">
+                    <button class="product-card__question">
+                        <span class="product-card__subbutton">
+                            Что входит в стоимость?
+                        </span>
+                    </button>
+                    <button class="product-card__calc button" type="button">
+                        Рассчитать по своим размерам
                     </button>
                 </div>
             </div>
