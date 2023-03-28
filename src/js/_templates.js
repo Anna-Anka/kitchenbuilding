@@ -149,9 +149,9 @@ im.mask(inputs)
 //headerSticky();
 
 // * Подключение плавного скролла
-//import { smoothScroll } from "./templates/smooth-scroll";
+import { smoothScroll } from "./templates/smooth-scroll";
 
-//smoothScroll();
+smoothScroll();
 
 // * Подключение карты
 //import { mapFunction } from './templates/map';

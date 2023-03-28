@@ -1,0 +1,77 @@
+.characteristic-card {
+	position: relative;
+	@include adaptiv-value('font-size', 16, 14, 1);
+	display: flex;
+	justify-content: space-between;
+
+	&::after {
+		flex-grow: 1;
+		order: 2;
+		margin: 0 5px;
+		border-bottom: 1px dashed $grey-600;
+		content: '';
+	}
+
+	&__parametr {
+		max-width: 50%;
+		font-weight: $fw-600;
+	}
+
+	&__meaning {
+		order: 3;
+		max-width: 50%;
+		text-align: right;
+	}
+
+	&__button {
+		position: relative;
+		padding-right: 30px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 20px;
+			height: 20px;
+			color: $grey-600;
+			font-weight: $fw-600;
+			font-size: 12px;
+			line-height: 1.5;
+			text-align: center;
+			background-color: $white;
+			border: 1px solid $grey-600;
+			border-radius: 50%;
+			content: 'i';
+		}
+	}
+
+	&__descr {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		display: none;
+		width: 100%;
+		background-color: $white;
+		border-radius: 10px;
+		box-shadow: 0 4px 10px rgba($dark-800, 0.25);
+		transform: translateY(100%);
+		@include adaptiv-value('padding', 15, 10, 1);
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__subtitle {
+		@include adaptiv-value('font-size', 16, 14, 1);
+		display: block;
+		margin-bottom: 5px;
+		font-weight: $fw-600;
+	}
+
+	&__subtext {
+		@include adaptiv-value('font-size', 16, 12, 1);
+		color: $grey-600;
+	}
+}

@@ -31,6 +31,7 @@
 
 // * cards
 @import './components/cards/sketch-card';
+@import './components/cards/characteristic-card';
 
 // * products-card
 @import './components/cards/products/product-card';
@@ -65,4 +66,5 @@
 @import './product-page/recommended-products/to-price';
 @import './product-page/video';
 @import './product-page/sketches';
-@import './product-page/_characteristics';
+@import './product-page/characteristics/characteristics';
+@import './product-page/characteristics/menu-accordion';

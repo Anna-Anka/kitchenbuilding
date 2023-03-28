@@ -7,6 +7,14 @@
 		padding-bottom: 48.5%;
 		overflow: hidden;
 		@include adaptiv-value('margin-bottom', 20, 10, 1);
+
+		@media (any-hover: hover) {
+			&:hover {
+				.product-card__small {
+					bottom: 10px;
+				}
+			}
+		}
 	}
 
 	&__main {
@@ -78,6 +86,11 @@
 		border-radius: 8px;
 		box-shadow: 0 4px 30px rgba($dark-800, 0.3);
 		transform: translateX(-50%);
+
+        @media (any-hover: hover) {
+			bottom: -50px;
+            transition: bottom 0.4s ease-out;
+		}
 
 		@include mq(xl) {
 			display: none;

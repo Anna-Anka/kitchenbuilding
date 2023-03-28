@@ -4,14 +4,19 @@ export const characteristicsDescr = () => {
 
         cards.forEach(card => {
             const button = card.querySelector('.characteristic-card__button');
-            console.log(button)
             const descr = card.querySelector('.characteristic-card__descr');
 
             if (button) {
                 button.addEventListener('click', () => {
                     descr.classList.toggle('characteristic-card__descr--active')
                 })
-            }   
+
+                window.addEventListener('click', (e) => {
+                    if (!button.contains(e.target) && !descr.contains(e.target)) {
+                        descr.classList.remove('characteristic-card__descr--active')
+                    }
+                })
+            }
         })
     }
 }

@@ -1,6 +1,10 @@
 .other-models {
     @include adaptiv-value('padding-top', 60, 20, 1);
 
+    @include mq(xl) {
+        padding-bottom: 45px;
+    }
+
 	&__title {
 		@include adaptiv-value('margin-bottom', 20, 12, 1);
 	}
