@@ -87,9 +87,9 @@
 		box-shadow: 0 4px 30px rgba($dark-800, 0.3);
 		transform: translateX(-50%);
 
-        @media (any-hover: hover) {
+		@media (any-hover: hover) {
 			bottom: -50px;
-            transition: bottom 0.4s ease-out;
+			transition: bottom 0.4s ease-out;
 		}
 
 		@include mq(xl) {
@@ -325,15 +325,19 @@
 		}
 	}
 
+	&__kit {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
 	&__question {
 		position: relative;
 		font-weight: $fw-600;
 		@include adaptiv-value('font-size', 16, 12, 1);
 		@include adaptiv-value('padding-right', 44, 35, 1);
-
-		&:not(:last-child) {
-			margin-bottom: 15px;
-		}
 
 		&::before {
 			position: absolute;

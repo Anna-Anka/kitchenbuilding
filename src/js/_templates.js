@@ -50,7 +50,10 @@ burger();
 
 // * Реализация табов
 import GraphTabs from 'graph-tabs';
-const tabs = new GraphTabs('recommended-products');
+
+if (document.querySelector('[data-tabs="recommended-products"]')) {
+    const tabs = new GraphTabs('recommended-products');
+}
 
 // * Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
@@ -89,9 +92,12 @@ const tabs = new GraphTabs('recommended-products');
 
 // * Подключение inputmask
 import Inputmask from "inputmask";
-let inputs = document.querySelectorAll('input[type="tel"]')
-let im = new Inputmask('+7 (999) 999-99-99')
-im.mask(inputs)
+
+if (document.querySelector('input[type="tel"]')) {
+    let inputs = document.querySelectorAll('input[type="tel"]')
+    let im = new Inputmask('+7 (999) 999-99-99')
+    im.mask(inputs)
+}
 
 // * Подключение choices.js
 // import Choices from "choices.js";

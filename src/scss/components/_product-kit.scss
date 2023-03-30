@@ -1,0 +1,49 @@
+.product-kit {
+	position: absolute;
+	right: 0;
+	bottom: -10px;
+	z-index: 12;
+	display: none;
+	width: 458px;
+	padding: 15px;
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 0 -1px 35px rgba($black, 0.2);
+	transform: translateY(100%);
+
+	@include mq(sm) {
+		right: -15px;
+		width: 320px;
+	}
+
+	&--active {
+		display: block;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 13px;
+		border: 1px solid rgba($black, 0.15);
+		border-radius: 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__img {
+		width: 40px;
+		height: 40px;
+		@include adaptiv-value('margin-right', 20, 15, 1);
+
+		img {
+			object-fit: contain;
+		}
+	}
+
+	&__text {
+		color: $grey-600;
+		font-size: 14px;
+	}
+}
