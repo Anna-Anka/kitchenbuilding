@@ -50,11 +50,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_favorite_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project/_favorite-button */ "./src/js/project/_favorite-button.js");
-/* harmony import */ var _project_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project/_sort */ "./src/js/project/_sort.js");
+/* harmony import */ var _project_product_kit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project/_product-kit */ "./src/js/project/_product-kit.js");
+/* harmony import */ var _project_sort__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project/_sort */ "./src/js/project/_sort.js");
 
 
-(0,_project_sort__WEBPACK_IMPORTED_MODULE_1__.sort)();
+
+(0,_project_sort__WEBPACK_IMPORTED_MODULE_2__.sort)();
 (0,_project_favorite_button__WEBPACK_IMPORTED_MODULE_0__.favoriteButton)();
+(0,_project_product_kit__WEBPACK_IMPORTED_MODULE_1__.productKit)();
 
 /***/ }),
 
@@ -140,7 +143,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // * Реализация табов
 
-const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_2__["default"]('recommended-products');
+if (document.querySelector('[data-tabs="recommended-products"]')) {
+  const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_2__["default"]('recommended-products');
+}
 
 // * Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
@@ -179,9 +184,11 @@ const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_2__["default"]('recommended
 
 // * Подключение inputmask
 
-let inputs = document.querySelectorAll('input[type="tel"]');
-let im = new (inputmask__WEBPACK_IMPORTED_MODULE_3___default())('+7 (999) 999-99-99');
-im.mask(inputs);
+if (document.querySelector('input[type="tel"]')) {
+  let inputs = document.querySelectorAll('input[type="tel"]');
+  let im = new (inputmask__WEBPACK_IMPORTED_MODULE_3___default())('+7 (999) 999-99-99');
+  im.mask(inputs);
+}
 
 // * Подключение choices.js
 // import Choices from "choices.js";
@@ -398,6 +405,37 @@ const favoriteButton = () => {
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         button.classList.toggle('favorite-button--active');
+      });
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/project/_product-kit.js":
+/*!****************************************!*\
+  !*** ./src/js/project/_product-kit.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "productKit": () => (/* binding */ productKit)
+/* harmony export */ });
+const productKit = () => {
+  if (document.querySelector('.product-kit')) {
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      const button = card.querySelector('.product-card__question');
+      const kit = card.querySelector('.product-kit');
+      button.addEventListener('click', () => {
+        kit.classList.toggle('product-kit--active');
+      });
+      window.addEventListener('click', e => {
+        if (!button.contains(e.target) && !kit.contains(e.target)) {
+          kit.classList.remove('product-kit--active');
+        }
       });
     });
   }
