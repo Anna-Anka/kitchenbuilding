@@ -2,10 +2,10 @@
 .swiper-button-prev {
 	@include adaptiv-value('width', 60, 28, 1);
 	@include adaptiv-value('height', 60, 28, 1);
+	z-index: 7;
 	margin-top: 0;
 	color: transparent;
 	backdrop-filter: blur(6px);
-    z-index: 7;
 
 	&::after {
 		width: 24px;
