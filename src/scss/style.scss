@@ -34,6 +34,7 @@
 // * cards
 @import './components/cards/sketch-card';
 @import './components/cards/characteristic-card';
+@import './components/cards/kitchenbuilding-card';
 
 // * products-card
 @import './components/cards/products/product-card';
@@ -54,6 +55,7 @@
 //@import './templates/marquee';
 
 // * home-page
+@import './home-page/kitchenbuilding';
 @import './home-page/addresses';
 
 // * catalog-page

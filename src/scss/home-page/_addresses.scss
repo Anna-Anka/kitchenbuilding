@@ -1,4 +1,7 @@
 .addresses {
+
+    @include adaptiv-value('padding-top', 60, 40, 1);
+
 	&__title {
 		text-align: center;
 	}
