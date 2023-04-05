@@ -35,6 +35,7 @@
 @import './components/cards/sketch-card';
 @import './components/cards/characteristic-card';
 @import './components/cards/kitchenbuilding-card';
+@import './components/cards/approach-card';
 
 // * products-card
 @import './components/cards/products/product-card';
@@ -55,6 +56,7 @@
 //@import './templates/marquee';
 
 // * home-page
+@import './home-page/approach';
 @import './home-page/no-problems';
 @import './home-page/kitchenbuilding';
 @import './home-page/addresses';

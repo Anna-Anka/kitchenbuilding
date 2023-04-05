@@ -141,6 +141,22 @@ body {
 }
 
 .section {
-    @include adaptiv-value('padding-top', 30, 20, 1);
-    @include adaptiv-value('padding-bottom', 30, 20, 1);
+	@include adaptiv-value('padding-top', 30, 20, 1);
+	@include adaptiv-value('padding-bottom', 30, 20, 1);
+}
+
+.kitchenbuilding-decor {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		background-image: url('../img/kitchenbuilding-decor.svg');
+		content: '';
+		@include bg-conatin;
+		@include adaptiv-value('max-width', 1360, 396, 1);
+		@include adaptiv-value('height', 162, 48, 1);
+	}
 }
