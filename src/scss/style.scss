@@ -42,6 +42,7 @@
 @import './components/cards/products/preview-model';
 @import './components/cards/products/similar-model';
 @import './components/cards/products/recommended-product';
+@import './components/cards/products/product-today';
 
 
 // * footer
@@ -56,6 +57,7 @@
 //@import './templates/marquee';
 
 // * home-page
+@import './home-page/recommend-today';
 @import './home-page/approach';
 @import './home-page/no-problems';
 @import './home-page/kitchenbuilding';

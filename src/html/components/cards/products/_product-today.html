@@ -1,0 +1,18 @@
+<article class="product-today">
+    <div class="product-today__image @gradient">
+        @if(context.label === 'true') {
+            <span class="product-today__label @label-type">
+                @label-text
+            </span>
+        }
+        <picture>
+           <source srcset="img/recommend-today/@img.avif" type="image/avif">
+           <source srcset="img/recommend-today/@img.webp" type="image/webp">
+           <img class="product-today__img" src="img/recommend-today/@img.png" alt="@title" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <h3 class="product-today__title">
+        <a href="#">@title</a>
+    </h3>
+    <span class="product-today__subtitle">@subtitle</span>
+</article>

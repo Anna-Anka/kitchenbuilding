@@ -1,0 +1,107 @@
+<section class="recommend-today">
+    <div class="container">
+        <h2 class="recommend-today__title title">
+            Рекомендуем сегодня
+        </h2>
+        <div class="recommend-today__wrapper">
+            <div class="recommend-today__swiper swiper">
+                <ul class="recommend-today__items swiper-wrapper">
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '1',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--light',
+                        'label-text' : 'Новинка',
+                        'title' : 'Светлая кухня',
+                        'subtitle' : 'Специально для любителей светлого'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '2',
+                        'gradient' : '',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--dark',
+                        'label-text' : '-50%',
+                        'title' : 'Распродажа сантехники',
+                        'subtitle' : 'На всю сантехнику'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '3',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--light',
+                        'label-text' : '-25%',
+                        'title' : 'Скидка на духовой шкаф',
+                        'subtitle' : 'При покупке комплекта техники'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '4',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--dark',
+                        'label-text' : '12 месяцев 0%',
+                        'title' : 'Рассрочка 12 месяцев 0%',
+                        'subtitle' : 'На технику KORTING'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '1',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--light',
+                        'label-text' : 'Новинка',
+                        'title' : 'Светлая кухня',
+                        'subtitle' : 'Специально для любителей светлого'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '2',
+                        'gradient' : '',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--dark',
+                        'label-text' : '-50%',
+                        'title' : 'Распродажа сантехники',
+                        'subtitle' : 'На всю сантехнику'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '3',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--light',
+                        'label-text' : '-25%',
+                        'title' : 'Скидка на духовой шкаф',
+                        'subtitle' : 'При покупке комплекта техники'
+                        })
+                    </li>
+                    <li class="recommend-today__item swiper-slide">
+                        @include('../components/cards/products/_product-today.html', {
+                        'img' : '4',
+                        'gradient' : 'product-today__image--gradient',
+                        'label' : 'true',
+                        'label-type' : 'product-today__label--dark',
+                        'label-text' : '12 месяцев 0%',
+                        'title' : 'Рассрочка 12 месяцев 0%',
+                        'subtitle' : 'На технику KORTING'
+                        })
+                    </li>
+                </ul>
+                <div class="recommend-today__scrollbar"></div>
+                <div class="recommend-today__pagination swiper-pagination"></div>
+                <button class="recommend-today__button recommend-today__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                </button>
+                <button class="recommend-today__button recommend-today__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
