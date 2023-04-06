@@ -1,0 +1,37 @@
+<section class="simple-products section">
+    <div class="container">
+        <h2 class="sr-only">
+            Товары
+        </h2>
+        <div class="simple-products__wrapper">
+            <div class="simple-products__swiper swiper">
+                <ul class="simple-products__items swiper-wrapper">
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                    <li class="simple-products__item swiper-slide">
+                        @include('../components/cards/products/_simple-product.html')
+                    </li>
+                </ul>
+                <div class="simple-products__scrollbar"></div>
+                <div class="simple-products__pagination swiper-pagination"></div>
+                <button class="simple-products__button arrow-button arrow-button--left simple-products__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="simple-products__button arrow-button simple-products__button--next swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

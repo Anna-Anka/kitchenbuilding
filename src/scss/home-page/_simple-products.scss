@@ -1,9 +1,8 @@
-.recommend-today {
-	@include adaptiv-value('padding-bottom', 60, 40, 1);
+.simple-products {
 
 	&__wrapper {
 		position: relative;
-        @include adaptiv-value('padding-bottom' , 40, 20, 1);
+		@include adaptiv-value('padding-bottom', 40, 20, 1);
 	}
 
 	&__swiper {
@@ -33,7 +32,7 @@
 			left: 0;
 		}
 
-        @include mq(lg) {
+		@include mq(lg) {
 			display: none;
 		}
 	}
@@ -75,6 +74,63 @@
 
 		.swiper-scrollbar-drag {
 			height: 3px;
+		}
+	}
+
+	.product-card {
+		&__images {
+			padding-bottom: 61.5%;
+		}
+
+		&__img {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+            @include mq(xl) {
+                border-radius: 10px;
+            }
+		}
+
+        &__name {
+            max-width: 190px;
+            margin-right: 10px;
+        }
+
+		&__title {
+			color: $black;
+			font-size: 16px;
+		}
+
+		&__subtitle,
+		&__subprice {
+			@include adaptiv-value('font-size', 16, 12, 1);
+		}
+
+		&__subprice {
+			color: rgba($black, 0.6);
+		}
+
+        &__cost,
+        &__info {
+            margin-right: 0;
+        }
+
+		.product-price {
+			display: flex;
+
+			&__current {
+				color: $red-600;
+
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+
+            &__old {
+                font-size: 12px;
+                opacity: 0.5;
+            }
 		}
 	}
 }
