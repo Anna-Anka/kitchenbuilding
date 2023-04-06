@@ -1,3 +1,4 @@
+import { homeHeroSwiper } from "./swipers/_home-hero";
 import { otherModelsSwiper } from "./swipers/_other-models";
 import { productCardSlider } from "./swipers/_product-card-slider";
 import { recommendTodaySwiper } from "./swipers/_recommend-today";
@@ -10,3 +11,5 @@ otherModelsSwiper();
 recommendTodaySwiper();
 
 simpleProductsSwiper();
+
+homeHeroSwiper();

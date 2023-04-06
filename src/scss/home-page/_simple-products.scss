@@ -1,5 +1,6 @@
 .simple-products {
-
+    @include adaptiv-value('padding-top',  35, 20, 1);
+    
 	&__wrapper {
 		position: relative;
 		@include adaptiv-value('padding-bottom', 40, 20, 1);
