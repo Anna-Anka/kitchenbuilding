@@ -1,0 +1,97 @@
+.discuss {
+	padding-right: 36px;
+	padding-left: 36px;
+	color: $white;
+
+	@include mq(lg) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	&__wrapper {
+		padding: 50px 0;
+		background-color: $dark-800;
+		@include adaptiv-value('border-radius', 20, 12, 1);
+
+		&::before {
+			bottom: 0;
+			transform: translate(-50%, 50%);
+			opacity: 0.02;
+			filter: invert(100%) sepia(17%) saturate(26%) hue-rotate(170deg)
+				brightness(105%) contrast(76%);
+		}
+
+		@include mq(lg) {
+			padding: 32px 30px 68px;
+		}
+
+		@include mq(sm) {
+			padding: 20px 16px 68px;
+		}
+	}
+
+	&__inner {
+		@include flex-center-sb;
+
+		@include mq(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 775px;
+		margin-right: 20px;
+
+		@include mq(lg) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+	}
+
+	&__subtitle {
+		display: block;
+	}
+
+	&__text {
+		opacity: 0.7;
+		@include adaptiv-value('font-size', 20, 12, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		white-space: nowrap;
+
+		@include mq(sm) {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+
+	&__button {
+		margin-right: 14px;
+
+		@include mq(sm) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__link {
+		color: $white;
+		border-color: $white;
+	}
+}

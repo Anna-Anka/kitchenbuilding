@@ -53,7 +53,6 @@ body {
 	&--white {
 		padding: 10px 20px;
 		color: $dark-800;
-		font-weight: $fw-600;
 		background-color: transparent;
 		border: 1px solid rgba($grey-600, 0.2);
 		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -62,6 +61,27 @@ body {
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $grey-200;
+			}
+		}
+
+		&:active {
+			color: $white;
+			background-color: $dark-800;
+		}
+	}
+
+	&--border {
+		padding: 15px 35px;
+		color: $dark-800;
+		background-color: transparent;
+		border: 1px solid $dark-800;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		@include adaptiv-value('font-size', 16, 14, 1);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: $dark-800;
 			}
 		}
 
@@ -154,6 +174,9 @@ body {
 		left: 50%;
 		width: 100%;
 		background-image: url('../img/kitchenbuilding-decor.svg');
+		opacity: 0.2;
+		filter: invert(99%) sepia(1%) saturate(142%) hue-rotate(305deg)
+			brightness(113%) contrast(70%);
 		content: '';
 		@include bg-conatin;
 		@include adaptiv-value('max-width', 1360, 396, 1);

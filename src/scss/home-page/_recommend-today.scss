@@ -1,5 +1,4 @@
 .recommend-today {
-	@include adaptiv-value('padding-top', 60, 40, 1);
 	@include adaptiv-value('padding-bottom', 60, 40, 1);
 
 	&__wrapper {
