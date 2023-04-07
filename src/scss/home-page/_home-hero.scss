@@ -29,13 +29,23 @@
 
 		&::before {
 			position: absolute;
-			top: 0;
+			top: 5px;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			background-image: url('../img/home-hero/bg.png');
+			border-radius: inherit;
 			content: '';
 			@include bg-cover;
+
+			@include mq(lg) {
+				@include adaptiv-value('height', 630, 264, 1);
+				top: 0;
+			}
+
+			@include mq(sm) {
+				height: 320px;
+			}
 		}
 
 		@include mq(lg) {
@@ -51,20 +61,24 @@
 	&__container {
 		position: relative;
 		z-index: 1;
-
-		@include mq(lg) {
-			padding: 0;
-		}
 	}
 
 	&__inner {
 		@include flex-center-sb;
+
+		@include mq(lg) {
+			justify-content: center;
+		}
 	}
 
 	&__content {
 		width: 100%;
 		max-width: 524px;
 		margin-right: 20px;
+
+		@include mq(lg) {
+			display: none;
+		}
 	}
 
 	&__box {
@@ -72,6 +86,12 @@
 
 		@include mq(lg) {
 			display: none;
+		}
+
+		&--mobile {
+			@include mq(lg) {
+				display: block;
+			}
 		}
 	}
 
@@ -89,13 +109,213 @@
 		}
 	}
 
+	&__calc {
+		white-space: nowrap;
+		@include adaptiv-value('font-size', 16, 10, 1);
+
+		@include mq(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(lg) {
+				display: flex;
+				width: 100%;
+			}
+		}
+	}
+
+	&__info {
+		position: relative;
+
+		@include mq(lg) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__middle {
+		position: absolute;
+		bottom: -40px;
+		left: 0;
+		z-index: 2;
+
+		@include mq(lg) {
+			width: 100%;
+			position: relative;
+			bottom: unset;
+			left: unset;
+		}
+	}
+
+	&__descr {
+		width: 223px;
+		height: 223px;
+		padding: 40px;
+		text-align: center;
+		background-color: $white;
+		border-radius: 100%;
+		@include flex-column-all-center;
+
+		@include mq(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+			padding: 23px 30px;
+			border-radius: 15px;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 15px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 5px;
+		color: $black;
+		font-weight: $fw-700;
+		font-size: 16px;
+
+		@include mq(lg) {
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
+
+		@include mq(lg) {
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+	}
+
+	.product-price {
+		@include flex-column-v-center;
+		margin-bottom: 10px;
+
+		@include mq(lg) {
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-bottom: 2px;
+		}
+
+		@include mq(sm) {
+			justify-content: center;
+		}
+
+		&__current {
+			color: $red-600;
+			@include adaptiv-value('font-size', 20, 16, 1);
+
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 3px;
+
+				@include mq(lg) {
+					margin-right: 4px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__subtext {
+		@include adaptiv-value('font-size', 16, 12, 1);
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		width: 45px;
+		height: 45px;
+		background-color: $dark-800;
+		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/arrow-longer.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg-conatin;
+		}
+
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		@include adaptiv-value('padding-left', 60, 20, 1);
+		@include adaptiv-value('padding-right', 60, 20, 1);
+
+		@include mq(lg) {
+			display: flex;
+			flex-direction: column-reverse;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__swiper {
+		position: static;
+		max-width: 670px;
+		@include adaptiv-value('max-width', 670, 285, 1);
+		@include adaptiv-value('height', 544, 231, 1);
+	}
+
 	&__item {
 		width: 100%;
-		max-width: 670px;
-		height: 544px;
 	}
 
 	&__img {
+		width: 100%;
+		height: 100%;
 		object-fit: contain;
+		filter: drop-shadow(0 6px 15px rgba($black, 0.25));
+	}
+
+	&__button {
+		position: absolute;
+		background-color: $grey-200;
+		border: 1px solid $grey-600;
+
+		&--prev {
+			left: 0;
+		}
+
+		&--next {
+			right: 0;
+		}
+
+		&::after {
+			filter: invert(0);
+			@include adaptiv-value('width', 24, 14, 1);
+			@include adaptiv-value('height', 24, 14, 1);
+		}
+	}
+
+	.swiper-pagination {
+		bottom: -25px;
+
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			background-color: transparent;
+			border: 1px solid $grey-600;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: $grey-600;
+		}
 	}
 }
