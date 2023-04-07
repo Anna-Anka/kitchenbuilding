@@ -69,12 +69,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _swipers_other_models__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swipers/_other-models */ "./src/js/swipers/_other-models.js");
-/* harmony import */ var _swipers_product_card_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swipers/_product-card-slider */ "./src/js/swipers/_product-card-slider.js");
+/* harmony import */ var _swipers_home_hero__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./swipers/_home-hero */ "./src/js/swipers/_home-hero.js");
+/* harmony import */ var _swipers_other_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swipers/_other-models */ "./src/js/swipers/_other-models.js");
+/* harmony import */ var _swipers_popular_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swipers/_popular-products */ "./src/js/swipers/_popular-products.js");
+/* harmony import */ var _swipers_product_card_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swipers/_product-card-slider */ "./src/js/swipers/_product-card-slider.js");
+/* harmony import */ var _swipers_recommend_today__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./swipers/_recommend-today */ "./src/js/swipers/_recommend-today.js");
 
 
-(0,_swipers_product_card_slider__WEBPACK_IMPORTED_MODULE_1__.productCardSlider)();
-(0,_swipers_other_models__WEBPACK_IMPORTED_MODULE_0__.otherModelsSwiper)();
+
+
+
+(0,_swipers_product_card_slider__WEBPACK_IMPORTED_MODULE_3__.productCardSlider)();
+(0,_swipers_other_models__WEBPACK_IMPORTED_MODULE_1__.otherModelsSwiper)();
+(0,_swipers_recommend_today__WEBPACK_IMPORTED_MODULE_4__.recommendTodaySwiper)();
+(0,_swipers_popular_products__WEBPACK_IMPORTED_MODULE_2__.popularProductsSwiper)();
+(0,_swipers_home_hero__WEBPACK_IMPORTED_MODULE_0__.homeHeroSwiper)();
 
 /***/ }),
 
@@ -513,6 +522,41 @@ const sort = () => {
 
 /***/ }),
 
+/***/ "./src/js/swipers/_home-hero.js":
+/*!**************************************!*\
+  !*** ./src/js/swipers/_home-hero.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "homeHeroSwiper": () => (/* binding */ homeHeroSwiper)
+/* harmony export */ });
+/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_libs */ "./src/js/_libs.js");
+
+const homeHeroSwiper = () => {
+  if (document.querySelector('.home-hero__swiper')) {
+    return new Swiper('.home-hero__swiper', {
+      loop: true,
+      speed: 800,
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: '.home-hero__button--next',
+        prevEl: '.home-hero__button--prev'
+      },
+      pagination: {
+        el: '.home-hero__pagination',
+        clickable: true
+      }
+    });
+  }
+};
+
+/***/ }),
+
 /***/ "./src/js/swipers/_other-models.js":
 /*!*****************************************!*\
   !*** ./src/js/swipers/_other-models.js ***!
@@ -563,6 +607,64 @@ const otherModelsSwiper = () => {
           slidesPerGroup: 2,
           slidesPerView: 2.2,
           spaceBetween: 10
+        }
+      }
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/swipers/_popular-products.js":
+/*!*********************************************!*\
+  !*** ./src/js/swipers/_popular-products.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "popularProductsSwiper": () => (/* binding */ popularProductsSwiper)
+/* harmony export */ });
+/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_libs */ "./src/js/_libs.js");
+
+const popularProductsSwiper = () => {
+  if (document.querySelector('.popular-products__swiper')) {
+    return new Swiper('.popular-products__swiper', {
+      loop: true,
+      speed: 800,
+      navigation: {
+        nextEl: '.popular-products__button--next',
+        prevEl: '.popular-products__button--prev'
+      },
+      pagination: {
+        el: '.popular-products__pagination',
+        clickable: true
+      },
+      scrollbar: {
+        el: ".popular-products__scrollbar",
+        draggable: true
+      },
+      breakpoints: {
+        1100: {
+          slidesPerGroup: 3,
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerGroup: 2,
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        560: {
+          slidesPerGroup: 1,
+          slidesPerView: 1.8,
+          spaceBetween: 20
+        },
+        320: {
+          slidesPerGroup: 1,
+          slidesPerView: 1.2,
+          spaceBetween: 15
         }
       }
     });
@@ -629,6 +731,64 @@ const productCardSlider = () => {
     });
   }
   ;
+};
+
+/***/ }),
+
+/***/ "./src/js/swipers/_recommend-today.js":
+/*!********************************************!*\
+  !*** ./src/js/swipers/_recommend-today.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "recommendTodaySwiper": () => (/* binding */ recommendTodaySwiper)
+/* harmony export */ });
+/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_libs */ "./src/js/_libs.js");
+
+const recommendTodaySwiper = () => {
+  if (document.querySelector('.recommend-today__swiper')) {
+    return new Swiper('.recommend-today__swiper', {
+      loop: true,
+      speed: 800,
+      navigation: {
+        nextEl: '.recommend-today__button--next',
+        prevEl: '.recommend-today__button--prev'
+      },
+      pagination: {
+        el: '.recommend-today__pagination',
+        clickable: true
+      },
+      scrollbar: {
+        el: ".recommend-today__scrollbar",
+        draggable: true
+      },
+      breakpoints: {
+        1100: {
+          slidesPerGroup: 4,
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerGroup: 3,
+          slidesPerView: 3,
+          spaceBetween: 10
+        },
+        560: {
+          slidesPerGroup: 2,
+          slidesPerView: 2.2,
+          spaceBetween: 10
+        },
+        320: {
+          slidesPerGroup: 1,
+          slidesPerView: 1.2,
+          spaceBetween: 10
+        }
+      }
+    });
+  }
 };
 
 /***/ }),
@@ -835,118 +995,117 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ GraphTabs)
 /* harmony export */ });
 class GraphTabs {
-    constructor(selector, options) {
-        let defaultOptions = {
-            isChanged: () => { }
+  constructor(selector, options) {
+    let defaultOptions = {
+      isChanged: () => {}
+    }
+    this.options = Object.assign(defaultOptions, options);
+    this.selector = selector;
+    this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
+    if (this.tabs) {
+      this.tabList = this.tabs.querySelector('.tabs__nav');
+      this.tabsBtns = this.tabList.querySelectorAll('.tabs__nav-btn');
+      this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
+    } else {
+      console.error('Селектор data-tabs не существует!');
+      return;
+    }
+
+    this.check();
+    this.init();
+    this.events();
+  }
+
+  check() {
+    if (document.querySelectorAll(`[data-tabs="${this.selector}"]`).length > 1) {
+      console.error('Количество элементов с одинаковым data-tabs больше одного!');
+      return;
+    }
+
+    if (this.tabsBtns.length !== this.tabsPanels.length) {
+      console.error('Количество кнопок и элементов табов не совпадает!');
+      return;
+    }
+  }
+
+  init() {
+    this.tabList.setAttribute('role', 'tablist');
+
+    this.tabsBtns.forEach((el, i) => {
+      el.setAttribute('role', 'tab');
+      el.setAttribute('tabindex', '-1');
+      el.setAttribute('id', `${this.selector}${i + 1}`);
+      el.classList.remove('tabs__nav-btn--active');
+    });
+
+    this.tabsPanels.forEach((el, i) => {
+      el.setAttribute('role', 'tabpanel');
+      el.setAttribute('tabindex', '-1');
+      el.setAttribute('aria-labelledby', this.tabsBtns[i].id);
+      el.classList.remove('tabs__panel--active');
+    });
+
+    this.tabsBtns[0].classList.add('tabs__nav-btn--active');
+    this.tabsBtns[0].removeAttribute('tabindex');
+    this.tabsBtns[0].setAttribute('aria-selected', 'true');
+    this.tabsPanels[0].classList.add('tabs__panel--active');
+  }
+
+  events() {
+    this.tabsBtns.forEach((el, i) => {
+      el.addEventListener('click', (e) => {
+        let currentTab = this.tabList.querySelector('[aria-selected]');
+
+        if (e.currentTarget !== currentTab) {
+          this.switchTabs(e.currentTarget, currentTab);
         }
-        this.options = Object.assign(defaultOptions, options);
-        this.selector = selector;
-        this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
-        if (this.tabs) {
-            this.tabList = this.tabs.querySelector('.tabs__nav');
-            this.tabsBtns = this.tabList.querySelectorAll('.tabs__nav-btn');
-            this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
+      });
+
+      el.addEventListener('keydown', (e) => {
+        let index = Array.prototype.indexOf.call(this.tabsBtns, e.currentTarget);
+
+        let dir = null;
+
+        if (e.which === 37) {
+          dir = index - 1;
+        } else if (e.which === 39) {
+          dir = index + 1;
+        } else if (e.which === 40) {
+          dir = 'down';
         } else {
-            console.error('Селектор data-tabs не существует!');
-            return;
+          dir = null;
         }
 
-        this.check();
-        this.init();
-        this.events();
-    }
-
-    check() {
-        if (document.querySelectorAll(`[data-tabs="${this.selector}"]`).length > 1) {
-            console.error('Количество элементов с одинаковым data-tabs больше одного!');
-            return;
+        if (dir !== null) {
+          if (dir === 'down') {
+            this.tabsPanels[i].focus();
+          } else if (this.tabsBtns[dir]) {
+            this.switchTabs(this.tabsBtns[dir], e.currentTarget);
+          }
         }
+      });
+    });
+  }
 
-        if (this.tabsBtns.length !== this.tabsPanels.length) {
-            console.error('Количество кнопок и элементов табов не совпадает!');
-            return;
-        }
-    }
+  switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
+    newTab.focus();
+    newTab.removeAttribute('tabindex');
+    newTab.setAttribute('aria-selected', 'true');
 
-    init() {
-        this.tabList.setAttribute('role', 'tablist');
+    oldTab.removeAttribute('aria-selected');
+    oldTab.setAttribute('tabindex', '-1');
 
-        this.tabsBtns.forEach((el, i) => {
-            el.setAttribute('role', 'tab');
-            el.setAttribute('id', `${this.selector}${i + 1}`);
-            el.classList.remove('tabs__nav-btn--active');
+    let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
+    let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
 
-            el.removeAttribute('tabindex');
-        });
+    this.tabsPanels[oldIndex].classList.remove('tabs__panel--active');
+    this.tabsPanels[index].classList.add('tabs__panel--active');
 
-        this.tabsPanels.forEach((el, i) => {
-            el.setAttribute('role', 'tabpanel');
-            el.setAttribute('aria-labelledby', this.tabsBtns[i].id);
-            el.classList.remove('tabs__panel--active');
-        });
+    this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
+    this.tabsBtns[index].classList.add('tabs__nav-btn--active');
 
-        this.tabsBtns[0].classList.add('tabs__nav-btn--active');
-        this.tabsBtns[0].setAttribute('aria-selected', 'true');
-        this.tabsPanels[0].classList.add('tabs__panel--active');
-        this.tabsBtns[0].setAttribute('tabindex', '-1');
-    }
-
-    events() {
-        this.tabsBtns.forEach((el, i) => {
-            el.addEventListener('click', (e) => {
-                let currentTab = this.tabList.querySelector('[aria-selected]');
-
-                if (e.currentTarget !== currentTab) {
-                    this.switchTabs(e.currentTarget, currentTab);
-                }
-            });
-
-            el.addEventListener('keydown', (e) => {
-                let index = Array.prototype.indexOf.call(this.tabsBtns, e.currentTarget);
-
-                let dir = null;
-
-                if (e.which === 37) {
-                    dir = index - 1;
-                } else if (e.which === 39) {
-                    dir = index + 1;
-                } else if (e.which === 40) {
-                    dir = 'down';
-                } else {
-                    dir = null;
-                }
-
-                if (dir !== null) {
-                    if (dir === 'down') {
-                        this.tabsPanels[i].focus();
-                    } else if (this.tabsBtns[dir]) {
-                        this.switchTabs(this.tabsBtns[dir], e.currentTarget);
-                    }
-                }
-            });
-        });
-    }
-
-    switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
-        newTab.focus();
-        newTab.removeAttribute('tabindex');
-        newTab.setAttribute('aria-selected', 'true');
-        oldTab.removeAttribute('aria-selected');
-
-        let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
-        let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
-
-        this.tabsPanels[oldIndex].classList.remove('tabs__panel--active');
-        this.tabsPanels[index].classList.add('tabs__panel--active');
-
-        this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
-        this.tabsBtns[index].classList.add('tabs__nav-btn--active');
-
-        this.tabsBtns[index].setAttribute('tabindex', '-1');
-        this.tabsBtns[oldIndex].removeAttribute('tabindex');
-
-        this.options.isChanged(this);
-    }
+    this.options.isChanged(this);
+  }
 }
 
 /***/ }),
