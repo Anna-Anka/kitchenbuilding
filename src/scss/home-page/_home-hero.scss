@@ -1,6 +1,6 @@
 .home-hero {
 	@include adaptiv-value('padding-top', 10, 20, 1);
-	@include adaptiv-value('padding-bottom', 35, 20, 1);
+	@include adaptiv-value('padding-bottom', 60, 40, 1);
 	padding-right: 35px;
 	padding-left: 35px;
 
@@ -27,16 +27,20 @@
 		);
 		border-radius: 30px;
 
-		&::before {
+		&::before,
+		&::after {
 			position: absolute;
-			top: 5px;
 			left: 0;
 			width: 100%;
+			content: '';
+			@include bg-cover;
+		}
+
+		&::before {
+			top: 5px;
 			height: 100%;
 			background-image: url('../img/home-hero/bg.png');
 			border-radius: inherit;
-			content: '';
-			@include bg-cover;
 
 			@include mq(lg) {
 				@include adaptiv-value('height', 630, 264, 1);
@@ -46,6 +50,14 @@
 			@include mq(sm) {
 				height: 320px;
 			}
+		}
+
+		&::after {
+			bottom: 0;
+			background-image: url('../img/home-hero/bottom-bg.svg');
+			background-size: contain;
+			transform: translateY(50%);
+			@include adaptiv-value('height', 62, 40, 1);
 		}
 
 		@include mq(lg) {
@@ -143,10 +155,10 @@
 		z-index: 2;
 
 		@include mq(lg) {
-			width: 100%;
 			position: relative;
 			bottom: unset;
 			left: unset;
+			width: 100%;
 		}
 	}
 
@@ -316,6 +328,51 @@
 
 		.swiper-pagination-bullet-active {
 			background-color: $grey-600;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		z-index: 2;
+		width: 100%;
+        @include adaptiv-value('padding', 15, 8, 1);
+		background-color: $white;
+		border-radius: 50%;
+		@include adaptiv-value('max-width', 100, 77, 1);
+		@include adaptiv-value('height', 100, 77, 1);
+		@include flex-all-center;
+		transform: translate(-50%, 70%);
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 3;
+			background-image: url('../img/home-hero/circle-arrow.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include adaptiv-value('width', 36, 26, 1);
+			@include adaptiv-value('height', 36, 26, 1);
+			@include bg-conatin;
+		}
+	}
+
+	&__circle {
+		@include bg-conatin;
+		@include adaptiv-value('max-width', 85, 62, 1);
+		@include adaptiv-value('height', 85, 62, 1);
+		width: 100%;
+		animation: 5s linear 0s normal none infinite running circle;
+	}
+
+	@keyframes circle {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
 		}
 	}
 }

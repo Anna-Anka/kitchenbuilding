@@ -1,23 +1,23 @@
 import '../_libs'
 
-export const simpleProductsSwiper = () => {
-    if (document.querySelector('.simple-products__swiper')) {
-        return new Swiper('.simple-products__swiper', {
+export const popularProductsSwiper = () => {
+    if (document.querySelector('.popular-products__swiper')) {
+        return new Swiper('.popular-products__swiper', {
             loop: true,
             speed: 800,
 
             navigation: {
-                nextEl: '.simple-products__button--next',
-                prevEl: '.simple-products__button--prev',
+                nextEl: '.popular-products__button--next',
+                prevEl: '.popular-products__button--prev',
             },
 
             pagination: {
-                el: '.simple-products__pagination',
+                el: '.popular-products__pagination',
                 clickable: true,
             },
 
             scrollbar: {
-                el: ".simple-products__scrollbar",
+                el: ".popular-products__scrollbar",
                 draggable: true
             },
 
