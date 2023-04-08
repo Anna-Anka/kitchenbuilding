@@ -54,8 +54,143 @@
 			}
 		}
 
-        &__calc {
-            display: none;
+		&__calc {
+			display: none;
+		}
+	}
+}
+
+.catalog-v2 {
+	.products {
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(444px, 1fr));
+			gap: 50px 38px;
+
+			@include mq(xl) {
+				gap: 20px 30px;
+			}
+
+            @include mq(lg) {
+                grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+            }
+		}
+
+        &__item {
+            &:not(:last-child) {
+               margin-bottom: 0;
+            }
         }
+
+		.product-card {
+			&__images {
+				padding-bottom: 54.5%;
+
+				@media (any-hover: hover) {
+					&:hover {
+						.product-card__small {
+							bottom: 10px;
+						}
+					}
+				}
+			}
+
+			&__small {
+				padding: 4px;
+				border-radius: 4px;
+
+				@media (any-hover: hover) {
+					bottom: -25px;
+				}
+			}
+
+			&__thumb {
+				height: 45px;
+			}
+
+            &__info {
+                @include mq(xl) {
+                    justify-content: space-between;
+                }
+            }
+
+			&__button {
+				width: 30px;
+				height: 30px;
+
+				&::after {
+					width: 8px;
+					height: 8px;
+				}
+
+				&--next {
+					right: 15px;
+				}
+
+				&--prev {
+					left: 15px;
+				}
+			}
+
+			&__subtitle,
+			&__link {
+				display: none;
+
+                @include mq(lg) {
+                    display: block;
+                }
+			}
+
+			&__name {
+				width: auto;
+				max-width: unset;
+			}
+
+			&__more {
+				display: block;
+				color: $red-600;
+				font-weight: $fw-600;
+				font-size: 16px;
+
+                @include mq(lg) {
+                    display: none;
+                }
+			}
+
+			&__pay {
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			&__cost {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				width: auto;
+				max-width: unset;
+				margin-right: 0;
+
+                @include mq(lg) {
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+			}
+
+			&__subprice {
+				margin-right: 15px;
+
+                @include mq(lg) {
+                    margin-right: 0;
+                }
+			}
+
+			&__question {
+				&::before {
+					width: 22px;
+					height: 22px;
+					font-size: 12px;
+				}
+			}
+		}
 	}
 }
