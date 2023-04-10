@@ -4,10 +4,14 @@
 	left: 0;
 	display: none;
 	width: 100%;
-	padding: 90px 20px 30px;
 	max-height: 100%;
+	padding: 90px 20px 30px;
 	overflow-y: auto;
 	background-color: $white;
+
+	@include mq(sm) {
+		padding-bottom: 110px;
+	}
 
 	&--active {
 		@include mq(lg) {

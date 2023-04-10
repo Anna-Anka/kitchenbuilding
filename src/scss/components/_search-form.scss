@@ -1,0 +1,69 @@
+.search-form {
+	position: absolute;
+	right: -50%;
+	bottom: 0;
+	z-index: 50;
+	width: 0;
+	max-width: 1045px;
+	height: 0;
+	border-radius: 1000px;
+	box-shadow: 0 4px 24px rgba($black, 0.17);
+	transform: translate(50%, 100%);
+	visibility: hidden;
+	transition: right 0.4s ease-in-out;
+
+	@include mq(lg) {
+		display: none;
+	}
+
+	&--active {
+		right: 50%;
+		width: 100%;
+		height: auto;
+		visibility: visible;
+		transition: right 0.4s ease-in-out;
+	}
+
+	&__field {
+		width: 100%;
+		padding: 20px 250px 20px 35px;
+		background-color: $white;
+		border-radius: inherit;
+	}
+
+	&__management {
+		position: absolute;
+		top: 50%;
+		right: 22px;
+		display: flex;
+		transform: translateY(-50%);
+	}
+
+	&__button {
+		margin-right: 10px;
+		padding: 9px 32px;
+		background-color: $dark-800;
+	}
+
+	&__close {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background-color: $grey-200;
+		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/close.svg');
+			transform: translate(50%, -50%);
+			filter: invert(52%) sepia(4%) saturate(63%) hue-rotate(314deg)
+				brightness(90%) contrast(81%);
+			content: '';
+			@include bg-conatin;
+		}
+	}
+}
