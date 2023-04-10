@@ -71,16 +71,16 @@
 				gap: 20px 30px;
 			}
 
-            @include mq(lg) {
-                grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
-            }
+			@include mq(lg) {
+				grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+			}
 		}
 
-        &__item {
-            &:not(:last-child) {
-               margin-bottom: 0;
-            }
-        }
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
 
 		.product-card {
 			&__images {
@@ -108,11 +108,13 @@
 				height: 45px;
 			}
 
-            &__info {
-                @include mq(xl) {
-                    justify-content: space-between;
-                }
-            }
+			&__info {
+				align-items: flex-start;
+
+				@include mq(xl) {
+					justify-content: space-between;
+				}
+			}
 
 			&__button {
 				width: 30px;
@@ -136,9 +138,9 @@
 			&__link {
 				display: none;
 
-                @include mq(lg) {
-                    display: block;
-                }
+				@include mq(lg) {
+					display: block;
+				}
 			}
 
 			&__name {
@@ -152,9 +154,9 @@
 				font-weight: $fw-600;
 				font-size: 16px;
 
-                @include mq(lg) {
-                    display: none;
-                }
+				@include mq(lg) {
+					display: none;
+				}
 			}
 
 			&__pay {
@@ -170,18 +172,20 @@
 				max-width: unset;
 				margin-right: 0;
 
-                @include mq(lg) {
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
+				@include mq(lg) {
+					flex-direction: column;
+					align-items: flex-end;
+				}
 			}
 
 			&__subprice {
+				display: none;
 				margin-right: 15px;
 
-                @include mq(lg) {
-                    margin-right: 0;
-                }
+				@include mq(lg) {
+					display: inline-block;
+					margin-right: 0;
+				}
 			}
 
 			&__question {

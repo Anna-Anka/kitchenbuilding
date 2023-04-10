@@ -74,5 +74,9 @@
 			color: $dark-800;
 			background-color: $grey-200;
 		}
+
+		@include mq(sm) {
+			padding: 25px 0 105px;
+		}
 	}
 }
