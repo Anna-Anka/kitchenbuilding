@@ -1,0 +1,23 @@
+.catalog-v2 {
+	.products {
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(444px, 1fr));
+			gap: 50px 38px;
+
+			@include mq(xl) {
+				gap: 20px 30px;
+			}
+
+			@include mq(lg) {
+				grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+			}
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,5 +1,8 @@
 .product-card {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
+	height: 100%;
 
 	&__images {
 		position: relative;
@@ -271,9 +274,9 @@
 		}
 	}
 
-    &__more {
-        display: none;
-    }
+	&__more {
+		display: none;
+	}
 
 	&__pay {
 		margin-left: auto;
