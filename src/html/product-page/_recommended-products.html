@@ -38,134 +38,305 @@
             </ul>
             <div class="tabs__wrapper">
                 <div class="tabs__content">
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '1',
-                            'badge' : 'dark',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика',
-                            'old' : 'false'
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '2',
-                            'badge' : 'base',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
-                            'old' : 'true',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'technique',
-                            'img' : '3',
-                            'badge' : 'photo',
-                            'title' : 'Комплект техники Simfer Комплект техники Simfer',
-                            'old' : 'true',
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'technique',
-                            'img' : '3',
-                            'title' : 'Комплект техники Simfer',
-                            'old' : 'false',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'technique',
+                                    'img' : '3',
+                                    'badge' : 'photo',
+                                    'title' : 'Комплект техники Simfer Комплект техники Simfer',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'technique',
+                                    'img' : '3',
+                                    'title' : 'Комплект техники Simfer',
+                                    'old' : 'false',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'technique',
+                                    'img' : '3',
+                                    'badge' : 'photo',
+                                    'title' : 'Комплект техники Simfer Комплект техники Simfer',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'technique',
+                                    'img' : '3',
+                                    'title' : 'Комплект техники Simfer',
+                                    'old' : 'false',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '1',
-                            'badge' : 'dark',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика',
-                            'old' : 'false'
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '2',
-                            'badge' : 'base',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
-                            'old' : 'true',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '1',
-                            'badge' : 'dark',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика',
-                            'old' : 'false'
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '2',
-                            'badge' : 'base',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
-                            'old' : 'true',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '1',
-                            'badge' : 'dark',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика',
-                            'old' : 'false'
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '2',
-                            'badge' : 'base',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
-                            'old' : 'true',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '1',
-                            'badge' : 'dark',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика',
-                            'old' : 'false'
-                            })
-                        </li>
-                        <li class="recommended-products__item">
-                            @include('./../components/cards/products/_recommended-product.html', {
-                            'type' : 'normal',
-                            'img' : '2',
-                            'badge' : 'base',
-                            'title' : 'Столешница',
-                            'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
-                            'old' : 'true',
-                            })
-                        </li>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '1',
+                                    'badge' : 'dark',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика',
+                                    'old' : 'false'
+                                    })
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+                                    @include('./../components/cards/products/_recommended-product.html', {
+                                    'type' : 'normal',
+                                    'img' : '2',
+                                    'badge' : 'base',
+                                    'title' : 'Столешница',
+                                    'subtext' : 'ПВХ 300х3,8 см, керамика ПВХ 300х3,8 см, керамика',
+                                    'old' : 'true',
+                                    })
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
                 </div>
                 <form class="to-price" action="#">
@@ -178,44 +349,51 @@
                             <span class="to-price__arrow arrow-button arrow-button--left" aria-hidden></span>
                         </button>
                     </div>
+
                     <ul class="to-price__items" id="price-items">
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked disabled>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня “Кастелло”</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня “Кастелло”</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                     </ul>
-                    <div class="to-price__footer">
-                        <button class="to-price__more" aria-controls="price-items" type="button">
-                            Ещё 12
+                    <div>
+                        <button class="to-price__show" aria-controls="price-items" type="button">
+                            <span class="to-price__more">Ещё 12</span>
                         </button>
                         <div class="to-price__cost">
                             <span class="to-price__total">Итого</span>

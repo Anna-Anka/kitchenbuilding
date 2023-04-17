@@ -1,17 +1,15 @@
 .to-price {
 	align-self: start;
-	width: 49%;
+	width: 100%;
+	max-width: 325px;
+	padding: 25px;
 	background-color: $white;
 	border-radius: 12px;
 	box-shadow: 0 4px 54px rgba($black, 0.1);
-	@include adaptiv-value('padding-top', 30, 25, 1);
-	@include adaptiv-value('padding-bottom', 30, 25, 1);
-	@include adaptiv-value('padding-right', 45, 16, 1);
-	@include adaptiv-value('padding-left', 45, 16, 1);
 
 	@include mq(lg) {
 		display: none;
-		width: 100%;
+		max-width: 100%;
 	}
 
 	&--visible {
@@ -59,7 +57,7 @@
 	}
 
 	&__items {
-		@include adaptiv-value('margin-bottom', 27, 7, 1);
+		@include adaptiv-value('margin-bottom', 12, 7, 1);
 	}
 
 	&__item {
@@ -85,6 +83,16 @@
 	&__label {
 		display: flex;
 		@include adaptiv-value('margin-right', 20, 12, 1);
+		@include adaptiv-value('max-width', 24, 20, 1);
+		width: 100%;
+	}
+
+	&__content {
+		width: 100%;
+
+        @include mq(xl) {
+            @include flex-center-sb;
+        }
 	}
 
 	&__descr {
@@ -100,7 +108,7 @@
 
 	&__subtitle,
 	&__price {
-		@include adaptiv-value('font-size', 20, 14, 1);
+		@include adaptiv-value('font-size', 16, 14, 1);
 	}
 
 	&__subtitle {
@@ -109,7 +117,8 @@
 
 	&__subtext {
 		color: $grey-600;
-		@include adaptiv-value('font-size', 16, 12, 1);
+		font-weight: $fw-400;
+		font-size: 12px;
 	}
 
 	&__price {
@@ -117,23 +126,29 @@
 		margin-left: auto;
 	}
 
+	&__show {
+		width: 100%;
+		margin-bottom: 12px;
+		padding: 6px 12px;
+		color: $dark-800;
+		font-weight: $fw-600;
+		font-size: 12px;
+		background-color: rgba($grey-600, 0.2);
+		border-radius: 1000px;
+	}
+
 	&__more {
 		position: relative;
-		padding-right: 22px;
-		color: $red-600;
-		font-weight: $fw-600;
-		@include adaptiv-value('font-size', 16, 14, 1);
+		padding-right: 18px;
 
 		&::before {
 			position: absolute;
 			top: 50%;
 			right: 0;
-			width: 14px;
-			height: 14px;
+			width: 12px;
+			height: 12px;
 			background-image: url('../img/icons/arrow.svg');
 			transform: translateY(-50%);
-			filter: invert(16%) sepia(53%) saturate(7081%) hue-rotate(350deg)
-				brightness(79%) contrast(89%);
 			transition: transform 0.3s ease-in-out;
 			content: '';
 			@include bg-conatin;
@@ -150,14 +165,13 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-        @include adaptiv-value('margin-top', -20, -10, 1);
 		margin-bottom: 20px;
 	}
 
 	&__total {
 		margin-right: 10px;
 		font-weight: $fw-600;
-		@include adaptiv-value('fon-size', 24, 16, 1);
+		@include adaptiv-value('font-size', 20, 16, 1);
 	}
 
 	.product-price {

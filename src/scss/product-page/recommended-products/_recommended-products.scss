@@ -39,23 +39,26 @@
 
 		&__wrapper {
 			display: flex;
+			justify-content: space-between;
 		}
 
 		&__content {
-			width: 49%;
+			width: 100%;
+			@include adaptiv-value('max-width', 1015, 500, 1);
 			margin-right: 20px;
 
-			@include mq(lg) {
-				width: 100%;
-				margin-right: 0;
+			@include mq(xl) {
+				max-width: 650px;
 			}
 
-			@include mq(sm) {
-				overflow-x: auto;
+			@include mq(lg) {
+				max-width: 100%;
+				margin-right: 0;
 			}
 		}
 
 		&__panel {
+			position: relative;
 			display: none;
 
 			&--active {
@@ -64,9 +67,23 @@
 		}
 	}
 
-	&__items {
+	&__wrapper {
+		position: relative;
+	}
+
+	&__list {
 		display: flex;
+	}
+
+	&__swiper {
+		position: static;
 		width: 100%;
+		max-width: 875px;
+
+		@include mq(xl) {
+			max-width: 100%;
+			padding-bottom: 10px;
+		}
 	}
 
 	&__item {
@@ -91,6 +108,48 @@
 
 		&--hidden {
 			display: none;
+		}
+	}
+
+	&__scrollbar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 1.5px;
+		background-color: rgba($grey-200, 0.2);
+
+		@include mq(xl) {
+			display: block;
+		}
+
+		.swiper-scrollbar-drag {
+			height: 3px;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 48%;
+		background-color: $grey-200;
+
+		@include mq(xl) {
+			display: none;
+		}
+
+		&--next {
+			@include adaptiv-value('right', 0, -30, 1);
+		}
+
+		&--prev {
+			@include adaptiv-value('left', 0, -30, 1);
+		}
+
+		&::after {
+			width: 16px;
+			height: 16px;
+			filter: invert(0);
 		}
 	}
 }
