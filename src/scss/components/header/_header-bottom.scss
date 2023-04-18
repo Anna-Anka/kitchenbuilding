@@ -50,9 +50,42 @@
 		font-weight: $fw-600;
 		font-size: 16px;
 
+		&--menu {
+			display: flex;
+			align-items: center;
+
+			.header-bottom__link {
+				margin-right: 4px;
+			}
+		}
+
 		&:not(:last-child) {
 			@include adaptiv-value('margin-right', 80, 0, 1);
 		}
+	}
+
+	&__button {
+		position: relative;
+		width: 16px;
+		height: 16px;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 10px;
+			height: 10px;
+			background-image: url('../img/sprite.svg#menu-arrow');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg-conatin;
+		}
+
+        &--active {
+            &::before {
+                filter: invert(19%) sepia(31%) saturate(5680%) hue-rotate(342deg) brightness(110%) contrast(102%);
+            }
+        }
 	}
 
 	.header-user {

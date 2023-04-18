@@ -1,5 +1,4 @@
 <header class="header">
-    <div class="overlay" aria-hidden="true" data-menu-overlay></div>
     <nav class="header__navigation">
         <div class="header-top">
             <div class="container">
@@ -48,10 +47,11 @@
                         <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
                     </a>
                     <ul class="header-bottom__items">
-                        <li class="header-bottom__item">
+                        <li class="header-bottom__item header-bottom__item--menu">
                             <a class="header-bottom__link" href="#">
                                 Каталог
                             </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
                         </li>
                         <li class="header-bottom__item">
                             <a class="header-bottom__link" href="#">
@@ -96,6 +96,72 @@
                     <button class="search-form__close" type="button">
                         <span class="sr-only">Закрыть поиск</span>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                @include('./cards/products/_product-today.html', {
+                                'img' : '1',
+                                'gradient' : 'product-today__image--gradient',
+                                'label' : 'true',
+                                'label-type' : 'product-today__label--light',
+                                'label-text' : 'Рекомендуем сегодня',
+                                'title' : 'Светлая кухня',
+                                'subtitle' : 'Специально для любителей светлого',
+                                'arrow' : 'true'
+                                })
+                            </li>
+                            <li class="drop-menu__recommended">
+                                @include('./cards/products/_product-today.html', {
+                                'img' : '3',
+                                'gradient' : 'product-today__image--gradient',
+                                'label' : 'true',
+                                'label-type' : 'product-today__label--dark',
+                                'label-text' : 'Выгодное предложение',
+                                'title' : 'Скидка на духовой шкаф',
+                                'subtitle' : 'При покупке комплекта техники',
+                                'arrow' : 'true'
+                                })
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
