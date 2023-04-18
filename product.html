@@ -13,11 +13,11 @@
 
 <body class="body">
   <div class="wrapper">
+    <div class="overlay" aria-hidden="true"></div>
 
 <!--  -->
 
 <header class="header">
-    <div class="overlay" aria-hidden="true" data-menu-overlay></div>
     <nav class="header__navigation">
         <div class="header-top">
             <div class="container">
@@ -45,7 +45,9 @@
                         </li>
                     </ul>
                     <div class="header-top__user">
-                        <button class="header-top__search" type="button">Поиск</button>
+                        <button class="header-top__search" type="button">
+                            Поиск
+                        </button>
                         <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
                             + 7 (495) 189-65-92
                         </a>
@@ -64,10 +66,11 @@
                         <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
                     </a>
                     <ul class="header-bottom__items">
-                        <li class="header-bottom__item">
+                        <li class="header-bottom__item header-bottom__item--menu">
                             <a class="header-bottom__link" href="#">
                                 Каталог
                             </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
                         </li>
                         <li class="header-bottom__item">
                             <a class="header-bottom__link" href="#">
@@ -101,138 +104,245 @@
                     </button>
                 </div>
             </div>
+
+            <div class="search-form">
+                <label class="sr-only" for="header-search">Что искать?</label>
+                <input class="search-form__field" name="search" type="text" placeholder="Введите поиск..." id="header-search" required>
+                <div class="search-form__management">
+                    <button class="search-form__button button" type="submit">
+                        Искать
+                    </button>
+                    <button class="search-form__close" type="button">
+                        <span class="sr-only">Закрыть поиск</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--light">
+            Рекомендуем сегодня
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/1.avif" type="image/avif">
+            <source srcset="img/recommend-today/1.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/1.png" alt="Светлая кухня" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Светлая кухня</a>
+        </h3>
+        <span class="product-today__subtitle">Специально для любителей светлого</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--dark">
+            Выгодное предложение
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/3.avif" type="image/avif">
+            <source srcset="img/recommend-today/3.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/3.png" alt="Скидка на духовой шкаф" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
+        </h3>
+        <span class="product-today__subtitle">При покупке комплекта техники</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="burger-menu" id="header-burger-menu" data-menu>
-            <div class="burger-menu__user header-user">
-                <a class="header-user__favorite" href="#">
-                    <span class="header-user__icon" aria-hidden="true"></span>
-                    Избранное (0)
-                </a>
-                <button class="header-user__call button" type="button">
-                    Заказать звонок
-                </button>
-            </div>
-            <ul class="burger-menu__accordion menu-accordion">
-                <li class="menu-accordion__item">
-                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
-                    <ul class="menu-accordion__content">
-                        <li class="menu-accordion__link">
-                            <a href="#">Сотрудничество</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Адреса салонов</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-accordion__item">
-                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
-                    <ul class="menu-accordion__content">
-                        <li class="menu-accordion__link">
-                            <a href="#">Сотрудничество</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Адреса салонов</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-accordion__item">
-                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
-                    <ul class="menu-accordion__content">
-                        <li class="menu-accordion__link">
-                            <a href="#">Сотрудничество</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Адреса салонов</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-accordion__item">
-                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
-                    <ul class="menu-accordion__content">
-                        <li class="menu-accordion__link">
-                            <a href="#">Сотрудничество</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Адреса салонов</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-accordion__item">
-                    <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
-                    <ul class="menu-accordion__content">
-                        <li class="menu-accordion__link">
-                            <a href="#">Сотрудничество</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">Адреса салонов</a>
-                        </li>
-                        <li class="menu-accordion__link">
-                            <a href="#">О компании</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
-                kuhnistroy@kuhni.ru
-            </a>
-            <div class="burger-menu__bottom menu-bottom">
-                <ul class="social">
-                    <li class="social__item">
-                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
-                            <span class="sr-only">Facebook</span>
-                        </a>
+            <div class="burger-menu__box">
+                <div class="burger-menu__user header-user">
+                    <a class="header-user__favorite" href="#">
+                        <span class="header-user__icon" aria-hidden="true"></span>
+                        Избранное (0)
+                    </a>
+                    <button class="header-user__call button" type="button">
+                        Заказать звонок
+                    </button>
+                </div>
+                <ul class="burger-menu__accordion menu-accordion">
+                    <li class="menu-accordion__item">
+                        <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="menu-accordion__content">
+                            <li class="menu-accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
-                            <span class="sr-only">vk</span>
-                        </a>
+                    <li class="menu-accordion__item">
+                        <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                        <ul class="menu-accordion__content">
+                            <li class="menu-accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
-                            <span class="sr-only">instagram</span>
-                        </a>
+                    <li class="menu-accordion__item">
+                        <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                        <ul class="menu-accordion__content">
+                            <li class="menu-accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
-                            <span class="sr-only">classmates</span>
-                        </a>
+                    <li class="menu-accordion__item">
+                        <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                        <ul class="menu-accordion__content">
+                            <li class="menu-accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
-                            <span class="sr-only">youtube</span>
-                        </a>
+                    <li class="menu-accordion__item">
+                        <button class="menu-accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                        <ul class="menu-accordion__content">
+                            <li class="menu-accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="menu-accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
-                <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                    kuhnistroy@kuhni.ru
+                </a>
+                <div class="burger-menu__bottom menu-bottom">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                                <span class="sr-only">vk</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                                <span class="sr-only">classmates</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                    <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -870,8 +980,10 @@
             </ul>
             <div class="tabs__wrapper">
                 <div class="tabs__content">
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -908,8 +1020,8 @@
     </div>
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -950,10 +1062,99 @@
     </div>
 </aricle>
 
-                        </li>
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge recommended-product__badge--dark">
+            Вариант на фото
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/1.avif" type="image/avif">
+            <source srcset="img/recommended/1.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/1.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/2.avif" type="image/avif">
+            <source srcset="img/recommended/2.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/2.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product recommended-product--technique">
     <div class="recommended-product__image">
@@ -1000,8 +1201,8 @@
 
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product recommended-product--technique">
     <div class="recommended-product__image">
@@ -1038,10 +1239,105 @@
 
 </aricle>
 
-                        </li>
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product recommended-product--technique">
+    <div class="recommended-product__image">
+
+            <picture>
+                <source srcset="img/recommended/label.avif" type="image/avif">
+                <source srcset="img/recommended/label.webp" type="image/webp">
+                <img class="recommended-product__label" src="img/recommended/label.png" alt="simfer" width="57" height="24" loading="lazy">
+            </picture>
+
+        <picture>
+            <source srcset="img/recommended/3.avif" type="image/avif">
+            <source srcset="img/recommended/3.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/3.png" alt="Рекомндуемый товар 1" width="325" height="200" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Комплект техники Simfer Комплект техники Simfer</h3>
+            <ol class="recommended-product__text">
+                <li>Варочная поверхность</li>
+                <li>Духовой шкаф</li>
+                <li>Посудомоечна машина</li>
+            </ol>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product recommended-product--technique">
+    <div class="recommended-product__image">
+
+        <picture>
+            <source srcset="img/recommended/3.avif" type="image/avif">
+            <source srcset="img/recommended/3.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/3.png" alt="Рекомндуемый товар 1" width="325" height="200" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Комплект техники Simfer</h3>
+            <ol class="recommended-product__text">
+                <li>Варочная поверхность</li>
+                <li>Духовой шкаф</li>
+                <li>Посудомоечна машина</li>
+            </ol>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+
+</aricle>
+
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1078,8 +1374,8 @@
     </div>
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1120,10 +1416,8 @@
     </div>
 </aricle>
 
-                        </li>
-                    </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1160,8 +1454,8 @@
     </div>
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1202,10 +1496,19 @@
     </div>
 </aricle>
 
-                        </li>
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1242,8 +1545,8 @@
     </div>
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1284,10 +1587,8 @@
     </div>
 </aricle>
 
-                        </li>
-                    </ul>
-                    <ul class="recommended-products__items tabs__panel">
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1324,8 +1625,8 @@
     </div>
 </aricle>
 
-                        </li>
-                        <li class="recommended-products__item">
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
 
 <aricle class="recommended-product">
 
@@ -1366,7 +1667,356 @@
     </div>
 </aricle>
 
-                        </li>
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
+                    </ul>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge recommended-product__badge--dark">
+            Вариант на фото
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/1.avif" type="image/avif">
+            <source srcset="img/recommended/1.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/1.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/2.avif" type="image/avif">
+            <source srcset="img/recommended/2.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/2.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge recommended-product__badge--dark">
+            Вариант на фото
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/1.avif" type="image/avif">
+            <source srcset="img/recommended/1.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/1.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/2.avif" type="image/avif">
+            <source srcset="img/recommended/2.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/2.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
+                    </ul>
+                    <ul class="recommended-products__list tabs__panel">
+                        <div class="recommended-products__swiper swiper">
+                            <ul class="recommended-products__items swiper-wrapper">
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge recommended-product__badge--dark">
+            Вариант на фото
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/1.avif" type="image/avif">
+            <source srcset="img/recommended/1.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/1.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/2.avif" type="image/avif">
+            <source srcset="img/recommended/2.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/2.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge recommended-product__badge--dark">
+            Вариант на фото
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/1.avif" type="image/avif">
+            <source srcset="img/recommended/1.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/1.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                                <li class="recommended-products__item swiper-slide">
+
+<aricle class="recommended-product">
+
+    <div class="recommended-product__image">
+
+        <span class="recommended-product__badge">
+            Базовый вариант
+        </span>
+
+        <picture>
+            <source srcset="img/recommended/2.avif" type="image/avif">
+            <source srcset="img/recommended/2.webp" type="image/webp">
+            <img class="recommended-product__img" src="img/recommended/2.png" alt="Рекомндуемый товар 1" width="325" height="260" loading="lazy">
+        </picture>
+    </div>
+    <div class="recommended-product__content">
+        <div class="recommended-product__descr">
+            <h3 class="recommended-product__title">Столешница</h3>
+            <p class="recommended-product__text">ПВХ 300×3,8 см, керамика ПВХ 300×3,8 см, керамика</p>
+            <div class="product-price">
+                <span class="product-price__current">
+                    95 000 ₽
+                </span>
+
+                <span class="product-price__old">
+                    109 999 ₽
+                </span>
+
+            </div>
+        </div>
+        <form action="#">
+            <label class="recommended-product__add">
+                <input class="checkbox-hidden" type="checkbox" name="add">
+                <span class="checkbox-visible" aria-hidden="true"></span>
+                Добавлено к общей стоимости
+            </label>
+        </form>
+    </div>
+</aricle>
+
+                                </li>
+                            </ul>
+                            <div class="recommended-products__scrollbar"></div>
+                            <button class="recommended-products__button recommended-products__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                            </button>
+                            <button class="recommended-products__button recommended-products__button--next arrow-button swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </ul>
                 </div>
                 <form class="to-price" action="#">
@@ -1379,44 +2029,51 @@
                             <span class="to-price__arrow arrow-button arrow-button--left" aria-hidden></span>
                         </button>
                     </div>
+
                     <ul class="to-price__items" id="price-items">
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked disabled>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня «Кастелло»</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня «Кастелло»</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня «Кастелло»</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня «Кастелло»</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                         <li class="to-price__item">
                             <label class="to-price__label">
                                 <input class="checkbox-hidden" type="checkbox" name="add" value="Кухня “Кастелло”" checked>
                                 <span class="checkbox-visible" aria-hidden="true"></span>
                             </label>
-                            <div class="to-price__descr">
-                                <span class="to-price__subtitle">Кухня «Кастелло»</span>
-                                <span class="to-price__subtext">Набор фурнитуры</span>
+                            <div class="to-price__content">
+                                <div class="to-price__descr">
+                                    <span class="to-price__subtitle">Кухня «Кастелло»</span>
+                                    <span class="to-price__subtext">Набор фурнитуры</span>
+                                </div>
+                                <span class="to-price__price">75 000 ₽</span>
                             </div>
-                            <span class="to-price__price">75 000 ₽</span>
                         </li>
                     </ul>
-                    <div class="to-price__footer">
-                        <button class="to-price__more" aria-controls="price-items" type="button">
-                            Ещё 12
+                    <div>
+                        <button class="to-price__show" aria-controls="price-items" type="button">
+                            <span class="to-price__more">Ещё 12</span>
                         </button>
                         <div class="to-price__cost">
                             <span class="to-price__total">Итого</span>

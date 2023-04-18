@@ -50,14 +50,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _project_favorite_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project/_favorite-button */ "./src/js/project/_favorite-button.js");
-/* harmony import */ var _project_product_kit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project/_product-kit */ "./src/js/project/_product-kit.js");
-/* harmony import */ var _project_sort__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project/_sort */ "./src/js/project/_sort.js");
+/* harmony import */ var _project_open_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project/_open-menu */ "./src/js/project/_open-menu.js");
+/* harmony import */ var _project_product_kit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project/_product-kit */ "./src/js/project/_product-kit.js");
+/* harmony import */ var _project_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./project/_search */ "./src/js/project/_search.js");
+/* harmony import */ var _project_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./project/_sort */ "./src/js/project/_sort.js");
 
 
 
-(0,_project_sort__WEBPACK_IMPORTED_MODULE_2__.sort)();
+
+
+(0,_project_sort__WEBPACK_IMPORTED_MODULE_4__.sort)();
 (0,_project_favorite_button__WEBPACK_IMPORTED_MODULE_0__.favoriteButton)();
-(0,_project_product_kit__WEBPACK_IMPORTED_MODULE_1__.productKit)();
+(0,_project_product_kit__WEBPACK_IMPORTED_MODULE_2__.productKit)();
+(0,_project_search__WEBPACK_IMPORTED_MODULE_3__.search)();
+(0,_project_open_menu__WEBPACK_IMPORTED_MODULE_1__.openMenu)();
 
 /***/ }),
 
@@ -74,6 +80,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _swipers_popular_products__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swipers/_popular-products */ "./src/js/swipers/_popular-products.js");
 /* harmony import */ var _swipers_product_card_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./swipers/_product-card-slider */ "./src/js/swipers/_product-card-slider.js");
 /* harmony import */ var _swipers_recommend_today__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./swipers/_recommend-today */ "./src/js/swipers/_recommend-today.js");
+/* harmony import */ var _swipers_recommended_products__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./swipers/_recommended-products */ "./src/js/swipers/_recommended-products.js");
+
 
 
 
@@ -84,6 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_swipers_recommend_today__WEBPACK_IMPORTED_MODULE_4__.recommendTodaySwiper)();
 (0,_swipers_popular_products__WEBPACK_IMPORTED_MODULE_2__.popularProductsSwiper)();
 (0,_swipers_home_hero__WEBPACK_IMPORTED_MODULE_0__.homeHeroSwiper)();
+(0,_swipers_recommended_products__WEBPACK_IMPORTED_MODULE_5__.recommendedProductsSwiper)();
 
 /***/ }),
 
@@ -351,8 +360,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const recommendedToPriceMore = () => {
   if (document.querySelector('.to-price__more')) {
+    const button = document.querySelector('.to-price__show');
     const more = document.querySelector('.to-price__more');
-    more.addEventListener('click', () => {
+    button.addEventListener('click', () => {
       more.classList.toggle('to-price__more--expanded');
       if (more.classList.contains('to-price__more--expanded')) {
         more.innerHTML = 'Скрыть';
@@ -421,6 +431,67 @@ const favoriteButton = () => {
 
 /***/ }),
 
+/***/ "./src/js/project/_open-menu.js":
+/*!**************************************!*\
+  !*** ./src/js/project/_open-menu.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "openMenu": () => (/* binding */ openMenu)
+/* harmony export */ });
+/* harmony import */ var _templates_disable_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../templates/disable-scroll */ "./src/js/templates/disable-scroll.js");
+/* harmony import */ var _templates_enable_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../templates/enable-scroll */ "./src/js/templates/enable-scroll.js");
+
+
+const openMenu = () => {
+  if (document.querySelector('.header-bottom__button')) {
+    const menuButton = document.querySelector('.header-bottom__button');
+    const menu = document.querySelector('.drop-menu');
+    const overlay = document.querySelector('.overlay');
+    const headerTop = document.querySelector('.header-top');
+    const headerBottom = document.querySelector('.header-bottom');
+    const calcHeightHeader = () => {
+      let height = headerTop.clientHeight + headerBottom.clientHeight;
+      menu.style.paddingTop = height + 'px';
+    };
+    const setDefault = () => {
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Открыть меню');
+      (0,_templates_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+    };
+    function clickWindow(event) {
+      if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
+        menuButton.classList.remove('header-bottom__button--active');
+        menu.classList.remove('drop-menu--active');
+        overlay.classList.remove('overlay--active');
+        setDefault();
+        window.removeEventListener('click', clickWindow);
+      }
+    }
+    calcHeightHeader();
+    window.addEventListener('resize', calcHeightHeader);
+    menuButton.addEventListener('click', () => {
+      menuButton.classList.toggle('header-bottom__button--active');
+      menu.classList.toggle('drop-menu--active');
+      overlay.classList.toggle('overlay--active');
+      window.removeEventListener('click', clickWindow);
+      if (menuButton.classList.contains('header-bottom__button--active')) {
+        menuButton.setAttribute('aria-expanded', 'true');
+        menuButton.setAttribute('aria-label', 'Закрыть меню');
+        (0,_templates_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+        window.addEventListener('click', clickWindow);
+      } else {
+        setDefault();
+      }
+    });
+  }
+};
+
+/***/ }),
+
 /***/ "./src/js/project/_product-kit.js":
 /*!****************************************!*\
   !*** ./src/js/project/_product-kit.js ***!
@@ -447,6 +518,35 @@ const productKit = () => {
         }
       });
     });
+  }
+};
+
+/***/ }),
+
+/***/ "./src/js/project/_search.js":
+/*!***********************************!*\
+  !*** ./src/js/project/_search.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "search": () => (/* binding */ search)
+/* harmony export */ });
+const search = () => {
+  if (document.querySelector('.header-top__search')) {
+    const searchButton = document.querySelector('.header-top__search');
+    const searchForm = document.querySelector('.search-form');
+    const closeButton = document.querySelector('.search-form__close');
+    searchButton.addEventListener('click', () => {
+      searchForm.classList.toggle('search-form--active');
+    });
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        searchForm.classList.remove('search-form--active');
+      });
+    }
   }
 };
 
@@ -793,6 +893,56 @@ const recommendTodaySwiper = () => {
 
 /***/ }),
 
+/***/ "./src/js/swipers/_recommended-products.js":
+/*!*************************************************!*\
+  !*** ./src/js/swipers/_recommended-products.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "recommendedProductsSwiper": () => (/* binding */ recommendedProductsSwiper)
+/* harmony export */ });
+/* harmony import */ var _libs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_libs */ "./src/js/_libs.js");
+
+const recommendedProductsSwiper = () => {
+  if (document.querySelector('.recommended-products__swiper')) {
+    const allSwipers = document.querySelectorAll('.recommended-products__swiper');
+    allSwipers.forEach(swiper => {
+      const swiperRecommended = new Swiper(swiper, {
+        loop: true,
+        speed: 800,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: swiper.querySelector('.recommended-products__button--next'),
+          prevEl: swiper.querySelector('.recommended-products__button--prev')
+        },
+        scrollbar: {
+          el: swiper.querySelector('.recommended-products__scrollbar'),
+          draggable: true
+        },
+        breakpoints: {
+          768: {
+            slidesPerGroup: 3,
+            slidesPerView: 3
+          },
+          560: {
+            slidesPerGroup: 2,
+            slidesPerView: 2.2
+          },
+          320: {
+            slidesPerGroup: 1,
+            slidesPerView: 1.5
+          }
+        }
+      });
+    });
+  }
+};
+
+/***/ }),
+
 /***/ "./src/js/templates/accordion.js":
 /*!***************************************!*\
   !*** ./src/js/templates/accordion.js ***!
@@ -851,28 +1001,34 @@ const burger = () => {
   const burger = document?.querySelector('[data-burger]');
   const menu = document?.querySelector('[data-menu]');
   const menuLinks = document?.querySelectorAll('[data-menu-link]');
-  const overlay = document?.querySelector('[data-menu-overlay]');
+  const overlay = document.querySelector('.overlay');
+  const setDefault = () => {
+    burger?.setAttribute('aria-expanded', 'false');
+    burger?.setAttribute('aria-label', 'открыть меню');
+    overlay.removeEventListener('click', clickOverlay);
+    (0,_templates_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+  };
+  const clickOverlay = () => {
+    burger.classList.remove('burger--active');
+    menu.classList.remove('burger-menu--active');
+    overlay.classList.remove('overlay--active');
+    console.log('clickOverlay');
+    setDefault();
+  };
   const checkClass = () => {
     if (burger?.classList.contains('burger--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'закрыть меню');
       (0,_templates_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+      overlay.addEventListener('click', clickOverlay);
     } else {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'открыть меню');
-      (0,_templates_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+      setDefault();
     }
   };
-  burger?.addEventListener('click', e => {
+  burger?.addEventListener('click', () => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('burger-menu--active');
-    overlay?.classList.toggle('overlay--active');
-    checkClass();
-  });
-  overlay?.addEventListener('click', () => {
-    burger.classList.remove('burger--active');
-    menu.classList.remove('burger-menu--active');
-    overlay.classList.remove('overlay--active');
+    overlay.classList.toggle('overlay--active');
     checkClass();
   });
   menuLinks?.forEach(el => {
