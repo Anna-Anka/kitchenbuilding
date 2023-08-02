@@ -1,19 +1,20 @@
 @include('./components/links/_head.html',
 { 'title' : 'Кухнистрой — интернет-магазин кухонь | Страница товара' }
 )
-<!--  -->
+
 @include('./components/_header.html')
 
 @include('./components/_mobile-menu.html')
 
 @include('./components/_breadcrumbs.html', {
-    'current' : 'Каталог'
+'class' : 'breadcrumbs',
+'current' : 'Каталог'
 })
 
 <main class="main">
     <section class="catalog catalog-v2">
         <div class="container">
-            <h1 class="title title--large">Каталог</h1>
+            <h1 class="title title--medium">Каталог</h1>
             @include('./catalog-page/_filters.html')
         </div>
         @include('./catalog-page/_products.html')
@@ -21,5 +22,5 @@
 </main>
 
 @include('./components/_footer.html')
-<!--  -->
+
 @include('./components/links/_bottom.html')

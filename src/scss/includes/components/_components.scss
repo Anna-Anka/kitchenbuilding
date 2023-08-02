@@ -1,0 +1,43 @@
+// * header
+@import '../../components/header/header-user';
+@import '../../components/header/header-top';
+@import '../../components/header/header-bottom';
+@import '../../components/header/drop-menu';
+
+// * burger
+@import '../../components/header/burger/burger';
+@import '../../components/header/burger/burger-menu';
+
+@import '../../components/social';
+@import '../../components/search';
+@import '../../components/menu-bottom';
+@import '../../components/breadcrumbs';
+@import '../../components/swiper';
+@import '../../components/product-price';
+@import '../../components/favorite-button';
+@import '../../components/consultation';
+@import '../../components/form';
+@import '../../components/product-kit';
+@import '../../components/mobile-menu';
+@import '../../components/search-form';
+@import '../../components/circle-link';
+
+@import '../../components/hero-section';
+
+// * cards
+@import '../../components/cards/sketch-card';
+@import '../../components/cards/characteristic-card';
+@import '../../components/cards/kitchenbuilding-card';
+@import '../../components/cards/approach-card';
+
+// * products-card
+@import '../../components/cards/products/product-card';
+@import '../../components/cards/products/preview-model';
+@import '../../components/cards/products/similar-model';
+@import '../../components/cards/products/recommended-product';
+@import '../../components/cards/products/product-today';
+
+// * footer
+@import '../../components/footer/footer';
+@import '../../components/footer/menu-accordion';
+@import '../../components/footer/menu-bottom';

@@ -1,0 +1,29 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | О компании' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/_hero-section.html', {
+    'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
+    'breadcrumbs' : 'О компании',
+    'title' : 'Фабрика кухни',
+    'text' : '<p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>',
+    'folder' : 'about-page',
+    'action-1' : '<a class="button" href="#">О производстве</a>',
+    'action-2' : '<button class="button button--border" type="button">Оставить заявку</button>',
+    'circle-goto' : '',
+    'circle-text' : 'бесплатная разработка проекта'
+    })
+</main>
+
+@include('./components/_consultation.html', {
+'class' : 'consultation'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

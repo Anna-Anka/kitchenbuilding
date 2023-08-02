@@ -1,0 +1,31 @@
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-section__wrapper">
+            <span class="hero-section__inscription inscription" aria-hidden></span>
+            <div class="hero-section__content">
+                <span class="hero-section__inscription inscription" aria-hidden></span>
+                @include('./_breadcrumbs.html', {
+                'class' : 'breadcrumbs breadcrumbs--depend',
+                'current' : '@breadcrumbs'
+                })
+                <h1 class="hero-section__title title">
+                    @title
+                </h1>
+                <div class="hero-section__text">
+                    @text
+                </div>
+                <div class="hero-section__actions">
+                    @action-1
+                    @action-2
+                </div>
+            </div>
+            <div class="hero-section__image">
+                <span class="hero-section__bg" style="background-image: url('img/@folder/top-bg.jpg');" aria-hidden> </span>
+            </div>
+            <a class="circle-link" href="#" data-goto="@circle-goto">
+                <span class="circle-link__content circle-link__content--big" style="background-image: url('img/@folder/circle-link.svg');" aria-hidden></span>
+                <span class="sr-only">@circle-text</span>
+            </a>
+        </div>
+    </div>
+</section>

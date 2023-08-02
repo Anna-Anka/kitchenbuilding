@@ -2,6 +2,15 @@
 	padding-top: 10px;
 	@include adaptiv-value(' padding-bottom', 20, 10, 1);
 
+	&--depend {
+		padding-top: 0;
+		padding-bottom: 40px;
+
+		.container {
+			padding: 0;
+		}
+	}
+
 	&__items {
 		display: flex;
 		overflow-x: auto;

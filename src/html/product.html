@@ -2,22 +2,21 @@
 { 'title' : 'Кухнистрой — интернет-магазин кухонь | Страница товара' }
 )
 
-<!--  -->
-
 @include('./components/_header.html')
 
 @include('./components/_mobile-menu.html')
 
 @include('./components/_breadcrumbs.html', {
-    'count' : '2',
-    '2' : 'Каталог',
-    'current' : 'Кастелло Лайт'
+'class' : 'breadcrumbs',
+'count' : '2',
+'2' : 'Каталог',
+'current' : 'Кастелло Лайт'
 })
 
 <main class="main">
     <div class="product-page">
         <div class="container">
-            <h1 class="product-page__title title title--large">Кастелло</h1>
+            <h1 class="product-page__title title title--medium">Кастелло</h1>
         </div>
 
         <section class="product-page__card">
@@ -44,9 +43,9 @@
 </main>
 
 @include('./components/_consultation.html', {
-    'class' : 'consultation consultation--top'
+'class' : 'consultation consultation--top'
 })
 
 @include('./components/_footer.html')
-<!--  -->
+
 @include('./components/links/_bottom.html')

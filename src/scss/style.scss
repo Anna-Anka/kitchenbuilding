@@ -1,55 +1,10 @@
-/* stylelint-disable */
-
-// * standart
 @import 'fonts';
 @import 'vars';
 @import 'reset';
 @import 'mixins';
 @import 'libs';
 @import 'global';
-
-// * components
-
-//* header
-@import './components/header/header-user';
-@import './components/header/header-top';
-@import './components/header/header-bottom';
-@import './components/header/drop-menu';
-
-// * burger
-@import './components/header/burger/burger';
-@import './components/header/burger/burger-menu';
-
-@import './components/social';
-@import './components/search';
-@import './components/menu-bottom';
-@import './components/breadcrumbs';
-@import './components/swiper';
-@import './components/product-price';
-@import './components/favorite-button';
-@import './components/consultation';
-@import './components/form';
-@import './components/product-kit';
-@import './components/mobile-menu';
-@import './components/search-form';
-
-// * cards
-@import './components/cards/sketch-card';
-@import './components/cards/characteristic-card';
-@import './components/cards/kitchenbuilding-card';
-@import './components/cards/approach-card';
-
-// * products-card
-@import './components/cards/products/product-card';
-@import './components/cards/products/preview-model';
-@import './components/cards/products/similar-model';
-@import './components/cards/products/recommended-product';
-@import './components/cards/products/product-today';
-
-// * footer
-@import './components/footer/footer';
-@import './components/footer/menu-accordion';
-@import './components/footer/menu-bottom';
+@import 'includes';
 
 // * templates
 //@import './templates/stepper';
@@ -57,35 +12,4 @@
 //@import './templates/modal';
 //@import './templates/marquee';
 
-// * home-page
-
-@import './home-page/home-hero';
-@import './home-page/popular-products';
-@import './home-page/discuss';
-@import './home-page/recommend-today';
-@import './home-page/approach';
-@import './home-page/no-problems';
-@import './home-page/kitchenbuilding';
-@import './home-page/addresses';
-
-// * catalog-page
-@import './catalog-page/filters/filters';
-@import './catalog-page/filters/sort';
-@import './catalog-page/products';
-
-// * catalog-v2-page
-@import './catalog-v2-page/products';
-@import './catalog-v2-page/product-card';
-
-// * product-page
-@import './product-page/product-page';
-@import './product-page/product-card';
-@import './product-page/other-models';
-@import './product-page/product-navigation';
-@import './product-page/similar-models';
-@import './product-page/recommended-products/recommended-products';
-@import './product-page/recommended-products/to-price';
-@import './product-page/video';
-@import './product-page/sketches';
-@import './product-page/characteristics/characteristics';
-@import './product-page/characteristics/menu-accordion';
+// * about-page

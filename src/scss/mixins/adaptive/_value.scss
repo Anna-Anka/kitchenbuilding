@@ -6,28 +6,31 @@ $maxWidthContainer: 1390;
 $minWidth: 360;
 
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
-    $addSize: $startSize - $minSize;
+	$addSize: $startSize - $minSize;
 
-    @if $type==1 {
-        //Только если меньшe контейнера
-        #{$property}: $startSize + px;
+	@if $type==1 {
+		//Только если меньшe контейнера
+		#{$property}: $startSize + px;
 
-        @media (max-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContainer - #{$minWidth + px}}));
-        }
-    }
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(
+				#{$minSize + px} + #{$addSize} *
+					((100vw - 360px) / #{$maxWidthContainer - 360})
+			);
+		}
+	} @else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
 
-    @else if $type==2 {
-        //Только если больше контейнера
-        #{$property}: $startSize + px;
-
-        @media (min-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - #{$minWidth + px}}));
-        }
-    }
-
-    @else {
-        //Всегда
-        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - #{$minWidth + px}}));
-    }
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(
+				#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
+			);
+		}
+	} @else {
+		//Всегда
+		#{$property}: calc(
+			#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
+		);
+	}
 }
