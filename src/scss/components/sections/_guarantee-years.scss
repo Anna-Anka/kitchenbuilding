@@ -1,0 +1,54 @@
+.guarantee-years {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
+	&__header {
+		@include flex-center-sb;
+		@include adaptiv-value('padding-bottom', 40, 20, 1);
+
+		@include mq(md, min) {
+			padding-right: 30px;
+		}
+	}
+
+	&__descr {
+		width: 100%;
+		max-width: 1015px;
+		margin-right: 20px;
+
+		@include mq(lg) {
+			max-width: 547px;
+		}
+
+		@include mq(md) {
+			max-width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 14, 1);
+	}
+
+	&__items {
+		display: flex;
+		overflow: auto;
+		@include adaptiv-value('gap', 20, 10, 1);
+
+		@include mq(xl) {
+			flex-direction: column;
+		}
+
+		@include mq(sm) {
+			flex-direction: row;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+
+		@include mq(sm) {
+			flex-shrink: 0;
+		}
+	}
+}

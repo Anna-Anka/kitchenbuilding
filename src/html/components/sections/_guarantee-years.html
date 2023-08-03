@@ -1,0 +1,48 @@
+<section class="guarantee-years section section--large">
+    <div class="container">
+        <div class="guarantee-years__header">
+            <div class="guarantee-years__descr">
+                <h2 class="guarantee-years__title title">
+                    Гарантия 12 лет
+                </h2>
+                <div class="guarantee-years__text">
+                    <p>
+                        Уже много лет Фабрика Кухни ZETTA дает всем свои клиентам гарантию на кухни 12 лет. Такой большой гарантийный срок является следствием многолетнего опыта работы компании и
+                        жесточайшего отбора
+                        поставщиков. Каждый элемент кухни сделан таким образом, чтобы мы могли гарантировать его работу в течении 12 лет. На практике, реальный срок службы кухни составляет более 20
+                        лет.
+                    </p>
+                </div>
+            </div>
+            <div class="years-icon" aria-hidden>
+                <div class="years-icon__content">
+                    <span class="years-icon__decor"></span>
+                    <span class="years-icon__title">12</span>
+                    <span class="years-icon__text">лет</span>
+                </div>
+            </div>
+        </div>
+        <ul class="guarantee-years__items">
+            <li class="guarantee-years__item">
+                @include('../cards/_guarantee-card.html', {
+                'bg' : 'production',
+                'subtitle' : 'Производство',
+                'item-1' : 'Премиальная фурнитура от Grass (Австрия)',
+                'item-2' : 'Петли с 5-слойной стальной пластиной и системой Click',
+                'item-3' : 'Лучшая система крепления корпусов Camar (Италия)',
+                'item-4' : 'Металлические держатели в зоне духового шкафа'
+                })
+            </li>
+            <li class="guarantee-years__item">
+                @include('../cards/_guarantee-card.html', {
+                'bg' : 'assembly',
+                'subtitle' : 'Сборка',
+                'item-1' : 'Кухни собираются на производстве, а не у клиента дома',
+                'item-2' : 'Монтаж в один день с доставкой силами двух монтажников',
+                'item-3' : 'Только автоматизированное поточное производство фасадов',
+                'item-4' : 'Избыточный запас прочности и надежности корпусов'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

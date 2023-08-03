@@ -1,6 +1,6 @@
 .popular-products {
-    @include adaptiv-value('padding-top', 60, 40, 1);
-    
+	@include adaptiv-value('padding-top', 60, 40, 1);
+
 	&__wrapper {
 		position: relative;
 		@include adaptiv-value('padding-bottom', 40, 20, 1);
@@ -9,9 +9,9 @@
 	&__swiper {
 		position: static;
 
-        @include mq(md) {
-            margin-right: -15px;
-        }
+		@include mq(md) {
+			margin-right: -15px;
+		}
 	}
 
 	&__button {
@@ -88,18 +88,17 @@
 			top: 0;
 			left: 0;
 
-            @include mq(xl) {
-                border-radius: 10px;
-            }
+			@include mq(xl) {
+				border-radius: 10px;
+			}
 		}
 
-        &__name {
-            max-width: 190px;
-            margin-right: 10px;
-        }
+		&__name {
+			max-width: 190px;
+			margin-right: 10px;
+		}
 
 		&__title {
-			color: $black;
 			font-size: 16px;
 		}
 
@@ -112,10 +111,10 @@
 			color: rgba($black, 0.6);
 		}
 
-        &__cost,
-        &__info {
-            margin-right: 0;
-        }
+		&__cost,
+		&__info {
+			margin-right: 0;
+		}
 
 		.product-price {
 			display: flex;
@@ -128,10 +127,10 @@
 				}
 			}
 
-            &__old {
-                font-size: 12px;
-                opacity: 0.5;
-            }
+			&__old {
+				font-size: 12px;
+				opacity: 0.5;
+			}
 		}
 	}
 }

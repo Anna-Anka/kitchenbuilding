@@ -1,11 +1,12 @@
 .kitchenbuilding {
 	background-color: $grey-200;
+	@include adaptiv-value('padding-top', 60, 40, 1);
 	@include adaptiv-value('padding-bottom', 118, 71, 1);
 
 	&::before {
 		bottom: 0;
 		transform: translate(-50%, 50%);
-        
+
 		@include mq(sm) {
 			bottom: 17px;
 		}

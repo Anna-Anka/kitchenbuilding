@@ -3,6 +3,7 @@
 
 	@include mq(lg) {
 		padding-top: 20px;
+		padding-bottom: 45px;
 	}
 
 	.breadcrumbs {
@@ -106,6 +107,7 @@
 
 	&__text {
 		margin-bottom: 40px;
+		color: $dark-800;
 
 		@include mq(lg) {
 			margin-bottom: 20px;

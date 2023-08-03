@@ -236,6 +236,7 @@
 	}
 
 	&__subtext {
+		color: $dark-800;
 		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 

@@ -3,6 +3,7 @@
 	width: 100%;
 	max-width: 325px;
 	padding: 25px;
+	color: $dark-800;
 	background-color: $white;
 	border-radius: 12px;
 	box-shadow: 0 4px 54px rgba($black, 0.1);
@@ -82,17 +83,17 @@
 
 	&__label {
 		display: flex;
+		width: 100%;
 		@include adaptiv-value('margin-right', 20, 12, 1);
 		@include adaptiv-value('max-width', 24, 20, 1);
-		width: 100%;
 	}
 
 	&__content {
 		width: 100%;
 
-        @include mq(xl) {
-            @include flex-center-sb;
-        }
+		@include mq(xl) {
+			@include flex-center-sb;
+		}
 	}
 
 	&__descr {

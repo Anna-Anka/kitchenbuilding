@@ -260,12 +260,17 @@
 		@include adaptiv-value('margin-bottom', 5, 2, 1);
 	}
 
+	&__subtitle,
+	&__title,
+	&__question {
+		color: $dark-800;
+	}
+
 	&__title {
 		font-weight: $fw-700;
 	}
 
 	&__subtitle {
-		color: $grey-600;
 		font-size: 20px;
 		line-height: 1.1;
 
@@ -311,6 +316,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: flex-end;
+		font-weight: $fw-600;
 		white-space: nowrap;
 
 		&--active {

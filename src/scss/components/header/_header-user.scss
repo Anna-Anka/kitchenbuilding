@@ -6,6 +6,7 @@
 		position: relative;
 		margin-right: 10px;
 		padding: 15px 20px;
+		color: $dark-800;
 		font-weight: $fw-600;
 		font-size: 16px;
 		background-color: $grey-200;
@@ -21,7 +22,7 @@
 	}
 
 	&__icon {
-        @include adaptiv-value('width', 22, 14, 1);
+		@include adaptiv-value('width', 22, 14, 1);
 		@include adaptiv-value('height', 22, 14, 1);
 		margin-right: 6px;
 		background-image: url('../img/icons/heart.svg');

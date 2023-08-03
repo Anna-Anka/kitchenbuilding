@@ -12,9 +12,14 @@
 		content: '';
 	}
 
+	&__subtitle,
+	&__parametr {
+		color: $dark-800;
+		font-weight: $fw-600;
+	}
+
 	&__parametr {
 		max-width: 50%;
-		font-weight: $fw-600;
 	}
 
 	&__meaning {
@@ -64,10 +69,9 @@
 	}
 
 	&__subtitle {
-		@include adaptiv-value('font-size', 16, 14, 1);
 		display: block;
 		margin-bottom: 5px;
-		font-weight: $fw-600;
+		@include adaptiv-value('font-size', 16, 14, 1);
 	}
 
 	&__subtext {

@@ -29,9 +29,6 @@
 
 	&__title {
 		@include adaptiv-value('margin-bottom', 4, 2, 1);
-		@include adaptiv-value('font-size', 20, 14, 1);
-		font-weight: $fw-600;
-		line-height: 1.2;
 	}
 
 	&__text {

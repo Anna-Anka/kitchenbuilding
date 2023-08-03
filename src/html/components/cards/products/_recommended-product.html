@@ -7,7 +7,7 @@
             Вариант на фото
         </span>
         }
-        
+
         @if(context.badge === 'base') {
         <span class="recommended-product__badge">
             Базовый вариант
@@ -21,7 +21,7 @@
     </div>
     <div class="recommended-product__content">
         <div class="recommended-product__descr">
-            <h3 class="recommended-product__title">@title</h3>
+            <h3 class="recommended-product__title subtitle">@title</h3>
             <p class="recommended-product__text">@subtext</p>
             <div class="product-price">
                 <span class="product-price__current">
@@ -49,11 +49,11 @@
 <aricle class="recommended-product recommended-product--technique">
     <div class="recommended-product__image">
         @if(context.badge === 'photo') {
-            <picture>
-                <source srcset="img/recommended/label.avif" type="image/avif">
-                <source srcset="img/recommended/label.webp" type="image/webp">
-                <img class="recommended-product__label" src="img/recommended/label.png" alt="simfer" width="57" height="24" loading="lazy">
-            </picture>
+        <picture>
+            <source srcset="img/recommended/label.avif" type="image/avif">
+            <source srcset="img/recommended/label.webp" type="image/webp">
+            <img class="recommended-product__label" src="img/recommended/label.png" alt="simfer" width="57" height="24" loading="lazy">
+        </picture>
         }
         <picture>
             <source srcset="img/recommended/@img.avif" type="image/avif">

@@ -1,6 +1,5 @@
 .addresses {
-
-    @include adaptiv-value('padding-top', 60, 40, 1);
+	@include adaptiv-value('padding-top', 60, 40, 1);
 
 	&__title {
 		text-align: center;
@@ -55,9 +54,6 @@
 	}
 
 	&__subtitle {
-		font-weight: $fw-600;
-		@include adaptiv-value('font-size', 20, 14, 1);
-
 		&:not(:last-child) {
 			@include adaptiv-value('margin-bottom', 8, 5, 1);
 		}
@@ -101,7 +97,7 @@
 			width: 100%;
 		}
 
-        @include mq(sm) {
+		@include mq(sm) {
 			height: 220px;
 		}
 

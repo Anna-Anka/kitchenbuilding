@@ -7,7 +7,7 @@
 @include('./components/_mobile-menu.html')
 
 <main class="main">
-    @include('./components/_hero-section.html', {
+    @include('./components/sections/_hero-section.html', {
     'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
     'breadcrumbs' : 'О компании',
     'title' : 'Фабрика кухни',
@@ -18,6 +18,7 @@
     'circle-goto' : '',
     'circle-text' : 'бесплатная разработка проекта'
     })
+    @include('./components/sections/_guarantee-years.html')
 </main>
 
 @include('./components/_consultation.html', {

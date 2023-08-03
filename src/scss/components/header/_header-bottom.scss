@@ -33,6 +33,7 @@
 	&__items {
 		margin-right: 10px;
 		margin-left: auto;
+		color: $dark-800;
 		font-size: 16px;
 		background-color: $grey-200;
 		border-radius: 1000px;
@@ -81,11 +82,12 @@
 			@include bg-conatin;
 		}
 
-        &--active {
-            &::before {
-                filter: invert(19%) sepia(31%) saturate(5680%) hue-rotate(342deg) brightness(110%) contrast(102%);
-            }
-        }
+		&--active {
+			&::before {
+				filter: invert(19%) sepia(31%) saturate(5680%) hue-rotate(342deg)
+					brightness(110%) contrast(102%);
+			}
+		}
 	}
 
 	.header-user {
@@ -158,6 +160,7 @@
 	}
 
 	&__phone {
+		color: $dark-800;
 		font-size: 12px;
 	}
 

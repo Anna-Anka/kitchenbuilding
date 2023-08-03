@@ -3,8 +3,8 @@
 	margin-bottom: 20px;
 
 	&__item {
-        cursor: pointer;
-        
+		cursor: pointer;
+
 		&:not(:last-child) {
 			@include adaptiv-value('margin-right', 20, 12, 1);
 		}
@@ -29,14 +29,14 @@
 		&--down {
 			.sort__visible {
 				&::before {
-                    transform: rotate(180deg) translateY(50%);
-                }
+					transform: rotate(180deg) translateY(50%);
+				}
 			}
 		}
 
-        &--hidden {
-            display: none;
-        }
+		&--hidden {
+			display: none;
+		}
 	}
 
 	&__hidden {
@@ -49,14 +49,16 @@
 				opacity: 1;
 			}
 
-            &::before {
-                filter: invert(20%) sepia(61%) saturate(4441%) hue-rotate(347deg) brightness(81%) contrast(92%);
-            }
+			&::before {
+				filter: invert(20%) sepia(61%) saturate(4441%) hue-rotate(347deg)
+					brightness(81%) contrast(92%);
+			}
 		}
 	}
 
 	&__visible {
 		position: relative;
+		color: $dark-800;
 
 		&::before,
 		&::after {

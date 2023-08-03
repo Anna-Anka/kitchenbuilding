@@ -28,6 +28,7 @@
 
 		&__info {
 			align-items: flex-start;
+			margin-right: 0;
 
 			@include mq(xl) {
 				justify-content: space-between;
@@ -61,6 +62,16 @@
 			}
 		}
 
+		&__set {
+			@include mq(lg, min) {
+				display: flex;
+			}
+		}
+
+		&__kit {
+			margin-bottom: 0;
+		}
+
 		&__name {
 			width: auto;
 			max-width: unset;
@@ -74,6 +85,16 @@
 
 			@include mq(lg) {
 				display: none;
+			}
+		}
+
+		.product-price {
+			&__current {
+				@include adaptiv-value('font-size', 20, 16, 1);
+			}
+
+			&__old {
+				@include adaptiv-value('font-size', 14, 12, 1);
 			}
 		}
 
@@ -107,7 +128,8 @@
 		}
 
 		&__question {
-            padding-right: 34px;
+			padding-right: 34px;
+
 			&::before {
 				width: 22px;
 				height: 22px;
