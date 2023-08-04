@@ -1,0 +1,55 @@
+<section class="items-section">
+    <div class="container">
+        <div class="items-section__wrapper">
+            <div class="items-section__content">
+                <h2 class="items-section__title title">
+                    Ценности компании
+                </h2>
+                <div class="items-section__text">
+                    <p>
+                        Наша миссия, повышать уровень жизни людей, делая качественные товары и услуги более доступными
+                    </p>
+                </div>
+                <ul class="items-section__items">
+                    <li class="items-section__item">
+                        @include('../components/cards/_number-card.html', {
+                        'number' : '01',
+                        'title' : 'Мы верим в возможности человека',
+                        'text' : '<p>Дайте ему шанс и он сделает гораздо больше, чем вы и он сам могли бы ожидать</p> ',
+                        })
+                    </li>
+                    <li class="items-section__item">
+                        @include('../components/cards/_number-card.html', {
+                        'number' : '02',
+                        'title' : 'Удовольствие от труда',
+                        'text' : '<p>Мы ценим упорный труд и стремимся получать удовольствие от такого труда</p> ',
+                        })
+                    </li>
+                    <li class="items-section__item">
+                        @include('../components/cards/_number-card.html', {
+                        'number' : '03',
+                        'title' : 'Уважение',
+                        'text' : '<p>Уважение к человеку. Уважение к клиенту, партнеру, сотруднику</p> ',
+                        })
+                    </li>
+                    <li class="items-section__item">
+                        @include('../components/cards/_number-card.html', {
+                        'number' : '04',
+                        'title' : 'Качество',
+                        'text' : '<p>Мы верны качеству - качеству товаров и услуг, качеству отношений, качеству коммуникаций, качеству нашей работы</p> ',
+                        })
+                    </li>
+                </ul>
+                <a class="items-section__action button button--border" href="#">
+                    Узнать подробнее
+                </a>
+            </div>
+            <div class="items-section__image items-section__image--normal">
+                <div class="items-section__bg" style="background-image: url('img/picture/company-values.jpg');" aria-hidden> </div>
+            </div>
+            <a class="items-section__action items-section__action--mobile button button--border" href="#">
+                Узнать подробнее
+            </a>
+        </div>
+    </div>
+</section>
