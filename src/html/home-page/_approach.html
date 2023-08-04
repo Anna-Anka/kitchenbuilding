@@ -2,17 +2,20 @@
     <div class="container">
         <div class="items-section__wrapper">
             <div class="items-section__content">
-                <h2 class="items-section__title title">
-                    Наш подход к работе
-                </h2>
-                <div class="items-section__text">
-                    <p>
-                        Проект этой кухни создан на заказ с учетом необычных размеров помещения. Собственное высокотехнологическое производство позволяет нам создавать.
-                    </p>
+                <div class="items-section__header">
+                    <h2 class="items-section__title title">
+                        Наш подход к работе
+                    </h2>
+                    <div class="items-section__text">
+                        <p>
+                            Проект этой кухни создан на заказ с учетом необычных размеров помещения. Собственное высокотехнологическое производство позволяет нам создавать.
+                        </p>
+                    </div>
                 </div>
                 <ul class="items-section__items">
                     <li class="items-section__item">
                         @include('../components/cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '01',
                         'title' : 'Обсуждение деталей',
                         'text' : '<p>Обсудим с вами все детали работы. Учтем ваши пожелания и реальные возможности</p> ',
@@ -20,6 +23,7 @@
                     </li>
                     <li class="items-section__item">
                         @include('../components/cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '02',
                         'title' : 'Замер помещения',
                         'text' : '<p>Обсудим с вами все детали работы. Учтем ваши пожелания и реальные возможности</p> ',
@@ -27,6 +31,7 @@
                     </li>
                     <li class="items-section__item">
                         @include('../components/cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '03',
                         'title' : 'Проектрование',
                         'text' : '<p>Обсудим с вами все детали работы. Учтем ваши пожелания и реальные возможности</p> ',
@@ -34,6 +39,7 @@
                     </li>
                     <li class="items-section__item">
                         @include('../components/cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '04',
                         'title' : 'Реализация проекта',
                         'text' : '<p>Обсудим с вами все детали работы. Учтем ваши пожелания и реальные возможности</p> ',

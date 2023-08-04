@@ -32,7 +32,7 @@
 
 	&__content {
 		width: 100%;
-		max-width: 720px;
+		max-width: 670px;
 		margin-right: 20px;
 
 		@include mq(lg) {
@@ -46,8 +46,16 @@
 		}
 	}
 
+	&__header {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
 	&__title {
-		@include adaptiv-value('margin-bottom', 15, 10, 1);
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 15, 10, 1);
+		}
 	}
 
 	&__text {
@@ -71,6 +79,12 @@
 			grid-template-columns: 1fr;
 			gap: 15px;
 		}
+
+		&--several {
+			@include mq(md) {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
 	}
 
 	&__action {
@@ -88,8 +102,8 @@
 			}
 
 			@include mq(sm) {
-				max-width: 100%;
 				width: 100%;
+				max-width: 100%;
 			}
 		}
 	}

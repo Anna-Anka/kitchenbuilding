@@ -1,7 +1,16 @@
-<article class="number-card">
+<article class="@class">
+    @if(typeof number !== 'undefined' && number) {
     <span class="number-card__number">@number</span>
+    }
     <div class="number-card__content">
+        @if(typeof title !== 'undefined' && title) {
         <h3 class="number-card__title subtitle">@title</h3>
+        }
+
+        @if(typeof numberTitle !== 'undefined' && numberTitle) {
+        <span class="number-card__title number-card__title--number subtitle">@numberTitle</span>
+        }
+
         <div class="number-card__text">@text</div>
     </div>
 </article>

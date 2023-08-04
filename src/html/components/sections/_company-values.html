@@ -2,38 +2,44 @@
     <div class="container">
         <div class="items-section__wrapper">
             <div class="items-section__content">
-                <h2 class="items-section__title title">
-                    Ценности компании
-                </h2>
-                <div class="items-section__text">
-                    <p>
-                        Наша миссия, повышать уровень жизни людей, делая качественные товары и услуги более доступными
-                    </p>
+                <div class="items-section__header">
+                    <h2 class="items-section__title title">
+                        Ценности компании
+                    </h2>
+                    <div class="items-section__text">
+                        <p>
+                            Наша миссия, повышать уровень жизни людей, делая качественные товары и услуги более доступными
+                        </p>
+                    </div>
                 </div>
                 <ul class="items-section__items">
                     <li class="items-section__item">
-                        @include('../components/cards/_number-card.html', {
+                        @include('../cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '01',
                         'title' : 'Мы верим в возможности человека',
                         'text' : '<p>Дайте ему шанс и он сделает гораздо больше, чем вы и он сам могли бы ожидать</p> ',
                         })
                     </li>
                     <li class="items-section__item">
-                        @include('../components/cards/_number-card.html', {
+                        @include('../cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '02',
                         'title' : 'Удовольствие от труда',
                         'text' : '<p>Мы ценим упорный труд и стремимся получать удовольствие от такого труда</p> ',
                         })
                     </li>
                     <li class="items-section__item">
-                        @include('../components/cards/_number-card.html', {
+                        @include('../cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '03',
                         'title' : 'Уважение',
                         'text' : '<p>Уважение к человеку. Уважение к клиенту, партнеру, сотруднику</p> ',
                         })
                     </li>
                     <li class="items-section__item">
-                        @include('../components/cards/_number-card.html', {
+                        @include('../cards/_number-card.html', {
+                        'class' : 'number-card',
                         'number' : '04',
                         'title' : 'Качество',
                         'text' : '<p>Мы верны качеству - качеству товаров и услуг, качеству отношений, качеству коммуникаций, качеству нашей работы</p> ',
