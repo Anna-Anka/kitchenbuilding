@@ -1,0 +1,43 @@
+.action-watch {
+	position: relative;
+	padding: 17px 34px 17px 75px;
+	color: $dark-800;
+	background-color: $white;
+	border-radius: 40px;
+	box-shadow: 0 20px 54px 0px rgba($black, 0.2);
+	@include adaptiv-value('font-size', 18, 14, 1);
+	@include flex-all-center;
+
+	@include mq(sm) {
+		padding: 16px;
+		color: $white;
+		background-color: $dark-800;
+	}
+
+	&__decor {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 60px;
+		height: 60px;
+		background-color: $red-600;
+		border-radius: 50%;
+		transform: translateY(-50%);
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 19px;
+			height: 22px;
+			background-image: url('../img/icons/polygon.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg-conatin;
+		}
+
+		@include mq(sm) {
+			display: none;
+		}
+	}
+}

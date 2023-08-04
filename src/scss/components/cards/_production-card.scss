@@ -1,0 +1,51 @@
+.production-card {
+	width: 100%;
+	height: 100%;
+	padding: 30px 24px 28px;
+	background-color: $white;
+	@include adaptiv-value('border-radius', 20, 16, 1);
+
+	@include mq(lg) {
+		padding: 16px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiv-value('margin-bottom', 20, 12, 1);
+	}
+
+	&__bg {
+		@include bg-cover;
+		flex-basis: 100px;
+		flex-shrink: 0;
+		height: 100px;
+
+		margin-right: 16px;
+		border-radius: 50%;
+
+		@include mq(xl) {
+			flex-basis: 60px;
+			height: 60px;
+		}
+	}
+
+	&__title {
+		color: rgba($black, 0.2);
+		text-align: right;
+
+		@include mq(xl) {
+			font-size: 20px;
+		}
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 16, 14, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

@@ -22,10 +22,12 @@
 @import '../../components/search-form';
 @import '../../components/circle-link';
 @import '../../components/years-icon';
+@import '../../components/action-watch';
 
 // * sections
 @import '../../components/sections/hero-section';
 @import '../../components/sections/guarantee-years';
+@import '../../components/sections/about-production';
 
 // * cards
 @import '../../components/cards/sketch-card';
@@ -33,6 +35,7 @@
 @import '../../components/cards/kitchenbuilding-card';
 @import '../../components/cards/approach-card';
 @import '../../components/cards/guarantee-card';
+@import '../../components/cards/production-card';
 
 // * products-card
 @import '../../components/cards/products/product-card';

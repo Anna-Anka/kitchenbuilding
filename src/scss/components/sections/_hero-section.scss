@@ -46,13 +46,13 @@
 
 		&::after {
 			position: absolute;
-			bottom: -65px;
-			left: 51%;
+			bottom: -15px;
+			left: 50%;
 			z-index: 2;
 			width: 278px;
 			height: 63px;
 			background-color: $white;
-			transform: translateX(-51%);
+			transform: translateX(-50%);
 			content: '';
 			clip-path: path(
 				'M0.5 63H0.511518C17.1479 63 33.3691 57.7615 46.9107 48.0157L92.8075 14.9843C120.668 -5.06683 158.101 -4.98776 185.878 15.1809L230.829 47.8191C244.423 57.6893 260.749 63 277.5 63H0.5Z'

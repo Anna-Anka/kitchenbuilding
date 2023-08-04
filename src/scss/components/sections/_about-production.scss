@@ -1,0 +1,64 @@
+.about-production {
+	padding: 90px 0 130px;
+	background-color: $grey-200;
+
+	@include mq(lg) {
+		padding: 40px 0 113px;
+	}
+
+	@include mq(md) {
+		padding-bottom: 58px;
+	}
+
+	&::before {
+		bottom: 0;
+		transform: translate(-50%, 30%);
+	}
+
+	&__header,
+	&__text {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__header {
+		width: 100%;
+		max-width: 1015px;
+		margin: 0 auto;
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__text {
+		@include mq(lg) {
+			font-size: 14px;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		gap: 14px;
+		justify-content: center;
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
+	}
+
+	&__items {
+		display: flex;
+		padding-bottom: 30px;
+		overflow-x: auto;
+		@include adaptiv-value('gap', 20, 10, 1);
+	}
+
+	&__item {
+		@include adaptiv-value('flex-basis', 320, 300, 1);
+		flex-shrink: 0;
+	}
+}

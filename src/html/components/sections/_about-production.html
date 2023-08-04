@@ -1,0 +1,52 @@
+<section class="about-production inscription">
+    <div class="container">
+        <div class="about-production__header">
+            <h2 class="about-production__title title">
+                О производстве
+            </h2>
+            <div class="about-production__text">
+                <p>
+                    Все понимают, что невозможно сделать дешевый продукт качественно и нельзя сделать качественный продукт дешево. Нам удалось сделать все наоборот! Благодаря уникальным ноу-хау
+                    разработанным нашей компании мы смогли сделать товар высочайшего качества по уникально низкой цене. Мы приглашаем познакомиться с нашей уникальной моделью бизнеса!
+                </p>
+            </div>
+            <div class="about-production__actions">
+                <a class="action-watch" href="#">
+                    <span class="action-watch__decor" aria-hidden></span>
+                    Смотреть
+                </a>
+                <a class="button button--border" href="#">Узнать подробнее</a>
+            </div>
+        </div>
+        <ul class="about-production__items">
+            <li class="about-production__item">
+                @include('../cards/_production-card.html', {
+                'bg' : 'company',
+                'title' : '20 лет',
+                'text' : '<p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>'
+                })
+            </li>
+            <li class="about-production__item">
+                @include('../cards/_production-card.html', {
+                'bg' : 'complexes',
+                'title' : '4.5 га',
+                'text' : '<p>В Подмосковье на площади 4,5 гектара были построены логистический и производственный комплексы</p>'
+                })
+            </li>
+            <li class="about-production__item">
+                @include('../cards/_production-card.html', {
+                'bg' : 'quality',
+                'title' : '12 лет',
+                'text' : '<p>Мы имеем уникально высокий уровень качества, позволяющий предоставлять гарантию на кухни сроком 12 лет</p>'
+                })
+            </li>
+            <li class="about-production__item">
+                @include('../cards/_production-card.html', {
+                'bg' : 'models',
+                'title' : '70 моделей',
+                'text' : '<p>Наш ассортимент включает в себя 70 моделей с фасадами российского и итальянского производства</p>'
+                })
+            </li>
+        </ul>
+    </div>
+</section>
