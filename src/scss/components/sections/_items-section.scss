@@ -25,8 +25,72 @@
 	&__wrapper {
 		@include flex-center-sb;
 
-		@include mq(lg) {
-			flex-direction: column;
+		&--later-adaptive {
+			@include mq(md) {
+				flex-direction: column;
+			}
+
+			.items-section__content {
+				@include mq(md) {
+					max-width: 100%;
+					margin-right: 0;
+					margin-bottom: 40px;
+				}
+			}
+
+			.items-section__items {
+				&:not(:last-child) {
+					@include mq(md, min) {
+						margin-bottom: 40px;
+					}
+				}
+			}
+
+			.items-section__action {
+				@include mq(md) {
+					display: none;
+				}
+
+				&--mobile {
+					@include mq(md) {
+						display: flex;
+					}
+				}
+			}
+		}
+
+		&--early-adaptive {
+			@include mq(lg) {
+				flex-direction: column;
+			}
+
+			.items-section__content {
+				@include mq(lg) {
+					max-width: 100%;
+					margin-right: 0;
+					margin-bottom: 40px;
+				}
+			}
+
+			.items-section__action {
+				@include mq(lg) {
+					display: none;
+				}
+
+				&--mobile {
+					@include mq(lg) {
+						display: flex;
+					}
+				}
+			}
+
+			.items-section__items {
+				&:not(:last-child) {
+					@include mq(lg, min) {
+						margin-bottom: 40px;
+					}
+				}
+			}
 		}
 	}
 
@@ -34,12 +98,6 @@
 		width: 100%;
 		max-width: 670px;
 		margin-right: 20px;
-
-		@include mq(lg) {
-			max-width: 100%;
-			margin-right: 0;
-			margin-bottom: 40px;
-		}
 
 		@include mq(sm) {
 			margin-bottom: 20px;
@@ -69,12 +127,6 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 25px;
 
-		&:not(:last-child) {
-			@include mq(lg, min) {
-				margin-bottom: 40px;
-			}
-		}
-
 		@include mq(md) {
 			grid-template-columns: 1fr;
 			gap: 15px;
@@ -90,16 +142,8 @@
 	&__action {
 		max-width: fit-content;
 
-		@include mq(lg) {
-			display: none;
-		}
-
 		&--mobile {
 			display: none;
-
-			@include mq(lg) {
-				display: flex;
-			}
 
 			@include mq(sm) {
 				width: 100%;
