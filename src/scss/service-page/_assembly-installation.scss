@@ -1,0 +1,72 @@
+.assembly-installation {
+	@include adaptiv-value('padding-top', 100, 40, 1);
+	@include adaptiv-value('padding-bottom', 160, 58, 1);
+	background-color: $grey-200;
+
+	&::before {
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 30%);
+	}
+
+	&__header {
+		display: flex;
+		gap: 20px;
+		align-items: flex-end;
+		justify-content: space-between;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__descr {
+		width: 100%;
+		max-width: 1015px;
+
+		@include mq(lg) {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		@include mq(lg) {
+			font-size: 14px;
+		}
+
+		b {
+			font-weight: $fw-400;
+			color: $dark-800;
+		}
+	}
+
+	&__link {
+		@include mq(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			display: flex;
+
+			@include mq(lg, min) {
+				display: none;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		@include adaptiv-value('gap', 20, 10, 1);
+		padding-bottom: 20px;
+
+		@include mq(xl) {
+			overflow: auto;
+		}
+
+		@include mq(lg) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		@include adaptiv-value('flex-basis', 440, 300, 1);
+		flex-shrink: 0;
+	}
+}
