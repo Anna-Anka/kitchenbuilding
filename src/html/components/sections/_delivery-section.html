@@ -1,0 +1,49 @@
+<section class="delivery-section section section--large">
+    <div class="container">
+        <div class="delivery-section__header">
+            <h2 class="delivery-section__title title">
+                @title
+            </h2>
+            @if(typeof link !== 'undefined' && link) {
+            <a class="delivery-section__link button button--border" href="#">@link</a>
+            }
+        </div>
+        <ul class="delivery-section__items">
+            <li class="delivery-section__item">
+                @include('../cards/_delivery-card.html', {
+                'icon' : 'delivery',
+                'number' : '01',
+                'title' : 'Доставка мебели',
+                'text' : '<p>Осуществляется бесплатно для клиентов нашей компании, проживающих в пределах Малого Бетонного Кольца (трасса А107) (при заказе менее 36000 рублей стоимость доставки определяется прейскурантом).</p>'
+                })
+            </li>
+            <li class="delivery-section__item">
+                @include('../cards/_delivery-card.html', {
+                'icon' : 'transport',
+                'number' : '02',
+                'title' : 'Транспорт',
+                'text' : '<p>Компания располагает большим парком грузовой техники, специально приспособленной для погрузки/разгрузки и безопасной транспортировки мебели.</p>'
+                })
+            </li>
+            <li class="delivery-section__item">
+                @include('../cards/_delivery-card.html', {
+                'icon' : 'employee',
+                'number' : '03',
+                'title' : 'Все работы',
+                'text' : '<p>Осуществляются штатными сотрудниками фирмы «ZETTA» — мы отвечаем за заказанный Вами гарнитур в течение всего времени поездки, строго следим за соблюдение правил перевозки предметов обстановки.</p>'
+                })
+            </li>
+            <li class="delivery-section__item">
+                @include('../cards/_delivery-card.html', {
+                'icon' : 'rules',
+                'number' : '04',
+                'title' : 'Правила доставки',
+                'text' : '<p>сборки и установки можно посмотреть в разделе <a href="#">Документация по продукции.</a></p>'
+                })
+            </li>
+        </ul>
+        @if(typeof link !== 'undefined' && link) {
+        <a class="delivery-section__link delivery-section__link--mobile button button--border" href="#">@link</a>
+        }
+    </div>
+</section>

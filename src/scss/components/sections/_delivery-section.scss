@@ -1,0 +1,44 @@
+.delivery-section {
+	@include adaptiv-value('padding-bottom', 80, 40, 1);
+
+	&__header {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+		@include flex-center-sb;
+
+		@include mq(md, min) {
+			gap: 20px;
+		}
+	}
+
+	&__link {
+		@include mq(md) {
+			display: none;
+		}
+
+		&--mobile {
+			display: flex;
+			@include mq(md, min) {
+				display: none;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		@include adaptiv-value('gap', 20, 10, 1);
+		padding-bottom: 20px;
+
+		@include mq(xl) {
+			overflow: auto;
+		}
+
+		@include mq(lg) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		@include adaptiv-value('flex-basis', 325, 300, 1);
+		flex-shrink: 0;
+	}
+}
