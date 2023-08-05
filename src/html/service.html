@@ -1,0 +1,39 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Сервис' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/sections/_hero-section.html', {
+    'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
+    'breadcrumbs' : 'Сервис',
+    'title' : 'Выполняем замеры для вашей новой кухни бесплатно',
+    'text' : '<p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>',
+    'folder' : 'service-page',
+    'action-1' : '<a class="button" href="#">О производстве</a>',
+    'action-2' : '<button class="button button--border" type="button">Оставить заявку</button>',
+    'extra' : '<p>Замер позволит нашим специалистам оптимально разместить все элементы кухонного гарнитура с минимально возможными зазорами. Наши специалисты оснащены самым современным измерительным инструментом — лазерными рулетками и цифровыми угломерами.</p>',
+    'circle-goto' : '',
+    'circle-text' : 'получите чек-лист бесплатно'
+    })
+
+    @include('./components/sections/_consultation.html', {
+    'class' : 'consultation consultation--normal',
+    'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+    'tel' : 'true'
+    })
+
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

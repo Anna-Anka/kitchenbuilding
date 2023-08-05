@@ -26,6 +26,9 @@
                 <span class="circle-link__content circle-link__content--big" style="background-image: url('img/@folder/circle-link.svg');" aria-hidden></span>
                 <span class="sr-only">@circle-text</span>
             </a>
+            @if(typeof extra !== 'undefined' && extra) {
+            <div class="hero-section__extra">@extra</div>
+            }
         </div>
     </div>
 </section>

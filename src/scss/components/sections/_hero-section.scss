@@ -78,6 +78,7 @@
 		position: relative;
 		padding: 50px;
 		padding-bottom: 160px;
+		overflow: hidden;
 		background-color: $grey-200;
 
 		@include mq(lg) {
@@ -86,6 +87,7 @@
 		}
 
 		@include mq(sm) {
+			order: -2;
 			padding-bottom: 63px;
 		}
 
@@ -93,6 +95,7 @@
 			display: none;
 
 			@include mq(sm) {
+				bottom: -20px;
 				display: block;
 			}
 		}
@@ -137,8 +140,36 @@
 	}
 
 	&__image {
+		position: relative;
 		@include mq(sm) {
 			height: 232px;
+		}
+	}
+
+	&__extra {
+		z-index: 3;
+		width: 100%;
+		max-width: 490px;
+		background-color: $white;
+		@include adaptiv-value('font-size', 14, 12, 1);
+		box-shadow: 0 20px 54px 0px rgba($black, 0.1);
+		@include adaptiv-value('padding', 20, 12, 1);
+		@include adaptiv-value('border-radius', 20, 15, 1);
+
+		@include mq(xl) {
+			max-width: 35%;
+		}
+
+		@include mq(sm, min) {
+			position: absolute;
+			right: 0;
+			bottom: -47px;
+		}
+
+		@include mq(sm) {
+			order: -1;
+			max-width: 100%;
+			margin-top: -60px;
 		}
 	}
 
