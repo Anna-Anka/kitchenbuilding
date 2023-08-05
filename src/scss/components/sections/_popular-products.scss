@@ -1,6 +1,16 @@
 .popular-products {
 	@include adaptiv-value('padding-top', 60, 40, 1);
 
+	&--normal {
+		@include adaptiv-value('padding-top', 100, 40, 1);
+		@include adaptiv-value('padding-bottom', 100, 40, 1);
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
 	&__wrapper {
 		position: relative;
 		@include adaptiv-value('padding-bottom', 40, 20, 1);

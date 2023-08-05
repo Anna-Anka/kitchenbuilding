@@ -1,28 +1,35 @@
-<section class="popular-products section" id="popular">
+<section class="@class" id="popular">
     <div class="container">
+
+        @if(typeof title !== 'undefined' && title) {
+        <h2 class="popular-products__title title">@title</h2>
+        }
+
+        @if(typeof title === 'undefined' || !title) {
         <h2 class="sr-only">
-            Товары
+            Популярные модели
         </h2>
+        }
         <div class="popular-products__wrapper">
             <div class="popular-products__swiper swiper">
                 <ul class="popular-products__items swiper-wrapper">
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                     <li class="popular-products__item swiper-slide">
-                        @include('../components/cards/products/_popular-product.html')
+                        @include('../cards/products/_popular-product.html')
                     </li>
                 </ul>
                 <div class="popular-products__scrollbar"></div>

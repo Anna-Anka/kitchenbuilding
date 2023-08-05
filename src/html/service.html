@@ -27,16 +27,25 @@
 
     @include('./service-page/_assembly-installation.html')
 
+    @include('./components/sections/_popular-products.html', {
+    'class' : 'popular-products popular-products--normal',
+    'title' : 'Популярные модели'
+    })
+
     @include('./components/sections/_consultation.html', {
-    'class' : 'consultation consultation--normal',
+    'class' : 'consultation consultation--zero',
     'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
     'tel' : 'true'
+    })
+
+    @include('./components/sections/_addresses.html', {
+    'class' : 'addresses addresses--normal'
     })
 
 </main>
 
 @include('./components/sections/_consultation.html', {
-'class' : 'consultation consultation--normal',
+'class' : 'consultation consultation--bottom',
 'title' : 'Отправка на почту чек-листа',
 'email' : 'true'
 })
