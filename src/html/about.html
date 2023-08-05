@@ -21,12 +21,19 @@
     @include('./components/sections/_guarantee-years.html')
     @include('./components/sections/_about-production.html')
     @include('./components/sections/_company-values.html')
+    @include('./components/sections/_consultation.html', {
+    'class' : 'consultation consultation--zero',
+    'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+    'tel' : 'true'
+    })
     @include('./about-page/_cooperation-company.html')
     @include('./about-page/_work-kitchenbuilding.html')
 </main>
 
-@include('./components/_consultation.html', {
-'class' : 'consultation'
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
 })
 
 @include('./components/_footer.html')

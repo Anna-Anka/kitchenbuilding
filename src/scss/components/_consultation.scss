@@ -1,10 +1,28 @@
 .consultation {
-	padding-top: 0;
 	@include adaptiv-value('padding-bottom', 60, 40, 1);
 
-    &--top {
-        margin-top: -170px;
-    }
+	&--deny {
+		margin-top: -170px;
+	}
+
+	&--normal {
+		@include adaptiv-value('padding-top', 100, 40, 1);
+		@include adaptiv-value('padding-bottom', 100, 40, 1);
+	}
+
+	&--top {
+		@include adaptiv-value('padding-top', 100, 40, 1);
+		padding-bottom: 0;
+	}
+
+	&--bottom {
+		@include adaptiv-value('padding-bottom', 100, 40, 1);
+		padding-top: 0;
+	}
+
+	&--zero {
+		padding: 0;
+	}
 
 	&__wrapper {
 		padding: 50px 70px;
@@ -16,6 +34,11 @@
 		}
 	}
 
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__title {
 		color: $white;
 	}
@@ -23,58 +46,31 @@
 	.form {
 		&__inner {
 			display: flex;
+			gap: 12px;
 			width: 100%;
+			@include adaptiv-value('margin-bottom', 25, 12, 1);
 
 			@include mq(lg) {
+				flex-wrap: wrap;
+			}
+
+			@include mq(md) {
 				flex-direction: column;
 			}
 		}
 
-		&__items {
-			margin-right: 15px;
-
-			@include mq(lg) {
-				margin-right: 0;
-				margin-bottom: 12px;
-			}
-		}
-
-		&__item,
-		&__button {
-			width: 24%;
-		}
-
 		&__item {
-			width: 33%;
-
-			&:not(:last-child) {
-				@include mq(lg) {
-					margin-right: 4px;
-				}
-
-				@include mq(md) {
-					margin-right: 0;
-				}
-			}
-
-			@include mq(md) {
-				width: 100%;
+			@include mq(lg) {
+				flex: 1 0 25%;
 			}
 		}
 
 		&__button {
-			width: 25%;
+			width: 100%;
 
 			@include mq(lg) {
-				width: 100%;
-			}
-		}
-
-		&__inner {
-			margin-bottom: 25px;
-
-			@include mq(lg) {
-				margin-bottom: 10px;
+				flex: 0 0 100%;
+				flex-direction: column;
 			}
 		}
 	}

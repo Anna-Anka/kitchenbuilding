@@ -17,9 +17,21 @@
     @include('./home-page/_addresses.html')
 </main>
 
-@include('./components/_consultation.html', {
-'class' : 'consultation'
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation',
+'title' : 'Оставьте заявку на консультацию',
+'tel' : 'true',
+'email' : 'true'
 })
+
+<p class="form__agree">
+    <input class="form__hidden checkbox-hidden" type="checkbox" name="agree" checked required>
+    <span class="form__visible checkbox-visible" aria-hidden></span>
+    <span>
+        Согласен (а) на обработку <a href="#">персональных данных</a>
+    </span>
+</p>
+
 
 @include('./components/_footer.html')
 

@@ -1,0 +1,49 @@
+<section class="@class" id="consultation">
+    <div class="container">
+        <form class="consultation__wrapper form" action="#">
+            <h2 class="consultation__title title">
+                @title
+            </h2>
+            <div class="consultation__content">
+                <div class="form__inner">
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" name="name" type="text" placeholder="Имя" id="consultation-name" required>
+                    </div>
+                    @if(context.tel === 'true') {
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-phone">
+                            Введите номер телефона
+                        </label>
+                        <input class="form__field" name="phone" type="tel" placeholder="Телефон" id="consultation-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                    </div>
+                    }
+                    @if(context.email === 'true') {
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-email">
+                            Введите вашу почту
+                        </label>
+                        <input class="form__field" name="phone" type="email" placeholder="Почта" id="consultation-email" required>
+                    </div>
+                    }
+
+                    <button class="form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <div class="form__agree">
+                    <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <label for="consultation-agree">
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </label>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
