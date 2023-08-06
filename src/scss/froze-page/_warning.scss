@@ -1,0 +1,36 @@
+.warning {
+	&__wrapper {
+		border: 1px solid rgba($black, 0.2);
+		border-radius: 20px;
+		@include adaptiv-value('padding', 40, 24, 1);
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 1015px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__title {
+		@include adaptiv-value('padding-left', 44, 36, 1);
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			position: absolute;
+			top: -5px;
+			left: 0;
+			background-image: url('../img/icons/alert.svg');
+			content: '';
+			@include adaptiv-value('width', 32, 24, 1);
+			@include adaptiv-value('height', 32, 24, 1);
+			@include bg-conatin;
+		}
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 14, 1);
+	}
+}

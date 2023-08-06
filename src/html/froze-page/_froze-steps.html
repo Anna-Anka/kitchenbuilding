@@ -1,0 +1,40 @@
+<section class="froze-steps">
+    <div class="container">
+        <div class="froze-steps__header">
+            <h2 class="froze-steps__title title">
+                Этапы замера
+            </h2>
+            <div class="froze-steps__text">
+                <p>
+                    Бесплатный замер помещения производится в пределах Большого бетонного кольца (трасса А108). Замер является собственностью компании «Кухнистрой» и на руки не выдается!
+                </p>
+            </div>
+        </div>
+        <ul class="froze-steps__items">
+            <li class="froze-steps__item">
+                @include('../components/cards/_step-card.html', {
+                'number' : '01',
+                'title' : 'Заявка',
+                'text' : '<p>Получаем заявку и согласуем удобное время</p>',
+                'icon' : 'application'
+                })
+            </li>
+            <li class="froze-steps__item">
+                @include('../components/cards/_step-card.html', {
+                'number' : '02',
+                'title' : 'Замер',
+                'text' : '<p>Производим замер вашего помещения</p>',
+                'icon' : 'froze'
+                })
+            </li>
+            <li class="froze-steps__item">
+                @include('../components/cards/_step-card.html', {
+                'number' : '03',
+                'title' : 'Корректировки',
+                'text' : '<p>Вносим корректировки в дизайн-проект кухни</p>',
+                'icon' : 'corrects'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

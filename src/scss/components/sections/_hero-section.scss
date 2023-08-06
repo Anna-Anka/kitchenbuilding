@@ -1,9 +1,8 @@
 .hero-section {
-	padding-bottom: 100px;
+	@include adaptiv-value('padding-bottom', 147, 85, 1);
 
 	@include mq(lg) {
 		padding-top: 20px;
-		padding-bottom: 45px;
 	}
 
 	.breadcrumbs {

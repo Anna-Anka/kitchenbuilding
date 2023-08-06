@@ -15,8 +15,12 @@
                     @text
                 </div>
                 <div class="hero-section__actions">
-                    @action-1
-                    @action-2
+                    @if(typeof action1 !== 'undefiend' && action1) {
+                    @action1
+                    }
+                    @if(typeof action2 !== 'undefiend' && action2) {
+                    @action2
+                    }
                 </div>
             </div>
             <div class="hero-section__image">

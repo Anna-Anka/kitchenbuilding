@@ -1,0 +1,36 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Замер' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/sections/_hero-section.html', {
+    'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
+    'breadcrumbs' : 'Замер помещения',
+    'title' : 'Выполняем замеры для вашей новой кухни бесплатно',
+    'text' : '<p>Проверяем углы, учитываем особенности стен, отмечаем выводы коммуникаций.</p>',
+    'folder' : 'froze-page',
+    'action1' : '<a class="button" href="#">Запись на замер</a>',
+    'action2' : '',
+    'circle-goto' : '',
+    'circle-text' : 'бесплатная разработка проекта'
+    })
+
+    @include('./froze-page/_froze-steps.html')
+
+    @include('./froze-page/_warning.html')
+
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

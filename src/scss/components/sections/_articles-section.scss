@@ -81,17 +81,3 @@
 		}
 	}
 }
-
-.filter-content {
-	display: flex;
-	@include adaptiv-value('gap', 10, 4, 1);
-	overflow-x: auto;
-	@include adaptiv-value('padding-bottom', 20, 10, 1);
-	@include adaptiv-value('margin-bottom', 20, 10, 1);
-
-	.mixitup-control-active {
-		color: $white;
-		background-color: $dark-800;
-		border-color: transparent;
-	}
-}

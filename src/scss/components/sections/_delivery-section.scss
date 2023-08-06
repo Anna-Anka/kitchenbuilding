@@ -1,5 +1,5 @@
 .delivery-section {
-	@include adaptiv-value('padding-bottom', 80, 40, 1);
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
 	&__header {
 		@include adaptiv-value('margin-bottom', 40, 20, 1);
@@ -8,6 +8,10 @@
 		@include mq(md, min) {
 			gap: 20px;
 		}
+	}
+
+	&__title {
+		margin-bottom: 0;
 	}
 
 	&__link {
