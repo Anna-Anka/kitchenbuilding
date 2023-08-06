@@ -22,3 +22,10 @@ if (document.querySelector('input[type="tel"]')) {
 
 import { smoothScroll } from "./templates/smooth-scroll";
 smoothScroll();
+
+import mixitup from 'mixitup';
+let mixer = mixitup('.articles-section__items', {
+    load: {
+        filter: '.category-furniture'
+    }
+});

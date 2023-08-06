@@ -4,23 +4,23 @@ import Swiper, {
 
 Swiper.use([Pagination, Navigation, Scrollbar]);
 
-if (document.querySelector('.recommend-today__swiper')) {
-    new Swiper('.recommend-today__swiper', {
+if (document.querySelector('.articles-section__swiper')) {
+    new Swiper('.articles-section__swiper', {
         loop: true,
         speed: 800,
 
         navigation: {
-            nextEl: '.recommend-today__button--next',
-            prevEl: '.recommend-today__button--prev',
+            nextEl: '.articles-section__button--next',
+            prevEl: '.articles-section__button--prev',
         },
 
         pagination: {
-            el: '.recommend-today__pagination',
+            el: '.articles-section__pagination',
             clickable: true,
         },
 
         scrollbar: {
-            el: ".recommend-today__scrollbar",
+            el: ".articles-section__scrollbar",
             draggable: true
         },
 
@@ -28,13 +28,7 @@ if (document.querySelector('.recommend-today__swiper')) {
             1100: {
                 slidesPerGroup: 4,
                 slidesPerView: 4,
-                spaceBetween: 20,
-            },
-
-            768: {
-                slidesPerGroup: 3,
-                slidesPerView: 3,
-                spaceBetween: 10,
+                spaceBetween: 26,
             },
 
             560: {

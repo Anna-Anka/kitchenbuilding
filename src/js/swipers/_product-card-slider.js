@@ -1,57 +1,59 @@
-import '../_libs'
+import Swiper, {
+    Pagination, Navigation, Thumbs,
+} from 'swiper';
 
-export const productCardSlider = () => {
-    if (document.querySelector('.product-card__main')) {
-        const productCards = document.querySelectorAll('.product-card')
+Swiper.use([Pagination, Navigation, Thumbs]);
 
-        productCards.forEach(card => {
-            const sliderMain = card.querySelector('.slider-main');
-            const sliderNav = card.querySelector('.slider-nav');
+if (document.querySelector('.product-card__main')) {
+    const productCards = document.querySelectorAll('.product-card')
 
-            const swiperSmall = new Swiper(sliderNav, {
-                slidesPerView: 9,
-                spaceBetween: 10,
-                loopedSlides: 9,
-                freeMode: true,
-            });
+    productCards.forEach(card => {
+        const sliderMain = card.querySelector('.slider-main');
+        const sliderNav = card.querySelector('.slider-nav');
 
-            const swiperMain = new Swiper(sliderMain, {
-                spaceBetween: 10,
-                loopedSlides: 9,
-                speed: 500,
+        const swiperSmall = new Swiper(sliderNav, {
+            slidesPerView: 9,
+            spaceBetween: 10,
+            loopedSlides: 9,
+            freeMode: true,
+        });
 
-                thumbs: {
-                    swiper: swiperSmall,
-                },
+        const swiperMain = new Swiper(sliderMain, {
+            spaceBetween: 10,
+            loopedSlides: 9,
+            speed: 500,
 
-                navigation: {
-                    nextEl: card.querySelector('.product-card__button--next'),
-                    prevEl: card.querySelector('.product-card__button--prev')
-                },
+            thumbs: {
+                swiper: swiperSmall,
+            },
 
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                },
-            })
+            navigation: {
+                nextEl: card.querySelector('.product-card__button--next'),
+                prevEl: card.querySelector('.product-card__button--prev')
+            },
 
-            const changeSlide = () => {
-                const slideActive = swiperMain.realIndex + 1
-                
-                const priceAll = card.querySelectorAll('[data-price]')
-
-                priceAll.forEach(price => {
-                    const valuePrice = Number(price.getAttribute('data-price'))
-                    if (valuePrice === slideActive) {
-                        price.classList.add('product-card__price--active')
-                    } else {
-                        price.classList.remove('product-card__price--active')
-                    }
-                })
-            }
-
-            swiperMain.init(changeSlide())
-            swiperMain.on('slideChange', changeSlide)
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
         })
-    };
+
+        const changeSlide = () => {
+            const slideActive = swiperMain.realIndex + 1
+
+            const priceAll = card.querySelectorAll('[data-price]')
+
+            priceAll.forEach(price => {
+                const valuePrice = Number(price.getAttribute('data-price'))
+                if (valuePrice === slideActive) {
+                    price.classList.add('product-card__price--active')
+                } else {
+                    price.classList.remove('product-card__price--active')
+                }
+            })
+        }
+
+        swiperMain.init(changeSlide())
+        swiperMain.on('slideChange', changeSlide)
+    })
 };

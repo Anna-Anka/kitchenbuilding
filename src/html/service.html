@@ -42,10 +42,14 @@
     'class' : 'addresses addresses--normal'
     })
 
+    @include('./components/sections/_articles-section.html', {
+    'title' : 'Статьи'
+    })
+
 </main>
 
 @include('./components/sections/_consultation.html', {
-'class' : 'consultation consultation--bottom',
+'class' : 'consultation consultation--normal',
 'title' : 'Отправка на почту чек-листа',
 'email' : 'true'
 })

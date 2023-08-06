@@ -1,8 +1,11 @@
-import '../_libs'
+import Swiper, {
+    Pagination, Navigation,
+} from 'swiper';
 
-export const homeHeroSwiper = () => {
+Swiper.use([Pagination, Navigation]);
+
     if (document.querySelector('.home-hero__swiper')) {
-        return new Swiper('.home-hero__swiper', {
+        new Swiper('.home-hero__swiper', {
             loop: true,
             speed: 800,
             slidesPerGroup: 1,
@@ -20,4 +23,3 @@ export const homeHeroSwiper = () => {
             },
         });
     }
-};

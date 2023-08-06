@@ -1,18 +1,7 @@
-import { homeHeroSwiper } from "./swipers/_home-hero";
-import { otherModelsSwiper } from "./swipers/_other-models";
-import { popularProductsSwiper } from "./swipers/_popular-products";
-import { productCardSlider } from "./swipers/_product-card-slider";
-import { recommendTodaySwiper } from "./swipers/_recommend-today";
-import { recommendedProductsSwiper } from "./swipers/_recommended-products";
-
-productCardSlider();
-
-otherModelsSwiper();
-
-recommendTodaySwiper();
-
-popularProductsSwiper()
-
-homeHeroSwiper();
-
-recommendedProductsSwiper();
+import './swipers/_home-hero';
+import './swipers/_other-models';
+import './swipers/_popular-products';
+import './swipers/_product-card-slider';
+import './swipers/_recommend-today';
+import './swipers/_recommended-products';
+import './swipers/_articles-section';
