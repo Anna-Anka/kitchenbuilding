@@ -1,0 +1,74 @@
+.questions {
+	background-color: $grey-200;
+	@include adaptiv-value('padding-top', 90, 40, 1);
+	@include adaptiv-value('padding-bottom', 160, 58, 1);
+
+	&::before {
+		bottom: 0;
+		transform: translate(-50%, 30%);
+	}
+
+	&__header {
+		width: 100%;
+		max-width: 1015px;
+		margin: 0 auto;
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 12, 1);
+	}
+
+	.menu-accordion {
+		&__item {
+			@include adaptiv-value('padding-bottom', 27, 22, 1);
+
+			&:not(:last-child) {
+				@include adaptiv-value('margin-bottom', 30, 15, 1);
+			}
+		}
+
+		&__button {
+			color: $dark-800;
+			font-weight: $fw-600;
+			transition: color 0.3s;
+			@include adaptiv-value('font-size', 24, 14, 1);
+			transition: padding-bottom 0.3s;
+
+			&::before {
+				@include adaptiv-value('width', 56, 32, 1);
+				@include adaptiv-value('height', 56, 32, 1);
+				@include adaptiv-value('top', -10, -5, 1);
+				background-color: $white;
+				background-image: url('../img/icons/plus.svg');
+				border: 1px solid rgba($grey-600, 0.2);
+				border-radius: 50%;
+				transition: border-color 0.3s, filter 0.3s, transform 0.3s;
+				@include bg-conatin;
+				@include adaptiv-value('background-size', 20, 11, 1);
+			}
+		}
+
+		&__content {
+			@include adaptiv-value('font-size', 20, 14, 1);
+			width: 89%;
+			margin-top: 0;
+		}
+
+		.open .menu-accordion__button {
+			color: $red-600;
+			padding-bottom: 15px;
+
+			&::before {
+				border-color: transparent;
+				transform: rotate(45deg);
+				filter: invert(1);
+			}
+		}
+	}
+}

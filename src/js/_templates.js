@@ -24,8 +24,11 @@ import { smoothScroll } from "./templates/smooth-scroll";
 smoothScroll();
 
 import mixitup from 'mixitup';
-let mixer = mixitup('.articles-section__items', {
-    load: {
-        filter: '.category-furniture'
-    }
-});
+
+if (document.querySelector('.articles-section__items')) {
+    let mixer = mixitup('.articles-section__items', {
+        load: {
+            filter: '.category-furniture'
+        }
+    });
+}
