@@ -1,0 +1,37 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Сборка и установка' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/sections/_hero-section.html', {
+    'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
+    'breadcrumbs' : 'Сборка и установка',
+    'title' : 'Сборка и установка',
+    'text' : '<p>Наряду с разработкой проекта, замером и доставкой, установка кухни производится нашей компанией бесплатно*.</p>',
+    'extra' : '<p>(* при заказе на сумму менее 36 000 рублей, при доставке и установке за пределами Малого Бетонного кольца (трасса А107), а также при установке в помещениях со сложной конфигурацией, стоимость данной услуги определяется прейскурантом).</p>',
+    'folder' : 'assembly-page',
+    'action1' : '<a class="button" href="#">Оставить заявку</a>',
+    'action2' : '',
+    'circle-img' : 'free-project',
+    'circle-goto' : '',
+    'circle-text' : 'бесплатная разработка проекта'
+    })
+
+    @include('./assembly-page/_questions.html')
+
+    @include('./assembly-page/_connection-appliances.html')
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')
