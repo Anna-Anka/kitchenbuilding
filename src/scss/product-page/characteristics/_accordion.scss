@@ -1,5 +1,5 @@
 .characteristics {
-	.menu-accordion {
+	.accordion {
 		width: 100%;
 		max-width: 945px;
 		margin-right: 40px;
@@ -92,7 +92,7 @@
 
 		&__item.open {
 			@include mq(md) {
-				.menu-accordion__content {
+				.accordion__content {
 					margin-top: 8px;
 					overflow: visible;
 					opacity: 1;
@@ -100,7 +100,7 @@
 			}
 		}
 
-		ul.menu-accordion__content {
+		ul.accordion__content {
 			padding-left: 20px;
 			list-style: unset;
 		}

@@ -1,4 +1,4 @@
-.menu-accordion {
+.accordion {
 	&__button {
 		position: relative;
 		width: 100%;
@@ -56,5 +56,11 @@
 
 	.open &__content {
 		opacity: 1;
+	}
+
+	.open &__button {
+		&::before {
+			transform: rotate(180deg) translateY(50%);
+		}
 	}
 }

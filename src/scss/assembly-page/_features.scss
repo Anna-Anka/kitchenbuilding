@@ -1,0 +1,29 @@
+.features {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
+	&__title {
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__content {
+		@include mq(sm) {
+			padding: 16px 0;
+		}
+	}
+
+	&__bg {
+		width: 73.5%;
+		@include adaptiv-value('height', 590, 183, 1);
+
+		@include mq(sm) {
+			width: 99%;
+		}
+	}
+
+	.accordion {
+		&__item {
+			flex-direction: column;
+		}
+	}
+}

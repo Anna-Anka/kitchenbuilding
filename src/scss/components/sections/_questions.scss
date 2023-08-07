@@ -24,7 +24,7 @@
 		@include adaptiv-value('font-size', 20, 12, 1);
 	}
 
-	.menu-accordion {
+	.accordion {
 		&__item {
 			@include adaptiv-value('padding-bottom', 27, 22, 1);
 
@@ -60,9 +60,9 @@
 			margin-top: 0;
 		}
 
-		.open .menu-accordion__button {
-			color: $red-600;
+		.open .accordion__button {
 			padding-bottom: 15px;
+			color: $red-600;
 
 			&::before {
 				border-color: transparent;

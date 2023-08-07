@@ -1,0 +1,97 @@
+.interactive {
+	@include flex-all-center;
+	background-color: $grey-200;
+	@include adaptiv-value('border-radius', 30, 7, 1);
+
+	&__bg {
+		@include bg-conatin;
+		position: relative;
+	}
+
+	&__title {
+		display: inline-block;
+		margin-bottom: 5px;
+		color: $black;
+	}
+
+	.accordion {
+		&__item {
+			position: absolute;
+			display: flex;
+			gap: 10px;
+			padding-bottom: 0;
+
+			&::before {
+				display: none;
+			}
+
+			@include mq(md) {
+				position: static;
+			}
+		}
+
+		&__button {
+			@include adaptiv-value('width', 56, 32, 1);
+			@include adaptiv-value('height', 56, 32, 1);
+			position: relative;
+			z-index: 1;
+			background-color: $red-600;
+			border-radius: 50%;
+			transition: background-color 0.3s, transform 0.3s;
+			@include flex-all-center;
+
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				background-image: url('../img/icons/plus.svg');
+				transform: translate(-50%, -50%);
+				filter: invert(1);
+				content: '';
+				@include adaptiv-value('width', 20, 12, 1);
+				@include adaptiv-value('height', 20, 12, 1);
+				@include bg-conatin;
+			}
+
+			@include mq(md) {
+				position: absolute;
+			}
+		}
+
+		&__content {
+			position: relative;
+			z-index: 2;
+			width: 305px;
+			margin-top: 0;
+			background-color: $white;
+			@include adaptiv-value('border-radius', 20, 15, 1);
+			@include adaptiv-value('padding', 30, 16, 1);
+			@include adaptiv-value('font-size', 16, 14, 1);
+			box-shadow: 0 20px 54px 0px rgba($black, 0.2);
+
+			@include mq(xl) {
+				width: 100%;
+				max-width: 305px;
+			}
+
+			@include mq(md) {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				max-width: 100%;
+				box-shadow: 0 20px 54px 0px rgba($black, 0.12);
+				transform: translateY(100%);
+			}
+		}
+
+		.open {
+			.accordion__button {
+				background-color: $dark-800;
+
+				&::before {
+					transform: rotate(45deg) translate(-67%, 4%);
+				}
+			}
+		}
+	}
+}

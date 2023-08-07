@@ -83,7 +83,7 @@
 		"body": [
 			"<ul class=\"accordion\">",
 			"    <li class=\"accordion__item\">",
-			"        <button class=\"accordion__control\" aria-expanded=\"false\">",
+			"        <button class=\"accordion__button\" aria-expanded=\"false\">",
 			"            Accordion",
 			"        </button>",
 			"        <div class=\"accordion__content\" aria-hidden=\"true\">",
@@ -119,26 +119,25 @@
 		"prefix": "g-lightbox",
 		"body": [
 			"<a class=\"$1\" data-fslightbox=\"$2\" href=\"img/$3.$4\">",
-            "   <picture>",
+			"   <picture>",
 			"       <source srcset=\"img/$3.avif\" type=\"image/avif\">",
 			"       <source srcset=\"img/$3.webp\" type=\"image/webp\">",
 			"       <img class=\"$5__img\" src=\"img/$3.$4\" alt=\"$6\" width=\"$7\" height=\"$8\" loading=\"lazy\">",
 			"   </picture>",
-            "</a>"
+			"</a>"
 		]
 	},
 
-    "marquee": {
+	"marquee": {
 		"prefix": "g-marquee",
 		"body": [
 			"<div class=\"marquee\">",
-            "    <div class=\"marquee__wrapper\">",
-            "        <ul class=\"marquee__items\">",
-            "            <li class=\"marquee__item\">$1</li>",
-            "        </ul>",
-            "    </div>",
-            "</div>"
+			"    <div class=\"marquee__wrapper\">",
+			"        <ul class=\"marquee__items\">",
+			"            <li class=\"marquee__item\">$1</li>",
+			"        </ul>",
+			"    </div>",
+			"</div>"
 		]
 	}
 }
-

@@ -1,5 +1,5 @@
 .footer {
-	.menu-accordion {
+	.accordion {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
@@ -39,7 +39,7 @@
 
 		&__item.open {
 			@include mq(lg) {
-				.menu-accordion__content {
+				.accordion__content {
 					margin-top: 20px;
 					margin-bottom: 8px;
 				}
