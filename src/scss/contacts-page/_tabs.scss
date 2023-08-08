@@ -1,0 +1,35 @@
+.tabs {
+	&__nav {
+		display: flex;
+		overflow-x: scroll;
+		@include adaptiv-value('gap', 10, 4, 1);
+		@include adaptiv-value('margin-bottom', 10, 6, 1);
+		@include adaptiv-value('padding-bottom', 10, 6, 1);
+	}
+
+	&__nav-item {
+		width: 100%;
+	}
+
+	&__nav-btn {
+		width: 100%;
+		padding: 13px 25px;
+
+		@include mq(md) {
+			padding: 7px 14px;
+		}
+
+		&--active {
+			color: $white;
+			background-color: $dark-800;
+		}
+	}
+
+	&__panel {
+		display: none;
+
+		&--active {
+			display: flex;
+		}
+	}
+}

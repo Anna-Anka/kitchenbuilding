@@ -1,0 +1,57 @@
+.salon-card {
+	width: 100%;
+	@include adaptiv-value('padding', 30, 16, 1);
+	@include adaptiv-value('border-radius', 16, 8, 1);
+	@include adaptiv-value('font-size', 16, 12, 1);
+	box-shadow: 0 20px 54px 0px rgba($black, 0.1);
+
+	&--info {
+		font-weight: $fw-600;
+		background-color: transparent;
+		border: 1px solid rgba($black, 0.2);
+		box-shadow: none;
+	}
+
+	&__content {
+		@include adaptiv-value('margin-bottom', 20, 8, 1);
+
+		*:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 6, 4, 1);
+		}
+
+		b {
+			color: $dark-800;
+			font-weight: $fw-600;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__button {
+		position: relative;
+		color: $dark-800;
+		@include adaptiv-value('font-size', 16, 12, 1);
+		font-weight: $fw-600;
+
+		&::before {
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px dashed $dark-800;
+			content: '';
+		}
+
+		&--accent {
+			color: $red-600;
+
+			&::before {
+				border-bottom-color: $red-600;
+			}
+		}
+	}
+}

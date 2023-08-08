@@ -44,7 +44,9 @@
 		"body": [
 			"<div class=\"tabs\" data-tabs=\"$1\">",
 			"   <ul class=\"tabs__nav\">",
-			"       <li class=\"tabs__nav-item\"><a class=\"tabs__nav-btn\" href=\"#\">$2</a></li>",
+			"       <li class=\"tabs__nav-item\">",
+			"           <button class=\"tabs__nav-btn\" type=\"button\">$2</button>",
+			"       </li>",
 			"   </ul>",
 			"   <div class=\"tabs__content\">",
 			"       <div class=\"tabs__panel\">$5</div>",

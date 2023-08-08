@@ -4,6 +4,7 @@ import { productKit } from "./project/_product-kit";
 import { search } from "./project/_search";
 import { sort } from "./project/_sort";
 import './project/_interactive';
+import './project/_contacts-tabs';
 
 sort();
 

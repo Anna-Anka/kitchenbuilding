@@ -1,0 +1,81 @@
+.contacts {
+	&__title {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__wrapper {
+		position: relative;
+		min-height: 750px;
+
+		@include mq(xl) {
+			height: calc(var(--contacts-panel) + 652px);
+			min-height: auto;
+		}
+
+		@include mq(md) {
+			height: calc(var(--contacts-panel) + 420px);
+		}
+
+		@include mq(sm) {
+			height: calc(var(--contacts-panel) + 294px);
+		}
+	}
+
+	&__panel {
+		@include adaptiv-value('border-radius', 30, 15, 1);
+		@include adaptiv-value('padding', 40, 12, 1);
+		width: 41%;
+		min-height: inherit;
+		box-shadow: 0 20px 54px 0px rgba($black, 0.13);
+
+		@include mq(xl) {
+			width: 100%;
+			min-height: auto;
+		}
+	}
+
+	&__subtitle {
+		@include adaptiv-value('margin-bottom', 20, 12, 1);
+		@include adaptiv-value('font-size', 24, 16, 1);
+	}
+
+	&__items {
+		width: 100%;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			@include adaptiv-value('margin-bottom', 15, 10, 1);
+		}
+	}
+
+	&__map {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 57%;
+		height: 100%;
+		border-radius: 30px;
+
+		@include mq(xl) {
+			width: 100%;
+			height: 632px;
+		}
+
+		@include mq(md) {
+			height: 400px;
+		}
+
+		@include mq(sm) {
+			height: 274px;
+		}
+
+		div,
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+			border-radius: inherit;
+		}
+	}
+}
