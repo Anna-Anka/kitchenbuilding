@@ -2,15 +2,7 @@
 	@include adaptiv-value('padding-top', 100, 40, 1);
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
-	&--inscription {
-		&::before {
-			bottom: 0;
-			transform: translate(-50%, 30%);
-		}
-	}
-
 	&--bg {
-		padding: 30px 0;
 		background-color: $grey-200;
 
 		@include mq(lg) {
@@ -19,6 +11,15 @@
 
 		@include mq(md) {
 			padding-bottom: 40px;
+		}
+	}
+
+	&--inscription {
+		@include adaptiv-value('padding-bottom', 160, 60, 1);
+
+		&::before {
+			bottom: 0;
+			transform: translate(-50%, 30%);
 		}
 	}
 
@@ -149,6 +150,15 @@
 				width: 100%;
 				max-width: 100%;
 			}
+		}
+	}
+
+	.extra-plank {
+		position: relative;
+
+		&::before {
+			@include adaptiv-value('background-size', 32, 24, 1);
+			background-image: url('../img/icons/delivery.svg');
 		}
 	}
 
