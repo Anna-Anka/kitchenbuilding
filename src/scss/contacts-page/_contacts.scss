@@ -37,6 +37,7 @@
 	&__subtitle {
 		@include adaptiv-value('margin-bottom', 20, 12, 1);
 		@include adaptiv-value('font-size', 24, 16, 1);
+		color: $black;
 	}
 
 	&__items {

@@ -7,6 +7,7 @@
 	padding: 37px 90px 37px 37px;
 	background-color: $white;
 	@include adaptiv-value('border-radius', 20, 12, 1);
+	box-shadow: 0 4px 50px 0 rgba($black, 0.05);
 
 	@include mq(md) {
 		padding: 16px 70px 16px 16px;
@@ -26,6 +27,7 @@
 
 	&__title {
 		@include adaptiv-value('margin-bottom', 23, 10, 1);
+		@include adaptiv-value('font-size', 46, 16, 1);
 	}
 
 	&__subtitle {

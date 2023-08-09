@@ -1,0 +1,47 @@
+<section class="@class">
+    <div class="container">
+        <div class="kitchenbuilding__header">
+            <div class="kitchenbuilding__descr">
+                <h2 class="kitchenbuilding__title title">
+                    Кухнистрой <span class="kitchenbuilding__accent">.ru</span> - это
+                </h2>
+                <div class="kitchenbuilding__text">
+                    <p>
+                        Проект этой кухни создан на заказ с учетом необычных размеров помещения.
+                    </p>
+                </div>
+            </div>
+            @if(typeof link !== 'undefined' && context.link === 'true') {
+            <a class="kitchenbuilding__link button button--border" href="#">
+                Узнать подробнее
+            </a>
+            }
+        </div>
+        <ul class="kitchenbuilding__items">
+            <li class="kitchenbuilding__item">
+                @include('../cards/_kitchenbuilding-card.html', {
+                'icon' : 'employees',
+                'title' : '1 200',
+                'subtitle' : 'Сотрудников',
+                'text' : 'В нашей компании'
+                })
+            </li>
+            <li class="kitchenbuilding__item">
+                @include('../cards/_kitchenbuilding-card.html', {
+                'icon' : 'olds',
+                'title' : '15',
+                'subtitle' : 'Лет',
+                'text' : 'Работы компании'
+                })
+            </li>
+            <li class="kitchenbuilding__item">
+                @include('../cards/_kitchenbuilding-card.html', {
+                'icon' : 'projects',
+                'title' : '200+',
+                'subtitle' : 'Реализованных проектов',
+                'text' : 'В год'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

@@ -15,7 +15,9 @@
     @include('./home-page/_recommend-today.html')
     @include('./home-page/_approach.html')
     @include('./home-page/_no-problems.html')
-    @include('./home-page/_kitchenbuilding.html')
+    @include('./components/sections/_kitchenbuilding.html', {
+    'class' : 'kitchenbuilding kitchenbuilding--background inscription'
+    })
     @include('./components/sections/_addresses.html', {
     'class' : 'addresses section'
     })
