@@ -1,11 +1,11 @@
-.contacts {
+.production-technologies {
 	.tabs {
 		&__nav {
-			display: flex;
-			overflow-x: scroll;
+			@include adaptiv-value('margin-bottom', 20, 10, 1);
+			@include adaptiv-value('padding-bottom', 20, 10, 1);
 			@include adaptiv-value('gap', 10, 4, 1);
-			@include adaptiv-value('margin-bottom', 10, 6, 1);
-			@include adaptiv-value('padding-bottom', 10, 6, 1);
+			display: flex;
+			overflow-x: auto;
 		}
 
 		&__nav-item {
@@ -14,11 +14,7 @@
 
 		&__nav-btn {
 			width: 100%;
-			padding: 13px 25px;
-
-			@include mq(md) {
-				padding: 7px 14px;
-			}
+			white-space: nowrap;
 
 			&--active {
 				color: $white;

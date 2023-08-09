@@ -1,0 +1,57 @@
+.production-technologies {
+	@include adaptiv-value('padding-top', 100, 40, 1);
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	&__swiper {
+		position: static;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		background-color: $white;
+		border: 1px solid rgba($grey-600, 0.2);
+		transform: translateY(-50%);
+
+		@include mq(md) {
+			top: 14px;
+			transform: translateY(0);
+		}
+
+		&--next {
+			right: -20px;
+
+			@include mq(md) {
+				right: unset;
+				left: 50px;
+			}
+		}
+
+		&--prev {
+			left: -20px;
+
+			@include mq(md) {
+				left: 10px;
+			}
+		}
+
+		&::after {
+			filter: none;
+			@include adaptiv-value('width', 24, 14, 1);
+			@include adaptiv-value('height', 24, 14, 1);
+		}
+	}
+
+	.swiper-button-disabled {
+		opacity: 0.5;
+	}
+}

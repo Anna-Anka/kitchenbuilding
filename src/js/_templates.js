@@ -17,6 +17,10 @@ if (document.querySelector('[data-tabs="contacts"]')) {
     const tabs = new GraphTabs('contacts');
 }
 
+if (document.querySelector('[data-tabs="production-technologies"]')) {
+    const tabs = new GraphTabs('production-technologies');
+}
+
 import Inputmask from "inputmask";
 if (document.querySelector('input[type="tel"]')) {
     let inputs = document.querySelectorAll('input[type="tel"]')

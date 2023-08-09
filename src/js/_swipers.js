@@ -5,3 +5,4 @@ import './swipers/_product-card-slider';
 import './swipers/_recommend-today';
 import './swipers/_recommended-products';
 import './swipers/_articles-section';
+import './swipers/_production-technologies';
