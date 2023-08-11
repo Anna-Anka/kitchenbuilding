@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>Кухнистрой — интернет-магазин кухонь | История компании</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="overlay" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="header__navigation">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__items">
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Адреса салонов
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__user">
+                        <button class="header-top__search" type="button">
+                            Поиск
+                        </button>
+                        <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
+                            + 7 (495) 189-65-92
+                        </a>
+                        <a class="header-top__contact header-top__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                            kuhnistroy@kuhni.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__wrapper">
+                    <a class="header-bottom__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
+                    </a>
+                    <ul class="header-bottom__items">
+                        <li class="header-bottom__item header-bottom__item--menu">
+                            <a class="header-bottom__link" href="#">
+                                Каталог
+                            </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom__user header-user">
+                        <a class="header-user__favorite" href="#">
+                            <span class="header-user__icon" aria-hidden="true"></span>
+                            Избранное (0)
+                        </a>
+                        <button class="header-user__call button" type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header-bottom__mobile">
+                        <a class="header-bottom__phone" href="tel:+78000000000">8 (800)-000-00-00</a>
+                        <p class="header-bottom__hours">пн-пт с 8:00–18:00</p>
+                    </div>
+                    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-form">
+                <label class="sr-only" for="header-search">Что искать?</label>
+                <input class="search-form__field" name="search" type="text" placeholder="Введите поиск..." id="header-search" required>
+                <div class="search-form__management">
+                    <button class="search-form__button button" type="submit">
+                        Искать
+                    </button>
+                    <button class="search-form__close" type="button">
+                        <span class="sr-only">Закрыть поиск</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--light">
+            Рекомендуем сегодня
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/1.avif" type="image/avif">
+            <source srcset="img/recommend-today/1.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/1.png" alt="Светлая кухня" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Светлая кухня</a>
+        </h3>
+        <span class="product-today__subtitle">Специально для любителей светлого</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--dark">
+            Выгодное предложение
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/3.avif" type="image/avif">
+            <source srcset="img/recommend-today/3.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/3.png" alt="Скидка на духовой шкаф" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
+        </h3>
+        <span class="product-today__subtitle">При покупке комплекта техники</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu" id="header-burger-menu" data-menu>
+            <div class="burger-menu__box">
+                <div class="burger-menu__user header-user">
+                    <a class="header-user__favorite" href="#">
+                        <span class="header-user__icon" aria-hidden="true"></span>
+                        Избранное (0)
+                    </a>
+                    <button class="header-user__call button" type="button">
+                        Заказать звонок
+                    </button>
+                </div>
+                <ul class="burger-menu__accordion accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                    kuhnistroy@kuhni.ru
+                </a>
+                <div class="burger-menu__bottom menu-bottom">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                                <span class="sr-only">vk</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                                <span class="sr-only">classmates</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                    <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu">
+    <div class="container">
+        <ul class="mobile-menu__items">
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/catalog.svg');" aria-hidden></span>
+                    Каталог
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/registration.svg');" aria-hidden></span>
+                    Запись в салон
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/address.svg');" aria-hidden></span>
+                    Адреса
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/project.svg');" aria-hidden></span>
+                    Хочу проект
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <section class="hero-section hero-history">
+    <div class="container">
+        <div class="hero-section__wrapper">
+            <span class="hero-section__inscription inscription" aria-hidden></span>
+            <div class="hero-section__content">
+                <span class="hero-section__inscription inscription" aria-hidden></span>
+                <div class="breadcrumbs breadcrumbs--depend">
+    <div class="container">
+        <ul class="breadcrumbs__items">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"> История компании</a>
+            </li>
+        </ul>
+    </div>
+</div>
+                <h1 class="hero-section__title title">
+                    История компании
+                </h1>
+                <div class="hero-section__text">
+                    <p>
+                        Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе
+                    </p>
+                </div>
+                <div class="hero-section__actions">
+                    <a class="button" href="#">Оставить заявку</a>
+                    <a class="button button--border" href="#">О компании</a>
+                </div>
+            </div>
+            <div class="hero-section__image">
+                <span class="hero-section__bg" style="background-image: url('img/history-page/top-bg.svg');" aria-hidden> </span>
+            </div>
+            <a class="circle-link" href="#" data-goto="@circle-goto">
+                <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
+                <span class="sr-only">Бесплатная разработка проекта</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <section class="main-dates">
+    <div class="container">
+        <h2 class="main-dates__title title">
+            Главные даты нашей компании
+        </h2>
+    </div>
+    <div class="main-dates__wrapper">
+        <div class="main-dates__container main-dates__container--first container">
+            <div class="main-dates__item">
+                <div class="main-dates__content main-dates__content--top">
+                    <article class="date-card date-card--bottom">
+    <div class="date-card__decor date-card__decor--bottom">
+        <span class="date-card__number subtitle">01</span>
+        <picture>
+            <source srcset="img/history-page/main-dates/01.avif" type="image/avif">
+            <source srcset="img/history-page/main-dates/01.webp" type="image/webp">
+            <img class="date-card__img" src="img/history-page/main-dates/01.jpg" alt="Запуск" width="120" height="120" loading="lazy">
+        </picture>
+    </div>
+    <div class="date-card__content">
+        <time class="date-card__date" datetime="1998">1998</time>
+        <h3 class="date-card__title subtitle">Запуск</h3>
+        <div class="date-card__text">
+            <p>Компания Ilcam была основана в 1959 году Туллио Замо, отцом сегодняшних акционеров и руководителей Пьерлуиджи и Сильвано.
+        </div>
+    </div>
+</article>
+                </div>
+            </div>
+            <div class="main-dates__item">
+                <div class="main-dates__content main-dates__content--top">
+                    <article class="date-card date-card--bottom">
+    <div class="date-card__decor date-card__decor--bottom">
+        <span class="date-card__number subtitle">02</span>
+        <picture>
+            <source srcset="img/history-page/main-dates/02.avif" type="image/avif">
+            <source srcset="img/history-page/main-dates/02.webp" type="image/webp">
+            <img class="date-card__img" src="img/history-page/main-dates/02.jpg" alt="Запуск" width="120" height="120" loading="lazy">
+        </picture>
+    </div>
+    <div class="date-card__content">
+        <time class="date-card__date" datetime="1998">1998</time>
+        <h3 class="date-card__title subtitle">Запуск</h3>
+        <div class="date-card__text">
+            <p>Компания Ilcam была основана в 1959 году Туллио Замо, отцом сегодняшних акционеров и руководителей Пьерлуиджи и Сильвано.</p>
+        </div>
+    </div>
+</article>
+                </div>
+            </div>
+        </div>
+        <span class="main-dates__decor" aria-hidden></span>
+        <div class="main-dates__container container">
+            <div class="main-dates__item">
+                <div class="main-dates__content main-dates__content--bottom">
+                    <article class="date-card date-card--top">
+    <div class="date-card__decor date-card__decor--top">
+        <span class="date-card__number subtitle">03</span>
+        <picture>
+            <source srcset="img/history-page/main-dates/03.avif" type="image/avif">
+            <source srcset="img/history-page/main-dates/03.webp" type="image/webp">
+            <img class="date-card__img" src="img/history-page/main-dates/03.jpg" alt="Запуск" width="120" height="120" loading="lazy">
+        </picture>
+    </div>
+    <div class="date-card__content">
+        <time class="date-card__date" datetime="2010">2010</time>
+        <h3 class="date-card__title subtitle">Запуск</h3>
+        <div class="date-card__text">
+            <p>Компания Ilcam была основана в 1959 году Туллио Замо, отцом сегодняшних акционеров и руководителей Пьерлуиджи и Сильвано.</p>
+        </div>
+    </div>
+</article>
+                </div>
+            </div>
+            <div class="main-dates__item">
+                <div class="main-dates__content main-dates__content--bottom">
+                    <article class="date-card date-card--top">
+    <div class="date-card__decor date-card__decor--top">
+        <span class="date-card__number subtitle">04</span>
+        <picture>
+            <source srcset="img/history-page/main-dates/04.avif" type="image/avif">
+            <source srcset="img/history-page/main-dates/04.webp" type="image/webp">
+            <img class="date-card__img" src="img/history-page/main-dates/04.jpg" alt="Запуск" width="120" height="120" loading="lazy">
+        </picture>
+    </div>
+    <div class="date-card__content">
+        <time class="date-card__date" datetime="2015">2015</time>
+        <h3 class="date-card__title subtitle">Запуск</h3>
+        <div class="date-card__text">
+            <p>Компания Ilcam была основана в 1959 году Туллио Замо, отцом сегодняшних акционеров и руководителей Пьерлуиджи и Сильвано.</p>
+        </div>
+    </div>
+</article>
+                </div>
+            </div>
+            <div class="main-dates__item">
+                <div class="main-dates__content main-dates__content--bottom">
+                    <article class="date-card date-card--top">
+    <div class="date-card__decor date-card__decor--top">
+        <span class="date-card__number subtitle">05</span>
+        <picture>
+            <source srcset="img/history-page/main-dates/05.avif" type="image/avif">
+            <source srcset="img/history-page/main-dates/05.webp" type="image/webp">
+            <img class="date-card__img" src="img/history-page/main-dates/05.jpg" alt="Запуск" width="120" height="120" loading="lazy">
+        </picture>
+    </div>
+    <div class="date-card__content">
+        <time class="date-card__date" datetime="2022">2022</time>
+        <h3 class="date-card__title subtitle">Запуск</h3>
+        <div class="date-card__text">
+            <p>Компания Ilcam была основана в 1959 году Туллио Замо, отцом сегодняшних акционеров и руководителей Пьерлуиджи и Сильвано.</p>
+        </div>
+    </div>
+</article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="about-production inscription">
+    <div class="container">
+        <div class="about-production__header">
+            <h2 class="about-production__title title">
+                О производстве
+            </h2>
+            <div class="about-production__text">
+                <p>
+                    Все понимают, что невозможно сделать дешевый продукт качественно и нельзя сделать качественный продукт дешево. Нам удалось сделать все наоборот! Благодаря уникальным ноу-хау
+                    разработанным нашей компании мы смогли сделать товар высочайшего качества по уникально низкой цене. Мы приглашаем познакомиться с нашей уникальной моделью бизнеса!
+                </p>
+            </div>
+            <div class="about-production__actions">
+                <a class="action-watch" href="#">
+                    <span class="action-watch__decor" aria-hidden></span>
+                    Смотреть
+                </a>
+                <a class="button button--border" href="#">Узнать подробнее</a>
+            </div>
+        </div>
+        <ul class="about-production__items">
+            <li class="about-production__item">
+                <article class="production-card">
+    <div class="production-card__header">
+        <span class="production-card__bg" style="background-image: url('img/production-block/company.jpg');" aria-hidden></span>
+        <h3 class="production-card__title title">20 лет</h3>
+    </div>
+    <div class="production-card__text"><p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p></div>
+</article>
+            </li>
+            <li class="about-production__item">
+                <article class="production-card">
+    <div class="production-card__header">
+        <span class="production-card__bg" style="background-image: url('img/production-block/complexes.jpg');" aria-hidden></span>
+        <h3 class="production-card__title title">4.5 га</h3>
+    </div>
+    <div class="production-card__text"><p>В Подмосковье на площади 4,5 гектара были построены логистический и производственный комплексы</p></div>
+</article>
+            </li>
+            <li class="about-production__item">
+                <article class="production-card">
+    <div class="production-card__header">
+        <span class="production-card__bg" style="background-image: url('img/production-block/quality.jpg');" aria-hidden></span>
+        <h3 class="production-card__title title">12 лет</h3>
+    </div>
+    <div class="production-card__text"><p>Мы имеем уникально высокий уровень качества, позволяющий предоставлять гарантию на кухни сроком 12 лет</p></div>
+</article>
+            </li>
+            <li class="about-production__item">
+                <article class="production-card">
+    <div class="production-card__header">
+        <span class="production-card__bg" style="background-image: url('img/production-block/models.jpg');" aria-hidden></span>
+        <h3 class="production-card__title title">70 моделей</h3>
+    </div>
+    <div class="production-card__text"><p>Наш ассортимент включает в себя 70 моделей с фасадами российского и итальянского производства</p></div>
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <section class="items-section">
+    <div class="container">
+        <div class="items-section__wrapper items-section__wrapper--early-adaptive">
+            <div class="items-section__content">
+                <div class="items-section__header">
+                    <h2 class="items-section__title title">
+                        Ценности компании
+                    </h2>
+                    <div class="items-section__text">
+                        <p>
+                            Наша миссия, повышать уровень жизни людей, делая качественные товары и услуги более доступными
+                        </p>
+                    </div>
+                </div>
+                <ul class="items-section__items">
+                    <li class="items-section__item">
+                        <article class="number-card">
+
+    <span class="number-card__number">01</span>
+
+    <div class="number-card__content">
+
+        <h3 class="number-card__title subtitle">Мы верим в возможности человека</h3>
+
+        <div class="number-card__text"><p>Дайте ему шанс и он сделает гораздо больше, чем вы и он сам могли бы ожидать</p> </div>
+    </div>
+</article>
+                    </li>
+                    <li class="items-section__item">
+                        <article class="number-card">
+
+    <span class="number-card__number">02</span>
+
+    <div class="number-card__content">
+
+        <h3 class="number-card__title subtitle">Удовольствие от труда</h3>
+
+        <div class="number-card__text"><p>Мы ценим упорный труд и стремимся получать удовольствие от такого труда</p> </div>
+    </div>
+</article>
+                    </li>
+                    <li class="items-section__item">
+                        <article class="number-card">
+
+    <span class="number-card__number">03</span>
+
+    <div class="number-card__content">
+
+        <h3 class="number-card__title subtitle">Уважение</h3>
+
+        <div class="number-card__text"><p>Уважение к человеку. Уважение к клиенту, партнеру, сотруднику</p> </div>
+    </div>
+</article>
+                    </li>
+                    <li class="items-section__item">
+                        <article class="number-card">
+
+    <span class="number-card__number">04</span>
+
+    <div class="number-card__content">
+
+        <h3 class="number-card__title subtitle">Качество</h3>
+
+        <div class="number-card__text"><p>Мы верны качеству — качеству товаров и услуг, качеству отношений, качеству коммуникаций, качеству нашей работы</p> </div>
+    </div>
+</article>
+                    </li>
+                </ul>
+                <a class="items-section__action button button--border" href="#">
+                    Узнать подробнее
+                </a>
+            </div>
+            <div class="items-section__image items-section__image--normal">
+                <div class="items-section__bg" style="background-image: url('img/picture/company-values.jpg');" aria-hidden> </div>
+            </div>
+            <a class="items-section__action items-section__action--mobile button button--border" href="#">
+                Узнать подробнее
+            </a>
+        </div>
+    </div>
+</section>
+
+    <section class="consultation consultation--bottom" id="consultation">
+    <div class="container">
+        <form class="consultation__wrapper form" action="#">
+            <h2 class="consultation__title title">
+                Закажите бесплатную разработку дизайн- проекта кухни
+            </h2>
+            <div class="consultation__content">
+                <div class="form__inner">
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" name="name" type="text" placeholder="Имя" id="consultation-name" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-phone">
+                            Введите номер телефона
+                        </label>
+                        <input class="form__field" name="phone" type="tel" placeholder="Телефон" id="consultation-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                    </div>
+
+                    <button class="form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <div class="form__agree">
+                    <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <label for="consultation-agree">
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </label>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+    <section class="guarantee-years">
+    <div class="container">
+        <div class="guarantee-years__header">
+            <div class="guarantee-years__descr">
+                <h2 class="guarantee-years__title title">
+                    Гарантия 12 лет
+                </h2>
+                <div class="guarantee-years__text">
+                    <p>
+                        Уже много лет Фабрика Кухни ZETTA дает всем свои клиентам гарантию на кухни 12 лет. Такой большой гарантийный срок является следствием многолетнего опыта работы компании и
+                        жесточайшего отбора
+                        поставщиков. Каждый элемент кухни сделан таким образом, чтобы мы могли гарантировать его работу в течении 12 лет. На практике, реальный срок службы кухни составляет более 20
+                        лет.
+                    </p>
+                </div>
+            </div>
+            <div class="years-icon" aria-hidden>
+                <div class="years-icon__content">
+                    <span class="years-icon__decor"></span>
+                    <span class="years-icon__title">12</span>
+                    <span class="years-icon__text">лет</span>
+                </div>
+            </div>
+        </div>
+        <ul class="guarantee-years__items">
+            <li class="guarantee-years__item">
+                <article class="guarantee-card">
+    <div class="guarantee-card__content">
+        <h3 class="guarantee-card__title subtitle">Производство</h3>
+        <ul class="guarantee-card__items list">
+            <li>Премиальная фурнитура от Grass (Австрия)</li>
+            <li>Петли с 5-слойной стальной пластиной и системой Click</li>
+            <li>Лучшая система крепления корпусов Camar (Италия)</li>
+            <li>Металлические держатели в зоне духового шкафа</li>
+        </ul>
+    </div>
+    <span class="guarantee-card__bg" style="background-image: url('img/illustrations/production.svg');" aria-hidden> </span>
+</article>
+            </li>
+            <li class="guarantee-years__item">
+                <article class="guarantee-card">
+    <div class="guarantee-card__content">
+        <h3 class="guarantee-card__title subtitle">Сборка</h3>
+        <ul class="guarantee-card__items list">
+            <li>Кухни собираются на производстве, а не у клиента дома</li>
+            <li>Монтаж в один день с доставкой силами двух монтажников</li>
+            <li>Только автоматизированное поточное производство фасадов</li>
+            <li>Избыточный запас прочности и надежности корпусов</li>
+        </ul>
+    </div>
+    <span class="guarantee-card__bg" style="background-image: url('img/illustrations/assembly.svg');" aria-hidden> </span>
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrapper">
+                <address class="footer__info">
+                    <a class="footer__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
+                    </a>
+                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                        + 7 (495) 189-65-92
+                    </a>
+                    <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                        kuhnistroy@kuhni.ru
+                    </a>
+                    <button class="footer__call" type="button">Заказать звонок</button>
+                </address>
+                <ul class="accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Компания</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Акции</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Портфолио</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Новости</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Сервис</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Замер</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доставка и сборка</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Монтаж</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Гарантия</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Миссия</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Кухни</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Электрика</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доп элементы</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Сантехника</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="menu-bottom">
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                            <span class="sr-only">vk</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                            <span class="sr-only">classmates</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+
+</html>

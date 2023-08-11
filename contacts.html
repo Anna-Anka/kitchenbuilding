@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>Кухнистрой — интернет-магазин кухонь | Адреса салонов</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="overlay" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="header__navigation">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__items">
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Адреса салонов
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__user">
+                        <button class="header-top__search" type="button">
+                            Поиск
+                        </button>
+                        <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
+                            + 7 (495) 189-65-92
+                        </a>
+                        <a class="header-top__contact header-top__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                            kuhnistroy@kuhni.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__wrapper">
+                    <a class="header-bottom__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
+                    </a>
+                    <ul class="header-bottom__items">
+                        <li class="header-bottom__item header-bottom__item--menu">
+                            <a class="header-bottom__link" href="#">
+                                Каталог
+                            </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom__user header-user">
+                        <a class="header-user__favorite" href="#">
+                            <span class="header-user__icon" aria-hidden="true"></span>
+                            Избранное (0)
+                        </a>
+                        <button class="header-user__call button" type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header-bottom__mobile">
+                        <a class="header-bottom__phone" href="tel:+78000000000">8 (800)-000-00-00</a>
+                        <p class="header-bottom__hours">пн-пт с 8:00–18:00</p>
+                    </div>
+                    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-form">
+                <label class="sr-only" for="header-search">Что искать?</label>
+                <input class="search-form__field" name="search" type="text" placeholder="Введите поиск..." id="header-search" required>
+                <div class="search-form__management">
+                    <button class="search-form__button button" type="submit">
+                        Искать
+                    </button>
+                    <button class="search-form__close" type="button">
+                        <span class="sr-only">Закрыть поиск</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--light">
+            Рекомендуем сегодня
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/1.avif" type="image/avif">
+            <source srcset="img/recommend-today/1.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/1.png" alt="Светлая кухня" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Светлая кухня</a>
+        </h3>
+        <span class="product-today__subtitle">Специально для любителей светлого</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--dark">
+            Выгодное предложение
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/3.avif" type="image/avif">
+            <source srcset="img/recommend-today/3.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/3.png" alt="Скидка на духовой шкаф" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <h3 class="product-today__title">
+            <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
+        </h3>
+        <span class="product-today__subtitle">При покупке комплекта техники</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu" id="header-burger-menu" data-menu>
+            <div class="burger-menu__box">
+                <div class="burger-menu__user header-user">
+                    <a class="header-user__favorite" href="#">
+                        <span class="header-user__icon" aria-hidden="true"></span>
+                        Избранное (0)
+                    </a>
+                    <button class="header-user__call button" type="button">
+                        Заказать звонок
+                    </button>
+                </div>
+                <ul class="burger-menu__accordion accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                    kuhnistroy@kuhni.ru
+                </a>
+                <div class="burger-menu__bottom menu-bottom">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                                <span class="sr-only">vk</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                                <span class="sr-only">classmates</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                    <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu">
+    <div class="container">
+        <ul class="mobile-menu__items">
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/catalog.svg');" aria-hidden></span>
+                    Каталог
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/registration.svg');" aria-hidden></span>
+                    Запись в салон
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/address.svg');" aria-hidden></span>
+                    Адреса
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/project.svg');" aria-hidden></span>
+                    Хочу проект
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ul class="breadcrumbs__items">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"> Адреса салонов</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <section class="contacts section">
+    <div class="container">
+        <h2 class="contacts__title title">
+            Адреса салонов
+        </h2>
+        <div class="contacts__wrapper">
+            <div class="contacts__panel">
+                <h3 class="contacts__subtitle subtitle subtitle--large">
+                    Салоны
+                </h3>
+                <div class="contacts__tabs tabs" data-tabs="contacts">
+                    <ul class="tabs__nav">
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn button button--border" type="button">
+                                Москва
+                            </button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn button button--border" type="button">
+                                Калуга
+                            </button>
+                        </li>
+                        <li class="tabs__nav-item">
+                            <button class="tabs__nav-btn button button--border" type="button">
+                                Владикавказ
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel tabs__panel--active">
+                            <ul class="contacts__items">
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Москва, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Москва, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="contacts__item">
+                                    <article class="salon-card salon-card--info">
+                                        <p>
+                                            Новый салон. Скоро откроемся!
+                                        </p>
+                                    </article>
+                                </li>
+                            </ul>
+                            <div class="contacts__map">
+                                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/rastorguyevskiy_pereulok_1/Z04YcwBgTkQBQFtvfXt3dHxmZw==/?ll=37.570717%2C55.765053&utm_medium=mapframe&utm_source=maps&z=17.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Расторгуевский переулок, 1 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.570717%2C55.765053&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcyNjIwNxJM0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCg0LDRgdGC0L7RgNCz0YPQtdCy0YHQutC40Lkg0L_QtdGA0LXRg9C70L7QuiwgMSIKDWpIFkIVag9fQg%2C%2C&z=17.14" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                            </div>
+                        </div>
+
+                        <div class="tabs__panel">
+                            <ul class="contacts__items">
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Калуга, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Калуга, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                            <div class="contacts__map">
+                                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/6/kaluga/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Калуга</a><a href="https://yandex.ru/maps/geo/kaluga/53056940/?ll=36.281954%2C54.516886&utm_medium=mapframe&utm_source=maps&z=12.11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=36.281954%2C54.516886&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1Njk0MBIa0KDQvtGB0YHQuNGPLCDQmtCw0LvRg9Cz0LAiCg2eCxFCFQEOWkI%2C&z=12.11" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                            </div>
+                        </div>
+
+                        <div class="tabs__panel">
+                            <ul class="contacts__items">
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Владикавказ, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="contacts__item">
+                                    <article class="salon-card">
+                                        <div class="salon-card__content">
+                                            <p>
+                                                <b>г. Владикавказ, Расторгуевский пер., д. 1</b>
+                                            </p>
+                                            <p>
+                                                Ежедневно, с 10:30 до 21:30
+                                            </p>
+                                        </div>
+                                        <div class="salon-card__buttons">
+                                            <button class="salon-card__button" type="button">
+                                                Смотреть на Карте
+                                            </button>
+                                            <button class="salon-card__button salon-card__button--accent" type="button">
+                                                Записаться в салон
+                                            </button>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li class="contacts__item">
+                                    <article class="salon-card salon-card--info">
+                                        <p>
+                                            Новый салон. Скоро откроемся!
+                                        </p>
+                                    </article>
+                                </li>
+                            </ul>
+                            <div class="contacts__map">
+                                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/33/vladikavkaz/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Владикавказ</a><a href="https://yandex.ru/maps/geo/vladikavkaz/53119295/?ll=44.672976%2C43.024277&utm_medium=mapframe&utm_source=maps&z=12.75" style="color:#eee;font-size:12px;position:absolute;top:14px;">Владикавказ — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=44.672976%2C43.024277&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExOTI5NRJp0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQodC10LLQtdGA0L3QsNGPINCe0YHQtdGC0LjRjyDigJQg0JDQu9Cw0L3QuNGPLCDQktC70LDQtNC40LrQsNCy0LrQsNC3IgoNIboyQhU1GSxC&z=12.75" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<section class="consultation consultation--normal" id="consultation">
+    <div class="container">
+        <form class="consultation__wrapper form" action="#">
+            <h2 class="consultation__title title">
+                Отправка на почту чек-листа
+            </h2>
+            <div class="consultation__content">
+                <div class="form__inner">
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" name="name" type="text" placeholder="Имя" id="consultation-name" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-email">
+                            Введите вашу почту
+                        </label>
+                        <input class="form__field" name="phone" type="email" placeholder="Почта" id="consultation-email" required>
+                    </div>
+
+                    <button class="form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <div class="form__agree">
+                    <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <label for="consultation-agree">
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </label>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrapper">
+                <address class="footer__info">
+                    <a class="footer__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
+                    </a>
+                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                        + 7 (495) 189-65-92
+                    </a>
+                    <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                        kuhnistroy@kuhni.ru
+                    </a>
+                    <button class="footer__call" type="button">Заказать звонок</button>
+                </address>
+                <ul class="accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Компания</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Акции</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Портфолио</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Новости</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Сервис</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Замер</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доставка и сборка</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Монтаж</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Гарантия</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Миссия</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Кухни</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Электрика</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доп элементы</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Сантехника</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="menu-bottom">
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                            <span class="sr-only">vk</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                            <span class="sr-only">classmates</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+
+</html>
