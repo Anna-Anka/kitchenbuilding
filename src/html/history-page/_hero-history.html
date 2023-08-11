@@ -1,0 +1,33 @@
+<section class="hero-section hero-history">
+    <div class="container">
+        <div class="hero-section__wrapper">
+            <span class="hero-section__inscription inscription" aria-hidden></span>
+            <div class="hero-section__content">
+                <span class="hero-section__inscription inscription" aria-hidden></span>
+                @include('../components/_breadcrumbs.html', {
+                'class' : 'breadcrumbs breadcrumbs--depend',
+                'current' : 'История компании'
+                })
+                <h1 class="hero-section__title title">
+                    История компании
+                </h1>
+                <div class="hero-section__text">
+                    <p>
+                        Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе
+                    </p>
+                </div>
+                <div class="hero-section__actions">
+                    <a class="button" href="#">Оставить заявку</a>
+                    <a class="button button--border" href="#">О компании</a>
+                </div>
+            </div>
+            <div class="hero-section__image">
+                <span class="hero-section__bg" style="background-image: url('img/history-page/top-bg.svg');" aria-hidden> </span>
+            </div>
+            <a class="circle-link" href="#" data-goto="@circle-goto">
+                <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
+                <span class="sr-only">Бесплатная разработка проекта</span>
+            </a>
+        </div>
+    </div>
+</section>

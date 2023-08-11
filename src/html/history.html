@@ -1,0 +1,28 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Производство' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./history-page/_hero-history.html')
+
+    @include('./components/sections/_about-production.html')
+
+    @include('./components/sections/_company-values.html')
+
+    @include('./components/sections/_consultation.html', {
+    'class' : 'consultation consultation--normal',
+    'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+    'tel' : 'true'
+    })
+
+    @include('./components/sections/_guarantee-years.html')
+
+</main>
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

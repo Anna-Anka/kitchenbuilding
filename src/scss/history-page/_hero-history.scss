@@ -1,0 +1,51 @@
+.hero-history {
+	.hero-section__wrapper {
+		min-height: 610px;
+		background-color: $grey-200;
+		@include adaptiv-value('border-radius', 30, 15, 1);
+
+		@include mq(lg) {
+			min-height: auto;
+		}
+
+		@include mq(sm) {
+			padding-bottom: 60px;
+		}
+	}
+
+	.hero-section__content {
+		@include mq(sm, min) {
+			padding-right: 0;
+		}
+
+		@include mq(sm) {
+			padding-bottom: 10px;
+		}
+
+		.hero-section__inscription {
+			display: none;
+		}
+	}
+
+	.hero-section__image {
+		width: 67%;
+		height: 403px;
+		padding: 50px 50px 0 0;
+
+		@include mq(lg) {
+			width: 55%;
+			height: 237px;
+			padding: 0;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+			height: 155px;
+			padding: 0 20px;
+		}
+	}
+
+	.hero-section__bg {
+		background-size: contain;
+	}
+}
