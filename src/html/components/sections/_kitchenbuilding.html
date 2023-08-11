@@ -43,5 +43,10 @@
                 })
             </li>
         </ul>
+        @if(typeof link !== 'undefined' && context.link === 'true') {
+        <a class="kitchenbuilding__link kitchenbuilding__link--mobile button button--border" href="#">
+            Узнать подробнее
+        </a>
+        }
     </div>
 </section>

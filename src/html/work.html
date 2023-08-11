@@ -1,0 +1,48 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Вакансии' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/sections/_hero-section.html', {
+    'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
+    'breadcrumbs' : 'Вакансии',
+    'title' : 'Вакансии',
+    'text' : '<p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>',
+    'folder' : 'work-page',
+    'action1' : '<a class="button" href="#">Перейти к вакансиям</a>',
+    'action2' : '<a class="button button--border" href="#">Оставить заявку</a>',
+    'circle-img' : 'free-project',
+    'circle-goto' : '',
+    'circle-text' : 'бесплатная разработка проекта'
+    })
+
+    @include('./components/sections/_kitchenbuilding.html', {
+    'class' : 'kitchenbuilding',
+    'link' : 'true'
+    })
+
+    @include('./components/sections/_consultation.html', {
+    'class' : 'consultation consultation--bottom',
+    'title' : 'Оставьте заявку на вакансию',
+    'tel' : 'true'
+    })
+
+    @include('./components/sections/_about-production.html')
+
+    @include('./components/sections/_company-values.html')
+
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--bottom',
+'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+'tel' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

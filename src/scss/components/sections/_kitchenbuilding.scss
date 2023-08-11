@@ -64,6 +64,7 @@
 
 		@include mq(lg) {
 			flex-direction: column;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -76,6 +77,25 @@
 			@include mq(lg) {
 				margin-right: 0;
 				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__link {
+		@include mq(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			display: flex;
+			max-width: fit-content;
+
+			@include mq(lg, min) {
+				display: none;
+			}
+
+			@include mq(md) {
+				max-width: 100%;
 			}
 		}
 	}

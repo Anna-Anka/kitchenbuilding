@@ -80,10 +80,10 @@
 			content: '';
 
 			@include mq(lg) {
-				width: 33px;
-				height: 1px;
 				top: 30px;
 				left: 0;
+				width: 33px;
+				height: 1px;
 			}
 		}
 
