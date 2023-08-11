@@ -9,12 +9,14 @@
 <main class="main">
     @include('./history-page/_hero-history.html')
 
+    @include('./history-page/_main-dates.html')
+
     @include('./components/sections/_about-production.html')
 
     @include('./components/sections/_company-values.html')
 
     @include('./components/sections/_consultation.html', {
-    'class' : 'consultation consultation--normal',
+    'class' : 'consultation consultation--bottom',
     'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
     'tel' : 'true'
     })
