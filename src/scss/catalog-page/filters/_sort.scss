@@ -12,14 +12,14 @@
 		&--up,
 		&--down {
 			.sort__visible {
-				padding-right: 14px;
+				@include adaptiv-value('padding-right', 14, 10, 1);
 
 				&::before {
 					@include bg-conatin;
 					top: 50%;
 					right: 0;
 					width: 6px;
-					height: 14px;
+					@include adaptiv-value('height', 14, 10, 1);
 					background-image: url('../img/icons/up.svg');
 					transform: translateY(-50%);
 				}
@@ -59,6 +59,7 @@
 	&__visible {
 		position: relative;
 		color: $dark-800;
+		@include adaptiv-value('font-size', 20, 12, 1);
 
 		&::before,
 		&::after {

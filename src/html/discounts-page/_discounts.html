@@ -1,0 +1,96 @@
+<section class="discounts">
+    <div class="container">
+        <h2 class="discounts__title title">
+            Акции и скидки
+        </h2>
+        <form class="discounts__sort sort" action="#" method="get">
+            <label class="sort__item sort__item--normal">
+                <input class="sort__hidden" type="radio" name="sort" value="По популярности" checked>
+                <span class="sort__visible">По популярности</span>
+            </label>
+            <label class="sort__item sort__item--up">
+                <input class="sort__hidden" type="radio" name="sort" value="По цене по возрастанию">
+                <span class="sort__visible">По цене</span>
+            </label>
+            <label class="sort__item sort__item--down sort__item--hidden">
+                <input class="sort__hidden" type="radio" name="sort" value="По цене по убыванию">
+                <span class="sort__visible">По цене</span>
+            </label>
+        </form>
+        <ul class="discounts__items">
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/cashback-25',
+                'alt' : 'кухня',
+                'title' : 'Cashback 25%',
+                'subtitle' : 'Получаете бесплатно технику',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/certificate',
+                'alt' : 'шкафы',
+                'title' : 'Сертификат на 100 000 ₽',
+                'subtitle' : 'На шкафы гостиные и гардеробные',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/discount-45',
+                'alt' : 'кухони с фасадами итальянского производства',
+                'title' : 'Скидка 45% модели итальянского производства',
+                'subtitle' : 'Скидка распространяется на 8 моделей кухонь с фасадами итальянского производства',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/installment',
+                'alt' : 'Рассрочка',
+                'title' : 'Рассрочка 0%',
+                'subtitle' : '6 месяцев, без процентов',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/discount-20-oven',
+                'alt' : 'духовой шкаф',
+                'title' : 'Вместе выгодно! Скидка 20%',
+                'subtitle' : 'На духовой шкаф B 6330.0S',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/discount-20-laundry',
+                'alt' : 'стиральная машина',
+                'title' : 'Стираем цены!',
+                'subtitle' : 'Скидка 20% на все приборы и аксессуары для ухода за бельем',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/discount-100-summer',
+                'alt' : 'комплект техники Korting',
+                'title' : 'Летние скидки до 100%',
+                'subtitle' : 'При покупке комплекта техники Korting',
+                })
+            </li>
+            <li class="discounts__item">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'discounts/discount-100-graude',
+                'alt' : 'комплект техники Graude',
+                'title' : 'Купи больше - плати меньше!',
+                'subtitle' : 'Скидки до 100% при покупке комплекта',
+                })
+            </li>
+        </ul>
+        <span class="loader" style="background-image: url('img/icons/loader.svg');" aria-hidden> </span>
+    </div>
+</section>

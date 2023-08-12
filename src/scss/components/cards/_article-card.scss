@@ -2,12 +2,13 @@
 	position: relative;
 
 	&__image {
-		@include adaptiv-value('height', 440, 360, 1);
-		margin-bottom: 20px;
+		@include adaptiv-value('margin-bottom', 20, 10, 1);
 		border-radius: 15px;
+		position: relative;
+		padding-bottom: 135%;
 
 		&--gradient {
-			position: relative;
+			// position: relative;
 
 			&::before {
 				position: absolute;
@@ -25,10 +26,8 @@
 	}
 
 	&__img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 		border-radius: 15px;
+		@include resize-img;
 	}
 
 	&__title {
@@ -49,7 +48,7 @@
 		}
 	}
 
-	&__date {
+	&__subtitle {
 		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 }

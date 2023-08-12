@@ -1,0 +1,44 @@
+.discounts {
+	@include adaptiv-value('padding-bottom', 40, 0, 1);
+
+	&__sort {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px 20px;
+
+		@include mq(lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include mq(sm) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px 10px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__item {
+		max-width: 100%;
+	}
+
+	.article-card {
+		&__subtitle {
+			@include line-clamp(1);
+
+			@include mq(lg) {
+				@include line-clamp(2);
+			}
+		}
+
+		&__image {
+			border: 1px solid rgba($grey-600, 0.2);
+		}
+	}
+}

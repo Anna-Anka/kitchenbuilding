@@ -203,3 +203,21 @@ body {
 		@include adaptiv-value('height', 162, 48, 1);
 	}
 }
+
+.loader {
+	display: block;
+	@include adaptiv-value('width', 55, 30, 1);
+	@include adaptiv-value('height', 55, 30, 1);
+	margin: 0 auto;
+	@include bg-conatin;
+	animation: 1s linear 0s normal none infinite running rot;
+}
+
+@keyframes rot {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

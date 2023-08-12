@@ -1,13 +1,18 @@
 <article class="article-card">
     <div class="@image-class">
         <picture>
-            <source srcset="img/articles/@img.avif" type="image/avif">
-            <source srcset="img/articles/@img.webp" type="image/webp">
-            <img class="article-card__img" src="img/articles/@img.jpg" alt="@alt" width="325" height="440" loading="lazy">
+            <source srcset="img/@img.avif" type="image/avif">
+            <source srcset="img/@img.webp" type="image/webp">
+            <img class="article-card__img" src="img/@img.jpg" alt="@alt" width="325" height="440" loading="lazy">
         </picture>
     </div>
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">@title</a>
     </h3>
-    <time class="article-card__date" datetime=" @datetime">@date</time>
+    @if(typeof date !== 'undefined' && date && typeof datetime !== 'undefined' && datetime) {
+    <time class="article-card__subtitle" datetime="@datetime">@date</time>
+    }
+    @if(typeof subtitle !== 'undefined' && subtitle) {
+    <p class="article-card__subtitle">@subtitle</p>
+    }
 </article>
