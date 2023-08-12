@@ -1,0 +1,30 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Статьи' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/_breadcrumbs.html', {
+    'class' : 'breadcrumbs',
+    'current' : 'Статьи'
+    })
+
+    @include('./articles-page/_articles.html')
+
+    @include('./components/sections/_addresses.html', {
+    'class' : 'addresses section'
+    })
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

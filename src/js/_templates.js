@@ -33,8 +33,8 @@ smoothScroll();
 
 import mixitup from 'mixitup';
 
-if (document.querySelector('.articles-section__items')) {
-    let mixer = mixitup('.articles-section__items', {
+if (document.querySelector('.articles-block')) {
+    let mixer = mixitup('.articles-block', {
         load: {
             filter: '.category-furniture'
         }

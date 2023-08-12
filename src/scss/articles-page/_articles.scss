@@ -1,9 +1,5 @@
-.discounts {
+.articles {
 	@include adaptiv-value('padding-bottom', 40, 0, 1);
-
-	&__sort {
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
-	}
 
 	&__items {
 		display: grid;
@@ -21,20 +17,6 @@
 
 		&:not(:last-child) {
 			margin-bottom: 20px;
-		}
-	}
-
-	.article-card {
-		&__subtitle {
-			@include line-clamp(1);
-
-			@include mq(lg) {
-				@include line-clamp(2);
-			}
-		}
-
-		&__image {
-			border: 1px solid rgba($grey-600, 0.2);
 		}
 	}
 }

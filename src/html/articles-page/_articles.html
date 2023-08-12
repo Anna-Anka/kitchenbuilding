@@ -1,0 +1,120 @@
+<section class="discounts">
+    <div class="container">
+        <h2 class="discounts__title title">
+            Акции и скидки
+        </h2>
+        <ul class="filter-content">
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-furniture" type="button">Мебель</button>
+            </li>
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-interior" type="button">Интерьер</button>
+            </li>
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-comparisons" type="button">Сравнения</button>
+            </li>
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-technique" type="button">Техника</button>
+            </li>
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-practice" type="button">Практика</button>
+            </li>
+            <li class="filter-content__item">
+                <button class="filter-content__button button button--border" data-filter=".category-project" type="button">Проект</button>
+            </li>
+        </ul>
+        <ul class="articles__items articles-block">
+            <li class="mix category-furniture">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/5',
+                'alt' : 'Картинка 5',
+                'title' : 'Жизнь в цвете: какую палитру выбрать для интерьера кухни',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-furniture">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/1',
+                'alt' : 'Картинка 1',
+                'title' : 'Как выбрать хорошую технику для кухни',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-furniture">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image article-card__image--gradient',
+                'img' : 'articles/2',
+                'alt' : 'Картинка 2',
+                'title' : 'Жизнь в цвете',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-furniture">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/4',
+                'alt' : 'Картинка 4',
+                'title' : 'Жизнь в цвете: какую палитру выбрать для интерьера кухни',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-interior">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/6',
+                'alt' : 'Картинка 6',
+                'title' : 'Жизнь в цвете: какую палитру выбрать для интерьера кухни',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-comparisons">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/7',
+                'alt' : 'Картинка 7',
+                'title' : 'Жизнь в цвете',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-technique">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image article-card__image--gradient',
+                'img' : 'articles/8',
+                'alt' : 'Картинка 8',
+                'title' : 'Жизнь в цвете',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-practice">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/9',
+                'alt' : 'Картинка 9',
+                'title' : 'Жизнь в цвете',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+            <li class="mix category-project">
+                @include('../components/cards/_article-card.html', {
+                'image-class' : 'article-card__image',
+                'img' : 'articles/9',
+                'alt' : 'Картинка 9',
+                'title' : 'Жизнь в цвете',
+                'date' : '20.05.2023',
+                'datetime' : '2023-05-20'
+                })
+            </li>
+        </ul>
+        <span class="loader" style="background-image: url('img/icons/loader.svg');" aria-hidden> </span>
+    </div>
+</section>
