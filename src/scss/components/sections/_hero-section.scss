@@ -163,6 +163,11 @@
 		@include adaptiv-value('padding', 20, 12, 1);
 		@include adaptiv-value('border-radius', 20, 15, 1);
 
+		b {
+			font-weight: inherit;
+			color: $black;
+		}
+
 		@include mq(xl) {
 			max-width: 35%;
 		}

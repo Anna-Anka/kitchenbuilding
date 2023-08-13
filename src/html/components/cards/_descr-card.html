@@ -1,0 +1,11 @@
+<article class="@class">
+    <span class="descr-card__bg" style="background-image: url('img/illustrations/@bg.svg');" aria-hidden> </span>
+    <div class="descr-card__content">
+        @if(typeof title !== 'undefined' && title) {
+        <h3 class="descr-card__title subtitle">@title</h3>
+        }
+        <div class="descr-card__text">
+            @text
+        </div>
+    </div>
+</article>

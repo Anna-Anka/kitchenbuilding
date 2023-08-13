@@ -1,0 +1,57 @@
+.guarantee-videos {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+	@include adaptiv-value('padding-top', 100, 40, 1);
+
+	&__header {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+
+		@include mq(lg, min) {
+			max-width: 1015px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 12, 1);
+	}
+
+	&__items {
+		display: flex;
+		gap: 10px;
+
+		@include mq(md) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: 100%;
+		padding-bottom: 29.5%;
+
+		@include mq(md) {
+			padding-bottom: 49.5%;
+		}
+
+		@include mq(sm) {
+			padding-bottom: 69.5%;
+		}
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@include adaptiv-value('border-radius', 20, 10, 1);
+		}
+	}
+}

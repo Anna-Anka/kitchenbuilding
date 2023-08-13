@@ -1,0 +1,26 @@
+.guarantee-spread {
+	background-color: $grey-200;
+	@include adaptiv-value('padding-top', 100, 40, 1);
+	@include adaptiv-value('padding-bottom', 140, 58, 1);
+
+	&::before {
+		bottom: 0;
+		transform: translate(-50%, 30%);
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__items {
+		display: flex;
+		padding-bottom: 20px;
+		overflow-x: auto;
+		@include adaptiv-value('gap', 20, 10, 1);
+	}
+
+	&__item {
+		@include adaptiv-value('flex-basis', 440, 312, 1);
+		flex-shrink: 0;
+	}
+}
