@@ -1,11 +1,11 @@
 .interactive {
 	@include flex-all-center;
+	position: relative;
 	background-color: $grey-200;
 	@include adaptiv-value('border-radius', 30, 7, 1);
 
 	&__bg {
-		@include bg-conatin;
-		position: relative;
+		@include resize-bg;
 	}
 
 	&__title {
@@ -13,6 +13,10 @@
 		margin-bottom: 5px;
 		color: $black;
 	}
+
+	// &__item {
+	// 	z-index: 5;
+	// }
 
 	.accordion {
 		&__item {
@@ -40,6 +44,18 @@
 			transition: background-color 0.3s, transform 0.3s;
 			@include flex-all-center;
 
+			&--decor {
+				@include adaptiv-value('width', 75, 46, 1);
+				@include adaptiv-value('height', 75, 46, 1);
+				background-color: $white;
+				border: 1px solid rgba($grey-600, 0.4);
+				box-shadow: 0 20px 54px 0px rgba($black, 0.17);
+
+				&::before {
+					display: none;
+				}
+			}
+
 			&::before {
 				position: absolute;
 				top: 50%;
@@ -58,16 +74,22 @@
 			}
 		}
 
+		&__decor {
+			@include adaptiv-value('width', 44, 24, 1);
+			@include adaptiv-value('height', 44, 24, 1);
+			@include bg-conatin;
+		}
+
 		&__content {
 			position: relative;
 			z-index: 2;
 			width: 305px;
 			margin-top: 0;
 			background-color: $white;
+			box-shadow: 0 20px 54px 0px rgba($black, 0.2);
 			@include adaptiv-value('border-radius', 20, 15, 1);
 			@include adaptiv-value('padding', 30, 16, 1);
 			@include adaptiv-value('font-size', 16, 14, 1);
-			box-shadow: 0 20px 54px 0px rgba($black, 0.2);
 
 			@include mq(xl) {
 				width: 100%;
@@ -87,6 +109,10 @@
 		.open {
 			.accordion__button {
 				background-color: $dark-800;
+
+				&--decor {
+					background-color: $white;
+				}
 
 				&::before {
 					transform: rotate(45deg) translate(-67%, 4%);
