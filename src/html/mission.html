@@ -1,5 +1,5 @@
 @include('./components/links/_head.html',
-{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Гарантийное обсулживание' }
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Миссия и ценности' }
 )
 
 @include('./components/_header.html')
@@ -9,20 +9,20 @@
 <main class="main">
     @include('./components/sections/_hero-section.html', {
     'breadcrumbs-class' : 'breadcrumbs breadcrumbs--depend',
-    'breadcrumbs' : 'Гарантийное обсулживание',
-    'title' : 'Гарантийное обсулживание',
+    'breadcrumbs' : 'Миссия и ценности',
+    'title' : 'Миссия и ценности',
     'text' : '<p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>',
-    'folder' : 'guarantee-page',
-    'action1' : '<button class="button" type="button">Заказать замер</button>',
+    'folder' : 'mission-page',
+    'action1' : '<a class="button" href="#">Узнать вакансии</a>',
     'action2' : '<a class="button button--border" href="#">Оставить заявку</a>',
-    'extra' : '<p>Такой большой гарантийный срок является следствием многолетнего опыта работы компании и жесточайшего отбора поставщиков. Каждый элемент кухни сделан таким образом, чтобы мы могли гарантировать его работу в течении 12 лет. <b>На практике, реальный срок службы кухни составляет более 20 лет.</b></p>',
-    'extra-class' : 'hero-section__extra',
+    'extra' : '<p>Стремимся повышать уровень жизни людей, делая качественные товары и услуги более доступными.</p>',
+    'extra-class' : 'hero-section__extra hero-section__extra--accent',
     'circle-img' : 'free-project',
     'circle-goto' : '',
     'circle-text' : 'бесплатная разработка проекта'
     })
 
-    @include('./guarantee-page/_guarantee-spread.html')
+    @include('./mission-page/_our-beliefs.html')
 
     @include('./guarantee-page/_features.html')
 

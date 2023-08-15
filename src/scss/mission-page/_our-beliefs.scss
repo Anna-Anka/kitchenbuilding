@@ -1,0 +1,76 @@
+.our-beliefs {
+	&__header {
+		width: 100%;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+
+		@include mq(sm, min) {
+			max-width: 500px;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
+
+		@include mq(lg, min) {
+			max-width: 700px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 14, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		gap: 20px;
+
+		@include mq(md) {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__items,
+	&__image {
+		width: 48%;
+
+		@include mq(md) {
+			width: 100%;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+
+		@include mq(lg) {
+			gap: 10px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		display: block;
+		padding-bottom: 19.5%;
+		@include adaptiv-value('border-radius', 20, 10, 1);
+
+		@include mq(md) {
+			padding-bottom: 48.5%;
+		}
+	}
+
+	&__bg {
+		@include resize-bg;
+		border-radius: inherit;
+	}
+}

@@ -1,0 +1,34 @@
+.belief-card {
+	@include adaptiv-value('border-radius', 20, 10, 1);
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background-color: $grey-200;
+
+	@include mq(lg) {
+		flex-direction: column;
+		gap: 8px;
+		padding: 20px 12px;
+	}
+
+	&__number {
+		@include adaptiv-value('font-size', 16, 12, 1);
+		@include adaptiv-value('width', 42, 28, 1);
+		@include adaptiv-value('height', 42, 28, 1);
+		@include flex-all-center;
+		flex-shrink: 0;
+		color: $dark-800;
+		font-weight: $fw-600;
+		text-align: center;
+		background-color: $white;
+		border: 1px solid rgba($grey-600, 0.4);
+		border-radius: 50%;
+	}
+
+	&__title {
+		@include adaptiv-value('font-size', 20, 12, 1);
+		color: $black;
+	}
+}

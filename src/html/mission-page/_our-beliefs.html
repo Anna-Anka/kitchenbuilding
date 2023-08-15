@@ -1,0 +1,45 @@
+<section class="our-beliefs">
+    <div class="container">
+        <div class="our-beliefs__header">
+            <h2 class="our-beliefs__title title">
+                Наши убеждения
+            </h2>
+            <div class="our-beliefs__text">
+                <p>
+                    Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе
+                </p>
+            </div>
+        </div>
+        <div class="our-beliefs__wrapper">
+            <ul class="our-beliefs__items">
+                <li class="our-beliefs__item">
+                    @include('../components/cards/_belief-card.html', {
+                    'number' : '01',
+                    'title' : 'Довольный клиент - основа нашего успеха.'
+                    })
+                </li>
+                <li class="our-beliefs__item">
+                    @include('../components/cards/_belief-card.html', {
+                    'number' : '02',
+                    'title' : 'Мы относимся к клиентам, как к лучшим друзьям.'
+                    })
+                </li>
+                <li class="our-beliefs__item">
+                    @include('../components/cards/_belief-card.html', {
+                    'number' : '03',
+                    'title' : 'Мы стремимся сделать свой товар доступным'
+                    })
+                </li>
+                <li class="our-beliefs__item">
+                    @include('../components/cards/_belief-card.html', {
+                    'number' : '04',
+                    'title' : 'Строим долгосрочное сотрудничество с клиентами.'
+                    })
+                </li>
+            </ul>
+            <span class="our-beliefs__image" aria-hidden>
+                <span class="our-beliefs__bg" style="background-image: url('img/mission-page/our-beliefs.jpg');"></span>
+            </span>
+        </div>
+    </div>
+</section>
