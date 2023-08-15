@@ -1,0 +1,44 @@
+.true-card {
+	padding: 20px 20px 0 34px;
+	border-top: 1px solid rgba($grey-600, 0.2);
+	position: relative;
+
+	@include mq(lg) {
+		padding: 8px 0 0 28px;
+	}
+
+	&::before {
+		position: absolute;
+		top: 20px;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		background-image: url('../img/icons/check.svg');
+		content: '';
+		@include bg-conatin;
+		filter: invert(19%) sepia(75%) saturate(3815%) hue-rotate(347deg)
+			brightness(80%) contrast(94%);
+
+		@include mq(lg) {
+			top: 8px;
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('font-size', 20, 12, 1);
+		margin-bottom: 10px;
+		color: $black;
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 16, 12, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+		}
+	}
+}

@@ -1,4 +1,6 @@
 .our-beliefs {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
 	&__header {
 		width: 100%;
 		@include adaptiv-value('margin-bottom', 40, 20, 1);

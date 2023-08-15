@@ -112,9 +112,21 @@
 	&__title {
 		margin-bottom: 0;
 
+		&--decor {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 14px;
+			align-items: center;
+		}
+
 		&:not(:last-child) {
 			@include adaptiv-value('margin-bottom', 15, 10, 1);
 		}
+	}
+
+	&__logo {
+		@include adaptiv-value('height', 31, 16, 1);
+		@include adaptiv-value('max-width', 180, 93, 1);
 	}
 
 	&__text {
@@ -136,6 +148,51 @@
 		&--several {
 			@include mq(md) {
 				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		&--line {
+			grid-template-columns: 1fr;
+			@include adaptiv-value('gap', 40, 20, 1);
+		}
+	}
+
+	&__card {
+		display: flex;
+		gap: 20px;
+
+		@include mq(lg) {
+			gap: 12px;
+		}
+	}
+
+	&__icon {
+		@include bg-conatin;
+		flex-basis: 56px;
+		flex-shrink: 0;
+		height: 56px;
+		background-color: $grey-200;
+		background-size: 32px;
+		border-radius: 50%;
+
+		@include mq(lg) {
+			flex-basis: 35px;
+			height: 35px;
+			background-size: 20px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 10px;
+		color: $black;
+	}
+
+	&__subtext {
+		@include adaptiv-value('font-size', 16, 12, 1);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 4px;
 			}
 		}
 	}

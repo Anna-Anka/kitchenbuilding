@@ -1,0 +1,26 @@
+.mission-value {
+	background-color: $grey-200;
+	@include adaptiv-value('padding-top', 90, 40, 1);
+	@include adaptiv-value('padding-bottom', 140, 38, 1);
+
+	&::before {
+		bottom: 0;
+		transform: translate(-50%, 30%);
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding-bottom: 20px;
+
+		@include mq(md) {
+			grid-template-columns: repeat(3, 100%);
+			overflow-x: auto;
+		}
+	}
+}
