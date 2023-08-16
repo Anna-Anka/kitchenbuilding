@@ -1,0 +1,55 @@
+<section class="hero-section hero-cooperation">
+    <div class="container">
+        <div class="hero-section__wrapper">
+            <span class="hero-section__inscription inscription" aria-hidden></span>
+            <div class="hero-section__content">
+                <div class="hero-section__box">
+                    <span class="hero-section__inscription inscription" aria-hidden></span>
+                    @include('../components/_breadcrumbs.html', {
+                    'class' : 'breadcrumbs breadcrumbs--depend',
+                    'current' : 'Партнерство'
+                    })
+                    <h1 class="hero-section__title title">
+                        Зарабатывайте
+                        вместе с нами
+                    </h1>
+                    <div class="hero-section__text">
+                        <p>
+                            Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе
+                        </p>
+                    </div>
+                    <div class="hero-section__actions">
+                        <a class="button" href="#">Оставить заявку</a>
+                    </div>
+                </div>
+                <ul class="hero-section__items">
+                    <li class="hero-section__item">
+                        <a class="hero-section__link" href="#">
+                            <span>Гарантия</span>
+                            <span class="hero-section__icon" aria-hidden></span>
+                        </a>
+                    </li>
+                    <li class="hero-section__item">
+                        <a class="hero-section__link" href="#">
+                            <span>Преимущества</span>
+                            <span class="hero-section__icon" aria-hidden></span>
+                        </a>
+                    </li>
+                    <li class="hero-section__item">
+                        <a class="hero-section__link" href="#">
+                            <span>Привелегии</span>
+                            <span class="hero-section__icon" aria-hidden></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero-section__image">
+                <span class="hero-section__bg" style="background-image: url('img/cooperation-page/top-bg.jpg');" aria-hidden> </span>
+            </div>
+            <a class="circle-link" href="#" data-goto="@circle-goto">
+                <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
+                <span class="sr-only">Бесплатная разработка проекта</span>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Сотрудничество' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./cooperation-page/_hero-cooperation.html')
+
+    @include('./components/sections/_kitchenbuilding.html', {
+    'class' : 'kitchenbuilding kitchenbuilding--background inscription',
+    'link' : 'true'
+    })
+
+    @include('./cooperation-page/_main-advantages.html')
+
+    @include('./cooperation-page/_advantages-section.html')
+
+    @include('./components/sections/_consultation.html', {
+    'class' : 'consultation consultation--normal',
+    'title' : 'Оставьте заявку на партнерство',
+    'tel' : 'true'
+    })
+
+    @include('./components/sections/_guarantee-years.html', {
+    'class' : 'guarantee-years'
+    })
+
+    @include('./components/sections/_company-values.html')
+
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--bottom',
+'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+'tel' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

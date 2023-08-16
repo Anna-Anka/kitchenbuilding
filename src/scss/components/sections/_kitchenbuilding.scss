@@ -3,7 +3,7 @@
 
 	&--background {
 		background-color: $grey-200;
-		@include adaptiv-value('padding-top', 60, 40, 1);
+		@include adaptiv-value('padding-top', 80, 40, 1);
 		@include adaptiv-value('padding-bottom', 118, 71, 1);
 
 		&::before {

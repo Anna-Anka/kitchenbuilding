@@ -1,5 +1,7 @@
 .guarantee-years {
-	@include adaptiv-value('padding-bottom', 100, 40, 1);
+	&--bottom {
+		@include adaptiv-value('padding-bottom', 100, 40, 1);
+	}
 
 	&__header {
 		@include flex-center-sb;

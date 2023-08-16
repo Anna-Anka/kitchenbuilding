@@ -19,15 +19,23 @@
     'circle-goto' : '',
     'circle-text' : 'бесплатная разработка проекта'
     })
-    @include('./components/sections/_guarantee-years.html')
+
+    @include('./components/sections/_guarantee-years.html', {
+    'class' : 'guarantee-years guarantee-years--bottom'
+    })
+
     @include('./components/sections/_about-production.html')
+
     @include('./components/sections/_company-values.html')
+
     @include('./components/sections/_consultation.html', {
     'class' : 'consultation consultation--zero',
     'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
     'tel' : 'true'
     })
+
     @include('./about-page/_cooperation-company.html')
+
     @include('./about-page/_work-kitchenbuilding.html')
 </main>
 

@@ -1,0 +1,10 @@
+.hero-cooperation {
+	.hero-section__content {
+		@include flex-column-sb;
+		padding-bottom: 50px;
+	}
+
+	.hero-section__box {
+		margin-bottom: 24px;
+	}
+}
