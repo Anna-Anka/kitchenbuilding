@@ -1,0 +1,72 @@
+<section class="development-form">
+    <div class="container">
+        <form class="development-form__wrapper form" action="#">
+            <div class="development-form__content">
+                <h2 class="development-form__title title">
+                    Заявка на разработку 3D - дизайна кухни
+                </h2>
+                <div class="development-form__text">
+                    <p>Свяжемся с вами в ближайшее время!</p>
+                </div>
+
+                <div class="development-form__items">
+                    <div class="development-form__item">
+                        <label class="sr-only" for="project-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" id="project-name" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="development-form__item">
+                        <label class="sr-only" for="project-tel">
+                            Введите ваш телефон
+                        </label>
+                        <input class="form__field" id="project-tel" name="tel" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                </div>
+
+                <div class="development-form__send">
+                    <button class="development-form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+
+                    <div class="form__agree development-form__agree">
+                        <input class="form__hidden checkbox-hidden" id="development-agree" type="checkbox" name="agree" checked required>
+                        <span class="form__visible checkbox-visible" aria-hidden></span>
+                        <label for="development-agree">
+                            Согласен (а) на обработку <a href="#">персональных данных</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="development-form__file">
+                <div class="development-form__headding">
+                    <span class="development-form__subtitle subtitle">
+                        Прикрепите файл
+                    </span>
+                    <div class="development-form__subtext">
+                        <p>
+                            Если у вас есть файл с эскизами или замерами, отправьте его
+                        </p>
+                    </div>
+                </div>
+
+                <label class="sr-only" for="file">
+                    Загрузите файл или перетащите
+                </label>
+                <input class="development-form__field" id="file" name="file" type="file" placeholder="Загрузите файл или перетащите" multiple>
+            </div>
+            <div class="development-form__send development-form__send--mobile">
+                <button class="development-form__button button" type="submit">
+                    Оставить заявку
+                </button>
+                <div class="form__agree development-form__agree">
+                    <input class="form__hidden checkbox-hidden" id="development-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <label for="development-agree">
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

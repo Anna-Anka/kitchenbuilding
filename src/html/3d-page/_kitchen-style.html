@@ -1,0 +1,33 @@
+<section class="kitchen-style">
+    <div class="container">
+        <h2 class="kitchen-style__title title">
+            Кухни в любом стиле
+        </h2>
+        <div class="kitchen-style__wrapper">
+            <div class="kitchen-style__swiper swiper">
+                <ul class="kitchen-style__items swiper-wrapper">
+                    <li class="kitchen-style__item swiper-slide">
+                        @include('../components/cards/_swiper-card.html', {
+                        'title' : 'Дизайнерский стиль',
+                        'text' : '<p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.</p>',
+                        'number' : '01',
+                        'bg' : '3d-page/kitchen-style/1'
+                        })
+                    </li>
+                    <li class="kitchen-style__item swiper-slide">
+                        @include('../components/cards/_swiper-card.html', {
+                        'title' : 'Дизайнерский стиль 2',
+                        'text' : '<p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p>',
+                        'number' : '02',
+                        'bg' : '3d-page/kitchen-style/1'
+                        })
+                    </li>
+                </ul>
+                <button class="kitchen-style__button kitchen-style__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                </button>
+                <button class="kitchen-style__button kitchen-style__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

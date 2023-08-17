@@ -36,11 +36,14 @@
 		align-items: center;
 		color: $white;
 		line-height: 1.2;
-		cursor: pointer;
 		@include adaptiv-value('font-size', 16, 12, 1);
 
 		a {
 			word-break: keep-all;
+		}
+
+		label {
+			cursor: pointer;
 		}
 	}
 

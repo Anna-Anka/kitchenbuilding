@@ -25,23 +25,12 @@
 		padding-bottom: 20px;
 		overflow-x: auto;
 		@include adaptiv-value('gap', 20, 15, 1);
-
-		// &::before {
-		// 	position: absolute;
-		// 	left: 0;
-		// 	z-index: 0;
-		// 	width: 100%;
-		// 	height: 1px;
-		// 	background-color: rgba($grey-600, 0.4);
-		// 	content: '';
-		// 	@include adaptiv-value('top', 32, 25, 1);
-		// }
 	}
 
 	&__item {
 		@include adaptiv-value('flex-basis', 170, 130, 1);
-		flex-shrink: 0;
 		position: relative;
+		flex-shrink: 0;
 
 		&::before {
 			position: absolute;

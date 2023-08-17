@@ -1,0 +1,132 @@
+.development-form {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
+	&__wrapper {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		box-shadow: 0 5px 54px 0 rgba($black, 0.14);
+		@include adaptiv-value('padding', 50, 16, 1);
+		@include adaptiv-value('border-radius', 30, 12, 1);
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		@include mq(md, min) {
+			width: 50%;
+		}
+
+		@include mq(lg, min) {
+			width: 100%;
+			max-width: 630px;
+		}
+	}
+
+	&__file {
+		@include mq(md, min) {
+			width: 50%;
+		}
+
+		@include mq(lg, min) {
+			width: 100%;
+			max-width: 580px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 15, 5, 1);
+	}
+
+	&__text {
+		@include adaptiv-value('font-size', 20, 12, 1);
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+		color: $dark-800;
+	}
+
+	&__items {
+		display: flex;
+		margin-bottom: 15px;
+		@include adaptiv-value('gap', 15, 5, 1);
+
+		@include mq(lg) {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+		@include mq(md) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	.form {
+		&__field {
+			background-color: $grey-200;
+		}
+
+		&__agree {
+			width: 100%;
+			color: $grey-600;
+		}
+	}
+
+	&__send {
+		display: flex;
+		flex-direction: column;
+
+		@include mq(md) {
+			display: none;
+			margin-bottom: 12px;
+		}
+
+		&--mobile {
+			display: flex;
+
+			@include mq(md, min) {
+				display: none;
+			}
+		}
+	}
+
+	&__button {
+		width: 100%;
+		@include adaptiv-value('margin-bottom', 30, 12, 1);
+		color: $white;
+		background-color: $dark-800;
+	}
+
+	&__headding {
+		position: relative;
+		@include adaptiv-value('margin-bottom', 30, 12, 1);
+		@include adaptiv-value('padding-left', 76, 40, 1);
+
+		&::before {
+			@include bg-conatin;
+			@include adaptiv-value('width', 56, 32, 1);
+			@include adaptiv-value('height', 56, 32, 1);
+			@include adaptiv-value('background-size', 29, 16, 1);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $grey-200;
+			background-image: url('../img/icons/paperclip.svg');
+			border-radius: 50%;
+			content: '';
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 5px;
+	}
+
+	&__subtext {
+		@include adaptiv-value('font-size', 16, 12, 1);
+		color: $dark-800;
+	}
+}

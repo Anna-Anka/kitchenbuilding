@@ -1,4 +1,8 @@
 .guarantee-years {
+	&--top {
+		@include adaptiv-value('padding-top', 100, 40, 1);
+	}
+
 	&--bottom {
 		@include adaptiv-value('padding-bottom', 100, 40, 1);
 	}
