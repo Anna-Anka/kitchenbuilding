@@ -1,5 +1,7 @@
 .catalog-v2 {
 	.products {
+		@include adaptiv-value('padding-bottom', 60, 40, 1);
+
 		&__items {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(444px, 1fr));

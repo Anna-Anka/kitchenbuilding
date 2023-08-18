@@ -22,7 +22,9 @@
         <section class="product-page__card">
             <h2 class="sr-only">Товар</h2>
             <div class="product-page__container container">
-                @include('./components/cards/products/_product-card.html')
+                @include('./components/cards/products/_product-card.html', {
+                'slider' : 'true'
+                })
             </div>
         </section>
 

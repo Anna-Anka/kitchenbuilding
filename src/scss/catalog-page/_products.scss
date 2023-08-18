@@ -13,6 +13,10 @@
 			grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
 			gap: 20px 30px;
 		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__item {
@@ -59,8 +63,8 @@
 			display: none;
 		}
 
-        &__link {
-            margin-top: auto;
-        }
+		&__link {
+			margin-top: auto;
+		}
 	}
 }
