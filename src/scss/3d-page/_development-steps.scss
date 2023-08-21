@@ -1,0 +1,8 @@
+.development-steps {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 85, 20, 1);
+		text-align: center;
+	}
+}

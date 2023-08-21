@@ -3,13 +3,11 @@
 
 	&__image {
 		@include adaptiv-value('margin-bottom', 20, 10, 1);
-		border-radius: 15px;
 		position: relative;
 		padding-bottom: 135%;
+		border-radius: 15px;
 
 		&--gradient {
-			// position: relative;
-
 			&::before {
 				position: absolute;
 				width: 100%;
@@ -50,5 +48,6 @@
 
 	&__subtitle {
 		@include adaptiv-value('font-size', 16, 12, 1);
+		@include line-clamp(2);
 	}
 }

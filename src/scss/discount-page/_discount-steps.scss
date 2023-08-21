@@ -1,0 +1,27 @@
+.discount-steps {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+	@include adaptiv-value('padding-top', 30, 20, 1);
+
+	&__title {
+		@include adaptiv-value('margin-bottom', 75, 20, 1);
+		text-align: center;
+	}
+
+	&__items {
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+	}
+
+	.steps {
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+	}
+
+	&__actions {
+		display: flex;
+		gap: 14px;
+		justify-content: center;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+}

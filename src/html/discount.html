@@ -1,0 +1,36 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Столешница в подарок!' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/_breadcrumbs.html', {
+    'class' : 'breadcrumbs',
+    'count' : '2',
+    '2' : 'Акции',
+    'current' : 'Название акции'
+    })
+
+    @include('./discount-page/_discount-descr.html')
+
+    @include('./discount-page/_discount-steps.html')
+
+    @include('./discount-page/_other-discounts.html')
+
+    @include('./components/sections/_addresses.html', {
+    'class' : 'addresses section'
+    })
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Отправка на почту чек-листа',
+'email' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')
