@@ -1,0 +1,23 @@
+<div class="article-about">
+    <div class="container">
+        <div class="article-about__wrapper">
+            <div class="article-about__headding">
+                @include('../components/_breadcrumbs.html', {
+                'class' : 'breadcrumbs',
+                'count' : '2',
+                '2' : 'Статьи',
+                'current' : 'Весенние новинки ZETTA'
+                })
+                <h1 class="article-about__title title title--large">
+                    Весенние новинки ZETTA
+                </h1>
+            </div>
+            <div class="share">
+                <button class="share__button button button--border" type="button">
+                    Поделиться
+                </button>
+                <span class="share__copy">Ссылка скопирована</span>
+            </div>
+        </div>
+    </div>
+</div>

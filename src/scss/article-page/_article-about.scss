@@ -1,0 +1,23 @@
+.article-about {
+	padding-bottom: 40px;
+
+	@include mq(lg) {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.breadcrumbs {
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__wrapper {
+		@include flex-center-sb;
+		gap: 20px;
+	}
+
+	&__title {
+		margin-bottom: 0;
+	}
+}

@@ -5,22 +5,23 @@ import Swiper, {
 Swiper.use([Pagination, Navigation, Scrollbar]);
 
 if (document.querySelector('.other-discounts__swiper')) {
-    new Swiper('.other-discounts__swiper', {
+    const swiper = document.querySelector('.other-discounts__swiper')
+    new Swiper(swiper, {
         loop: true,
         speed: 800,
 
         navigation: {
-            nextEl: '.other-discounts__button--next',
-            prevEl: '.other-discounts__button--prev',
+            nextEl: swiper.querySelector('.other__button--next'),
+            prevEl: swiper.querySelector('.other__button--prev'),
         },
 
         pagination: {
-            el: '.other-discounts__pagination',
+            el: swiper.querySelector('.other__pagination'),
             clickable: true,
         },
 
         scrollbar: {
-            el: ".other-discounts__scrollbar",
+            el: swiper.querySelector('.other__scrollbar'),
             draggable: true
         },
 

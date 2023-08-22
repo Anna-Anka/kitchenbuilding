@@ -8,3 +8,4 @@ import './swipers/_articles-section';
 import './swipers/_production-technologies';
 import './swipers/_kitchen-style';
 import './swipers/_other-discounts';
+import './swipers/_other-articles';
