@@ -9,3 +9,4 @@ import './swipers/_production-technologies';
 import './swipers/_kitchen-style';
 import './swipers/_other-discounts';
 import './swipers/_other-articles';
+import './swipers/_reviews-card';

@@ -1,0 +1,26 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Кухнистрой — интернет-магазин кухонь | Отзывы' }
+)
+
+@include('./components/_header.html')
+
+@include('./components/_mobile-menu.html')
+
+<main class="main">
+    @include('./components/_breadcrumbs.html', {
+    'class' : 'breadcrumbs',
+    'current' : 'Отзывы'
+    })
+
+    @include('./reviews-page/_reviews-page.html')
+</main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--normal',
+'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+'phone' : 'true'
+})
+
+@include('./components/_footer.html')
+
+@include('./components/links/_bottom.html')

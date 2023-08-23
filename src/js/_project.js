@@ -5,6 +5,8 @@ import { search } from "./project/_search";
 import { sort } from "./project/_sort";
 import './project/_interactive';
 import './project/_contacts-tabs';
+import './project/_share';
+import './project/_review-card-more';
 
 sort();
 

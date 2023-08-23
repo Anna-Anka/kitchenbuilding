@@ -1,0 +1,31 @@
+.reviews-page {
+	&__header {
+		@include flex-center-sb;
+		@include adaptiv-value('margin-bottom', 30, 20, 1);
+		gap: 20px;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid rgba($grey-600, 0.2);
+	}
+
+	&__pagination {
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__more {
+		display: none;
+		width: 100%;
+
+		@include mq(lg) {
+			display: flex;
+		}
+	}
+}

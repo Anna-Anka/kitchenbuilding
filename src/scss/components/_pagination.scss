@@ -1,0 +1,37 @@
+.pagination {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+	font-weight: $fw-600;
+
+	&__item {
+		&:first-child {
+			margin-right: 16px;
+		}
+
+		&:last-child {
+			margin-left: 16px;
+		}
+	}
+
+	&__link {
+		padding: 8px 8px 3px;
+		border-radius: 5px;
+		transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+		&--current {
+			color: $red-600;
+			background-color: $grey-200;
+		}
+
+		&--next,
+		&--prevent {
+			padding: 0;
+			color: $dark-800;
+		}
+
+		&--disabled {
+			color: $grey-600;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<article class="review-card">
+    <div class="review-card__header">
+        <div class="review-card__info">
+            <time class="review-card__date subtitle" datetime="@datetime">
+                @date
+            </time>
+            <div class="review-card__rating">
+                <span class="review-card__grade">Оценка</span>
+                <ul class="review-card__stars" aria-hidden>
+                    <li class="review-card__star review-card__star--@star1"></li>
+                    <li class="review-card__star review-card__star--@star2"></li>
+                    <li class="review-card__star review-card__star--@star3"></li>
+                    <li class="review-card__star review-card__star--@star4"></li>
+                    <li class="review-card__star review-card__star--@star5"></li>
+                </ul>
+                <span class="review-card__number subtitle">@stars</span>
+            </div>
+        </div>
+        <span class="review-card__author subtitle">@author</span>
+    </div>
+    <div class="review-card__body">
+        @if(context.swiper === 'true') {
+        <div class="review-card__wrapper">
+            <div class="review-card__swiper swiper">
+                <ul class="review-card__items swiper-wrapper">
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    @if(typeof swiperType !== 'undefiend' && context.swiperType === 'big') {
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    }
+                </ul>
+                <button class="review-card__button review-card__button--prev arrow-button arrow-button--left swiper-button-prev swiper-button-prev" type="button">
+                </button>
+                <button class="review-card__button review-card__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+        }
+        <div class="review-card__content">
+            <div class="review-card__text">@text</div>
+            <button class="review-card__more" type="button">Чиать дальше</button>
+        </div>
+    </div>
+</article>

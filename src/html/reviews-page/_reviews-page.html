@@ -1,0 +1,99 @@
+<div class="reviews-page">
+    <div class="container">
+        <div class="reviews-page__header">
+            <h1 class="reviews-page__title title title--medium">Отзывы</h1>
+            <button class="button button--border" type="button">
+                Оставить отзыв
+            </button>
+        </div>
+        <ul class="reviews-page__body">
+            <li class="reviews-page__item">
+                @include('../components/cards/_review-card.html', {
+                'date' : '2023-05-12',
+                'star1' : 'fill',
+                'star2' : 'fill',
+                'star3' : 'fill',
+                'star4' : 'fill',
+                'star5' : 'empty',
+                'stars' : '4',
+                'author' : 'Юлия',
+                'swiper' : 'true',
+                'swiperType' : 'big',
+                'text' : '<p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p><p>Подшипники турбины смазываются моторным маслом, поступающим из общей системы. Вместе с ним в турбину поступает состав ТериумПро№1. Он формирует защитный слой в местах износа подшипников. Восстанавливает их поверхность, устраняет люфт. Тем самым увеличивается ресурс турбины. Тем самым увеличивается ресурс турбины.</p>',
+                })
+            </li>
+            <li class="reviews-page__item">
+                @include('../components/cards/_review-card.html', {
+                'date' : '2023-05-12',
+                'star1' : 'fill',
+                'star2' : 'fill',
+                'star3' : 'fill',
+                'star4' : 'fill',
+                'star5' : 'empty',
+                'stars' : '4',
+                'author' : 'Никита',
+                'text' : '<p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p>',
+                })
+            </li>
+            <li class="reviews-page__item">
+                @include('../components/cards/_review-card.html', {
+                'date' : '2023-05-12',
+                'star1' : 'fill',
+                'star2' : 'fill',
+                'star3' : 'fill',
+                'star4' : 'fill',
+                'star5' : 'empty',
+                'stars' : '4',
+                'author' : 'София',
+                'swiper' : 'true',
+                'text' : '<p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p>',
+                })
+            </li>
+            <li class="reviews-page__item">
+                @include('../components/cards/_review-card.html', {
+                'date' : '2023-05-12',
+                'star1' : 'fill',
+                'star2' : 'fill',
+                'star3' : 'fill',
+                'star4' : 'fill',
+                'star5' : 'empty',
+                'stars' : '4',
+                'author' : 'Юлия',
+                'text' : '<p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую</p>',
+                })
+            </li>
+        </ul>
+        <ul class="reviews-page__pagination pagination">
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--disabled pagination__link--prevent">
+                    Назад
+                </a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--current" href="#" aria-current="page">
+                    1
+                </a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link">...</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">15</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--next" href="#">
+                    Далее
+                </a>
+            </li>
+        </ul>
+        <button class="reviews-page__more button button--border" type="button">
+            Показать еще
+        </button>
+    </div>
+</div>
