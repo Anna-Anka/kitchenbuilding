@@ -1,4 +1,4 @@
-export const smoothScroll = () => {
+if (document.querySelector('a[data-goto]')) {
     const menuLinks = document.querySelectorAll('a[data-goto]')
 
     if (menuLinks.length > 0) {

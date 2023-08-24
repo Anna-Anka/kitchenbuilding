@@ -1,0 +1,83 @@
+<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="review">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Оставить отзыв
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <form class="form" action="#">
+            <div class="graph-modal__body">
+                <div class="graph-modal__items">
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" id="review-name" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-tel">
+                            Введите вашу электронную почту
+                        </label>
+                        <input class="form__field" id="review-tel" name="email" type="email" placeholder="Электронная почта" required>
+                    </div>
+                </div>
+                <div class="graph-modal__items">
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-tel">
+                            Введите ваш телефон
+                        </label>
+                        <input class="form__field" id="review-tel" name="tel" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-contract">
+                            Введите номер вашего договора
+                        </label>
+                        <input class="form__field form__field--number" id="review-contract" name="contract" type="number" placeholder="Номер договора" required>
+                    </div>
+                </div>
+                <div class="graph-modal__item">
+                    <label class="sr-only" for="review-contract">
+                        Напишите свой отзыв
+                    </label>
+                    <textarea class="form__field form__field--message" id="review-contract" name="comment" placeholder="Комментарий"></textarea>
+                </div>
+            </div>
+            <div class="graph-modal__footer">
+                <div class="graph-modal__settings">
+                    <fieldset class="graph-modal__rating rating">
+                        <legend class="rating__title">
+                            Укажите оценку:
+                        </legend>
+                        <div class="rating__stars">
+                            <input class="rating__hidden" id="rating-1" name="rating" value="1" type="radio">
+                            <label class="rating__star" for="rating-1" aria-label="1 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-2" name="rating" value="2" type="radio">
+                            <label class="rating__star" for="rating-2" aria-label="2 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-3" name="rating" value="3" type="radio">
+                            <label class="rating__star" for="rating-3" aria-label="3 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-4" name="rating" value="4" type="radio" checked>
+                            <label class="rating__star" for="rating-4" aria-label="4 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-5" name="rating" value="5" type="radio">
+                            <label class="rating__star" for="rating-5" aria-label="5 из 5"></label>
+                        </div>
+                    </fieldset>
+                    <div class="graph-modal__photo">
+                        <label class="graph-modal__attach" for="file">
+                            Прикрепить фото
+                        </label>
+                        <input class="graph-modal__field" id="file" name="photo" type="file" placeholder="Загрузите файл или перетащите" multiple>
+                    </div>
+                </div>
+                <button class="graph-modal__button button" type="submit">
+                    Отправить отзыв
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>

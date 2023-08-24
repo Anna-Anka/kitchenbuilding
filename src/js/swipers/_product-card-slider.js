@@ -44,7 +44,6 @@ if (document.querySelector('.product-card__main')) {
                 const slideActive = swiperMain.realIndex + 1
 
                 const priceAll = card.querySelectorAll('[data-price]')
-                console.log(priceAll)
 
                 priceAll.forEach(price => {
                     const valuePrice = Number(price.getAttribute('data-price'))
