@@ -14,9 +14,11 @@
 	visibility: hidden;
 	cursor: pointer;
 	opacity: 0;
-	transition: opacity var(--transition-time), visibility var(--transition-time);
+	transition:
+		opacity var(--transition-time),
+		visibility var(--transition-time);
 
-    &::before {
+	&::before {
 		display: inline-block;
 		height: 100%;
 		vertical-align: middle;
@@ -28,14 +30,21 @@
 	}
 
 	&__container {
+		@include adaptiv-value('border-radius', 30, 12, 1);
 		position: relative;
 		display: inline-block;
 		display: none;
+		width: 100%;
+		max-width: 1000px;
 		margin: 50px auto;
 		text-align: left;
 		vertical-align: middle;
 		background-color: $white;
 		cursor: default;
+
+		@media (max-width: 1024px) {
+			width: 90%;
+		}
 
 		&.graph-modal-open {
 			display: inline-block;
@@ -43,27 +52,133 @@
 	}
 
 	&__box {
+		@include adaptiv-value('padding', 50, 24, 1);
+		@include adaptiv-value('border-radius', 30, 12, 1);
 		position: relative;
-		width: 100%;
-		max-width: 700px;
-		padding: 40px;
-		background-color: $white;
-		@include flex-all-center;
+		background-color: $grey-200;
+		border-radius: inherit;
+	}
+
+	&__header {
+		@include flex-center-sb;
+		@include adaptiv-value('margin-bottom', 32, 18, 1);
+		gap: 20px;
+	}
+
+	&__title {
+		margin-bottom: 0;
 	}
 
 	&__close {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 20px;
-		height: 20px;
-		background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.001 512.001' style='enable-background:new 0 0 512.001 512.001;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+		@include adaptiv-value('width', 50, 32, 1);
+		@include adaptiv-value('height', 50, 32, 1);
+		position: relative;
+		background-color: $dark-800;
+		border-radius: 50%;
+
+		&::before {
+			@include adaptiv-value('width', 25, 16, 1);
+			@include adaptiv-value('height', 25, 16, 1);
+			@include bg-conatin;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-image: url('../img/icons/close.svg');
+			transform: translate(-50%, -50%);
+			filter: invert(1);
+			content: '';
+		}
+	}
+
+	&__items,
+	&__body {
+		@include adaptiv-value('gap', 20, 4, 1);
+		display: flex;
+	}
+
+	&__body {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__items {
+		display: flex;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	.form {
+		&__field {
+			&--message {
+				@include adaptiv-value('height', 140, 100, 1);
+				resize: none;
+			}
+
+			&--number {
+				@include number;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__rating {
+		@include adaptiv-value('margin-bottom', 15, 10, 1);
+	}
+
+	&__photo {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__attach {
+		@include adaptiv-value('font-size', 20, 14, 1);
+		position: relative;
+		align-self: flex-start;
+		padding-left: 45px;
+		color: $red-600;
+
+		&::before {
+			@include adaptiv-value('width', 30, 18, 1);
+			@include bg-conatin;
+			@include adaptiv-value('height', 30, 18, 1);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url('../img/icons/paperclip.svg');
+			content: '';
+		}
+	}
+
+	&__button {
+		align-self: flex-start;
+
+		@include mq(sm) {
+			width: 100%;
+		}
 	}
 
 	&.is-open {
 		visibility: visible;
 		opacity: 1;
-		transition: opacity var(--transition-time),
+		transition:
+			opacity var(--transition-time),
 			visibility var(--transition-time);
 	}
 }
@@ -81,11 +196,15 @@
 .fadeInUp {
 	transform: translateY(-100px);
 	opacity: 0;
-	transition: transform var(--transition-time), opacity var(--transition-time);
+	transition:
+		transform var(--transition-time),
+		opacity var(--transition-time);
 
 	&.animate-open {
 		transform: translateY(0);
 		opacity: 1;
-		transition: transform var(--transition-time), opacity var(--transition-time);
+		transition:
+			transform var(--transition-time),
+			opacity var(--transition-time);
 	}
 }

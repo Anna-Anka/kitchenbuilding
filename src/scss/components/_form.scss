@@ -14,13 +14,15 @@
 	}
 
 	&__field {
+		@include adaptiv-value('font-size', 16, 12, 1);
 		width: 100%;
 		padding: 20px 25px;
 		font-weight: $fw-600;
-		font-size: 16px;
 		line-height: 1.2;
 		background-color: $white;
+		border: 1px solid transparent;
 		border-radius: 10px;
+		transition: border-color 0.3s;
 
 		@include mq(md) {
 			padding: 17px 20px;
@@ -28,6 +30,11 @@
 
 		&::placeholder {
 			color: $grey-600;
+		}
+
+		&:focus {
+			border-color: rgba($grey-600, 0.4);
+			outline: 0;
 		}
 	}
 

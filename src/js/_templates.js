@@ -31,6 +31,9 @@ if (document.querySelector('input[type="tel"]')) {
 import { smoothScroll } from "./templates/smooth-scroll";
 smoothScroll();
 
+import GraphModal from 'graph-modal';
+const modal = new GraphModal('modal');
+
 import mixitup from 'mixitup';
 
 if (document.querySelector('.articles-block')) {
