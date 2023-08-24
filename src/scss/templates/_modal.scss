@@ -49,6 +49,12 @@
 		&.graph-modal-open {
 			display: inline-block;
 		}
+
+		&--thank {
+			.graph-modal__header {
+				margin-bottom: 5px;
+			}
+		}
 	}
 
 	&__box {
@@ -69,10 +75,21 @@
 		margin-bottom: 0;
 	}
 
+	&__text,
+	&__attach {
+		@include adaptiv-value('font-size', 20, 14, 1);
+	}
+
+	&__text,
+	&__body {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
+	}
+
 	&__close {
-		@include adaptiv-value('width', 50, 32, 1);
+		@include adaptiv-value('flex-basis', 50, 32, 1);
 		@include adaptiv-value('height', 50, 32, 1);
 		position: relative;
+		flex-shrink: 0;
 		background-color: $dark-800;
 		border-radius: 50%;
 
@@ -97,14 +114,10 @@
 	}
 
 	&__body {
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
-		display: flex;
 		flex-direction: column;
 	}
 
 	&__items {
-		display: flex;
-
 		@include mq(md) {
 			flex-direction: column;
 		}
@@ -148,7 +161,6 @@
 	}
 
 	&__attach {
-		@include adaptiv-value('font-size', 20, 14, 1);
 		position: relative;
 		align-self: flex-start;
 		padding-left: 45px;
