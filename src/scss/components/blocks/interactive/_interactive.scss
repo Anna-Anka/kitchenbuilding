@@ -1,0 +1,16 @@
+.interactive {
+	@include flex-all-center;
+	@include adaptiv-value('border-radius', 30, 7, 1);
+	position: relative;
+	background-color: $grey-200;
+
+	&__bg {
+		@include resize-bg;
+	}
+
+	&__title {
+		display: inline-block;
+		margin-bottom: 5px;
+		color: $black;
+	}
+}

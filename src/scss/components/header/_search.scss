@@ -16,14 +16,14 @@
 	}
 
 	&__button {
+		@include bg-conatin;
 		position: absolute;
 		top: 50%;
 		right: 16px;
 		width: 20px;
 		height: 20px;
-		background-image: url('../img/icons/search.svg');
+		background-image: url('../img/sprite.svg#search');
 		transform: translateY(-50%);
-		@include bg-conatin;
 		filter: invert(1);
 	}
 }

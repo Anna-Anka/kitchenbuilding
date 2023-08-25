@@ -1,6 +1,6 @@
 .characteristic-card {
-	position: relative;
 	@include adaptiv-value('font-size', 16, 14, 1);
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 
@@ -51,6 +51,7 @@
 	}
 
 	&__descr {
+		@include adaptiv-value('padding', 15, 10, 1);
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -61,7 +62,6 @@
 		border-radius: 10px;
 		box-shadow: 0 4px 10px rgba($dark-800, 0.25);
 		transform: translateY(100%);
-		@include adaptiv-value('padding', 15, 10, 1);
 
 		&--active {
 			display: block;
@@ -69,9 +69,9 @@
 	}
 
 	&__subtitle {
+		@include adaptiv-value('font-size', 16, 14, 1);
 		display: block;
 		margin-bottom: 5px;
-		@include adaptiv-value('font-size', 16, 14, 1);
 	}
 
 	&__subtext {

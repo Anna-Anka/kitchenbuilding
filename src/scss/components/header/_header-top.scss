@@ -31,8 +31,8 @@
 
 	&__search,
 	&__contact {
-		position: relative;
 		@include adaptiv-value('padding-left', 32, 26, 1);
+		position: relative;
 
 		@include mq(xl) {
 			width: 20px;
@@ -42,13 +42,13 @@
 		}
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 20px;
 			height: 20px;
 			content: '';
-			@include bg-conatin;
 		}
 	}
 
@@ -56,7 +56,7 @@
 		@include adaptiv-value('margin-right', 35, 22, 1);
 
 		&::before {
-			background-image: url('../img/icons/search.svg');
+			background-image: url('../img/sprite.svg#search');
 		}
 	}
 
@@ -67,13 +67,13 @@
 
 		&--phone {
 			&::before {
-				background-image: url('../img/icons/phone.svg');
+				background-image: url('../img/sprite.svg#phone');
 			}
 		}
 
 		&--email {
 			&::before {
-				background-image: url('../img/icons/email.svg');
+				background-image: url('../img/sprite.svg#email');
 			}
 		}
 	}

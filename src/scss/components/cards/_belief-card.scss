@@ -14,10 +14,10 @@
 	}
 
 	&__number {
-		@include adaptiv-value('font-size', 16, 12, 1);
+		@include flex-all-center;
 		@include adaptiv-value('width', 42, 28, 1);
 		@include adaptiv-value('height', 42, 28, 1);
-		@include flex-all-center;
+		@include adaptiv-value('font-size', 16, 12, 1);
 		flex-shrink: 0;
 		color: $dark-800;
 		font-weight: $fw-600;

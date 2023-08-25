@@ -1,9 +1,9 @@
 .salon-card {
-	width: 100%;
 	@include adaptiv-value('padding', 30, 16, 1);
 	@include adaptiv-value('border-radius', 16, 8, 1);
 	@include adaptiv-value('font-size', 16, 12, 1);
-	box-shadow: 0 20px 54px 0px rgba($black, 0.1);
+	width: 100%;
+	box-shadow: 0 20px 54px 0 rgba($black, 0.1);
 
 	&--info {
 		font-weight: $fw-600;
@@ -31,9 +31,9 @@
 	}
 
 	&__button {
+		@include adaptiv-value('font-size', 16, 12, 1);
 		position: relative;
 		color: $dark-800;
-		@include adaptiv-value('font-size', 16, 12, 1);
 		font-weight: $fw-600;
 
 		&::before {

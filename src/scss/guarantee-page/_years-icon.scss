@@ -10,6 +10,7 @@
 	}
 
 	&__content {
+		@include flex-column-all-center;
 		position: relative;
 		width: 140px;
 		height: 140px;
@@ -17,7 +18,6 @@
 		text-align: center;
 		background-color: $grey-200;
 		border-radius: 50%;
-		@include flex-column-all-center;
 
 		@include mq(lg) {
 			width: 93px;
@@ -46,6 +46,7 @@
 
 		&::before,
 		&::after {
+			@include bg-conatin;
 			position: absolute;
 			top: 50%;
 			width: 35px;
@@ -53,7 +54,6 @@
 			transform: translateY(-50%);
 			content: '';
 			fill: $red-500;
-			@include bg-conatin;
 
 			@include mq(lg) {
 				width: 24px;
@@ -63,12 +63,12 @@
 
 		&::before {
 			left: 0;
-			background-image: url('../img/vector/spikelet-left.svg');
+			background-image: url('../img/illustrations/spikelet-left.svg');
 		}
 
 		&::after {
 			right: 0;
-			background-image: url('../img/vector/spikelet-right.svg');
+			background-image: url('../img/illustrations/spikelet-right.svg');
 		}
 	}
 

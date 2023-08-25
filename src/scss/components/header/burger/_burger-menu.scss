@@ -55,21 +55,21 @@
 		display: block;
 		margin-bottom: 14px;
 		padding-left: 28px;
-		font-weight: $fw-600;
 		color: $dark-800;
+		font-weight: $fw-600;
 		font-size: 14px;
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 20px;
 			height: 20px;
-			background-image: url('../img/icons/email.svg');
+			background-image: url('../img/sprite.svg#email');
 			filter: invert(65%) sepia(52%) saturate(3587%) hue-rotate(337deg)
 				brightness(74%) contrast(114%);
 			content: '';
-			@include bg-conatin;
 		}
 	}
 }

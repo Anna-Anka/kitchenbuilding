@@ -24,11 +24,11 @@
 	&__icon {
 		@include adaptiv-value('width', 22, 14, 1);
 		@include adaptiv-value('height', 22, 14, 1);
+		@include bg-conatin;
 		margin-right: 6px;
-		background-image: url('../img/icons/heart.svg');
+		background-image: url('../img/sprite.svg#heart');
 		filter: invert(83%) sepia(46%) saturate(5102%) hue-rotate(345deg)
 			brightness(103%) contrast(94%);
 		content: '';
-		@include bg-conatin;
 	}
 }

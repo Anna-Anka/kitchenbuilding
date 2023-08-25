@@ -1,12 +1,12 @@
 .action-watch {
+	@include flex-all-center;
+	@include adaptiv-value('font-size', 18, 14, 1);
 	position: relative;
 	padding: 17px 34px 17px 75px;
 	color: $dark-800;
 	background-color: $white;
 	border-radius: 40px;
-	box-shadow: 0 20px 54px 0px rgba($black, 0.2);
-	@include adaptiv-value('font-size', 18, 14, 1);
-	@include flex-all-center;
+	box-shadow: 0 20px 54px 0 rgba($black, 0.2);
 
 	@include mq(sm) {
 		padding: 16px;
@@ -25,6 +25,7 @@
 		transform: translateY(-50%);
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -33,7 +34,6 @@
 			background-image: url('../img/icons/polygon.svg');
 			transform: translate(-50%, -50%);
 			content: '';
-			@include bg-conatin;
 		}
 
 		@include mq(sm) {

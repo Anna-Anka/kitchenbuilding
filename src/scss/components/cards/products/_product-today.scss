@@ -4,11 +4,11 @@
 	height: 100%;
 
 	&__image {
+		@include adaptiv-value('margin-bottom', 15, 12, 1);
 		position: relative;
 		height: 360px;
 		background-color: $white;
 		border-radius: 15px;
-		@include adaptiv-value('margin-bottom', 15, 12, 1);
 
 		&--gradient {
 			&::before {
@@ -29,13 +29,13 @@
 	}
 
 	&__label {
+		@include adaptiv-value('font-size', 16, 12, 1);
 		position: absolute;
 		top: 12px;
 		left: 12px;
 		padding: 6px 22px;
 		font-weight: $fw-600;
 		border-radius: 100px;
-		@include adaptiv-value('font-size', 16, 12, 1);
 
 		&--light {
 			color: $dark-800;
@@ -56,10 +56,10 @@
 	}
 
 	&__title {
-		color: $black;
-		font-weight: $fw-600;
 		@include adaptiv-value('font-size', 20, 14, 1);
 		@include adaptiv-value('margin-bottom', 5, 2, 1);
+		color: $black;
+		font-weight: $fw-600;
 	}
 
 	&__link {
@@ -75,8 +75,8 @@
 	}
 
 	&__subtitle {
-		color: $dark-800;
 		@include adaptiv-value('font-size', 16, 12, 1);
+		color: $dark-800;
 	}
 
 	&__arrow {
@@ -88,16 +88,16 @@
 		border-radius: 50%;
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			width: 12px;
 			height: 12px;
-			background-image: url('../img/icons/arrow-longer.svg');
+			background-image: url('../img/sprite.svg#arrow-longer');
 			transform: translate(-50%, -50%);
 			filter: invert(1);
 			content: '';
-			@include bg-conatin;
 		}
 	}
 }

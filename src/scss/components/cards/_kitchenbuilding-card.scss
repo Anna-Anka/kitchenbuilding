@@ -1,4 +1,5 @@
 .kitchenbuilding-card {
+	@include adaptiv-value('border-radius', 20, 12, 1);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -6,7 +7,6 @@
 	height: 100%;
 	padding: 37px 90px 37px 37px;
 	background-color: $white;
-	@include adaptiv-value('border-radius', 20, 12, 1);
 	box-shadow: 0 4px 50px 0 rgba($black, 0.05);
 
 	@include mq(md) {
@@ -17,12 +17,12 @@
 		@include bg-conatin;
 		@include adaptiv-value('width', 56, 46, 1);
 		@include adaptiv-value('height', 56, 46, 1);
-		position: absolute;
-		background-color: $grey-200;
-		border-radius: 50%;
 		@include adaptiv-value('top', 26, 16, 1);
 		@include adaptiv-value('right', 26, 16, 1);
 		@include adaptiv-value('background-size', 32, 26, 1);
+		position: absolute;
+		background-color: $grey-200;
+		border-radius: 50%;
 	}
 
 	&__title {
@@ -31,10 +31,10 @@
 	}
 
 	&__subtitle {
+		@include adaptiv-value('font-size', 20, 14, 1);
 		margin-bottom: 5px;
 		color: $black;
 		font-weight: $fw-600;
-		@include adaptiv-value('font-size', 20, 14, 1);
 	}
 
 	&__text {

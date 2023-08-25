@@ -1,11 +1,11 @@
 .sketch-card {
-	height: 100%;
-	background-color: $grey-200;
 	@include adaptiv-value('border-radius', 15, 8, 1);
 	@include adaptiv-value('padding-top', 15, 8, 1);
 	@include adaptiv-value('padding-left', 20, 8, 1);
 	@include adaptiv-value('padding-right', 20, 8, 1);
 	@include adaptiv-value('padding-bottom', 35, 20, 1);
+	height: 100%;
+	background-color: $grey-200;
 
 	&__top {
 		@include flex-center-sb;
@@ -13,10 +13,10 @@
 	}
 
 	&__counter {
+		@include adaptiv-value('font-size', 14, 8, 1);
 		margin-right: 10px;
 		color: $dark-800;
 		font-weight: $fw-600;
-		@include adaptiv-value('font-size', 14, 8, 1);
 	}
 
 	&__number {
@@ -24,12 +24,12 @@
 	}
 
 	&__img {
+		@include adaptiv-value('margin-bottom', 21, 8, 1);
+		@include adaptiv-value('height', 182, 82, 1);
 		display: flex;
 		margin: 0 auto;
 		padding: 0 5px;
 		object-fit: contain;
-		@include adaptiv-value('margin-bottom', 21, 8, 1);
-		@include adaptiv-value('height', 182, 82, 1);
 	}
 
 	&__price {
@@ -38,8 +38,8 @@
 	}
 
 	&__subtext {
-		color: $grey-600;
 		@include adaptiv-value('font-size', 16, 12, 1);
+		color: $grey-600;
 	}
 
 	.favorite-button {

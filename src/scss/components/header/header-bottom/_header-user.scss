@@ -1,0 +1,57 @@
+.header-bottom {
+	.header-user {
+		&__favorite {
+			@include mq(xl) {
+				width: 36px;
+				height: 36px;
+				padding: 6px;
+				font-size: 0;
+			}
+		}
+
+		&__icon {
+			@include mq(xl) {
+				margin-right: 0;
+			}
+		}
+
+		&__call {
+			@include mq(xl) {
+				padding: 12px 20px;
+				font-size: 14px;
+			}
+
+			@include mq(lg) {
+				position: relative;
+				width: 32px;
+				height: 32px;
+				padding: 8px;
+				font-size: 0;
+				border-radius: 50%;
+			}
+
+			&::before {
+				@include mq(lg) {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 14px;
+					height: 14px;
+					background-image: url('../img/sprite.svg#phone');
+					transform: translate(-50%, -50%);
+					content: '';
+					@include bg-conatin;
+				}
+			}
+		}
+
+		@include mq(lg) {
+			order: 1;
+			margin-right: 8px;
+		}
+
+		@include mq(sm) {
+			display: none;
+		}
+	}
+}

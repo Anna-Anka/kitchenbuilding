@@ -7,13 +7,13 @@
 	}
 
 	&__title {
-		text-align: center;
 		@include adaptiv-value('margin-bottom', 40, 20, 1);
+		text-align: center;
 	}
 
 	&__wrapper {
-		position: relative;
 		@include adaptiv-value('padding-bottom', 40, 20, 1);
+		position: relative;
 	}
 
 	&__swiper {

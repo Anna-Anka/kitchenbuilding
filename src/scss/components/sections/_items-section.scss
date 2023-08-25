@@ -1,4 +1,6 @@
 .items-section {
+	$this: &;
+
 	@include adaptiv-value('padding-top', 100, 40, 1);
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
@@ -31,30 +33,32 @@
 				flex-direction: column;
 			}
 
-			.items-section__content {
-				@include mq(md) {
-					max-width: 100%;
-					margin-right: 0;
-					margin-bottom: 40px;
-				}
-			}
-
-			.items-section__items {
-				&:not(:last-child) {
-					@include mq(md, min) {
+			.items-section {
+				&__content {
+					@include mq(md) {
+						max-width: 100%;
+						margin-right: 0;
 						margin-bottom: 40px;
 					}
 				}
-			}
 
-			.items-section__action {
-				@include mq(md) {
-					display: none;
+				&__items {
+					&:not(:last-child) {
+						@include mq(md, min) {
+							margin-bottom: 40px;
+						}
+					}
 				}
 
-				&--mobile {
+				&__action {
 					@include mq(md) {
-						display: flex;
+						display: none;
+					}
+
+					&--mobile {
+						@include mq(md) {
+							display: flex;
+						}
 					}
 				}
 			}
@@ -65,30 +69,32 @@
 				flex-direction: column;
 			}
 
-			.items-section__content {
-				@include mq(lg) {
-					max-width: 100%;
-					margin-right: 0;
-					margin-bottom: 40px;
-				}
-			}
-
-			.items-section__action {
-				@include mq(lg) {
-					display: none;
-				}
-
-				&--mobile {
+			.items-section {
+				&__content {
 					@include mq(lg) {
-						display: flex;
+						max-width: 100%;
+						margin-right: 0;
+						margin-bottom: 40px;
 					}
 				}
-			}
 
-			.items-section__items {
-				&:not(:last-child) {
-					@include mq(lg, min) {
-						margin-bottom: 40px;
+				&__action {
+					@include mq(lg) {
+						display: none;
+					}
+
+					&--mobile {
+						@include mq(lg) {
+							display: flex;
+						}
+					}
+				}
+
+				&__items {
+					&:not(:last-child) {
+						@include mq(lg, min) {
+							margin-bottom: 40px;
+						}
 					}
 				}
 			}

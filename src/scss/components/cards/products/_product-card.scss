@@ -5,11 +5,11 @@
 	height: 100%;
 
 	&__images {
+		@include adaptiv-value('margin-bottom', 20, 10, 1);
 		position: relative;
 		width: 100%;
 		padding-bottom: 48.5%;
 		overflow: hidden;
-		@include adaptiv-value('margin-bottom', 20, 10, 1);
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -194,8 +194,11 @@
 		height: 7px;
 		background-color: transparent;
 		border: 1px solid rgba($white, 0.4);
-		transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-			width 0.3s ease-in-out, height 0.3s ease-in-out;
+		transition:
+			background-color 0.3s ease-in-out,
+			border-color 0.3s ease-in-out,
+			width 0.3s ease-in-out,
+			height 0.3s ease-in-out;
 	}
 
 	.swiper-pagination-bullet-active {
@@ -347,12 +350,15 @@
 	}
 
 	&__question {
-		position: relative;
-		font-weight: $fw-600;
 		@include adaptiv-value('font-size', 16, 12, 1);
 		@include adaptiv-value('padding-right', 44, 35, 1);
+		position: relative;
+		font-weight: $fw-600;
 
 		&::before {
+			@include adaptiv-value('width', 32, 27, 1);
+			@include adaptiv-value('height', 32, 27, 1);
+			@include adaptiv-value('font-size', 18, 14, 1);
 			position: absolute;
 			top: 50%;
 			right: 0;
@@ -363,9 +369,6 @@
 			border-radius: 50%;
 			transform: translateY(-50%);
 			content: '?';
-			@include adaptiv-value('width', 32, 27, 1);
-			@include adaptiv-value('height', 32, 27, 1);
-			@include adaptiv-value('font-size', 18, 14, 1);
 		}
 	}
 

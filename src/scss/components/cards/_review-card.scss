@@ -85,9 +85,9 @@
 	}
 
 	&__star {
+		@include bg-conatin;
 		@include adaptiv-value('width', 18, 12, 1);
 		@include adaptiv-value('height', 18, 12, 1);
-		@include bg-conatin;
 
 		&--fill {
 			background-image: url('../img/icons/star-fill.svg');

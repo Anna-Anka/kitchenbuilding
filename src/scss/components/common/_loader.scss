@@ -1,0 +1,8 @@
+.loader {
+	@include adaptiv-value('width', 55, 30, 1);
+	@include adaptiv-value('height', 55, 30, 1);
+	@include bg-conatin;
+	display: block;
+	margin: 0 auto;
+	animation: 1s linear 0s normal none infinite running rot;
+}

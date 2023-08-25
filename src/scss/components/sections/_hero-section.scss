@@ -35,9 +35,9 @@
 	}
 
 	&__wrapper {
+		@include adaptiv-value('gap', 20, 10, 1);
 		position: relative;
 		display: flex;
-		@include adaptiv-value('gap', 20, 10, 1);
 		min-height: 610px;
 
 		@include mq(xl) {
@@ -71,8 +71,8 @@
 
 	&__content,
 	&__image {
-		width: 50%;
 		@include adaptiv-value('border-radius', 30, 15, 1);
+		width: 50%;
 
 		@include mq(sm) {
 			width: 100%;
@@ -130,9 +130,9 @@
 	}
 
 	&__actions {
+		@include adaptiv-value('gap', 15, 10, 1);
 		z-index: 1;
 		display: flex;
-		@include adaptiv-value('gap', 15, 10, 1);
 
 		@include mq(xl) {
 			flex-direction: column;
@@ -146,11 +146,11 @@
 	}
 
 	&__items {
+		@include adaptiv-value('gap', 10, 6, 1);
 		z-index: 1;
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: auto;
-		@include adaptiv-value('gap', 10, 6, 1);
 	}
 
 	&__link {
@@ -180,15 +180,15 @@
 		border-radius: 50%;
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			width: 12px;
 			height: 12px;
-			background-image: url('../img/icons/arrow.svg');
+			background-image: url('../img/sprite.svg#arrow');
 			transform: translate(-50%, -50%) rotate(-90deg);
 			content: '';
-			@include bg-conatin;
 		}
 
 		@include mq(lg) {
@@ -207,19 +207,19 @@
 	}
 
 	&__extra {
+		@include adaptiv-value('font-size', 14, 12, 1);
+		@include adaptiv-value('padding', 20, 12, 1);
+		@include adaptiv-value('border-radius', 20, 15, 1);
 		z-index: 3;
 		width: 100%;
 		max-width: 490px;
 		background-color: $white;
-		@include adaptiv-value('font-size', 14, 12, 1);
 		box-shadow: 0 20px 54px 0 rgba($black, 0.1);
-		@include adaptiv-value('padding', 20, 12, 1);
-		@include adaptiv-value('border-radius', 20, 15, 1);
 
 		&--accent {
+			@include adaptiv-value('font-size', 20, 12, 1);
 			color: $dark-800;
 			font-weight: $fw-500;
-			@include adaptiv-value('font-size', 20, 12, 1);
 		}
 
 		b {

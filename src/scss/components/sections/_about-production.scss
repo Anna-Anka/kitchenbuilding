@@ -21,11 +21,11 @@
 	}
 
 	&__header {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
 		width: 100%;
 		max-width: 1015px;
 		margin: 0 auto;
 		text-align: center;
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
 	}
 
 	&__text {
@@ -51,10 +51,10 @@
 	}
 
 	&__items {
+		@include adaptiv-value('gap', 20, 10, 1);
 		display: flex;
 		padding-bottom: 30px;
 		overflow-x: auto;
-		@include adaptiv-value('gap', 20, 10, 1);
 	}
 
 	&__item {

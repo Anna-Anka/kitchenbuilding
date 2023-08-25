@@ -6,9 +6,9 @@
 
 @include('./components/_mobile-menu.html')
 
-@include('./components/_modals.html')
-
-@include('./components/_modals.html')
+@include('./components/_modals.html', {
+'reviewModal': 'true'
+})
 
 <main class="main">
     @include('./components/_breadcrumbs.html', {

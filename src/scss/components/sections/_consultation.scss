@@ -45,10 +45,10 @@
 
 	.form {
 		&__inner {
+			@include adaptiv-value('margin-bottom', 25, 12, 1);
 			display: flex;
 			gap: 12px;
 			width: 100%;
-			@include adaptiv-value('margin-bottom', 25, 12, 1);
 
 			@include mq(lg) {
 				flex-wrap: wrap;

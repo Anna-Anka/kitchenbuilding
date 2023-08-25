@@ -7,7 +7,7 @@
 	color: $dark-800;
 	background-color: $white;
 	border-radius: 1000px;
-	box-shadow: 0 20px 54px 0px rgba($black, 0.1);
+	box-shadow: 0 20px 54px 0 rgba($black, 0.1);
 
 	@include mq(lg) {
 		padding: 10px 20px 10px 64px;
@@ -21,7 +21,7 @@
 		width: 63px;
 		height: 63px;
 		background-color: $dark-800;
-		background-image: url('../img/icons/phone.svg');
+		background-image: url('../img/sprite.svg#phone');
 		background-size: 24px;
 		border-radius: 50%;
 		content: '';

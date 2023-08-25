@@ -255,7 +255,7 @@
 			left: 50%;
 			width: 20px;
 			height: 20px;
-			background-image: url('../img/icons/arrow-longer.svg');
+			background-image: url('../img/sprite.svg#arrow-longer');
 			transform: translate(-50%, -50%);
 			content: '';
 			@include bg-conatin;

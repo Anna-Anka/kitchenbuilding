@@ -1,14 +1,14 @@
 .guarantee-card {
+	@include adaptiv-value('border-radius', 30, 15, 1);
 	position: relative;
 	width: 100%;
 	height: 100%;
 	background-color: $grey-200;
-	@include adaptiv-value('border-radius', 30, 15, 1);
 
 	&__content {
+		@include adaptive-value-master('max-width', 470, 350, 1900, 1124, 1);
 		width: 100%;
 		max-width: 470px;
-		@include adaptive-value-master('max-width', 470, 350, 1900, 1124, 1);
 		padding: 40px;
 
 		@include mq(xl) {
@@ -23,13 +23,13 @@
 	}
 
 	&__title {
-		color: $black;
 		@include adaptiv-value('margin-bottom', 12, 8, 1);
+		color: $black;
 	}
 
 	&__items {
-		padding-left: 18px;
 		@include adaptive-value-master('font-size', 16, 14, 1900, 1124, 1);
+		padding-left: 18px;
 
 		@include mq(xl) {
 			font-size: 14px;

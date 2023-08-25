@@ -1,7 +1,13 @@
-// * components
-@import './includes/components/components';
+@import './utils/animations';
+@import './utils/swiper';
 
-// * pages
+@import './includes/components/common';
+@import './includes/components/blocks';
+@import './includes/components/cards';
+@import './includes/components/header';
+@import './includes/components/sections';
+@import './includes/components/footer';
+
 @import './includes/pages/home-page';
 @import './includes/pages/catalog-pages';
 @import './includes/pages/product-page';

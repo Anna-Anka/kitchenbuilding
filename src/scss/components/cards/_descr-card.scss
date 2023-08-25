@@ -1,4 +1,5 @@
 .descr-card {
+	@include adaptiv-value('gap', 30, 20, 1);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -7,7 +8,6 @@
 	background-color: $white;
 	border: 1px solid rgba($grey-600, 0.2);
 	border-radius: 20px;
-	@include adaptiv-value('gap', 30, 20, 1);
 
 	@include mq(lg) {
 		padding: 20px;
@@ -23,8 +23,8 @@
 		}
 
 		.descr-card__bg {
-			background-size: contain;
 			@include adaptiv-value('height', 180, 140, 1);
+			background-size: contain;
 		}
 	}
 
@@ -41,13 +41,13 @@
 	}
 
 	&__bg {
-		@include bg-cover;
 		@include adaptiv-value('height', 156, 112, 1);
+		@include bg-cover;
 	}
 
 	&__title {
-		color: $black;
 		@include adaptiv-value('margin-bottom', 15, 10, 1);
+		color: $black;
 	}
 
 	&__text {

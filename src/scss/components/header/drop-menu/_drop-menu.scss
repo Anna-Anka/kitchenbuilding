@@ -6,7 +6,7 @@
 	display: none;
 	width: 100%;
 	max-height: 100%;
-    padding-top: 100px;
+	padding-top: 100px;
 	overflow-y: auto;
 
 	&--active {
@@ -28,10 +28,10 @@
 	}
 
 	&__list {
-		position: relative;
-		padding-right: 40px;
 		@include adaptiv-value('padding-right', 40, 10, 1);
 		@include adaptiv-value('margin-right', 40, 10, 1);
+		position: relative;
+		padding-right: 40px;
 
 		&::before {
 			position: absolute;
@@ -61,6 +61,7 @@
 		transition: color 0.3s ease-in-out;
 
 		&::before {
+			@include bg-conatin;
 			position: absolute;
 			top: 7px;
 			right: -20px;
@@ -73,7 +74,6 @@
 				brightness(110%) contrast(102%);
 			transition: opacity 0.3s ease-in-out;
 			content: '';
-			@include bg-conatin;
 		}
 
 		@media (any-hover: hover) {
@@ -94,50 +94,10 @@
 	}
 
 	&__recommended {
+		width: 100%;
+
 		&:not(:last-child) {
 			margin-right: 20px;
-		}
-	}
-
-	.product-today {
-		&__image {
-			margin-bottom: 0;
-
-			&--gradient {
-				&::before {
-					background-image: linear-gradient(
-						360deg,
-						rgba($black, 0.75) 13.58%,
-						rgba($black, 0) 60.19%
-					);
-				}
-			}
-		}
-
-		&__content {
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: flex;
-			align-items: flex-end;
-			justify-content: space-between;
-			width: 100%;
-			height: 100%;
-			padding: 0 25px 30px;
-		}
-
-		&__title {
-			margin-right: 10px;
-			margin-bottom: 0;
-			color: $white;
-		}
-
-		&__subtitle {
-			display: none;
-		}
-
-		&__arrow {
-			transform: translateY(8%);
 		}
 	}
 }

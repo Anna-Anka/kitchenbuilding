@@ -39,11 +39,11 @@
 	}
 
 	&__agree {
+		@include adaptiv-value('font-size', 16, 12, 1);
 		display: inline-flex;
 		align-items: center;
 		color: $white;
 		line-height: 1.2;
-		@include adaptiv-value('font-size', 16, 12, 1);
 
 		a {
 			word-break: keep-all;
@@ -77,28 +77,28 @@
 }
 
 .checkbox-visible {
+	@include adaptiv-value('max-width', 24, 20, 1);
+	@include adaptiv-value('height', 24, 20, 1);
 	position: relative;
 	width: 100%;
 	background-color: $white;
 	border: 1px solid rgba($grey-600, 0.4);
 	border-radius: 5px;
 	cursor: pointer;
-	@include adaptiv-value('max-width', 24, 20, 1);
-	@include adaptiv-value('height', 24, 20, 1);
 
 	&::before {
+		@include bg-conatin;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		width: 17px;
 		height: 17px;
-		background-image: url('../img/icons/check.svg');
+		background-image: url('../img/sprite.svg#check');
 		transform: translate(-50%, -50%);
 		opacity: 0;
 		filter: invert(13%) sepia(96%) saturate(2665%) hue-rotate(345deg)
 			brightness(122%) contrast(97%);
 		transition: opacity 0.3s ease-in-out;
 		content: '';
-		@include bg-conatin;
 	}
 }

@@ -32,6 +32,7 @@
 	}
 
 	&__number {
+		@include flex-all-center;
 		flex: 0 0 42px;
 		height: 42px;
 		color: $dark-800;
@@ -41,7 +42,6 @@
 		background-color: $white;
 		border: 1px solid rgba($grey-600, 0.4);
 		border-radius: 50%;
-		@include flex-all-center;
 
 		@include mq(lg) {
 			flex-basis: 28px;

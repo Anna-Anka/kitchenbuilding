@@ -36,9 +36,9 @@
 	}
 
 	&__items {
+		@include adaptiv-value('gap', 20, 10, 1);
 		display: flex;
 		overflow: auto;
-		@include adaptiv-value('gap', 20, 10, 1);
 
 		@include mq(xl) {
 			flex-direction: column;

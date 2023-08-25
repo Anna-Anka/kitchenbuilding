@@ -1,18 +1,21 @@
 .circle-link {
+	@include adaptiv-value('max-width', 100, 77, 1);
+	@include adaptiv-value('height', 100, 77, 1);
+	@include adaptiv-value('padding', 15, 8, 1);
+	@include flex-all-center;
 	position: absolute;
 	bottom: -10px;
 	left: 50%;
 	z-index: 2;
 	width: 100%;
-	@include adaptiv-value('padding', 15, 8, 1);
 	background-color: $white;
 	border-radius: 50%;
-	@include adaptiv-value('max-width', 100, 77, 1);
-	@include adaptiv-value('height', 100, 77, 1);
-	@include flex-all-center;
 	transform: translate(-50%, 70%);
 
 	&::before {
+		@include adaptiv-value('width', 36, 26, 1);
+		@include adaptiv-value('height', 36, 26, 1);
+		@include bg-conatin;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -20,16 +23,13 @@
 		background-image: url('../img/home-hero/circle-arrow.svg');
 		transform: translate(-50%, -50%);
 		content: '';
-		@include adaptiv-value('width', 36, 26, 1);
-		@include adaptiv-value('height', 36, 26, 1);
-		@include bg-conatin;
 	}
 
 	&__content {
-		@include bg-conatin;
-		flex-shrink: 0;
 		@include adaptiv-value('flex-basis', 85, 62, 1);
 		@include adaptiv-value('height', 85, 62, 1);
+		@include bg-conatin;
+		flex-shrink: 0;
 		width: 100%;
 		animation: 5s linear 0s normal none infinite running circle-link;
 
@@ -37,14 +37,5 @@
 			@include adaptiv-value('flex-basis', 95, 72, 1);
 			@include adaptiv-value('height', 95, 72, 1);
 		}
-	}
-}
-
-@keyframes circle-link {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
 	}
 }

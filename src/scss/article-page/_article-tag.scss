@@ -1,0 +1,11 @@
+.article-tag {
+	@include flex-all-center;
+	@include adaptiv-value('padding-top', 14, 7, 1);
+	@include adaptiv-value('padding-bottom', 14, 7, 1);
+	@include adaptiv-value('padding-right', 20, 16, 1);
+	@include adaptiv-value('padding-left', 20, 16, 1);
+	@include adaptiv-value('font-size', 20, 10, 1);
+	text-align: center;
+	background-color: $grey-200;
+	border-radius: 1000px;
+}

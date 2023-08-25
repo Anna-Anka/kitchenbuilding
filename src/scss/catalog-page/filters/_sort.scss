@@ -5,23 +5,23 @@
 	&__item {
 		cursor: pointer;
 
-		&:not(:last-child) {
+		&--normal {
 			@include adaptiv-value('margin-right', 20, 12, 1);
 		}
 
 		&--up,
 		&--down {
 			.sort__visible {
-				@include adaptiv-value('padding-right', 14, 10, 1);
+				@include adaptiv-value('padding-right', 18, 12, 1);
 
 				&::before {
 					@include bg-conatin;
+					@include adaptiv-value('height', 14, 10, 1);
+					@include adaptiv-value('width', 14, 10, 1);
 					top: 50%;
 					right: 0;
-					width: 6px;
-					@include adaptiv-value('height', 14, 10, 1);
-					background-image: url('../img/icons/up.svg');
-					transform: translateY(-50%);
+					background-image: url('../img/sprite.svg#arrow-longer');
+					transform: translateY(-50%) rotate(90deg);
 				}
 			}
 		}
@@ -29,7 +29,7 @@
 		&--down {
 			.sort__visible {
 				&::before {
-					transform: rotate(180deg) translateY(50%);
+					transform: rotate(-90deg) translateY(5%) translateX(50%);
 				}
 			}
 		}

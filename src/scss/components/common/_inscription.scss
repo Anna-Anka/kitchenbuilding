@@ -1,0 +1,18 @@
+.inscription {
+	@include adaptiv-value('max-width', 1360, 396, 1);
+	@include adaptiv-value('height', 162, 48, 1);
+	@include bg-conatin;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		background-image: url('../img/illustrations/inscription.svg');
+		opacity: 0.2;
+		filter: invert(99%) sepia(1%) saturate(142%) hue-rotate(305deg)
+			brightness(113%) contrast(70%);
+		content: '';
+	}
+}

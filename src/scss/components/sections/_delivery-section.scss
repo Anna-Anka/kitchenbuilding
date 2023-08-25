@@ -2,8 +2,8 @@
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
 	&__header {
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
 		@include flex-center-sb;
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
 
 		@include mq(md, min) {
 			gap: 20px;
@@ -21,6 +21,7 @@
 
 		&--mobile {
 			display: flex;
+
 			@include mq(md, min) {
 				display: none;
 			}
@@ -28,8 +29,8 @@
 	}
 
 	&__items {
-		display: flex;
 		@include adaptiv-value('gap', 20, 10, 1);
+		display: flex;
 		padding-bottom: 20px;
 
 		@include mq(xl) {

@@ -1,7 +1,7 @@
 .advantages-section {
-	background-color: $grey-200;
 	@include adaptiv-value('padding-top', 90, 40, 1);
 	@include adaptiv-value('padding-bottom', 140, 38, 1);
+	background-color: $grey-200;
 
 	&::before {
 		bottom: 0;

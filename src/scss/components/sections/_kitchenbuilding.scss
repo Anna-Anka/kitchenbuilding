@@ -2,9 +2,9 @@
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
 	&--background {
-		background-color: $grey-200;
 		@include adaptiv-value('padding-top', 80, 40, 1);
 		@include adaptiv-value('padding-bottom', 118, 71, 1);
+		background-color: $grey-200;
 
 		&::before {
 			bottom: 0;
@@ -41,12 +41,12 @@
 	&__accent {
 		@include adaptiv-value('width', 34, 18, 1);
 		@include adaptiv-value('height', 34, 18, 1);
+		@include adaptiv-value('font-size', 20, 10, 1);
 		padding: 2px;
 		color: $white;
 		font-weight: $fw-600;
 		background-color: $red-600;
 		border-radius: 50%;
-		@include adaptiv-value('font-size', 20, 10, 1);
 	}
 
 	&__text {

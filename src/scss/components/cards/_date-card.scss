@@ -1,28 +1,28 @@
 .date-card {
+	@include adaptiv-value('gap', 30, 24, 1);
 	display: flex;
 	width: 100%;
-	@include adaptiv-value('gap', 30, 24, 1);
 
 	&__decor {
-		position: relative;
 		@include adaptiv-value('flex-basis', 120, 100, 1);
+		@include adaptiv-value('height', 120, 100, 1);
+		position: relative;
 		z-index: 1;
 		flex-shrink: 0;
-		@include adaptiv-value('height', 120, 100, 1);
 	}
 
 	&__number {
+		@include flex-all-center;
+		@include adaptiv-value('font-size', 16, 12, 1);
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 40px;
 		height: 40px;
-		@include flex-all-center;
 		text-align: center;
 		background-color: $white;
 		border: 1px solid rgba($grey-600, 0.4);
 		border-radius: 50%;
-		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 
 	&__img {
@@ -30,7 +30,7 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 50%;
-		box-shadow: insert 0 20px 30px 0px rgba($black, 0.15);
+		box-shadow: insert 0 20px 30px 0 rgba($black, 0.15);
 	}
 
 	&__content {
@@ -39,20 +39,20 @@
 	}
 
 	&__date {
+		@include adaptiv-value('font-size', 80, 58, 1);
 		position: absolute;
 		top: 0;
 		left: 0;
 		color: rgba($grey-600, 0.1);
 		font-weight: $fw-700;
-		@include adaptiv-value('font-size', 80, 58, 1);
 	}
 
 	&__title {
+		@include adaptiv-value('padding-bottom', 15, 4, 1);
+		@include adaptiv-value('margin-bottom', 15, 4, 1);
 		position: relative;
 		display: inline-block;
 		color: $black;
-		@include adaptiv-value('padding-bottom', 15, 4, 1);
-		@include adaptiv-value('margin-bottom', 15, 4, 1);
 
 		&::before {
 			position: absolute;

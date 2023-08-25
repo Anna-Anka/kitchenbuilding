@@ -24,8 +24,8 @@
 	}
 
 	&__img {
-		border-radius: 15px;
 		@include resize-img;
+		border-radius: 15px;
 	}
 
 	&__title {
@@ -47,7 +47,7 @@
 	}
 
 	&__subtitle {
-		@include adaptiv-value('font-size', 16, 12, 1);
 		@include line-clamp(2);
+		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 }
