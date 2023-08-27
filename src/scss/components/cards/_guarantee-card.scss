@@ -9,6 +9,7 @@
 		@include adaptive-value-master('max-width', 470, 350, 1900, 1124, 1);
 		width: 100%;
 		max-width: 470px;
+		height: 100%;
 		padding: 40px;
 
 		@include mq(xl) {

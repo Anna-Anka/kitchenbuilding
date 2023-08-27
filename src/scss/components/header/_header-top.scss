@@ -56,7 +56,8 @@
 		@include adaptiv-value('margin-right', 35, 22, 1);
 
 		&::before {
-			background-image: url('../img/sprite.svg#search');
+			background-image: url('../img/icons/search.svg');
+			fill: $white;
 		}
 	}
 
@@ -67,13 +68,14 @@
 
 		&--phone {
 			&::before {
-				background-image: url('../img/sprite.svg#phone');
+				background-image: url('../img/icons/phone.svg');
+				fill: red;
 			}
 		}
 
 		&--email {
 			&::before {
-				background-image: url('../img/sprite.svg#email');
+				background-image: url('../img/icons/email.svg');
 			}
 		}
 	}

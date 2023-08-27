@@ -1,7 +1,7 @@
 .work-kitchenbuilding {
-	background-color: $grey-200;
 	@include adaptiv-value('padding-top', 90, 40, 1);
 	@include adaptiv-value('padding-bottom', 160, 58, 1);
+	background-color: $grey-200;
 
 	&::before {
 		bottom: 0;
@@ -27,9 +27,9 @@
 	}
 
 	&__title {
+		@include adaptiv-value('gap', 14, 10, 1);
 		display: flex;
 		flex-wrap: wrap;
-		gap: 14px;
 		align-items: center;
 	}
 
@@ -78,9 +78,9 @@
 	}
 
 	&__picture {
+		@include adaptiv-value('border-radius', 40, 15, 1);
 		width: 100%;
 		max-width: 630px;
-		@include adaptiv-value('border-radius', 40, 15, 1);
 
 		@include mq(md) {
 			max-width: 100%;
@@ -92,6 +92,14 @@
 		padding-bottom: 81%;
 		background-color: $grey-200;
 		border-radius: inherit;
+
+		@include mq(md) {
+			padding-bottom: 63%;
+		}
+
+		@include mq(sm) {
+			padding-bottom: 81%;
+		}
 
 		&:not(:last-child) {
 			@include mq(md) {

@@ -42,6 +42,7 @@
 		@include adaptiv-value('width', 34, 18, 1);
 		@include adaptiv-value('height', 34, 18, 1);
 		@include adaptiv-value('font-size', 20, 10, 1);
+		margin-left: 4px;
 		padding: 2px;
 		color: $white;
 		font-weight: $fw-600;

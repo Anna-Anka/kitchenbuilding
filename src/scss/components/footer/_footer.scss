@@ -49,13 +49,13 @@
 
 		&--phone {
 			&::before {
-				background-image: url('../img/sprite.svg#phone');
+				background-image: url('../img/icons/phone.svg');
 			}
 		}
 
 		&--email {
 			&::before {
-				background-image: url('../img/sprite.svg#email');
+				background-image: url('../img/icons/email.svg');
 			}
 		}
 	}

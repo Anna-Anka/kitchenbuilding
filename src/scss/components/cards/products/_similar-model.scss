@@ -9,9 +9,10 @@
 	border-radius: 10px;
 
 	&__image {
-		@include adaptiv-value('max-width', 155, 70, 1);
+		@include adaptiv-value('flex-basis', 155, 70, 1);
 		@include adaptiv-value('margin-right', 20, 12, 1);
 		position: relative;
+		flex-shrink: 0;
 		width: 100%;
 		padding-bottom: 23.5%;
 	}

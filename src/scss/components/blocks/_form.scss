@@ -44,13 +44,10 @@
 		align-items: center;
 		color: $white;
 		line-height: 1.2;
+		cursor: pointer;
 
 		a {
 			word-break: keep-all;
-		}
-
-		label {
-			cursor: pointer;
 		}
 	}
 
@@ -93,7 +90,7 @@
 		left: 50%;
 		width: 17px;
 		height: 17px;
-		background-image: url('../img/sprite.svg#check');
+		background-image: url('../img/icons/check.svg');
 		transform: translate(-50%, -50%);
 		opacity: 0;
 		filter: invert(13%) sepia(96%) saturate(2665%) hue-rotate(345deg)

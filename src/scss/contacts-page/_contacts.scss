@@ -1,8 +1,4 @@
 .contacts {
-	&__title {
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
-	}
-
 	&__wrapper {
 		position: relative;
 		min-height: 750px;

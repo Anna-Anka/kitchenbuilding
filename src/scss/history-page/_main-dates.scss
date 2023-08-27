@@ -3,7 +3,6 @@
 
 	&__title {
 		text-align: center;
-		@include adaptiv-value('margin-bottom', 40, 20, 1);
 	}
 
 	&__wrapper {

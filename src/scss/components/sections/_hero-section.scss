@@ -38,7 +38,7 @@
 		@include adaptiv-value('gap', 20, 10, 1);
 		position: relative;
 		display: flex;
-		min-height: 610px;
+		min-height: 550px;
 
 		@include mq(xl) {
 			min-height: 360px;
@@ -100,13 +100,14 @@
 			display: none;
 
 			@include mq(sm) {
-				bottom: -20px;
+				bottom: -10px;
 				display: block;
 			}
 		}
 	}
 
 	&__title {
+		margin-bottom: 15px;
 		@include mq(lg) {
 			margin-bottom: 10px;
 			font-size: 20px;
@@ -186,7 +187,7 @@
 			left: 50%;
 			width: 12px;
 			height: 12px;
-			background-image: url('../img/sprite.svg#arrow');
+			background-image: url('../img/icons/arrow.svg');
 			transform: translate(-50%, -50%) rotate(-90deg);
 			content: '';
 		}

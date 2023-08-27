@@ -1,8 +1,10 @@
 .warning {
+	@include adaptiv-value('padding-bottom', 100, 40, 1);
+
 	&__wrapper {
+		@include adaptiv-value('padding', 40, 24, 1);
 		border: 1px solid rgba($black, 0.2);
 		border-radius: 20px;
-		@include adaptiv-value('padding', 40, 24, 1);
 	}
 
 	&__content {
@@ -19,14 +21,14 @@
 		display: inline-block;
 
 		&::before {
+			@include bg-conatin;
+			@include adaptiv-value('width', 32, 24, 1);
+			@include adaptiv-value('height', 32, 24, 1);
 			position: absolute;
 			top: -5px;
 			left: 0;
 			background-image: url('../img/icons/alert.svg');
 			content: '';
-			@include adaptiv-value('width', 32, 24, 1);
-			@include adaptiv-value('height', 32, 24, 1);
-			@include bg-conatin;
 		}
 	}
 

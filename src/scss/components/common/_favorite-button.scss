@@ -1,8 +1,8 @@
 .favorite-button {
+	@include flex-all-center;
 	position: absolute;
 	background-color: $white;
 	border-radius: 50%;
-	@include flex-all-center;
 
 	&--active {
 		.favorite-button__icon {
@@ -11,9 +11,8 @@
 	}
 
 	&__icon {
-		transition: fill 0.3s ease-in-out;
-		fill: transparent;
+		fill: $white;
 		stroke: $red-600;
-		stroke-width: 2px;
+		transition: fill 0.3s ease-in-out;
 	}
 }

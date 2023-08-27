@@ -1,17 +1,12 @@
 .discuss {
-	padding-right: 36px;
-	padding-left: 36px;
+	@include adaptiv-value('padding-left', 36, 24, 1);
+	@include adaptiv-value('padding-right', 36, 24, 1);
 	color: $white;
 
-	@include mq(lg) {
-		padding-right: 0;
-		padding-left: 0;
-	}
-
 	&__wrapper {
+		@include adaptiv-value('border-radius', 20, 12, 1);
 		padding: 50px 0;
 		background-color: $dark-800;
-		@include adaptiv-value('border-radius', 20, 12, 1);
 
 		&::before {
 			bottom: 0;
@@ -52,8 +47,8 @@
 	}
 
 	&__title {
-		color: $white;
 		@include adaptiv-value('margin-bottom', 15, 10, 1);
+		color: $white;
 	}
 
 	&__subtitle {
@@ -61,8 +56,8 @@
 	}
 
 	&__text {
-		opacity: 0.7;
 		@include adaptiv-value('font-size', 20, 12, 1);
+		opacity: 0.7;
 
 		p {
 			&:not(:last-child) {

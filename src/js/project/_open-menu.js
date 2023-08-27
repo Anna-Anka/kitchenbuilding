@@ -15,7 +15,7 @@ if (document.querySelector('.header-bottom__button')) {
 
     const setDefault = () => {
         menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.setAttribute('aria-label', 'Открыть меню')
+        menuButton.setAttribute('aria-label', 'Открыть меню');
         enableScroll();
     }
 
@@ -48,5 +48,17 @@ if (document.querySelector('.header-bottom__button')) {
         } else {
             setDefault();
         }
+
+        const checkWidth = () => {
+            if (window.innerWidth < 993) {
+                setDefault();
+                menuButton.classList.remove('header-bottom__button--active');
+                menu.classList.remove('drop-menu--active');
+                overlay.classList.remove('overlay--active');
+                window.removeEventListener('resize', checkWidth)
+            }
+        }
+
+        window.addEventListener('resize', checkWidth)
     })
 }

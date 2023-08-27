@@ -1,11 +1,12 @@
 .inscription {
-	@include adaptiv-value('max-width', 1360, 396, 1);
-	@include adaptiv-value('height', 162, 48, 1);
 	@include bg-conatin;
 	position: relative;
 	overflow: hidden;
 
 	&::before {
+		@include adaptiv-value('max-width', 1360, 396, 1);
+		@include adaptiv-value('height', 162, 48, 1);
+		@include bg-conatin;
 		position: absolute;
 		left: 50%;
 		width: 100%;

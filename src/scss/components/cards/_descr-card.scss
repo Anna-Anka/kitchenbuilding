@@ -24,7 +24,6 @@
 
 		.descr-card__bg {
 			@include adaptiv-value('height', 180, 140, 1);
-			background-size: contain;
 		}
 	}
 
@@ -42,7 +41,7 @@
 
 	&__bg {
 		@include adaptiv-value('height', 156, 112, 1);
-		@include bg-cover;
+		@include bg-conatin;
 	}
 
 	&__title {

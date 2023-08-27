@@ -1,18 +1,18 @@
 .sketches {
-    @include adaptiv-value('padding-bottom', 60, 40, 1);
+	@include adaptiv-value('padding-bottom', 60, 40, 1);
 
 	&__items {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
 		@include adaptiv-value('gap', 20, 12, 1);
 		@include adaptiv-value('margin-bottom', 30, 20, 1);
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(279px, 1fr));
 
 		@include mq(lg) {
-			grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
 		}
 
 		@include mq(sm) {
-			grid-template-columns: repeat(auto-fit, minmax(149px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(149px, 1fr));
 		}
 	}
 

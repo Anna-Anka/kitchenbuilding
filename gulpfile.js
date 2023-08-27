@@ -90,9 +90,9 @@ const svgSprites = () => {
     .pipe(
       cheerio({
         run: function ($) {
-        //   $('[fill]').removeAttr('fill');
-        //   $('[stroke]').removeAttr('stroke');
-        //   $('[style]').removeAttr('style');
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
         },
         parserOptions: {
           xmlMode: true
@@ -102,9 +102,13 @@ const svgSprites = () => {
     .pipe(replace('&gt;', '>'))
     .pipe(svgSprite({
       mode: {
-        stack: {
-          sprite: "../sprite.svg"
-        }
+        symbol: {
+                sprite: '../sprite.svg',
+                svg: {
+                    xmlDeclaration: false,
+                    doctypeDeclaration: false
+                },
+            }
       },
     }))
     .pipe(dest(paths.buildImgFolder));

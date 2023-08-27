@@ -55,7 +55,7 @@ body {
 .logo {
 	display: inline-block;
 	width: 100%;
-	@include adaptiv-value('max-width', 270, 144, 1);
+	@include adaptiv-value('max-width', 270, 130, 1);
 	@include adaptiv-value('height', 46, 24, 1);
 
 	&__img {

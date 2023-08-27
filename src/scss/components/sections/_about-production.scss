@@ -41,6 +41,7 @@
 	}
 
 	&__actions {
+		@include adaptiv-value('margin-bottom', 40, 20, 1);
 		display: flex;
 		gap: 14px;
 		justify-content: center;

@@ -12,7 +12,8 @@
 		@include adaptiv-value('margin-bottom', 40, 20, 1);
 		width: 100%;
 		max-width: 1015px;
-		margin: 0 auto;
+		margin-right: auto;
+		margin-left: auto;
 		text-align: center;
 	}
 
@@ -47,7 +48,7 @@
 				@include adaptiv-value('top', -10, -5, 1);
 				@include adaptiv-value('background-size', 20, 11, 1);
 				background-color: $white;
-				background-image: url('../img/sprite.svg#plus');
+				background-image: url('../img/icons/plus.svg');
 				border: 1px solid rgba($grey-600, 0.2);
 				border-radius: 50%;
 				transition:

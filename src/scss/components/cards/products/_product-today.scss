@@ -10,6 +10,10 @@
 		background-color: $white;
 		border-radius: 15px;
 
+		picture {
+			height: 100%;
+		}
+
 		&--gradient {
 			&::before {
 				position: absolute;
@@ -94,7 +98,7 @@
 			left: 50%;
 			width: 12px;
 			height: 12px;
-			background-image: url('../img/sprite.svg#arrow-longer');
+			background-image: url('../img/icons/arrow-longer.svg');
 			transform: translate(-50%, -50%);
 			filter: invert(1);
 			content: '';

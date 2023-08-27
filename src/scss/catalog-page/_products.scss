@@ -54,7 +54,9 @@
 	.product-card {
 		&__content {
 			height: 100%;
+
 			@include mq(sm) {
+				width: calc(100vw - 15px);
 				padding: 0 15px;
 			}
 		}

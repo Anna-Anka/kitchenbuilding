@@ -2,13 +2,18 @@
 	display: flex;
 	align-items: center;
 
+	&__favorite,
+	&__call {
+		padding: 15px;
+		font-size: 15px;
+		white-space: nowrap;
+	}
+
 	&__favorite {
 		position: relative;
-		margin-right: 10px;
-		padding: 15px 20px;
+		margin-right: 8px;
 		color: $dark-800;
 		font-weight: $fw-600;
-		font-size: 16px;
 		background-color: $grey-200;
 		border-radius: 1000px;
 		@include flex-all-center;
@@ -26,7 +31,7 @@
 		@include adaptiv-value('height', 22, 14, 1);
 		@include bg-conatin;
 		margin-right: 6px;
-		background-image: url('../img/sprite.svg#heart');
+		background-image: url('../img/icons/heart.svg');
 		filter: invert(83%) sepia(46%) saturate(5102%) hue-rotate(345deg)
 			brightness(103%) contrast(94%);
 		content: '';

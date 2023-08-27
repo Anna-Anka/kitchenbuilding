@@ -27,7 +27,7 @@
 	}
 
 	&__logo {
-		margin-right: 18px;
+		@include adaptiv-value('margin-right', 18, 10, 1);
 	}
 
 	&__items {
@@ -77,7 +77,7 @@
 			left: 50%;
 			width: 10px;
 			height: 10px;
-			background-image: url('../img/sprite.svg#menu-arrow');
+			background-image: url('../img/icons/menu-arrow.svg');
 			transform: translate(-50%, -50%);
 			content: '';
 		}

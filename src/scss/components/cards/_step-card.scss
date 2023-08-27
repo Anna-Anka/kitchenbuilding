@@ -35,8 +35,8 @@
 	}
 
 	&__title {
-		margin-bottom: 15px;
 		display: block;
+		margin-bottom: 15px;
 		color: $black;
 
 		@include mq(lg) {
