@@ -16,14 +16,21 @@
 })
 
 <main class="main">
-    <section class="catalog catalog-v2">
+    <h1 class="sr-only">Выполненные работы</h1>
+    <section class="catalog portfolio catalog-v2">
         <div class="container">
-            <h1 class="title title--medium">Портфолио</h1>
+            <h2 class="title title--medium">Портфолио</h2>
             @include('./catalog-page/_filters.html')
         </div>
         @include('./portfolio-page/_products.html')
     </section>
 </main>
+
+@include('./components/sections/_consultation.html', {
+'class' : 'consultation consultation--bottom',
+'title' : 'Закажите бесплатную разработку дизайн- проекта кухни',
+'tel' : 'true'
+})
 
 @include('./components/_footer.html')
 

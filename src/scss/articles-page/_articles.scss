@@ -16,7 +16,7 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			@include adaptiv-value('margin-bottom', 40, 20, 1);
 		}
 	}
 }

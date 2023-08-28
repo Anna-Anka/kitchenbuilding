@@ -22,6 +22,8 @@
 					right: 0;
 					background-image: url('../img/icons/arrow-longer.svg');
 					transform: translateY(-50%) rotate(90deg);
+					filter: invert(89%) sepia(0%) saturate(3177%) hue-rotate(315deg)
+						brightness(97%) contrast(80%);
 				}
 			}
 		}

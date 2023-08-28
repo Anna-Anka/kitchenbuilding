@@ -1,5 +1,7 @@
 .features {
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
+	position: relative;
+	z-index: 1;
 
 	&--top {
 		@include adaptiv-value('padding-top', 100, 40, 1);

@@ -57,6 +57,23 @@
 			}
 		}
 
+		.favorite-button {
+			top: 10px;
+			right: 10px;
+			width: 40px;
+			height: 40px;
+
+			@include mq(xl) {
+				width: 32px;
+				height: 32px;
+			}
+
+			&__icon {
+				width: 15px;
+				height: 15px;
+			}
+		}
+
 		&__subtitle,
 		&__link {
 			display: none;
@@ -139,6 +156,19 @@
 				height: 22px;
 				font-size: 12px;
 			}
+		}
+	}
+}
+
+.portfolio {
+	.product-card {
+		&__title {
+			margin-bottom: 0;
+		}
+
+		&__subtitle {
+			@include adaptiv-value('font-size', 16, 12, 1);
+			display: inline-block;
 		}
 	}
 }

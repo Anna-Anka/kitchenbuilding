@@ -1,6 +1,6 @@
 .discount-steps {
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
-	@include adaptiv-value('padding-top', 30, 20, 1);
+	@include adaptiv-value('padding-top', 40, 20, 1);
 
 	&__title {
 		@include adaptiv-value('margin-bottom', 75, 20, 1);

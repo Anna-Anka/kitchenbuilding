@@ -31,7 +31,9 @@
 	}
 
 	&__descr {
-		width: 80%;
+		&:not(:last-child) {
+			width: 80%;
+		}
 	}
 
 	&__title {

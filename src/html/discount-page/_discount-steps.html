@@ -1,36 +1,36 @@
 <section class="discount-steps">
     <div class="container">
         <h2 class="discount-steps__title title">
-            Этапы разаработки 3D-проекта
+            Как поучавствовать в акции?
         </h2>
         <ul class="steps">
             <li class="steps__item">
                 @include('../components/cards/_step-card.html', {
                 'number' : '01',
-                'title' : 'Заявка',
+                'title' : 'Выбрать модель учавствующую в акции',
                 'text' : '<p>Получаем заявку и согласуем удобное время</p>',
-                'icon' : 'application'
+                'isIcon' : 'false'
                 })
             </li>
             <li class="steps__item">
                 @include('../components/cards/_step-card.html', {
                 'number' : '02',
-                'title' : 'Замер',
-                'text' : '<p>Производим замер вашего помещения</p>',
-                'icon' : 'development'
+                'title' : 'Оформить заявку',
+                'text' : '<p>Оформите заявку на бесплатное изготовление 3D дизайн-проекта или на консультацию с дизайнером по этой ссылке или просто нажмите в меню справа кнопку обратного звонка!</p>',
+                'isIcon' : 'false'
                 })
             </li>
             <li class="steps__item">
                 @include('../components/cards/_step-card.html', {
                 'number' : '03',
-                'title' : 'Корректировки',
-                'text' : '<p>Вносим корректировки в дизайн-проект кухни</p>',
-                'icon' : 'corrects'
+                'title' : 'Заключаем договор',
+                'text' : '<p>Вносим корректировки в дизайн-проект кухниДля того, чтобы стоимость кухонного гарнитура с учетом акции была зафиксирована, необходимо заключить договор в период действия акции.</p>',
+                'isIcon' : 'false'
                 })
             </li>
         </ul>
         <div class="discount-steps__actions">
-            <a class="button" href="#">Выбрать модель</a>
+            <a class="button" href="../catalog.html">Выбрать модель</a>
             <button class="button button--border" type="button">Заказать замер</button>
         </div>
     </div>

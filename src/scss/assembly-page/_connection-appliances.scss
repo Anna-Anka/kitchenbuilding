@@ -30,10 +30,10 @@
 	}
 
 	&__image {
-		position: relative;
-		max-width: 630px;
 		@include adaptiv-value('border-radius', 40, 15, 1);
 		@include adaptiv-value('min-height', 490, 290, 1);
+		position: relative;
+		max-width: 630px;
 	}
 
 	&__content,
@@ -46,16 +46,21 @@
 	}
 
 	.extra-plank {
+		@include adaptiv-value('border-radius', 40, 25, 1);
 		position: absolute;
 		right: 0;
 		bottom: -1px;
 		z-index: 1;
 		max-width: 80%;
-		@include adaptiv-value('border-radius', 40, 25, 1);
 		padding: 16px 30px 16px 95px;
 
 		@include mq(lg) {
 			padding: 10px 20px 10px 64px;
+		}
+
+		@include mq(md) {
+			max-width: 100%;
+			border-radius: 17px;
 		}
 
 		&::before {
