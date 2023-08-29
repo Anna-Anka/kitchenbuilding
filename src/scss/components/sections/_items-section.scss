@@ -1,6 +1,4 @@
 .items-section {
-	$this: &;
-
 	@include adaptiv-value('padding-top', 100, 40, 1);
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
@@ -136,9 +134,9 @@
 	}
 
 	&__text {
-		color: $grey-600;
 		@include adaptiv-value('margin-bottom', 40, 15, 1);
 		@include adaptiv-value('font-size', 20, 12, 1);
+		color: $grey-600;
 	}
 
 	&__items {
@@ -219,9 +217,21 @@
 	.extra-plank {
 		position: relative;
 
+		@include mq(md) {
+			display: none;
+		}
+
 		&::before {
 			@include adaptiv-value('background-size', 32, 24, 1);
 			background-image: url('../img/icons/delivery.svg');
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(md) {
+				display: flex;
+			}
 		}
 	}
 

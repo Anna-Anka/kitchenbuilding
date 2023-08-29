@@ -20,8 +20,12 @@
 		}
 	}
 
-	&__accordion {
+	.accordion {
 		margin-bottom: 20px;
+
+		&__button {
+			padding-right: 24px;
+		}
 	}
 
 	&__user {

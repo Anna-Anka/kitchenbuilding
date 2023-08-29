@@ -93,7 +93,8 @@
 
 			&::before {
 				@include mq(lg, min) {
-					height: 100%;
+					top: 5px;
+					height: 98%;
 				}
 			}
 		}

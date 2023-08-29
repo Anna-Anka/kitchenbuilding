@@ -36,6 +36,7 @@
 
 		&__button {
 			@include adaptiv-value('font-size', 24, 14, 1);
+			@include adaptiv-value('padding-right', 76, 48, 1);
 			color: $dark-800;
 			font-weight: $fw-600;
 			transition: color 0.3s;
