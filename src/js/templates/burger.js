@@ -37,6 +37,17 @@ burger?.addEventListener('click', () => {
     menu?.classList.toggle('burger-menu--active');
     overlay.classList.toggle('overlay--active');
     checkClass();
+
+    const checkWidthBurger = () => {
+        if (window.innerWidth > 993) {
+            if (burger?.classList.contains('burger--active')) {
+                clickOverlay();
+            }
+            window.removeEventListener('resize', checkWidthBurger)
+        }
+    }
+
+    window.addEventListener('resize', checkWidthBurger)
 });
 
 menuLinks?.forEach(el => {

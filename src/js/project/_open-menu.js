@@ -19,16 +19,6 @@ if (document.querySelector('.header-bottom__button')) {
         enableScroll();
     }
 
-    function clickWindow(event) {
-        if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
-            menuButton.classList.remove('header-bottom__button--active');
-            menu.classList.remove('drop-menu--active');
-            overlay.classList.remove('overlay--active');
-            setDefault();
-            window.removeEventListener('click', clickWindow)
-        }
-    }
-
     calcHeightHeader()
 
     window.addEventListener('resize', calcHeightHeader)
@@ -37,7 +27,6 @@ if (document.querySelector('.header-bottom__button')) {
         menuButton.classList.toggle('header-bottom__button--active');
         menu.classList.toggle('drop-menu--active');
         overlay.classList.toggle('overlay--active');
-        window.removeEventListener('click', clickWindow)
 
         if (menuButton.classList.contains('header-bottom__button--active')) {
             menuButton.setAttribute('aria-expanded', 'true');
@@ -45,12 +34,26 @@ if (document.querySelector('.header-bottom__button')) {
             disableScroll();
             window.addEventListener('click', clickWindow)
 
+            function clickWindow(event) {
+                if (!menuButton.contains(event.target) && !menu.contains(event.target)) {
+                    if (menuButton.classList.contains('header-bottom__button--active')){
+                        menuButton.classList.remove('header-bottom__button--active');
+                        menu.classList.remove('drop-menu--active');
+                        overlay.classList.remove('overlay--active');
+                        setDefault();
+                    }
+                    window.removeEventListener('click', clickWindow)
+                }
+            }
+
+
         } else {
             setDefault();
+            window.removeEventListener('click', clickWindow)
         }
 
         const checkWidth = () => {
-            if (window.innerWidth < 993) {
+            if (window.innerWidth < 993 && menuButton.classList.contains('header-bottom__button--active')) {
                 setDefault();
                 menuButton.classList.remove('header-bottom__button--active');
                 menu.classList.remove('drop-menu--active');
