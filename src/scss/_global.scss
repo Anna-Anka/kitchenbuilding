@@ -88,9 +88,4 @@ body {
 .section {
 	@include adaptiv-value('padding-top', 30, 20, 1);
 	@include adaptiv-value('padding-bottom', 30, 20, 1);
-
-	&--large {
-		@include adaptiv-value('padding-top', 50, 20, 1);
-		@include adaptiv-value('padding-bottom', 50, 20, 1);
-	}
 }

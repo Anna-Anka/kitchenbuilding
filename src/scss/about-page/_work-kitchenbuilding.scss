@@ -125,6 +125,7 @@
 	}
 
 	&__lane {
+		@include adaptiv-value('border-radius', 20, 12, 1);
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -137,7 +138,6 @@
 		font-weight: $fw-600;
 		line-height: 1.1;
 		background-color: $white;
-		@include adaptiv-value('border-radius', 20, 12, 1);
 
 		@include mq(md) {
 			max-width: 100%;
@@ -145,20 +145,20 @@
 	}
 
 	&__hh {
+		@include flex-all-center;
 		@include adaptiv-value('flex-basis', 63, 44, 1);
+		@include adaptiv-value('height', 63, 44, 1);
+		@include adaptiv-value('font-size', 16, 12, 1);
 		flex-shrink: 0;
 		color: $white;
 		text-align: center;
 		background-color: $dark-800;
 		border-radius: 50%;
-		@include adaptiv-value('height', 63, 44, 1);
-		@include flex-all-center;
-		@include adaptiv-value('font-size', 16, 12, 1);
 	}
 
 	&__subtext {
-		color: $black;
 		@include adaptiv-value('font-size', 20, 14, 1);
+		color: $black;
 	}
 
 	&__link {

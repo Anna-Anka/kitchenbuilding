@@ -82,8 +82,8 @@
 	}
 
 	&__content {
-		max-width: 680px;
 		@include adaptiv-value('gap', 30, 20, 1);
+		max-width: 680px;
 	}
 
 	&__item {

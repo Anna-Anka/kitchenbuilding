@@ -1,11 +1,11 @@
 .contacts {
 	.tabs {
 		&__nav {
-			display: flex;
-			overflow-x: scroll;
 			@include adaptiv-value('gap', 10, 4, 1);
 			@include adaptiv-value('margin-bottom', 10, 6, 1);
 			@include adaptiv-value('padding-bottom', 10, 6, 1);
+			display: flex;
+			overflow-x: auto;
 		}
 
 		&__nav-item {

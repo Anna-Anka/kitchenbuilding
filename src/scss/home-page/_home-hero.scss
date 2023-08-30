@@ -53,11 +53,11 @@
 		}
 
 		&::after {
+			@include adaptiv-value('height', 62, 40, 1);
 			bottom: 0;
 			background-image: url('../img/home-hero/bottom-bg.svg');
 			background-size: contain;
 			transform: translateY(50%);
-			@include adaptiv-value('height', 62, 40, 1);
 		}
 
 		@include mq(lg) {
@@ -122,8 +122,8 @@
 	}
 
 	&__calc {
-		white-space: nowrap;
 		@include adaptiv-value('font-size', 16, 10, 1);
+		white-space: nowrap;
 
 		@include mq(lg) {
 			display: none;
@@ -163,13 +163,13 @@
 	}
 
 	&__descr {
+		@include flex-column-all-center;
 		width: 223px;
 		height: 223px;
 		padding: 40px;
 		text-align: center;
 		background-color: $white;
 		border-radius: 100%;
-		@include flex-column-all-center;
 
 		@include mq(lg) {
 			flex-direction: row;
@@ -268,9 +268,9 @@
 	}
 
 	&__slider {
-		position: relative;
 		@include adaptiv-value('padding-left', 60, 20, 1);
 		@include adaptiv-value('padding-right', 60, 20, 1);
+		position: relative;
 
 		@include mq(lg) {
 			display: flex;
@@ -281,10 +281,10 @@
 	}
 
 	&__swiper {
-		position: static;
-		max-width: 670px;
 		@include adaptiv-value('max-width', 670, 285, 1);
 		@include adaptiv-value('height', 544, 231, 1);
+		position: static;
+		max-width: 670px;
 	}
 
 	&__item {
@@ -312,9 +312,9 @@
 		}
 
 		&::after {
-			filter: invert(0);
 			@include adaptiv-value('width', 24, 14, 1);
 			@include adaptiv-value('height', 24, 14, 1);
+			filter: invert(0);
 		}
 	}
 

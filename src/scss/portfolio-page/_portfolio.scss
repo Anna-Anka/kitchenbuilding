@@ -1,0 +1,12 @@
+.portfolio {
+	.product-card {
+		&__title {
+			margin-bottom: 0;
+		}
+
+		&__subtitle {
+			@include adaptiv-value('font-size', 16, 12, 1);
+			display: inline-block;
+		}
+	}
+}

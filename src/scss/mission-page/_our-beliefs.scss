@@ -61,10 +61,10 @@
 	}
 
 	&__image {
+		@include adaptiv-value('border-radius', 20, 10, 1);
 		position: relative;
 		display: block;
 		padding-bottom: 19.5%;
-		@include adaptiv-value('border-radius', 20, 10, 1);
 
 		@include mq(md) {
 			padding-bottom: 48.5%;

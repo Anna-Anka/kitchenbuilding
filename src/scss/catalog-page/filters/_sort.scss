@@ -59,9 +59,9 @@
 	}
 
 	&__visible {
+		@include adaptiv-value('font-size', 20, 12, 1);
 		position: relative;
 		color: $dark-800;
-		@include adaptiv-value('font-size', 20, 12, 1);
 
 		&::before,
 		&::after {

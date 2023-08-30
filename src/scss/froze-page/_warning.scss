@@ -1,4 +1,5 @@
 .warning {
+	@include adaptiv-value('padding-top', 50, 20, 1);
 	@include adaptiv-value('padding-bottom', 100, 40, 1);
 
 	&__wrapper {

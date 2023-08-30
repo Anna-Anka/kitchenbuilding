@@ -1,8 +1,8 @@
 .filters {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
 	@include adaptiv-value('row-gap', 30, 10, 1);
 	@include adaptiv-value('column-gap', 50, 10, 1);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 	overflow-x: auto;
@@ -65,8 +65,8 @@
 	}
 
 	&__visible {
-		padding: 10px 26px;
 		@include adaptiv-value('font-size', 20, 10, 1);
+		padding: 10px 26px;
 
 		@include mq(md) {
 			padding: 8px;

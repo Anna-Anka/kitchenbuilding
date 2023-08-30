@@ -20,11 +20,11 @@
 	}
 
 	&__items {
+		@include adaptiv-value('gap', 20, 15, 1);
 		position: relative;
 		display: flex;
 		padding-bottom: 20px;
 		overflow-x: auto;
-		@include adaptiv-value('gap', 20, 15, 1);
 	}
 
 	&__item {
@@ -33,6 +33,7 @@
 		flex-shrink: 0;
 
 		&::before {
+			@include adaptiv-value('top', 32, 25, 1);
 			position: absolute;
 			right: 0;
 			z-index: 0;
@@ -40,7 +41,6 @@
 			height: 1px;
 			background-color: rgba($grey-600, 0.4);
 			content: '';
-			@include adaptiv-value('top', 32, 25, 1);
 		}
 	}
 
