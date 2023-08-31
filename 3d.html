@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>Кухнистрой — интернет-магазин кухонь | 3D-дизайн кухни</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="overlay" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="header__navigation">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__items">
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Адреса салонов
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__user">
+                        <button class="header-top__search" type="button">
+                            Поиск
+                        </button>
+                        <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
+                            + 7 (495) 189-65-92
+                        </a>
+                        <a class="header-top__contact header-top__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                            kuhnistroy@kuhni.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__wrapper">
+                    <a class="header-bottom__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
+                    </a>
+                    <ul class="header-bottom__items">
+                        <li class="header-bottom__item header-bottom__item--menu">
+                            <a class="header-bottom__link" href="#">
+                                Каталог
+                            </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom__user header-user">
+                        <a class="header-user__favorite" href="#">
+                            <span class="header-user__icon" aria-hidden="true"></span>
+                            Избранное (0)
+                        </a>
+                        <button class="header-user__call button" type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header-bottom__mobile">
+                        <a class="header-bottom__phone" href="tel:+78000000000">8 (800)-000-00-00</a>
+                        <p class="header-bottom__hours">пн-пт с 8:00–18:00</p>
+                    </div>
+                    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-form">
+                <label class="sr-only" for="header-search">Что искать?</label>
+                <input class="search-form__field" name="search" type="text" placeholder="Введите поиск..." id="header-search" required>
+                <div class="search-form__management">
+                    <button class="search-form__button button" type="submit">
+                        Искать
+                    </button>
+                    <button class="search-form__close" type="button">
+                        <span class="sr-only">Закрыть поиск</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--light">
+            Рекомендуем сегодня
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/1.avif" type="image/avif">
+            <source srcset="img/recommend-today/1.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/1.png" alt="Светлая кухня" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <span class="product-today__title">
+            <a class="product-today__link" href="#">Светлая кухня</a>
+        </span>
+        <span class="product-today__subtitle">Специально для любителей светлого</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--dark">
+            Выгодное предложение
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/3.avif" type="image/avif">
+            <source srcset="img/recommend-today/3.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/3.png" alt="Скидка на духовой шкаф" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <span class="product-today__title">
+            <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
+        </span>
+        <span class="product-today__subtitle">При покупке комплекта техники</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu" id="header-burger-menu" data-menu>
+            <div class="burger-menu__box">
+                <div class="burger-menu__user header-user">
+                    <a class="header-user__favorite" href="#">
+                        <span class="header-user__icon" aria-hidden="true"></span>
+                        Избранное (0)
+                    </a>
+                    <button class="header-user__call button" type="button">
+                        Заказать звонок
+                    </button>
+                </div>
+                <ul class="burger-menu__accordion accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                    kuhnistroy@kuhni.ru
+                </a>
+                <div class="burger-menu__bottom menu-bottom">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                                <span class="sr-only">vk</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                                <span class="sr-only">classmates</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                    <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu">
+    <div class="container">
+        <ul class="mobile-menu__items">
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/catalog.svg');" aria-hidden></span>
+                    Каталог
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/registration.svg');" aria-hidden></span>
+                    Запись в салон
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/address.svg');" aria-hidden></span>
+                    Адреса
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/project.svg');" aria-hidden></span>
+                    Хочу проект
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
+<main class="main">
+    <section class="hero-section">
+    <div class="container">
+        <div class="hero-section__wrapper">
+            <span class="hero-section__inscription inscription" aria-hidden></span>
+            <div class="hero-section__content">
+                <span class="hero-section__inscription inscription" aria-hidden></span>
+                <div class="breadcrumbs breadcrumbs--depend">
+    <div class="container">
+        <ul class="breadcrumbs__items">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"> 3D проект</a>
+            </li>
+        </ul>
+    </div>
+</div>
+                <h1 class="hero-section__title title">
+                    3D-дизайн кухни
+                </h1>
+                <div class="hero-section__text">
+                    <p>Компания основана 1997 году и мы предлагаем Вам наш 20-летний опыт работы в кухонном бизнесе</p>
+                </div>
+                <div class="hero-section__actions">
+
+                    <a class="button" href="#" data-goto="#development-form">Оставить заявку</a>
+
+                </div>
+            </div>
+            <div class="hero-section__image">
+                <span class="hero-section__bg" style="background-image: url('img/3d-page/top-bg.jpg');" aria-hidden> </span>
+            </div>
+            <a class="circle-link" href="#" data-goto="#development-form">
+                <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
+                <span class="sr-only">Бесплатная разработка проекта</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+    <section class="development-form" id="development-form">
+    <div class="container">
+        <form class="development-form__wrapper form" action="#">
+            <div class="development-form__content">
+                <h2 class="development-form__title title">
+                    Заявка на разработку 3D — дизайна кухни
+                </h2>
+                <div class="development-form__text">
+                    <p>Свяжемся с вами в ближайшее время!</p>
+                </div>
+
+                <div class="development-form__items">
+                    <div class="development-form__item">
+                        <label class="sr-only" for="project-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" id="project-name" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="development-form__item">
+                        <label class="sr-only" for="project-tel">
+                            Введите ваш телефон
+                        </label>
+                        <input class="form__field" id="project-tel" name="tel" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                </div>
+
+                <div class="development-form__send">
+                    <button class="development-form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+
+                    <div class="form__agree development-form__agree">
+                        <input class="form__hidden checkbox-hidden" id="development-agree" type="checkbox" name="agree" checked required>
+                        <span class="form__visible checkbox-visible" aria-hidden></span>
+                        <label for="development-agree">
+                            Согласен (а) на обработку <a href="#">персональных данных</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="development-form__file">
+                <div class="development-form__headding">
+                    <span class="development-form__subtitle subtitle">
+                        Прикрепите файл
+                    </span>
+                    <div class="development-form__subtext">
+                        <p>
+                            Если у вас есть файл с эскизами или замерами, отправьте его
+                        </p>
+                    </div>
+                </div>
+
+                <label class="sr-only" for="file">
+                    Загрузите файл или перетащите
+                </label>
+                <input class="development-form__field" id="file" name="file" type="file" multiple>
+            </div>
+            <div class="development-form__send development-form__send--mobile">
+                <button class="development-form__button button" type="submit">
+                    Оставить заявку
+                </button>
+                <div class="form__agree development-form__agree">
+                    <input class="form__hidden checkbox-hidden" id="development-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <label for="development-agree">
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <section class="development-steps">
+    <div class="container">
+        <h2 class="development-steps__title title">
+            Этапы разаработки 3D-проекта
+        </h2>
+        <ul class="steps">
+            <li class="steps__item">
+                <article class="step-card">
+    <span class="step-card__number subtitle">01</span>
+    <div class="step-card__descr">
+        <h3 class="step-card__title subtitle">Заявка</h3>
+        <div class="step-card__text"><p>Получаем заявку и согласуем удобное время</p></div>
+    </div>
+
+    <span class="step-card__bg" style="background-image: url('img/froze-page/steps/application.jpg');" aria-hidden> </span>
+
+</article>
+            </li>
+            <li class="steps__item">
+                <article class="step-card">
+    <span class="step-card__number subtitle">02</span>
+    <div class="step-card__descr">
+        <h3 class="step-card__title subtitle">Замер</h3>
+        <div class="step-card__text"><p>Производим замер вашего помещения</p></div>
+    </div>
+
+    <span class="step-card__bg" style="background-image: url('img/froze-page/steps/froze.jpg');" aria-hidden> </span>
+
+</article>
+            </li>
+            <li class="steps__item">
+                <article class="step-card">
+    <span class="step-card__number subtitle">03</span>
+    <div class="step-card__descr">
+        <h3 class="step-card__title subtitle">Корректировки</h3>
+        <div class="step-card__text"><p>Вносим корректировки в дизайн-проект кухни</p></div>
+    </div>
+
+    <span class="step-card__bg" style="background-image: url('img/froze-page/steps/corrects.jpg');" aria-hidden> </span>
+
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <section class="kitchen-style">
+    <div class="container">
+        <h2 class="kitchen-style__title title">
+            Кухни в любом стиле
+        </h2>
+        <div class="kitchen-style__wrapper">
+            <div class="kitchen-style__swiper swiper">
+                <ul class="kitchen-style__items swiper-wrapper">
+                    <li class="kitchen-style__item swiper-slide">
+                        <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Дизайнерский стиль</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/3d-page/kitchen-style/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
+                    </li>
+                    <li class="kitchen-style__item swiper-slide">
+                        <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Дизайнерский стиль 2</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">02</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/3d-page/kitchen-style/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
+                    </li>
+                </ul>
+                <button class="kitchen-style__button kitchen-style__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
+                </button>
+                <button class="kitchen-style__button kitchen-style__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="kitchenbuilding kitchenbuilding--background inscription" id="kitchenbuilding">
+    <div class="container">
+        <div class="kitchenbuilding__header">
+            <div class="kitchenbuilding__descr">
+                <h2 class="kitchenbuilding__title title">
+                    Кухнистрой <span class="kitchenbuilding__accent">.ru</span> — это
+                </h2>
+                <div class="kitchenbuilding__text">
+                    <p>
+                        Проект этой кухни создан на заказ с учетом необычных размеров помещения.
+                    </p>
+                </div>
+            </div>
+
+            <a class="kitchenbuilding__link button button--border" href="#">
+                Узнать подробнее
+            </a>
+
+        </div>
+        <ul class="kitchenbuilding__items">
+            <li class="kitchenbuilding__item">
+                <article class="kitchenbuilding-card">
+    <span class="kitchenbuilding-card__icon" style="background-image: url('img/kitchenbuilding/employees.svg');" aria-hidden></span>
+    <span class="kitchenbuilding-card__title title">
+        1 200
+    </span>
+    <span class="kitchenbuilding-card__subtitle subtitle">
+        Сотрудников
+    </span>
+    <span class="kitchenbuilding-card__text">
+        В нашей компании
+    </span>
+</article>
+            </li>
+            <li class="kitchenbuilding__item">
+                <article class="kitchenbuilding-card">
+    <span class="kitchenbuilding-card__icon" style="background-image: url('img/kitchenbuilding/olds.svg');" aria-hidden></span>
+    <span class="kitchenbuilding-card__title title">
+        15
+    </span>
+    <span class="kitchenbuilding-card__subtitle subtitle">
+        Лет
+    </span>
+    <span class="kitchenbuilding-card__text">
+        Работы компании
+    </span>
+</article>
+            </li>
+            <li class="kitchenbuilding__item">
+                <article class="kitchenbuilding-card">
+    <span class="kitchenbuilding-card__icon" style="background-image: url('img/kitchenbuilding/projects.svg');" aria-hidden></span>
+    <span class="kitchenbuilding-card__title title">
+        200+
+    </span>
+    <span class="kitchenbuilding-card__subtitle subtitle">
+        Реализованных проектов
+    </span>
+    <span class="kitchenbuilding-card__text">
+        В год
+    </span>
+</article>
+            </li>
+        </ul>
+
+        <a class="kitchenbuilding__link kitchenbuilding__link--mobile button button--border" href="#">
+            Узнать подробнее
+        </a>
+
+    </div>
+</section>
+
+    <section class="guarantee-years guarantee-years--top" id="guarantee-years">
+    <div class="container">
+        <div class="guarantee-years__header">
+            <div class="guarantee-years__descr">
+                <h2 class="guarantee-years__title title">
+                    Гарантия 12 лет
+                </h2>
+                <div class="guarantee-years__text">
+                    <p>
+                        Уже много лет Фабрика Кухни ZETTA дает всем свои клиентам гарантию на кухни 12 лет. Такой большой гарантийный срок является следствием многолетнего опыта работы компании и
+                        жесточайшего отбора
+                        поставщиков. Каждый элемент кухни сделан таким образом, чтобы мы могли гарантировать его работу в течении 12 лет. На практике, реальный срок службы кухни составляет более 20
+                        лет.
+                    </p>
+                </div>
+            </div>
+            <div class="years-icon" aria-hidden>
+                <div class="years-icon__content">
+                    <span class="years-icon__decor"></span>
+                    <span class="years-icon__title">12</span>
+                    <span class="years-icon__text">лет</span>
+                </div>
+            </div>
+        </div>
+        <ul class="guarantee-years__items">
+            <li class="guarantee-years__item">
+                <article class="guarantee-card">
+    <div class="guarantee-card__content">
+        <h3 class="guarantee-card__title subtitle">Производство</h3>
+        <ul class="guarantee-card__items list">
+            <li>Премиальная фурнитура от Grass (Австрия)</li>
+            <li>Петли с 5-слойной стальной пластиной и системой Click</li>
+            <li>Лучшая система крепления корпусов Camar (Италия)</li>
+            <li>Металлические держатели в зоне духового шкафа</li>
+        </ul>
+    </div>
+    <span class="guarantee-card__bg" style="background-image: url('img/illustrations/production.svg');" aria-hidden> </span>
+</article>
+            </li>
+            <li class="guarantee-years__item">
+                <article class="guarantee-card">
+    <div class="guarantee-card__content">
+        <h3 class="guarantee-card__title subtitle">Сборка</h3>
+        <ul class="guarantee-card__items list">
+            <li>Кухни собираются на производстве, а не у клиента дома</li>
+            <li>Монтаж в один день с доставкой силами двух монтажников</li>
+            <li>Только автоматизированное поточное производство фасадов</li>
+            <li>Избыточный запас прочности и надежности корпусов</li>
+        </ul>
+    </div>
+    <span class="guarantee-card__bg" style="background-image: url('img/illustrations/assembly.svg');" aria-hidden> </span>
+</article>
+            </li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<section class="consultation consultation--normal" id="consultation">
+    <div class="container">
+        <form class="consultation__wrapper form" action="#">
+            <h2 class="consultation__title title">
+                Закажите бесплатную разработку дизайн- проекта кухни
+            </h2>
+            <div class="consultation__content">
+                <div class="form__inner">
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" name="name" type="text" placeholder="Имя" id="consultation-name" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-phone">
+                            Введите номер телефона
+                        </label>
+                        <input class="form__field" name="phone" type="tel" placeholder="Телефон" id="consultation-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                    </div>
+
+                    <button class="form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <label class="form__agree">
+                    <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <span>
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </span>
+                </label>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrapper">
+                <address class="footer__info">
+                    <a class="footer__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
+                    </a>
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
+                        + 7 (495) 189-65-92
+                    </a>
+                    <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                        kuhnistroy@kuhni.ru
+                    </a>
+                    <button class="footer__call" type="button">Заказать звонок</button>
+                </address>
+                <ul class="accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Компания</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Акции</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Портфолио</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Новости</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Сервис</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Замер</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доставка и сборка</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Монтаж</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Гарантия</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Миссия</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Кухни</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Электрика</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доп элементы</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Сантехника</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="menu-bottom">
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                            <span class="sr-only">vk</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                            <span class="sr-only">classmates</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+
+</html>

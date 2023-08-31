@@ -168,9 +168,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Светлая кухня</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">Специально для любителей светлого</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -193,9 +193,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">При покупке комплекта техники</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -377,6 +377,28 @@
     </div>
 </div>
 
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
 <main class="main">
     <section class="hero-section">
     <div class="container">
@@ -405,14 +427,14 @@
                 </div>
                 <div class="hero-section__actions">
 
-                    <a class="button" href="#">Оставить заявку</a>
+                    <a class="button" href="#" data-goto="#consultation">Оставить заявку</a>
 
                 </div>
             </div>
             <div class="hero-section__image">
                 <span class="hero-section__bg" style="background-image: url('img/assembly-page/top-bg.jpg');" aria-hidden> </span>
             </div>
-            <a class="circle-link" href="#" data-goto="">
+            <a class="circle-link" href="#" data-goto="#features">
                 <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
                 <span class="sr-only">бесплатная разработка проекта</span>
             </a>
@@ -423,7 +445,7 @@
     </div>
 </section>
 
-    <section class="features">
+    <section class="features" id="features">
     <div class="container">
         <h2 class="features__title title">
             Особенности услуги
@@ -624,7 +646,7 @@
     <div class="container">
         <form class="consultation__wrapper form" action="#">
             <h2 class="consultation__title title">
-                Отправка на почту чек-листа
+                Закажите бесплатную разработку дизайн- проекта кухни
             </h2>
             <div class="consultation__content">
                 <div class="form__inner">
@@ -637,10 +659,10 @@
                     </div>
 
                     <div class="form__item">
-                        <label class="sr-only" for="consultation-email">
-                            Введите вашу почту
+                        <label class="sr-only" for="consultation-phone">
+                            Введите номер телефона
                         </label>
-                        <input class="form__field" name="phone" type="email" placeholder="Почта" id="consultation-email" required>
+                        <input class="form__field" name="phone" type="tel" placeholder="Телефон" id="consultation-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
                     </div>
 
                     <button class="form__button button" type="submit">
@@ -648,13 +670,13 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
@@ -669,7 +691,7 @@
                     <a class="footer__logo logo" href="#">
                         <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
                     </a>
-                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
                         + 7 (495) 189-65-92
                     </a>
                     <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">

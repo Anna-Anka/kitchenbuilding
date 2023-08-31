@@ -168,9 +168,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Светлая кухня</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">Специально для любителей светлого</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -193,9 +193,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">При покупке комплекта техники</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -377,6 +377,28 @@
     </div>
 </div>
 
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
 <main class="main">
     <section class="hero-section">
     <div class="container">
@@ -405,7 +427,7 @@
                 </div>
                 <div class="hero-section__actions">
 
-                    <a class="button" href="#">О производстве</a>
+                    <a class="button" href="./production.html">О производстве</a>
 
                     <button class="button button--border" type="button">Оставить заявку</button>
 
@@ -414,7 +436,7 @@
             <div class="hero-section__image">
                 <span class="hero-section__bg" style="background-image: url('img/about-page/top-bg.jpg');" aria-hidden> </span>
             </div>
-            <a class="circle-link" href="#" data-goto="">
+            <a class="circle-link" href="#" data-goto="#guarantee-years">
                 <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
                 <span class="sr-only">бесплатная разработка проекта</span>
             </a>
@@ -422,7 +444,8 @@
         </div>
     </div>
 </section>
-    <section class="guarantee-years">
+
+    <section class="guarantee-years guarantee-years--bottom" id="guarantee-years">
     <div class="container">
         <div class="guarantee-years__header">
             <div class="guarantee-years__descr">
@@ -478,6 +501,7 @@
         </ul>
     </div>
 </section>
+
     <section class="about-production inscription">
     <div class="container">
         <div class="about-production__header">
@@ -495,7 +519,7 @@
                     <span class="action-watch__decor" aria-hidden></span>
                     Смотреть
                 </a>
-                <a class="button button--border" href="#">Узнать подробнее</a>
+                <a class="button button--border" href="../production.html">Узнать подробнее</a>
             </div>
         </div>
         <ul class="about-production__items">
@@ -538,6 +562,7 @@
         </ul>
     </div>
 </section>
+
     <section class="items-section">
     <div class="container">
         <div class="items-section__wrapper items-section__wrapper--early-adaptive">
@@ -606,19 +631,20 @@
 </article>
                     </li>
                 </ul>
-                <a class="items-section__action button button--border" href="#">
+                <a class="items-section__action button button--border" href="../about.html">
                     Узнать подробнее
                 </a>
             </div>
             <div class="items-section__image items-section__image--normal">
                 <div class="items-section__bg" style="background-image: url('img/picture/company-values.jpg');" aria-hidden> </div>
             </div>
-            <a class="items-section__action items-section__action--mobile button button--border" href="#">
+            <a class="items-section__action items-section__action--mobile button button--border" href="../about.html">
                 Узнать подробнее
             </a>
         </div>
     </div>
 </section>
+
     <section class="consultation consultation--zero" id="consultation">
     <div class="container">
         <form class="consultation__wrapper form" action="#">
@@ -647,18 +673,19 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
     </div>
 </section>
+
     <section class="items-section">
     <div class="container">
         <div class="items-section__wrapper items-section__wrapper--later-adaptive">
@@ -736,28 +763,29 @@
 </article>
                     </li>
                 </ul>
-                <a class="items-section__action button button--border" href="#">
+                <a class="items-section__action button button--border" href="../cooperation.html">
                     Узнать подробнее
                 </a>
             </div>
             <div class="items-section__image">
                 <div class="items-section__bg" style="background-image: url('img/picture/cooperation-company.png');" aria-hidden> </div>
             </div>
-            <a class="items-section__action items-section__action--mobile button button--border" href="#">
+            <a class="items-section__action items-section__action--mobile button button--border" href="../cooperation.html">
                 Узнать подробнее
             </a>
         </div>
     </div>
 </section>
+
     <section class="work-kitchenbuilding inscription">
     <div class="container">
         <div class="work-kitchenbuilding__wrapper">
             <div class="work-kitchenbuilding__content">
                 <h2 class="work-kitchenbuilding__title title">
                     <span>Работа в</span>
-                    <div class="work-kitchenbuilding__logo logo">
+                    <span class="work-kitchenbuilding__logo logo">
                         <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип кухнистрой" width="183" height="31" loading="lazy">
-                    </div>
+                    </span>
                 </h2>
                 <div class="work-kitchenbuilding__text">
                     <p>
@@ -767,7 +795,7 @@
                 </div>
                 <div class="work-kitchenbuilding__actions">
                     <a class="button" href="#">Перейти к вакансиям</a>
-                    <a class="button button--border" href="#">Узнать подробнее</a>
+                    <a class="button button--border" href="../work.html">Узнать подробнее</a>
                 </div>
             </div>
             <div class="work-kitchenbuilding__picture">
@@ -784,7 +812,7 @@
                 </div>
                 <div class="work-kitchenbuilding__actions work-kitchenbuilding__actions--mobile">
                     <a class="button" href="#">Перейти к вакансиям</a>
-                    <a class="button button--border" href="#">Узнать подробнее</a>
+                    <a class="button button--border" href="../work.html">Узнать подробнее</a>
                 </div>
             </div>
         </div>
@@ -820,13 +848,13 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
@@ -841,7 +869,7 @@
                     <a class="footer__logo logo" href="#">
                         <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
                     </a>
-                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
                         + 7 (495) 189-65-92
                     </a>
                     <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">

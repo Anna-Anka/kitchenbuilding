@@ -168,9 +168,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Светлая кухня</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">Специально для любителей светлого</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -193,9 +193,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">При покупке комплекта техники</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -377,6 +377,28 @@
     </div>
 </div>
 
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
 <main class="main">
     <section class="hero-section">
     <div class="container">
@@ -405,7 +427,7 @@
                 </div>
                 <div class="hero-section__actions">
 
-                    <a class="button" href="#">О производстве</a>
+                    <a class="button" href="./production.html">О производстве</a>
 
                     <button class="button button--border" type="button">Оставить заявку</button>
 
@@ -414,7 +436,7 @@
             <div class="hero-section__image">
                 <span class="hero-section__bg" style="background-image: url('img/service-page/top-bg.jpg');" aria-hidden> </span>
             </div>
-            <a class="circle-link" href="#" data-goto="">
+            <a class="circle-link" href="#" data-goto="#delivery-section">
                 <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-check.svg');" aria-hidden></span>
                 <span class="sr-only">получите чек-лист бесплатно</span>
             </a>
@@ -425,14 +447,14 @@
     </div>
 </section>
 
-    <section class="delivery-section">
+    <section class="delivery-section" id="delivery-section">
     <div class="container">
         <div class="delivery-section__header">
             <h2 class="delivery-section__title title">
                 Доставка
             </h2>
 
-            <a class="delivery-section__link button button--border" href="#">Узнать подробнее</a>
+            <a class="delivery-section__link button button--border" href="../delivery.html">Узнать подробнее</a>
 
         </div>
         <ul class="delivery-section__items">
@@ -478,7 +500,7 @@
             </li>
         </ul>
 
-        <a class="delivery-section__link delivery-section__link--mobile button button--border" href="#">Узнать подробнее</a>
+        <a class="delivery-section__link delivery-section__link--mobile button button--border" href="../delivery.html">Узнать подробнее</a>
 
     </div>
 </section>
@@ -496,36 +518,48 @@
                     </p>
                 </div>
             </div>
-            <a class="assembly-installation__link button button--border" href="#">
+            <a class="assembly-installation__link button button--border" href="../assembly.html">
                 Узнать подробнее
             </a>
         </div>
         <ul class="assembly-installation__items">
             <li class="assembly-installation__item">
-                <article class="assembly-card">
-    <span class="assembly-card__bg" style="background-image: url('img/illustrations/assembly/1.svg');" aria-hidden> </span>
-    <div class="assembly-card__text">
-        <p>Для оптимального расположения точек подключения бытовой техники, нашими специалистами разработаны рекомендации по подготовке помещения.</p>
+                <article class="descr-card">
+    <span class="descr-card__bg" style="background-image: url('img/illustrations/assembly/1.svg');" aria-hidden> </span>
+    <div class="descr-card__content">
+
+        <div class="descr-card__text">
+            <p>Для оптимального расположения точек подключения бытовой техники, нашими специалистами разработаны рекомендации по подготовке помещения.</p>
+        </div>
     </div>
 </article>
             </li>
             <li class="assembly-installation__item">
-                <article class="assembly-card">
-    <span class="assembly-card__bg" style="background-image: url('img/illustrations/assembly/2.svg');" aria-hidden> </span>
-    <div class="assembly-card__text">
-        <p>Подключение бытовой техники, приобретенной в наших фирменных салонах вместе с кухонным гарнитуром, производится бесплатно.</p>
+                <article class="descr-card">
+    <span class="descr-card__bg" style="background-image: url('img/illustrations/assembly/2.svg');" aria-hidden> </span>
+    <div class="descr-card__content">
+
+        <div class="descr-card__text">
+            <p>Подключение бытовой техники, приобретенной в наших фирменных салонах вместе с кухонным гарнитуром, производится бесплатно.</p>
+        </div>
     </div>
 </article>
             </li>
             <li class="assembly-installation__item">
-                <article class="assembly-card">
-    <span class="assembly-card__bg" style="background-image: url('img/illustrations/assembly/3.svg');" aria-hidden> </span>
-    <div class="assembly-card__text">
-        <p>Работы производятся в заранее оговоренное с заказчиком время, в подготовленном помещении. Чтобы монтаж был правильным. Мы разработали <a href="#">Требования по подготовке помещения</a>, с которыми можно ознакомиться.</p>
+                <article class="descr-card">
+    <span class="descr-card__bg" style="background-image: url('img/illustrations/assembly/3.svg');" aria-hidden> </span>
+    <div class="descr-card__content">
+
+        <div class="descr-card__text">
+            <p>Работы производятся в заранее оговоренное с заказчиком время, в подготовленном помещении. Чтобы монтаж был правильным. Мы разработали <a href="#">Требования по подготовке помещения</a>, с которыми можно ознакомиться.</p>
+        </div>
     </div>
 </article>
             </li>
         </ul>
+        <a class="assembly-installation__link assembly-installation__link--mobile button button--border" href="../assembly.html">
+            Узнать подробнее
+        </a>
     </div>
 </section>
 
@@ -550,12 +584,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -588,12 +625,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -626,12 +666,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -664,12 +707,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -702,12 +748,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -740,12 +789,15 @@
             <source srcset="img/product/1.webp" type="image/webp">
             <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
         </picture>
+        <a class="product-card__link-hide" href="#">Кастелло Лайт</a>
     </div>
 
     <div class="product-card__content">
         <div class="product-card__info">
             <div class="product-card__name">
-                <h3 class="product-card__title">Кастелло Лайт</h3>
+                <h3 class="product-card__title">
+                    <a href="#">Кастелло Лайт</a>
+                </h3>
                 <p class="product-card__subtitle">Фасад из Массива ясеня (Италия)</p>
             </div>
             <div class="product-card__pay">
@@ -805,13 +857,13 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
@@ -881,7 +933,7 @@
         </ul>
         <div class="articles-section__wrapper">
             <div class="articles-section__swiper swiper">
-                <ul class="articles-section__items swiper-wrapper">
+                <ul class="articles-block swiper-wrapper">
                     <li class="articles-section__item swiper-slide mix category-furniture">
                         <article class="article-card">
     <div class="article-card__image">
@@ -894,7 +946,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-furniture">
@@ -909,7 +963,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-furniture">
@@ -924,7 +980,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-interior">
@@ -939,7 +997,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-furniture">
@@ -954,7 +1014,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-interior">
@@ -969,7 +1031,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-furniture">
@@ -984,7 +1048,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-interior">
@@ -999,7 +1065,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-furniture">
@@ -1014,7 +1082,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-interior">
@@ -1029,7 +1099,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-interior">
@@ -1044,7 +1116,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-comparison">
@@ -1059,7 +1133,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-technique">
@@ -1074,7 +1150,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-practice">
@@ -1089,7 +1167,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                     <li class="articles-section__item swiper-slide mix category-project">
@@ -1104,7 +1184,9 @@
     <h3 class="article-card__title subtitle">
         <a class="article-card__link" href="#">Жизнь в цвете: какую палитру выбрать для интерьера кухни</a>
     </h3>
-    <time class="article-card__date" datetime=" 2023-05-20">20.05.2023</time>
+
+    <time class="article-card__subtitle" datetime="2023-05-20">20.05.2023</time>
+
 </article>
                     </li>
                 </ul>
@@ -1149,13 +1231,13 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
@@ -1170,7 +1252,7 @@
                     <a class="footer__logo logo" href="#">
                         <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
                     </a>
-                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
                         + 7 (495) 189-65-92
                     </a>
                     <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">

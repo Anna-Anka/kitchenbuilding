@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script defer src="js/main.js"></script>
+
+  <title>Кухнистрой — интернет-магазин кухонь | Отзывы</title>
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <div class="overlay" aria-hidden="true"></div>
+
+<header class="header">
+    <nav class="header__navigation">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__items">
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                Адреса салонов
+                            </a>
+                        </li>
+                        <li class="header-top__item">
+                            <a class="header-top__link" href="#">
+                                О компании
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-top__user">
+                        <button class="header-top__search" type="button">
+                            Поиск
+                        </button>
+                        <a class="header-top__contact header-top__contact--phone" href="tel:+74951896592">
+                            + 7 (495) 189-65-92
+                        </a>
+                        <a class="header-top__contact header-top__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                            kuhnistroy@kuhni.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__wrapper">
+                    <a class="header-bottom__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-dark.svg" alt="логотип" width="270" height="46" loading="lazy">
+                    </a>
+                    <ul class="header-bottom__items">
+                        <li class="header-bottom__item header-bottom__item--menu">
+                            <a class="header-bottom__link" href="#">
+                                Каталог
+                            </a>
+                            <button class="header-bottom__button" type="button" aria-label="Открыть меню" aria-expanded="false"></button>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="header-bottom__item">
+                            <a class="header-bottom__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-bottom__user header-user">
+                        <a class="header-user__favorite" href="#">
+                            <span class="header-user__icon" aria-hidden="true"></span>
+                            Избранное (0)
+                        </a>
+                        <button class="header-user__call button" type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header-bottom__mobile">
+                        <a class="header-bottom__phone" href="tel:+78000000000">8 (800)-000-00-00</a>
+                        <p class="header-bottom__hours">пн-пт с 8:00–18:00</p>
+                    </div>
+                    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="header-burger-menu" data-burger>
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-form">
+                <label class="sr-only" for="header-search">Что искать?</label>
+                <input class="search-form__field" name="search" type="text" placeholder="Введите поиск..." id="header-search" required>
+                <div class="search-form__management">
+                    <button class="search-form__button button" type="submit">
+                        Искать
+                    </button>
+                    <button class="search-form__close" type="button">
+                        <span class="sr-only">Закрыть поиск</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-menu">
+            <div class="drop-menu__body">
+                <div class="container">
+                    <div class="drop-menu__wrapper">
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Кухни</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Все кухни</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Современный стиль</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Нео классика</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Классический стиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop-menu__list">
+                            <span class="drop-menu__title title">Корпусная мебель</span>
+                            <ul class="drop-menu__items">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Шкафы</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Гардеробные</a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link" href="#">Прихожие</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="drop-menu__recommendeds">
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--light">
+            Рекомендуем сегодня
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/1.avif" type="image/avif">
+            <source srcset="img/recommend-today/1.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/1.png" alt="Светлая кухня" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <span class="product-today__title">
+            <a class="product-today__link" href="#">Светлая кухня</a>
+        </span>
+        <span class="product-today__subtitle">Специально для любителей светлого</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                            <li class="drop-menu__recommended">
+                                <article class="product-today">
+    <div class="product-today__image product-today__image--gradient">
+
+        <span class="product-today__label product-today__label--dark">
+            Выгодное предложение
+        </span>
+
+        <picture>
+            <source srcset="img/recommend-today/3.avif" type="image/avif">
+            <source srcset="img/recommend-today/3.webp" type="image/webp">
+            <img class="product-today__img" src="img/recommend-today/3.png" alt="Скидка на духовой шкаф" width="325" height="360" loading="lazy">
+        </picture>
+    </div>
+    <div class="product-today__content">
+        <span class="product-today__title">
+            <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
+        </span>
+        <span class="product-today__subtitle">При покупке комплекта техники</span>
+
+        <span class="product-today__arrow" aria-hidden></span>
+
+    </div>
+</article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-menu" id="header-burger-menu" data-menu>
+            <div class="burger-menu__box">
+                <div class="burger-menu__user header-user">
+                    <a class="header-user__favorite" href="#">
+                        <span class="header-user__icon" aria-hidden="true"></span>
+                        Избранное (0)
+                    </a>
+                    <button class="header-user__call button" type="button">
+                        Заказать звонок
+                    </button>
+                </div>
+                <ul class="burger-menu__accordion accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Услуги</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Контакты</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Портфолио</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Информация</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Сотрудничество</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="burger-menu__email" href="mailto:kuhnistroy@kuhni.ru">
+                    kuhnistroy@kuhni.ru
+                </a>
+                <div class="burger-menu__bottom menu-bottom">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                                <span class="sr-only">vk</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                                <span class="sr-only">instagram</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                                <span class="sr-only">classmates</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                                <span class="sr-only">youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                    <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu">
+    <div class="container">
+        <ul class="mobile-menu__items">
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/catalog.svg');" aria-hidden></span>
+                    Каталог
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/registration.svg');" aria-hidden></span>
+                    Запись в салон
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/address.svg');" aria-hidden></span>
+                    Адреса
+                </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="mobile-menu__icon" style="background-image: url('img/mobile-menu/project.svg');" aria-hidden></span>
+                    Хочу проект
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="review">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Оставить отзыв
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <form class="form" action="#">
+            <div class="graph-modal__body">
+                <div class="graph-modal__items">
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" id="review-name" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-email">
+                            Введите вашу электронную почту
+                        </label>
+                        <input class="form__field" id="review-email" name="email" type="email" placeholder="Электронная почта" required>
+                    </div>
+                </div>
+                <div class="graph-modal__items">
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-tel">
+                            Введите ваш телефон
+                        </label>
+                        <input class="form__field" id="review-tel" name="tel" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="graph-modal__item">
+                        <label class="sr-only" for="review-contract">
+                            Введите номер вашего договора
+                        </label>
+                        <input class="form__field form__field--number" id="review-contract" name="contract" type="number" placeholder="Номер договора" required>
+                    </div>
+                </div>
+                <div class="graph-modal__item">
+                    <label class="sr-only" for="review-contract">
+                        Напишите свой отзыв
+                    </label>
+                    <textarea class="form__field form__field--message" id="review-contract" name="comment" placeholder="Комментарий"></textarea>
+                </div>
+            </div>
+            <div class="graph-modal__footer">
+                <div class="graph-modal__settings">
+                    <fieldset class="graph-modal__rating rating">
+                        <legend class="rating__title">
+                            Укажите оценку:
+                        </legend>
+                        <div class="rating__stars">
+                            <input class="rating__hidden" id="rating-1" name="rating" value="1" type="radio">
+                            <label class="rating__star" for="rating-1" aria-label="1 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-2" name="rating" value="2" type="radio">
+                            <label class="rating__star" for="rating-2" aria-label="2 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-3" name="rating" value="3" type="radio">
+                            <label class="rating__star" for="rating-3" aria-label="3 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-4" name="rating" value="4" type="radio" checked>
+                            <label class="rating__star" for="rating-4" aria-label="4 из 5"></label>
+
+                            <input class="rating__hidden" id="rating-5" name="rating" value="5" type="radio">
+                            <label class="rating__star" for="rating-5" aria-label="5 из 5"></label>
+                        </div>
+                    </fieldset>
+                    <div class="graph-modal__photo">
+                        <label class="graph-modal__attach" for="file">
+                            Прикрепить фото
+                        </label>
+                        <input class="graph-modal__field" id="file" name="photo" type="file" multiple>
+                    </div>
+                </div>
+                <button class="graph-modal__button button" type="submit">
+                    Отправить отзыв
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
+<main class="main">
+    <div class="breadcrumbs">
+    <div class="container">
+        <ul class="breadcrumbs__items">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page"> Отзывы</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div class="reviews-page">
+    <div class="container">
+        <div class="reviews-page__header">
+            <h1 class="reviews-page__title title title--medium">Отзывы</h1>
+            <button class="button button--border" data-graph-path="review" type="button">
+                Оставить отзыв
+            </button>
+        </div>
+        <ul class="reviews-page__body">
+            <li class="reviews-page__item">
+                <article class="review-card">
+    <div class="review-card__header">
+        <div class="review-card__info">
+            <time class="review-card__date subtitle" datetime="2023-05-12">
+                12.05.2023
+            </time>
+            <div class="review-card__rating">
+                <span class="review-card__grade">Оценка</span>
+                <ul class="review-card__stars" aria-hidden>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--empty"></li>
+                </ul>
+                <span class="review-card__number subtitle">4</span>
+            </div>
+        </div>
+        <span class="review-card__author subtitle">Юлия</span>
+    </div>
+    <div class="review-card__body">
+
+        <div class="review-card__wrapper">
+            <div class="review-card__swiper swiper">
+                <ul class="review-card__items swiper-wrapper">
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+
+                </ul>
+                <button class="review-card__button review-card__button--prev arrow-button arrow-button--left swiper-button-prev swiper-button-prev" type="button">
+                </button>
+                <button class="review-card__button review-card__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+
+        <div class="review-card__content">
+            <div class="review-card__text"><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p><p>Подшипники турбины смазываются моторным маслом, поступающим из общей системы. Вместе с ним в турбину поступает состав ТериумПро№ 1. Он формирует защитный слой в местах износа подшипников. Восстанавливает их поверхность, устраняет люфт. Тем самым увеличивается ресурс турбины. Тем самым увеличивается ресурс турбины.</p></div>
+            <button class="review-card__more" type="button">Чиать дальше</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="reviews-page__item">
+                <article class="review-card">
+    <div class="review-card__header">
+        <div class="review-card__info">
+            <time class="review-card__date subtitle" datetime="2023-05-12">
+                12.05.2023
+            </time>
+            <div class="review-card__rating">
+                <span class="review-card__grade">Оценка</span>
+                <ul class="review-card__stars" aria-hidden>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--empty"></li>
+                </ul>
+                <span class="review-card__number subtitle">4</span>
+            </div>
+        </div>
+        <span class="review-card__author subtitle">Никита</span>
+    </div>
+    <div class="review-card__body">
+
+        <div class="review-card__content">
+            <div class="review-card__text"><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p></div>
+            <button class="review-card__more" type="button">Чиать дальше</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="reviews-page__item">
+                <article class="review-card">
+    <div class="review-card__header">
+        <div class="review-card__info">
+            <time class="review-card__date subtitle" datetime="2023-05-12">
+                12.05.2023
+            </time>
+            <div class="review-card__rating">
+                <span class="review-card__grade">Оценка</span>
+                <ul class="review-card__stars" aria-hidden>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--empty"></li>
+                </ul>
+                <span class="review-card__number subtitle">4</span>
+            </div>
+        </div>
+        <span class="review-card__author subtitle">София</span>
+    </div>
+    <div class="review-card__body">
+
+        <div class="review-card__wrapper">
+            <div class="review-card__swiper swiper">
+                <ul class="review-card__items swiper-wrapper">
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+                    <li class="review-card__item swiper-slide" style="background-image: url('img/reviews-page/1.jpg');"></li>
+
+                </ul>
+                <button class="review-card__button review-card__button--prev arrow-button arrow-button--left swiper-button-prev swiper-button-prev" type="button">
+                </button>
+                <button class="review-card__button review-card__button--next arrow-button swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+
+        <div class="review-card__content">
+            <div class="review-card__text"><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую Марию и влюбилась, это была моя мечта. Застройщик обещал, что скидка будет 25%. В процессе общения с менеджерами оказалось,</p></div>
+            <button class="review-card__more" type="button">Чиать дальше</button>
+        </div>
+    </div>
+</article>
+            </li>
+            <li class="reviews-page__item">
+                <article class="review-card">
+    <div class="review-card__header">
+        <div class="review-card__info">
+            <time class="review-card__date subtitle" datetime="2023-05-12">
+                12.05.2023
+            </time>
+            <div class="review-card__rating">
+                <span class="review-card__grade">Оценка</span>
+                <ul class="review-card__stars" aria-hidden>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--fill"></li>
+                    <li class="review-card__star review-card__star--empty"></li>
+                </ul>
+                <span class="review-card__number subtitle">4</span>
+            </div>
+        </div>
+        <span class="review-card__author subtitle">Юлия</span>
+    </div>
+    <div class="review-card__body">
+
+        <div class="review-card__content">
+            <div class="review-card__text"><p>Застройщик подарил мне золотую карту, и перед началом ремонта я решила посмотреть, кто какие скидки по этой карте предоставляет. Начала с кухонь и нашла Зетту. Открыла сайт, увидела бирюзовую</p></div>
+            <button class="review-card__more" type="button">Чиать дальше</button>
+        </div>
+    </div>
+</article>
+            </li>
+        </ul>
+        <ul class="reviews-page__pagination pagination">
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--disabled pagination__link--prevent">
+                    Назад
+                </a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--current" href="#" aria-current="page">
+                    1
+                </a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link">…</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">15</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--next" href="#">
+                    Далее
+                </a>
+            </li>
+        </ul>
+        <button class="reviews-page__more button button--border" type="button">
+            Показать еще
+        </button>
+    </div>
+</div>
+</main>
+
+<section class="consultation consultation--normal" id="consultation">
+    <div class="container">
+        <form class="consultation__wrapper form" action="#">
+            <h2 class="consultation__title title">
+                Закажите бесплатную разработку дизайн- проекта кухни
+            </h2>
+            <div class="consultation__content">
+                <div class="form__inner">
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-name">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" name="name" type="text" placeholder="Имя" id="consultation-name" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="sr-only" for="consultation-phone">
+                            Введите номер телефона
+                        </label>
+                        <input class="form__field" name="phone" type="tel" placeholder="Телефон" id="consultation-phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                    </div>
+
+                    <button class="form__button button" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+
+                <label class="form__agree">
+                    <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
+                    <span class="form__visible checkbox-visible" aria-hidden></span>
+                    <span>
+                        Согласен (а) на обработку <a href="#">персональных данных</a>
+                    </span>
+                </label>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__wrapper">
+                <address class="footer__info">
+                    <a class="footer__logo logo" href="#">
+                        <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
+                    </a>
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
+                        + 7 (495) 189-65-92
+                    </a>
+                    <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">
+                        kuhnistroy@kuhni.ru
+                    </a>
+                    <button class="footer__call" type="button">Заказать звонок</button>
+                </address>
+                <ul class="accordion">
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Компания</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Акции</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Адреса салонов</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Портфолио</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Блог</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Новости</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Сервис</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Замер</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доставка и сборка</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Монтаж</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Гарантия</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Миссия</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="accordion__item">
+                        <button class="accordion__button" aria-label="Открыть" aria-expanded="false" type="button">Каталог</button>
+                        <ul class="accordion__content">
+                            <li class="accordion__link">
+                                <a href="#">Кухни</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Электрика</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Доп элементы</a>
+                            </li>
+                            <li class="accordion__link">
+                                <a href="#">Сантехника</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="menu-bottom">
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/facebook.svg')" target="_blank">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/vk.svg')" target="_blank">
+                            <span class="sr-only">vk</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/instagram.svg')" target="_blank">
+                            <span class="sr-only">instagram</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/classmates.svg')" target="_blank">
+                            <span class="sr-only">classmates</span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" style="background-image: url('img/social/youtube.svg')" target="_blank">
+                            <span class="sr-only">youtube</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="menu-bottom__copy">Copyright © 2023 КУХНИСТРОЙ</span>
+                <a class="menu-bottom__offer" href="#">Публичная оферта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+</body>
+
+</html>

@@ -168,9 +168,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Светлая кухня</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">Специально для любителей светлого</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -193,9 +193,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">При покупке комплекта техники</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -377,6 +377,28 @@
     </div>
 </div>
 
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
 <div class="breadcrumbs">
     <div class="container">
         <ul class="breadcrumbs__items">
@@ -398,9 +420,7 @@
             <form class="filters smartfilter" action="#">
     <fieldset class="filters__list">
         <span class="filters__title">
-            <legend>
-                Страна производитель фасадов:
-            </legend>
+            Страна производитель фасадов:
         </span>
         <div class="filters__content">
             <label class="filters__item">
@@ -415,9 +435,7 @@
     </fieldset>
     <fieldset class="filters__list">
         <span class="filters__title">
-            <legend>
-                Стиль:
-            </legend>
+            Стиль:
         </span>
         <div class="filters__content">
             <label class="filters__item">
@@ -434,7 +452,7 @@
 
 <form class="sort" action="#" method="get">
     <label class="sort__item sort__item--normal">
-        <input class="sort__hidden" type="radio" name="sort" value="Нео-классика" checked>
+        <input class="sort__hidden" type="radio" name="sort" value="По популярности" checked>
         <span class="sort__visible">По популярности</span>
     </label>
     <label class="sort__item sort__item--up">
@@ -448,6 +466,7 @@
 </form>
         </div>
         <div class="products">
+    <h2 class="sr-only">Список товаров</h2>
     <div class="products__container container">
         <ul class="products__items">
             <li class="products__item">
@@ -456,7 +475,7 @@
         <div class="product-card__main slider-main">
             <button class="favorite-button" type="button" aria-label="Добавить в избранное">
                 <svg class="favorite-button__icon">
-                   <use xlink:href="img/sprite.svg#favorite">
+                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
             <ul class="product-card__swiper swiper-wrapper">
@@ -467,6 +486,7 @@
                         <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/2.avif" type="image/avif">
@@ -530,11 +550,15 @@
                         <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
             </ul>
+
             <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
             <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
+
         </div>
+
         <div class="product-card__small slider-nav">
             <ul class="product-card__previews swiper-wrapper">
                 <li class="product-card__thumb swiper-slide">
@@ -609,6 +633,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 
     <div class="product-card__content">
@@ -629,6 +654,7 @@
                                 200 999 ₽
                             </span>
                         </li>
+
                         <li class="product-card__price product-price" data-price="2">
                             <span class="product-price__current">
                                 2
@@ -663,7 +689,7 @@
                         </li>
                         <li class="product-card__price product-price" data-price="6">
                             <span class="product-price__current">
-                               6
+                                6
                             </span>
                             <span class="product-price__old">
                                 6
@@ -701,6 +727,7 @@
                                 10
                             </span>
                         </li>
+
                     </ul>
                     <p class="product-card__subprice">Цена за всю кухню на фото</p>
                 </div>
@@ -715,9 +742,9 @@
                             <ul class="product-kit__items">
                                 <li class="product-kit__item">
                                     <picture class="product-kit__img">
-                                       <source srcset="img/product-kit/1.avif" type="image/avif">
-                                       <source srcset="img/product-kit/1.webp" type="image/webp">
-                                       <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
+                                        <source srcset="img/product-kit/1.avif" type="image/avif">
+                                        <source srcset="img/product-kit/1.webp" type="image/webp">
+                                        <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
                                     </picture>
                                     <p class="product-kit__text">
                                         Корпуса 18 мм и фасады, системы крепления Camar
@@ -772,7 +799,7 @@
         <div class="product-card__main slider-main">
             <button class="favorite-button" type="button" aria-label="Добавить в избранное">
                 <svg class="favorite-button__icon">
-                   <use xlink:href="img/sprite.svg#favorite">
+                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
             <ul class="product-card__swiper swiper-wrapper">
@@ -783,6 +810,7 @@
                         <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/2.avif" type="image/avif">
@@ -846,11 +874,15 @@
                         <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
             </ul>
+
             <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
             <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
+
         </div>
+
         <div class="product-card__small slider-nav">
             <ul class="product-card__previews swiper-wrapper">
                 <li class="product-card__thumb swiper-slide">
@@ -925,6 +957,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 
     <div class="product-card__content">
@@ -945,6 +978,7 @@
                                 200 999 ₽
                             </span>
                         </li>
+
                         <li class="product-card__price product-price" data-price="2">
                             <span class="product-price__current">
                                 2
@@ -979,7 +1013,7 @@
                         </li>
                         <li class="product-card__price product-price" data-price="6">
                             <span class="product-price__current">
-                               6
+                                6
                             </span>
                             <span class="product-price__old">
                                 6
@@ -1017,6 +1051,7 @@
                                 10
                             </span>
                         </li>
+
                     </ul>
                     <p class="product-card__subprice">Цена за всю кухню на фото</p>
                 </div>
@@ -1031,9 +1066,9 @@
                             <ul class="product-kit__items">
                                 <li class="product-kit__item">
                                     <picture class="product-kit__img">
-                                       <source srcset="img/product-kit/1.avif" type="image/avif">
-                                       <source srcset="img/product-kit/1.webp" type="image/webp">
-                                       <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
+                                        <source srcset="img/product-kit/1.avif" type="image/avif">
+                                        <source srcset="img/product-kit/1.webp" type="image/webp">
+                                        <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
                                     </picture>
                                     <p class="product-kit__text">
                                         Корпуса 18 мм и фасады, системы крепления Camar
@@ -1088,7 +1123,7 @@
         <div class="product-card__main slider-main">
             <button class="favorite-button" type="button" aria-label="Добавить в избранное">
                 <svg class="favorite-button__icon">
-                   <use xlink:href="img/sprite.svg#favorite">
+                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
             <ul class="product-card__swiper swiper-wrapper">
@@ -1099,6 +1134,7 @@
                         <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/2.avif" type="image/avif">
@@ -1162,11 +1198,15 @@
                         <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
             </ul>
+
             <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
             <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
+
         </div>
+
         <div class="product-card__small slider-nav">
             <ul class="product-card__previews swiper-wrapper">
                 <li class="product-card__thumb swiper-slide">
@@ -1241,6 +1281,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 
     <div class="product-card__content">
@@ -1261,6 +1302,7 @@
                                 200 999 ₽
                             </span>
                         </li>
+
                         <li class="product-card__price product-price" data-price="2">
                             <span class="product-price__current">
                                 2
@@ -1295,7 +1337,7 @@
                         </li>
                         <li class="product-card__price product-price" data-price="6">
                             <span class="product-price__current">
-                               6
+                                6
                             </span>
                             <span class="product-price__old">
                                 6
@@ -1333,6 +1375,7 @@
                                 10
                             </span>
                         </li>
+
                     </ul>
                     <p class="product-card__subprice">Цена за всю кухню на фото</p>
                 </div>
@@ -1347,9 +1390,9 @@
                             <ul class="product-kit__items">
                                 <li class="product-kit__item">
                                     <picture class="product-kit__img">
-                                       <source srcset="img/product-kit/1.avif" type="image/avif">
-                                       <source srcset="img/product-kit/1.webp" type="image/webp">
-                                       <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
+                                        <source srcset="img/product-kit/1.avif" type="image/avif">
+                                        <source srcset="img/product-kit/1.webp" type="image/webp">
+                                        <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
                                     </picture>
                                     <p class="product-kit__text">
                                         Корпуса 18 мм и фасады, системы крепления Camar
@@ -1404,7 +1447,7 @@
         <div class="product-card__main slider-main">
             <button class="favorite-button" type="button" aria-label="Добавить в избранное">
                 <svg class="favorite-button__icon">
-                   <use xlink:href="img/sprite.svg#favorite">
+                    <use xlink:href="img/sprite.svg#favorite">
                 </svg>
             </button>
             <ul class="product-card__swiper swiper-wrapper">
@@ -1415,6 +1458,7 @@
                         <img class="product-card__img" src="img/product/1.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
                 <li class="product-card__big swiper-slide">
                     <picture>
                         <source srcset="img/product/2.avif" type="image/avif">
@@ -1478,11 +1522,15 @@
                         <img class="product-card__img" src="img/product/2.jpg" alt="Фото 1" width="1360" height="660" loading="lazy">
                     </picture>
                 </li>
+
             </ul>
+
             <button class="product-card__button product-card__button--prev swiper-button-prev arrow-button arrow-button--left" type="button"></button>
             <button class="product-card__button product-card__button--next swiper-button-next arrow-button" type="button"></button>
             <div class="swiper-pagination"></div>
+
         </div>
+
         <div class="product-card__small slider-nav">
             <ul class="product-card__previews swiper-wrapper">
                 <li class="product-card__thumb swiper-slide">
@@ -1557,6 +1605,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 
     <div class="product-card__content">
@@ -1577,6 +1626,7 @@
                                 200 999 ₽
                             </span>
                         </li>
+
                         <li class="product-card__price product-price" data-price="2">
                             <span class="product-price__current">
                                 2
@@ -1611,7 +1661,7 @@
                         </li>
                         <li class="product-card__price product-price" data-price="6">
                             <span class="product-price__current">
-                               6
+                                6
                             </span>
                             <span class="product-price__old">
                                 6
@@ -1649,6 +1699,7 @@
                                 10
                             </span>
                         </li>
+
                     </ul>
                     <p class="product-card__subprice">Цена за всю кухню на фото</p>
                 </div>
@@ -1663,9 +1714,9 @@
                             <ul class="product-kit__items">
                                 <li class="product-kit__item">
                                     <picture class="product-kit__img">
-                                       <source srcset="img/product-kit/1.avif" type="image/avif">
-                                       <source srcset="img/product-kit/1.webp" type="image/webp">
-                                       <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
+                                        <source srcset="img/product-kit/1.avif" type="image/avif">
+                                        <source srcset="img/product-kit/1.webp" type="image/webp">
+                                        <img src="img/product-kit/1.png" alt="Корпуса" width="40" height="40" loading="lazy">
                                     </picture>
                                     <p class="product-kit__text">
                                         Корпуса 18 мм и фасады, системы крепления Camar
@@ -1728,7 +1779,7 @@
                     <a class="footer__logo logo" href="#">
                         <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
                     </a>
-                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
                         + 7 (495) 189-65-92
                     </a>
                     <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">

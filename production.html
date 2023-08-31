@@ -168,9 +168,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Светлая кухня</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">Специально для любителей светлого</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -193,9 +193,9 @@
         </picture>
     </div>
     <div class="product-today__content">
-        <h3 class="product-today__title">
+        <span class="product-today__title">
             <a class="product-today__link" href="#">Скидка на духовой шкаф</a>
-        </h3>
+        </span>
         <span class="product-today__subtitle">При покупке комплекта техники</span>
 
         <span class="product-today__arrow" aria-hidden></span>
@@ -377,6 +377,28 @@
     </div>
 </div>
 
+<button class="modal-thank" type="button" data-graph-path="modal-thank" style="display: none;">Открыть</button>
+
+<div class="graph-modal">
+
+    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
+    <div class="graph-modal__box">
+        <div class="graph-modal__header">
+            <span class="graph-modal__title title">
+                Спасибо за обратную связь!
+            </span>
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+        </div>
+        <div class="graph-modal__text">
+            <p>
+                    В ближайшее время обработаем данные и опубликуем пост
+                </p>
+        </div>
+        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
+    </div>
+</div>
+</div>
+
 <main class="main">
     <section class="hero-section">
     <div class="container">
@@ -405,14 +427,14 @@
                 </div>
                 <div class="hero-section__actions">
 
-                    <a class="button" href="#">Оставить заявку</a>
+                    <a class="button" href="#" data-goto="#consultation">Оставить заявку</a>
 
                 </div>
             </div>
             <div class="hero-section__image">
                 <span class="hero-section__bg" style="background-image: url('img/production-page/top-bg.jpg');" aria-hidden> </span>
             </div>
-            <a class="circle-link" href="#" data-goto="">
+            <a class="circle-link" href="#" data-goto="#kitchenbuilding">
                 <span class="circle-link__content circle-link__content--big" style="background-image: url('img/circle-links/free-project.svg');" aria-hidden></span>
                 <span class="sr-only">Бесплатная разработка проекта</span>
             </a>
@@ -421,7 +443,7 @@
     </div>
 </section>
 
-    <section class="kitchenbuilding">
+    <section class="kitchenbuilding" id="kitchenbuilding">
     <div class="container">
         <div class="kitchenbuilding__header">
             <div class="kitchenbuilding__descr">
@@ -523,13 +545,21 @@
             <div class="items-section__image">
                 <div class="items-section__bg" style="background-image: url('img/production-page/production-kitchenbuilding.png');" aria-hidden> </div>
             </div>
+            <div class="extra-plank extra-plank--mobile">
+                <p>
+                    Основной поставщик компания ILCAM s.p.a., Италия
+                </p>
+                <a class="extra-plank__link" href="#">
+                    Официальный сайт ILCAM
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
     <section class="production-technologies">
     <div class="container">
-        <h2 class="production-technologies__title title">
+        <h2 class="title">
             Технологии производства ILCAM
         </h2>
         <div class="tabs" data-tabs="production-technologies">
@@ -571,50 +601,32 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Начальная фаза обработки древесины
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                    <p>
-                                                        Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Начальная фаза Спец элементы</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Вторая фаза обработки древесины
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                    <p>
-                                                        Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">02</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Вторая фаза обработки древесины</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">02</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -629,70 +641,46 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Начальная фаза Decor
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Начальная фаза Decor</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Вторая фаза Decor
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                    <p>
-                                                        Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">02</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Вторая фаза Decor</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">02</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Третья фаза Decor
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                    <p>
-                                                        Ремесленный дух и жесточайший подход к подбору материалов придают фазе обработке древесины фундаментальную роль во всем производстве ILCAM.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">02</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Третья фаза Decor</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">03</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -707,24 +695,18 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Начальная фаза Фасады
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Начальная фаза Фасады</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -739,44 +721,32 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Начальная фаза Lengo
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Начальная фаза Lengo</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Вторая фаза Lengo
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Вторая фаза Lengo</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">02</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -791,44 +761,32 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Начальная фаза Спец элементы
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Начальная фаза Спец элементы</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Вторая фаза Спец. элементы
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Вторая фаза Спец. элементы</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">02</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -843,24 +801,18 @@
                         <div class="production-technologies__swiper swiper">
                             <ul class="production-technologies__items swiper-wrapper">
                                 <li class="production-technologies__item swiper-slide">
-                                    <article class="technology-card">
-                                        <div class="technology-card__content">
-                                            <div>
-                                                <h3 class="technology-card__title subtitle">
-                                                    Окраска, упакова и отгрузка
-                                                </h3>
-                                                <div class="technology-card__text">
-                                                    <p>
-                                                        Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <span class="technology-card__number title title--large">01</span>
-                                        </div>
-                                        <div class="technology-card__images">
-                                            <span class="technology-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
-                                        </div>
-                                    </article>
+                                    <article class="swiper-card">
+    <div class="swiper-card__content">
+        <div>
+            <h3 class="swiper-card__title subtitle">Окраска, упакова и отгрузка</h3>
+            <div class="swiper-card__text"><p>Тщательность, проявляемая при выборе исходного сырья и материалов, является подтверждением усилий, предпринимаемых ILCAM в деле сохранения природных богатств и чистоты окружающей среды.</p></div>
+        </div>
+        <span class="swiper-card__number title title--large">01</span>
+    </div>
+    <div class="swiper-card__images">
+        <span class="swiper-card__bg" style="background-image: url('img/production-page/technologies/wood-processing/1.jpg');" aria-hidden> </span>
+    </div>
+</article>
                                 </li>
                             </ul>
                             <button class="production-technologies__button production-technologies__button--prev arrow-button arrow-button--left swiper-button-prev" type="button">
@@ -982,13 +934,13 @@
                     </button>
                 </div>
 
-                <div class="form__agree">
+                <label class="form__agree">
                     <input class="form__hidden checkbox-hidden" id="consultation-agree" type="checkbox" name="agree" checked required>
                     <span class="form__visible checkbox-visible" aria-hidden></span>
-                    <label for="consultation-agree">
+                    <span>
                         Согласен (а) на обработку <a href="#">персональных данных</a>
-                    </label>
-                </div>
+                    </span>
+                </label>
 
             </div>
         </form>
@@ -1003,7 +955,7 @@
                     <a class="footer__logo logo" href="#">
                         <img class="logo__img" src="img/logos/logo-light.svg" alt="логотип" width="270" height="40" loading="lazy">
                     </a>
-                    <a class="footer__contact footer__contact--phone" href="tel:+7 4951896592">
+                    <a class="footer__contact footer__contact--phone" href="tel:+74951896592">
                         + 7 (495) 189-65-92
                     </a>
                     <a class="footer__contact footer__contact--email" href="mailto:kuhnistroy@kuhni.ru">
