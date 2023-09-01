@@ -25,10 +25,10 @@
 
 	&__hidden {
 		@include hidden;
+	}
 
-		&:checked + .form__star {
-			background-image: url('../img/icons/star-fill.svg');
-		}
+	&__hidden:checked + &__star {
+		background-image: url('../img/icons/star-fill.svg');
 	}
 
 	&__star {
